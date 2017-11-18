@@ -25,7 +25,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     var cellNumber = 20
     var pageNumber = 2
-    var cellHeight = 38
+    var cellHeight = 40
     
     var randomNumberOneArray = [0]
     var randomNumberTwoArray = [0]
@@ -52,35 +52,40 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     //Save PDF
     func savePdfDataWithTableView(tableView: UITableView) {
-        cellNumber = 20 * pageNumber
         let priorBounds = tableView.bounds
-        let fittedSize = tableView.sizeThatFits(CGSize(width:580, height: cellHeight * cellNumber + 100 ))
-        print("#0 FittedSize Height \(fittedSize.height)")
-        tableView.bounds = CGRect(x:0, y:0, width:fittedSize.width, height:fittedSize.height)
-        let pdfPageBounds = CGRect(x:0, y:0, width:612, height:760)
+        let paperA4 = CGRect(x: 0, y: 0, width: 612, height: 800)
+        let pageWithMargin = CGRect(x: 0, y: 0, width: paperA4.width, height: paperA4.height)
+        
+//        cellNumber = 20 * pageNumber
+//
+        let fittedSize = tableView.sizeThatFits(CGSize(width:pageWithMargin.width, height: tableView.contentSize.height))
+         print("$ tableView.contentSize.height is \(tableView.contentSize.height)")
+        tableView.bounds = CGRect(x: 0, y: 0, width: fittedSize.width, height: fittedSize.height)
         let pdfData = NSMutableData()
-        //PDF Start
-        UIGraphicsBeginPDFContextToData(pdfData, pdfPageBounds, nil)
+      
+        UIGraphicsBeginPDFContextToData(pdfData, paperA4, nil)
         var pageOriginY: CGFloat = 0
-        while pageOriginY < fittedSize.height - 100 {
-            UIGraphicsBeginPDFPageWithInfo(pdfPageBounds, nil)
+        
+        while pageOriginY < fittedSize.height {
+
+            UIGraphicsBeginPDFPageWithInfo(paperA4, nil)
             UIGraphicsGetCurrentContext()!.saveGState()
             UIGraphicsGetCurrentContext()!.translateBy(x: 0, y: -pageOriginY)
-            print("#1 PageOriginY \(pageOriginY)")
+
             tableView.layer.render(in: UIGraphicsGetCurrentContext()!)
             UIGraphicsGetCurrentContext()!.restoreGState()
-            pageOriginY = pageOriginY + pdfPageBounds.size.height
-            print("#2 new PageOriginY \(pageOriginY)")
-            print("#3 PageBounds Height \(pdfPageBounds.size.height)")
-            print("#4 New FittedSize Height \(fittedSize.height)")
+            print("$ pageOriginY \(pageOriginY)")
+            pageOriginY = pageOriginY + paperA4.size.height
+            print("$ fitsize height \(fittedSize.height)")
+            print("$ new pageOriginY \(pageOriginY)")
         }
         UIGraphicsEndPDFContext()
         //PDF End
-        tableView.bounds = priorBounds
+        tableView.bounds = priorBounds // Reset the tableView
         docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
         docURL = docURL.appendingPathComponent("myDocument.pdf")
         pdfData.write(to: docURL as URL, atomically: true)
-//        print("$Save PDF URL: \(docURL)")
+
     }
     
     //Print Button Pressed
