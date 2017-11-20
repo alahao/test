@@ -12,23 +12,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var selectedOperation = ""
     var selectedRow = 1
+    var selectedOperationLabel = ""
     
     @IBAction func buttonPlus(_ sender: Any) {
         selectedOperation = "+"
+        selectedOperationLabel = "Plus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMinus(_ sender: Any) {
         selectedOperation = "-"
+        selectedOperationLabel = "Minus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMul(_ sender: Any) {
         selectedOperation = "X"
+        selectedOperationLabel = "Multiplication"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     @IBAction func buttonDiv(_ sender: Any) {
         selectedOperation = "/"
+        selectedOperationLabel = "Division"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
@@ -58,6 +63,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         destinationVC.numberOperation = selectedOperation
         destinationVC.numberOperationTwo = selectedOperation
         destinationVC.pageNumber = selectedRow
+        destinationVC.operationName = selectedOperationLabel
         }
         
     }
