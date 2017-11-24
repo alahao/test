@@ -20,24 +20,19 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var numberFour = 0
     var numberAnswerTwo = 0
     var numberOperationTwo = ""
-    var questionNumberArray = [0]
     
     var operationName = ""
     var docURL : URL!
     
     var cellNumber = 20
     var pageNumber = 2
-    let defaultCellHeight = 36
-    var cellHeight = 0
+    let defaultCellHeight = 40
+    var cellHeight = 40
+
+    var headerCells = [21,42,63,84,100,120,140,160,180,200,220,240,260,280,300]
     
-    var randomNumberOneArray = [0]
-    var randomNumberTwoArray = [0]
-    var randomNumberThreeArray = [0]
-    var randomNumberFourArray = [0]
-    var randomNumberAnswerOneArray = [0]
-    var randomNumberAnswerTwoArray = [0]
-    
-    var headerCells = [0,20,40,60,80,100,120,140,160,180,200,220,240,260,280,300]
+    var questionNumber = 0
+    var questionDic = [0: [0,0,0,0,0,0]]
 
     //Load PDF
     func loadPDFAndShare() {
@@ -61,28 +56,22 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         loadPDFAndShare()
     }
     
-    //Pull to Refresh
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action:
-            #selector(WorksheetVC.handleRefresh(_:)), for: UIControlEvents.valueChanged)
-        return refreshControl
-    }()
-    
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        removeAllArray()
-        self.worksheetTableView.reloadData()
-        refreshControl.endRefreshing()
-    }
-    
+//    //Pull to Refresh
+//    lazy var refreshControl: UIRefreshControl = {
+//        let refreshControl = UIRefreshControl()
+//        refreshControl.addTarget(self, action:
+//            #selector(WorksheetVC.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+//        return refreshControl
+//    }()
+//
+//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+//        removeAllArray()
+//        self.worksheetTableView.reloadData()
+//        refreshControl.endRefreshing()
+//    }
+//
     func removeAllArray() {
-        randomNumberOneArray.removeAll()
-        randomNumberTwoArray.removeAll()
-        randomNumberThreeArray.removeAll()
-        randomNumberFourArray.removeAll()
-        randomNumberAnswerOneArray.removeAll()
-        randomNumberAnswerTwoArray.removeAll()
-        questionNumberArray.removeAll()
+        questionDic.removeAll()
     }
     
     func generatingRandomNumber(numberAFrom: UInt32, numberATo: UInt32, numberBFrom: UInt32, numberBTo: UInt32, operation: String) {
@@ -115,13 +104,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             numberOne = numberAnswerOne * numberTwo
             numberThree = numberAnswerTwo * numberFour
         }
-        randomNumberOneArray.append(numberOne)
-        randomNumberTwoArray.append(numberTwo)
-        randomNumberThreeArray.append(numberThree)
-        randomNumberFourArray.append(numberFour)
-        randomNumberAnswerOneArray.append(numberAnswerOne)
-        randomNumberAnswerTwoArray.append(numberAnswerTwo)
-        questionNumberArray.append(<#T##newElement: Int##Int#>)
+      
+        let questionArray = [numberOne, numberTwo, numberAnswerOne, numberThree, numberFour, numberAnswerTwo]
+        questionDic.updateValue(questionArray, forKey: questionNumber)
+        questionNumber = questionNumber + 1
     }
     
     //Operations
@@ -157,11 +143,24 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let label = UILabel()
+//        label.textAlignment = NSTextAlignment.center
+//        label.text = "Dividion Worksheet"
+//        return label
+//    }
+    
+//    private func tableView (tableView:UITableView , heightForHeaderInSection section:Int)->Float
+//    {
+//        return 40.0
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         worksheetTableView.delegate = self
         worksheetTableView.dataSource = self
-        self.worksheetTableView.addSubview(self.refreshControl)
+//        self.worksheetTableView.addSubview(self.refreshControl)
         removeAllArray()
     }
     
@@ -177,56 +176,48 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         operationType()
 
-        if headerCells.contains(indexPath.row)  {
-            cellHeight = 100
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! TableViewCell
-            headerCell.worksheetTitle.text = operationName
-            return headerCell
-        } else {
-            cellHeight = defaultCellHeight
             let cell = tableView.dequeueReusableCell(withIdentifier: "worksheetCell", for: indexPath) as! TableViewCell
-            cell.RowNumberOne.text = String(indexPath.row * 2 - 1)
-            cell.RowNumberTwo.text = String(indexPath.row * 2)
+            let questionArray = questionDic[indexPath.row]
             
-            cell.numberOneLabel.text = String(randomNumberOneArray[indexPath.row])
-            cell.numberTwoLabel.text = String(randomNumberTwoArray[indexPath.row])
-            cell.numberAnswerLabel.text = String(numberAnswerOne)
+            cell.RowNumber.text = String(indexPath.row * 2 + 1)
+            cell.RowNumberTwo.text = String(indexPath.row * 2 + 2)
+            
+            cell.numberOneLabel.text = String(describing: questionArray![0])
+            cell.numberTwoLabel.text = String(describing: questionArray![1])
+            cell.numberAnswerLabel.text = String(describing: questionArray![2])
             cell.numberOperationLabel.text = numberOperation
             
-            cell.numberThreeLabel.text = String(randomNumberThreeArray[indexPath.row])
-            cell.numberFourLabel.text = String(randomNumberFourArray[indexPath.row])
-            cell.numberAnswerTwoLabel.text = String(numberAnswerTwo)
+            cell.numberThreeLabel.text = String(describing: questionArray![3])
+            cell.numberFourLabel.text = String(describing: questionArray![4])
+            cell.numberAnswerTwoLabel.text = String(describing: questionArray![5])
             cell.numberOperationTwoLabel.text = numberOperationTwo
         return cell
-        }
+
     }
     
     //Save PDF
     func savePdfDataWithTableView(tableView: UITableView) {
         let priorBounds = tableView.bounds
         let paperA4 = CGRect(x: 0, y: 0, width: 612, height: 800)
-        let pageWithMargin = CGRect(x: -50, y: 50, width: paperA4.width - 50, height: paperA4.height - 50)
-        
-        //cellNumber = 20 * pageNumber
-      
+        let pageWithMargin = CGRect(x: 0, y: 0, width: paperA4.width, height: paperA4.height)
         let fittedSize = tableView.sizeThatFits(CGSize(width:pageWithMargin.width, height: tableView.contentSize.height))
-        print("$ tableView.contentSize.height is \(tableView.contentSize.height)")
-        tableView.bounds = pageWithMargin
+       
+        tableView.bounds = CGRect(x: 0, y: 0, width: paperA4.width, height: fittedSize.height)
         let pdfData = NSMutableData()
         
         UIGraphicsBeginPDFContextToData(pdfData, paperA4, nil) //PDF BEGIN
         var pageOriginY: CGFloat = 0
-        while pageOriginY < fittedSize.height {
-            UIGraphicsBeginPDFPageWithInfo(CGRect(x: -25, y: 0, width: paperA4.width, height: paperA4.height), nil)
-            tableView.bounds = CGRect(x: 0, y: pageOriginY, width: pageWithMargin.width, height: pageOriginY + pageWithMargin.height)
+        while pageOriginY < fittedSize.height - 790 {
+            UIGraphicsBeginPDFPageWithInfo(paperA4, nil)
             UIGraphicsGetCurrentContext()!.saveGState()
             UIGraphicsGetCurrentContext()!.translateBy(x: 0, y: -pageOriginY)
             tableView.layer.render(in: UIGraphicsGetCurrentContext()!)
             UIGraphicsGetCurrentContext()!.restoreGState()
-            print("$ pageOriginY \(pageOriginY)")
+            
+            print("$ fittedSize.height is \(fittedSize.height)")
+            print("$ old pageOriginY is \(pageOriginY)")
             pageOriginY = pageOriginY + paperA4.size.height
-            print("$ fitsize height \(fittedSize.height)")
-            print("$ new pageOriginY \(pageOriginY)")
+            print("$ new pageOriginY is \(pageOriginY)")
         }
         UIGraphicsEndPDFContext() //PDF End
         tableView.bounds = priorBounds // Reset the tableView

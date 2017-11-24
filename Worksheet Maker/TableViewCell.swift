@@ -20,11 +20,15 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var numberAnswerTwoLabel: UILabel!
     
    
-    @IBOutlet weak var RowNumberOne: UILabel!
+    @IBOutlet weak var RowNumber: UILabel!
     @IBOutlet weak var RowNumberTwo: UILabel!
     
-    @IBOutlet weak var worksheetTitle: UILabel!
+    @IBOutlet weak var labelMathWorksheet: UILabel!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var labelFooter: UILabel!
     
+    @IBOutlet weak var worksheetTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
