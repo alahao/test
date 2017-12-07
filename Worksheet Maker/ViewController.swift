@@ -8,71 +8,57 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController {
+    @IBOutlet weak var pageLabel: UILabel!
+    @IBOutlet weak var pageQuestionLabel: UILabel!
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        selectedPageNumber = Int(sender.value)
+        pageLabel.text = "\(Int(sender.value)) Pages"
+        pageQuestionLabel.text = "\(Int(sender.value) * 20) Questions"
+    }
     
-    var selectedOperation = ""
-    var selectedRow = 1
-    var selectedOperationLabel = ""
+    @IBOutlet weak var makeLabel: UIButton!
+    
+    
+    var selectedOperation = "+"
+    var selectedPageNumber = 1
+    var selectedOperationLabel = "Plus"
     
     @IBAction func buttonPlus(_ sender: Any) {
         selectedOperation = "+"
-        selectedOperationLabel = "Plus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMinus(_ sender: Any) {
         selectedOperation = "-"
-        selectedOperationLabel = "Minus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMul(_ sender: Any) {
         selectedOperation = "X"
-        selectedOperationLabel = "Multiplication"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     @IBAction func buttonDiv(_ sender: Any) {
         selectedOperation = "/"
-        selectedOperationLabel = "Division"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
-    @IBOutlet weak var totalPagePicker: UIPickerView!
-    
-    var pagePicker = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(pagePicker[row]) pages, \(pagePicker[row] * 20) questions"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pagePicker.count
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedRow = pagePicker[row]
+    @IBAction func buttonFraction(_ sender: Any) {
+        selectedOperation = "Fraction"
+        performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueCreateWorkSheet" {
         let destinationVC =  segue.destination as! WorksheetVC
         destinationVC.numberOperation = selectedOperation
-        destinationVC.numberOperationTwo = selectedOperation
-        destinationVC.pageNumber = selectedRow
+        destinationVC.pageNumber = selectedPageNumber
         destinationVC.operationName = selectedOperationLabel
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        totalPagePicker.delegate = self
-        totalPagePicker.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 

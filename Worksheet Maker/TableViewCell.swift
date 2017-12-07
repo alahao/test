@@ -10,25 +10,27 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var numberOneLabel: UILabel!
-    @IBOutlet weak var numberOperationLabel: UILabel!
-    @IBOutlet weak var numberTwoLabel: UILabel!
     @IBOutlet weak var numberAnswerLabel: UILabel!
-    
     @IBOutlet weak var numberThreeLabel: UILabel!
-    @IBOutlet weak var numberOperationTwoLabel: UILabel!
-    @IBOutlet weak var numberFourLabel: UILabel!
     @IBOutlet weak var numberAnswerTwoLabel: UILabel!
     
-   
     @IBOutlet weak var RowNumber: UILabel!
     @IBOutlet weak var RowNumberTwo: UILabel!
     
-    @IBOutlet weak var labelMathWorksheet: UILabel!
-    @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var labelDate: UILabel!
-    @IBOutlet weak var labelFooter: UILabel!
+    // Fraction
+    @IBOutlet weak var fRowNumberOne: UILabel!
+
+    @IBOutlet weak var oneLN: UILabel!
+    @IBOutlet weak var oneLD: UILabel!
+    @IBOutlet weak var oneRN: UILabel!
+    @IBOutlet weak var oneRD: UILabel!
     
-    @IBOutlet weak var worksheetTitle: UILabel!
+    @IBOutlet weak var fRowNumberTwo: UILabel!
+    @IBOutlet weak var fAnswerOneNumber: UILabel!
+    @IBOutlet weak var fAnswerOneR: UILabel!
+    @IBOutlet weak var fAnswerOneD: UILabel!
+    // End Fraction
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,10 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Bold</string>
+            <string>AppleSDGothicNeo-UltraLight</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -13,13 +24,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Z7-nJ-uLj">
+                                <rect key="frame" x="56.5" y="269.5" width="262" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="worksheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-wh-Gn7">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="40"/>
+                                        <color key="textColor" red="0.29920160769999998" green="0.60023695229999996" blue="0.81237965820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-3G-QBq">
+                                        <rect key="frame" x="-2" y="28" width="232.5" height="84.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="70"/>
+                                        <color key="textColor" red="0.22010533023177645" green="0.56498921503605048" blue="0.81871093750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fu4-wh-Gn7" firstAttribute="leading" secondItem="5Z7-nJ-uLj" secondAttribute="leading" id="BUe-sh-6rj"/>
+                                    <constraint firstAttribute="height" constant="128" id="Csk-k1-xvG"/>
+                                    <constraint firstAttribute="width" secondItem="5Z7-nJ-uLj" secondAttribute="height" multiplier="131:64" id="Fz6-Jr-zbO"/>
+                                    <constraint firstItem="fu4-wh-Gn7" firstAttribute="top" secondItem="5Z7-nJ-uLj" secondAttribute="top" id="Kim-L6-JK2"/>
+                                    <constraint firstItem="iCT-3G-QBq" firstAttribute="leading" secondItem="5Z7-nJ-uLj" secondAttribute="leading" constant="-2" id="OXT-eA-Mfd"/>
+                                    <constraint firstItem="iCT-3G-QBq" firstAttribute="top" secondItem="fu4-wh-Gn7" secondAttribute="bottom" constant="-20" id="tqA-b3-gOM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34872365" green="0.32440686229999999" blue="0.52747768159999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Z7-nJ-uLj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gpd-Ah-g3g"/>
+                            <constraint firstItem="5Z7-nJ-uLj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RIV-vR-bxH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>

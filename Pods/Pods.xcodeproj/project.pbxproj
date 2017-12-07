@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29F48484E9FAF7DCFAFAC197EFB47106 /* Pods-Worksheet Maker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		441DCC3461F8C917D05F54D8D375FF8B /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */; };
+		47C07ADB2406AD83FFB16C68901F5746 /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3476843C36046B196DEBB3905A5D3E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		ABC4F2909FDF96C29043B385A6D5D968 /* Pods-Worksheet Maker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */; };
+		B30578001C078EF70BBC288075592D7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DC182D70C9FB0D81B3CA2BD8AD609C62 /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */; };
+		FFC00E58D21CB7E6819B673B75703D47 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B7B7BCBA96AF40328233249C17DFC3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F0CE67F2319EC9DC18A0959ACD77DD5;
+			remoteInfo = SimplePDF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
+		1815A74F4422ED3A4D13E3E90F7DCA91 /* Pods-Worksheet Maker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Worksheet Maker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Worksheet_Maker.framework; path = "Pods-Worksheet Maker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		45A906648A55C881C2B22078D08C2ADE /* Pods-Worksheet Maker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-frameworks.sh"; sourceTree = "<group>"; };
+		5678815429C65F423ABF9D1124CD478F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7ACA8C64F43DDB78DA7C315EFE15AA92 /* Pods-Worksheet Maker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-resources.sh"; sourceTree = "<group>"; };
+		91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FF2C4D244C4C5D84A9A4EE2482976D /* Pods-Worksheet Maker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Worksheet Maker.modulemap"; sourceTree = "<group>"; };
+		AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.release.xcconfig"; sourceTree = "<group>"; };
+		C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Worksheet Maker-umbrella.h"; sourceTree = "<group>"; };
+		C9C1C84B4A1B3F2762D6F64CB806967C /* Pods-Worksheet Maker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Worksheet Maker-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD442ED433A7E5D11E8B6DD2B9341BAB /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
+		D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Worksheet Maker-dummy.m"; sourceTree = "<group>"; };
+		E3963EE8494DB1FBC6AAB94DC6A5F412 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
+		EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.debug.xcconfig"; sourceTree = "<group>"; };
+		F124219945C607C47C3BD96DA5A728E1 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3D7C554C94600D8F3EDB303E23A807C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3476843C36046B196DEBB3905A5D3E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E172A44CBC7FD7E1F9BE58D51A94562F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30578001C078EF70BBC288075592D7F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64A5F21F21355825DCE0C337290A8160 /* Pods-Worksheet Maker */ = {
+			isa = PBXGroup;
+			children = (
+				5678815429C65F423ABF9D1124CD478F /* Info.plist */,
+				A1FF2C4D244C4C5D84A9A4EE2482976D /* Pods-Worksheet Maker.modulemap */,
+				1815A74F4422ED3A4D13E3E90F7DCA91 /* Pods-Worksheet Maker-acknowledgements.markdown */,
+				C9C1C84B4A1B3F2762D6F64CB806967C /* Pods-Worksheet Maker-acknowledgements.plist */,
+				D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */,
+				45A906648A55C881C2B22078D08C2ADE /* Pods-Worksheet Maker-frameworks.sh */,
+				7ACA8C64F43DDB78DA7C315EFE15AA92 /* Pods-Worksheet Maker-resources.sh */,
+				C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */,
+				EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */,
+				BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */,
+			);
+			name = "Pods-Worksheet Maker";
+			path = "Target Support Files/Pods-Worksheet Maker";
+			sourceTree = "<group>";
+		};
+		79431D09EF65B45A54BB33F408D2ECA8 /* SimplePDF */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */,
+				09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */,
+				916039991E9B120E8F228B14583FC29A /* Support Files */,
+			);
+			name = SimplePDF;
+			path = SimplePDF;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				BB5870201C60248D69A41FE3CB200E6A /* Pods */,
+				DA10602ED234EC97C3C644B0EC521774 /* Products */,
+				D62EB3BAEDDB02570911EDDC7AA3CFB5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		916039991E9B120E8F228B14583FC29A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3963EE8494DB1FBC6AAB94DC6A5F412 /* Info.plist */,
+				F124219945C607C47C3BD96DA5A728E1 /* SimplePDF.modulemap */,
+				E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */,
+				91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */,
+				CD442ED433A7E5D11E8B6DD2B9341BAB /* SimplePDF-prefix.pch */,
+				2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimplePDF";
+			sourceTree = "<group>";
+		};
+		BB5870201C60248D69A41FE3CB200E6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79431D09EF65B45A54BB33F408D2ECA8 /* SimplePDF */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D62EB3BAEDDB02570911EDDC7AA3CFB5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64A5F21F21355825DCE0C337290A8160 /* Pods-Worksheet Maker */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DA10602ED234EC97C3C644B0EC521774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */,
+				99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04812C754C89538CBCE91D2FA59B8F29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C07ADB2406AD83FFB16C68901F5746 /* SimplePDF-umbrella.h in Headers */,
+				FFC00E58D21CB7E6819B673B75703D47 /* SimplePDF.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55672CB111BB588104874C2F49A74537 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F48484E9FAF7DCFAFAC197EFB47106 /* Pods-Worksheet Maker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B0200D90533242A0F2009DCA8B7587D /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildPhases = (
+				40E9B9B29824E25F8478BA1825ED7644 /* Sources */,
+				E172A44CBC7FD7E1F9BE58D51A94562F /* Frameworks */,
+				04812C754C89538CBCE91D2FA59B8F29 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplePDF;
+			productName = SimplePDF;
+			productReference = 99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8A0AB6CB9FF3F257210EF9DDE95D77E4 /* Pods-Worksheet Maker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C74C4BDB4F46377C75811F040A38C8DD /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */;
+			buildPhases = (
+				1056216EBF87674972A39AF326858388 /* Sources */,
+				C3D7C554C94600D8F3EDB303E23A807C /* Frameworks */,
+				55672CB111BB588104874C2F49A74537 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4067228EB9B0AA0D24DD0E2CEF928F36 /* PBXTargetDependency */,
+			);
+			name = "Pods-Worksheet Maker";
+			productName = "Pods-Worksheet Maker";
+			productReference = 1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DA10602ED234EC97C3C644B0EC521774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A0AB6CB9FF3F257210EF9DDE95D77E4 /* Pods-Worksheet Maker */,
+				2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1056216EBF87674972A39AF326858388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC4F2909FDF96C29043B385A6D5D968 /* Pods-Worksheet Maker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E9B9B29824E25F8478BA1825ED7644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC182D70C9FB0D81B3CA2BD8AD609C62 /* SimplePDF-dummy.m in Sources */,
+				441DCC3461F8C917D05F54D8D375FF8B /* SimplePDF.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4067228EB9B0AA0D24DD0E2CEF928F36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimplePDF;
+			target = 2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */;
+			targetProxy = 7B7B7BCBA96AF40328233249C17DFC3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		33F8F7AAAA85E50D89ADDD29179D4D1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		494298BB1AA571772A421FEC61B4F95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		56730A192FBFEB01207F5FA841EB3964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7E3FDAA981BF7D042E73599762E9BC8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Worksheet_Maker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A129C4FD953198352FCB5879AE784421 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2C24224D3E7CE45CC611F59F53BE52A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Worksheet_Maker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56730A192FBFEB01207F5FA841EB3964 /* Debug */,
+				33F8F7AAAA85E50D89ADDD29179D4D1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B0200D90533242A0F2009DCA8B7587D /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494298BB1AA571772A421FEC61B4F95A /* Debug */,
+				A129C4FD953198352FCB5879AE784421 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C74C4BDB4F46377C75811F040A38C8DD /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C24224D3E7CE45CC611F59F53BE52A /* Debug */,
+				7E3FDAA981BF7D042E73599762E9BC8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
