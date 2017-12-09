@@ -25,21 +25,21 @@ class ViewController: UIViewController {
     var selectedOperationLabel = "Plus"
     
     @IBAction func buttonPlus(_ sender: Any) {
-        selectedOperation = "+"
+        selectedOperation = "Plus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMinus(_ sender: Any) {
-        selectedOperation = "-"
+        selectedOperation = "Minus"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMul(_ sender: Any) {
-        selectedOperation = "X"
+        selectedOperation = "Times"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     @IBAction func buttonDiv(_ sender: Any) {
-        selectedOperation = "/"
+        selectedOperation = "Division"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         let destinationVC =  segue.destination as! WorksheetVC
         destinationVC.numberOperation = selectedOperation
         destinationVC.pageNumber = selectedPageNumber
-        destinationVC.operationName = selectedOperationLabel
+        
         }
     }
     

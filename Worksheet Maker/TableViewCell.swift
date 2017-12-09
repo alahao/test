@@ -17,21 +17,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var RowNumber: UILabel!
     @IBOutlet weak var RowNumberTwo: UILabel!
     
-    // Fraction
-    @IBOutlet weak var fRowNumberOne: UILabel!
-
-    @IBOutlet weak var oneLN: UILabel!
-    @IBOutlet weak var oneLD: UILabel!
-    @IBOutlet weak var oneRN: UILabel!
-    @IBOutlet weak var oneRD: UILabel!
-    
-    @IBOutlet weak var fRowNumberTwo: UILabel!
-    @IBOutlet weak var fAnswerOneNumber: UILabel!
-    @IBOutlet weak var fAnswerOneR: UILabel!
-    @IBOutlet weak var fAnswerOneD: UILabel!
-    // End Fraction
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
