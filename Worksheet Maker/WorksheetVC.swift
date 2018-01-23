@@ -270,30 +270,33 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             let answerL = questionArray[indexPath.row][4]
             let answerR = questionArray[indexPath.row][5]
             
-            func formatAnswer(answer: String) {
+            let answerLabelL = cell.numberAnswerLabel
+            let answerLabelR = cell.numberAnswerTwoLabel
+            
+            func formatAnswer(answer: String, label: UILabel) {
             if answer.contains("/") && answer.contains(" "){
                 let unformattedAnswer = answer
                 let formattedAnswer = unformattedAnswer.split(separator: " ")
                 let attribString = NSMutableAttributedString(string: unformattedAnswer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                 attribString.addAttributes([NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction)], range: (unformattedAnswer as NSString).range(of: String(formattedAnswer[1])))
-                cell.numberAnswerTwoLabel.attributedText = attribString
-                cell.numberAnswerTwoLabel.sizeToFit()
+                label.attributedText = attribString
+                label.sizeToFit()
             }
             else if answerR.contains("/") {
                 let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                
-                cell.numberAnswerTwoLabel.attributedText = attribString
-                cell.numberAnswerTwoLabel.sizeToFit()
+                label.attributedText = attribString
+                label.sizeToFit()
             } else {
                 let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                 
-                cell.numberAnswerTwoLabel.attributedText = attribString
-                cell.numberAnswerTwoLabel.sizeToFit()
+                label.attributedText = attribString
+                label.sizeToFit()
             }
             }
             
-            formatAnswer(answer: answerL)
-            formatAnswer(answer: answerR)
+            formatAnswer(answer: answerL, label: answerLabelL!)
+            formatAnswer(answer: answerR, label: answerLabelR!)
             
         }
         cell.RowNumber.text = String(indexPath.row * 2 + 1)
