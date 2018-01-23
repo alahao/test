@@ -9,6 +9,23 @@
 import UIKit
 import SimplePDF
 
+extension UIFont
+{
+    static func fractionFont(ofSize pointSize: CGFloat) -> UIFont
+    {
+        let systemFontDesc = UIFont.systemFont(ofSize: pointSize).fontDescriptor
+        let fractionFontDesc = systemFontDesc.addingAttributes(
+            [
+                UIFontDescriptor.AttributeName.featureSettings: [
+                    [
+                        UIFontDescriptor.FeatureKey.featureIdentifier: kFractionsType,
+                        UIFontDescriptor.FeatureKey.typeIdentifier: kDiagonalFractionsSelector,
+                        ], ]
+            ] )
+        return UIFont(descriptor: fractionFontDesc, size:pointSize)
+    }
+}
+
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var worksheetTableView: UITableView!
@@ -45,12 +62,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var pageNumber = 2
     let defaultCellHeight = 40
     var cellHeight = 40
-    
-    var headerCells = [21,42,63,84,100,120,140,160,180,200,220,240,260,280,300]
+    let questionAnswerDivider = "┊"
     
     var questionNumber = 0
-    var questionArray = [["Quesion 1","Quesion 2","Answers1","Answers2"]]
-    //    var questionFractionArray = [[0,0,0,0,0,0,0,0,0,0,0,0]]
+    var questionArray = [["Quesion 1","Quesion 2", "space", "divider", "Answers1","Answers2"]]
     
     var currentPageArrayStart = 0
     
@@ -58,7 +73,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBAction func sendToPrint(_ sender: UIButton) {
         print("# Button Pressed")
         loadSimplePDF()
-        //savePdfDataWithTableView(tableView: worksheetTableView)
         loadPDFAndShare()
     }
     
@@ -85,7 +99,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         removeAllArray()
         for _ in 1...cellNumber {
             operationType()
-            //            print("$ Running generating Page")
         }
     }
     
@@ -120,8 +133,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             numberThree = numberAnswerTwo * numberFour
         }
         
-        questionArray.append(["\(numberOne) \(numberOpertaionSign) \(numberTwo) = ", "\(numberThree) \(numberOpertaionSign) \(numberFour) = ", "\(numberAnswerOne) "," \(numberAnswerTwo)"])
-        //        print("$ Running questionArray Append = \(questionArray)")
+        questionArray.append(["\(numberOne) \(numberOpertaionSign) \(numberTwo) = ", "\(numberThree) \(numberOpertaionSign) \(numberFour) = ", "", questionAnswerDivider, "\(numberAnswerOne) "," \(numberAnswerTwo)"])
     }
     
     func generatingRandomFraction(nLMin: UInt32, nLMax: UInt32, dLMin: UInt32, dLMax: UInt32, nRMin: UInt32, nRMax: UInt32, dRMin: UInt32, dRMax: UInt32) {
@@ -141,7 +153,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         fTwoAnswerN = fTwoLN * fTwoRD + fTwoRN * fTwoLD
         fTwoAnswerD = fTwoLD * fTwoRD
         
-        questionArray.append(["\(fOneLN)/\(fOneLD) + \(fOneRN)/\(fOneRD) = "," \(fTwoLN)/\(fTwoLD) + \(fTwoRN)/\(fTwoRD) = "," \(fOneAnswerN)/\(fOneAnswerD)","\(fTwoAnswerN)/\(fTwoAnswerD)"])
+        let simplifiedfOneAnswer = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
+        let simplifiedfTwoAnswer = simplifiedFraction(numerator: fTwoAnswerN, denominator: fTwoAnswerD)
+        
+        questionArray.append(["\(fOneLN)/\(fOneLD) + \(fOneRN)/\(fOneRD) = ", " \(fTwoLN)/\(fTwoLD) + \(fTwoRN)/\(fTwoRD) = ", "", questionAnswerDivider, simplifiedfOneAnswer, simplifiedfTwoAnswer])
     }
     
     //Operations
@@ -153,7 +168,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         generatingRandomNumber(numberAMin: 11, numberAMax: 99, numberBMin: 11, numberBMax: 99)}
     func OperationDivision() { // C/A=B
         generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
-    func OperationFraction() { //
+    func OperationFraction() { // 1/4 + 2/4 = 3/4
         generatingRandomFraction(nLMin: 2, nLMax: 9, dLMin: 2, dLMax: 9, nRMin: 2, nRMax: 9, dRMin: 2, dRMax: 9)
     }
     
@@ -172,7 +187,60 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             OperationDivision()
         } else if numberOperation == "Fraction" {
             OperationFraction()
-        }}
+        }
+    }
+    
+    func simplifiedFraction(numerator: Int, denominator: Int) -> (String)
+    {
+        var x = numerator
+        var y = denominator
+        while (y != 0) {
+            let buffer = y
+            y = x % y
+            x = buffer
+        }
+        
+        let hcfVal = x
+        let newNumerator = numerator/hcfVal
+        let newDenominator = denominator/hcfVal
+        
+        var finalNumerator = numerator;
+        var finalDenominator = denominator;
+        
+        let wholeNumbers:Int = newNumerator / newDenominator
+        let remainder:Int = newNumerator % newDenominator
+        
+        if(remainder > 0)
+        {
+            // see if we can simply the fraction part as well
+            if(newDenominator % remainder == 0) // no remainder means remainder can be simplified further
+            {
+                finalDenominator = newDenominator / remainder;
+                finalNumerator = remainder / remainder;
+            }
+            else
+            {
+                finalNumerator = remainder;
+                finalDenominator = newDenominator;
+            }
+        }
+        
+        if(wholeNumbers > 0 && remainder > 0)
+        {
+            // prints out whole number and fraction parts
+            return("\(wholeNumbers) \(finalNumerator)/\(finalDenominator)")
+        }
+        else if (wholeNumbers > 0 && remainder == 0)
+        {
+            // prints out whole number only
+            return("\(wholeNumbers)")
+        }
+        else
+        {
+            // prints out fraction part only
+            return("\(finalNumerator)/\(finalDenominator)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -191,31 +259,49 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return cellNumber
     }
     
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "worksheetCell", for: indexPath) as! TableViewCell
         
-        let pointSizeL : CGFloat = 22.0
-        let pointSizeS : CGFloat = 12.0
-        let systemFontDesc = UIFont.systemFont(ofSize: pointSizeS, weight: UIFont.Weight.light).fontDescriptor
-        let fractionFontDesc = systemFontDesc.addingAttributes([
-            UIFontDescriptor.AttributeName.featureSettings: [[
-                UIFontDescriptor.FeatureKey.featureIdentifier: kFractionsType,
-                UIFontDescriptor.FeatureKey.typeIdentifier: kDiagonalFractionsSelector,
-                ]]])
-        
+        let pointSizeFraction : CGFloat = 8.0
+      
         if numberOperation == "Fraction" {
-            cell.numberOneLabel.font = UIFont(descriptor: fractionFontDesc, size: pointSizeL)
-            cell.numberAnswerLabel.font = UIFont(descriptor: fractionFontDesc, size: pointSizeS)
-            cell.numberThreeLabel.font = UIFont(descriptor: fractionFontDesc, size: pointSizeL)
-            cell.numberAnswerTwoLabel.font = UIFont(descriptor: fractionFontDesc, size: pointSizeS)
+            let answerL = questionArray[indexPath.row][4]
+            let answerR = questionArray[indexPath.row][5]
+            
+            func formatAnswer(answer: String) {
+            if answer.contains("/") && answer.contains(" "){
+                let unformattedAnswer = answer
+                let formattedAnswer = unformattedAnswer.split(separator: " ")
+                let attribString = NSMutableAttributedString(string: unformattedAnswer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
+                attribString.addAttributes([NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction)], range: (unformattedAnswer as NSString).range(of: String(formattedAnswer[1])))
+                cell.numberAnswerTwoLabel.attributedText = attribString
+                cell.numberAnswerTwoLabel.sizeToFit()
+            }
+            else if answerR.contains("/") {
+                let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
+               
+                cell.numberAnswerTwoLabel.attributedText = attribString
+                cell.numberAnswerTwoLabel.sizeToFit()
+            } else {
+                let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
+                
+                cell.numberAnswerTwoLabel.attributedText = attribString
+                cell.numberAnswerTwoLabel.sizeToFit()
+            }
+            }
+            
+            formatAnswer(answer: answerL)
+            formatAnswer(answer: answerR)
+            
         }
-        
         cell.RowNumber.text = String(indexPath.row * 2 + 1)
         cell.numberOneLabel.text = String(describing: questionArray[indexPath.row][0])
-        cell.numberAnswerLabel.text = String(describing: questionArray[indexPath.row][2])
+        cell.numberAnswerLabel.text = String(describing: questionArray[indexPath.row][4])
         cell.RowNumberTwo.text = String(indexPath.row * 2 + 2)
         cell.numberThreeLabel.text = String(describing: questionArray[indexPath.row][1])
-        cell.numberAnswerTwoLabel.text = String(describing: questionArray[indexPath.row][3])
+        cell.numberAnswerTwoLabel.text = String(describing: questionArray[indexPath.row][5])
         return cell
     }
     
@@ -223,19 +309,24 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func loadSimplePDF() {
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize)
-        
+        pdf.setContentAlignment(.center)
         
         var tableDef = TableDefinition (
-            alignments: [.left, .left, .center, .center],
-            columnWidths: [240, 240, 40, 40],
-            fonts: [UIFont.systemFont(ofSize: 20),UIFont.systemFont(ofSize: 20),
-                    UIFont.systemFont(ofSize: 10),UIFont.systemFont(ofSize: 10)],
-            textColors: [UIColor.black])
+                alignments: [.center],
+                columnWidths: [220, 220, 70, 20, 20, 20],
+                fonts: [UIFont.systemFont(ofSize: 12),
+                        UIFont.systemFont(ofSize: 12),
+                        UIFont.systemFont(ofSize: 35),
+                        UIFont.systemFont(ofSize: 35),
+                        UIFont.systemFont(ofSize: 7),
+                        UIFont.systemFont(ofSize: 7)],
+                textColors: [UIColor.black, UIColor.black, UIColor.lightGray, UIColor.lightGray, UIColor.darkGray, UIColor.darkGray])
         
         if numberOperation == "Fraction" {
             // Fraction font size
-            let pointSizeL : CGFloat = 30.0
-            let pointSizeS : CGFloat = 15.0
+            let pointSizeDivider : CGFloat = 35.0
+            let pointSizeL : CGFloat = 18.0
+            let pointSizeS : CGFloat = 8.0
             let systemFontDesc = UIFont.systemFont(ofSize: pointSizeS, weight: UIFont.Weight.light).fontDescriptor
             let fractionFontDesc = systemFontDesc.addingAttributes([
                 UIFontDescriptor.AttributeName.featureSettings: [[
@@ -244,24 +335,26 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     ]]])
             
             tableDef = TableDefinition (
-                alignments: [.left, .left, .center, .center],
-                columnWidths: [240, 240, 50, 60],
-                fonts: [UIFont(descriptor: fractionFontDesc,
-                               size: pointSizeL),UIFont(descriptor: fractionFontDesc,
-                                                        size: pointSizeL), UIFont(descriptor: fractionFontDesc,
-                                                                                  size: pointSizeS),UIFont(descriptor: fractionFontDesc,
-                                                                                                           size: pointSizeS)], textColors: [UIColor.black])
+                alignments: [.center],
+                columnWidths: [220, 220, 70, 10, 25, 25],
+                fonts: [UIFont(descriptor: fractionFontDesc, size: pointSizeL),
+                        UIFont(descriptor: fractionFontDesc, size: pointSizeL),
+                        UIFont(descriptor: fractionFontDesc, size: pointSizeL),
+                        UIFont(descriptor: fractionFontDesc, size: pointSizeDivider),
+                        UIFont(descriptor: fractionFontDesc, size: pointSizeS),
+                        UIFont(descriptor: fractionFontDesc, size: pointSizeS)],
+                textColors: [UIColor.black, UIColor.black, UIColor.lightGray, UIColor.lightGray, UIColor.darkGray, UIColor.darkGray])
         }
         
         // Create Table
         while currentPageArrayStart + 19 < cellNumber {
-            pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.darkGray)
+            pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
             pdf.addLineSpace(10)
             let currentPageArray = questionArray[currentPageArrayStart...currentPageArrayStart + 19]
-            pdf.addTable(currentPageArray.count, columnCount: 4, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
+            pdf.addTable(currentPageArray.count, columnCount: 6, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
             currentPageArrayStart = currentPageArrayStart + 20
             pdf.addLineSpace(10)
-            pdf.addText("Created by WORKSHEET MAKER, download free on Apple AppStore", font: UIFont.systemFont(ofSize: 12), textColor: UIColor.darkGray)
+            pdf.addText("Created by WORKSHEET MAKER, download free on Apple AppStore", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()
