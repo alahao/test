@@ -282,7 +282,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 label.attributedText = attribString
                 label.sizeToFit()
             }
-            else if answerR.contains("/") {
+            else if answer.contains("/") {
                 let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                
                 label.attributedText = attribString
