@@ -68,6 +68,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var questionArray = [["Quesion 1","Quesion 2", "space", "divider", "Answers1","Answers2"]]
     
     var currentPageArrayStart = 0
+    var currentRow = 0
     
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
@@ -133,7 +134,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             numberThree = numberAnswerTwo * numberFour
         }
         
-        questionArray.append(["\(numberOne) \(numberOpertaionSign) \(numberTwo) = ", "\(numberThree) \(numberOpertaionSign) \(numberFour) = ", "", questionAnswerDivider, "\(numberAnswerOne) "," \(numberAnswerTwo)"])
+        questionArray.append(["\(numberOne) \(numberOpertaionSign) \(numberTwo) = ", "\(numberThree) \(numberOpertaionSign) \(numberFour) = ", "", questionAnswerDivider, "\(numberAnswerOne)","\(numberAnswerTwo)"])
     }
     
     func generatingRandomFraction(nLMin: UInt32, nLMax: UInt32, dLMin: UInt32, dLMax: UInt32, nRMin: UInt32, nRMax: UInt32, dRMin: UInt32, dRMax: UInt32) {
@@ -280,18 +281,18 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 let attribString = NSMutableAttributedString(string: unformattedAnswer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                 attribString.addAttributes([NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction)], range: (unformattedAnswer as NSString).range(of: String(formattedAnswer[1])))
                 label.attributedText = attribString
-                label.sizeToFit()
+              
             }
-            else if answerR.contains("/") {
+            else if answer.contains("/") {
                 let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.fractionFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
                
                 label.attributedText = attribString
-                label.sizeToFit()
+              
             } else {
-                let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: pointSizeFraction), NSAttributedStringKey.foregroundColor: UIColor.black])
+                let attribString = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 10), NSAttributedStringKey.foregroundColor: UIColor.black])
                 
                 label.attributedText = attribString
-                label.sizeToFit()
+              
             }
             }
             
@@ -300,9 +301,11 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
         }
         cell.RowNumber.text = String(indexPath.row * 2 + 1)
+        cell.RowNumber.sizeToFit()
         cell.numberOneLabel.text = String(describing: questionArray[indexPath.row][0])
         cell.numberAnswerLabel.text = String(describing: questionArray[indexPath.row][4])
         cell.RowNumberTwo.text = String(indexPath.row * 2 + 2)
+        cell.RowNumberTwo.sizeToFit()
         cell.numberThreeLabel.text = String(describing: questionArray[indexPath.row][1])
         cell.numberAnswerTwoLabel.text = String(describing: questionArray[indexPath.row][5])
         return cell
@@ -314,49 +317,79 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let pdf = SimplePDF(pageSize: A4paperSize)
         pdf.setContentAlignment(.center)
         
-        var tableDef = TableDefinition (
-                alignments: [.center],
-                columnWidths: [220, 220, 70, 20, 20, 20],
-                fonts: [UIFont.systemFont(ofSize: 12),
-                        UIFont.systemFont(ofSize: 12),
-                        UIFont.systemFont(ofSize: 35),
-                        UIFont.systemFont(ofSize: 35),
-                        UIFont.systemFont(ofSize: 7),
-                        UIFont.systemFont(ofSize: 7)],
-                textColors: [UIColor.black, UIColor.black, UIColor.lightGray, UIColor.lightGray, UIColor.darkGray, UIColor.darkGray])
-        
-        if numberOperation == "Fraction" {
-            // Fraction font size
-            let pointSizeDivider : CGFloat = 35.0
-            let pointSizeL : CGFloat = 18.0
-            let pointSizeS : CGFloat = 8.0
-            let systemFontDesc = UIFont.systemFont(ofSize: pointSizeS, weight: UIFont.Weight.light).fontDescriptor
-            let fractionFontDesc = systemFontDesc.addingAttributes([
-                UIFontDescriptor.AttributeName.featureSettings: [[
-                    UIFontDescriptor.FeatureKey.featureIdentifier: kFractionsType,
-                    UIFontDescriptor.FeatureKey.typeIdentifier: kDiagonalFractionsSelector,
-                    ]]])
-            
-            tableDef = TableDefinition (
-                alignments: [.center],
-                columnWidths: [220, 220, 70, 10, 25, 25],
-                fonts: [UIFont(descriptor: fractionFontDesc, size: pointSizeL),
-                        UIFont(descriptor: fractionFontDesc, size: pointSizeL),
-                        UIFont(descriptor: fractionFontDesc, size: pointSizeL),
-                        UIFont(descriptor: fractionFontDesc, size: pointSizeDivider),
-                        UIFont(descriptor: fractionFontDesc, size: pointSizeS),
-                        UIFont(descriptor: fractionFontDesc, size: pointSizeS)],
-                textColors: [UIColor.black, UIColor.black, UIColor.lightGray, UIColor.lightGray, UIColor.darkGray, UIColor.darkGray])
-        }
         
         // Create Table
         while currentPageArrayStart + 19 < cellNumber {
             pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
-            pdf.addLineSpace(10)
+            pdf.addVerticalSpace(20)
+           
+//            pdf.addTable(currentPageArray.count, columnCount: 6, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
+            
+            while currentRow < currentPageArrayStart + 20 {
+                    
             let currentPageArray = questionArray[currentPageArrayStart...currentPageArrayStart + 19]
-            pdf.addTable(currentPageArray.count, columnCount: 6, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
+                var answerTextL = NSMutableAttributedString()
+                var answerTextR = NSMutableAttributedString()
+                
+                if numberOperation == "Fraction" {
+                    let answerL = currentPageArray[currentRow][4]
+                    let answerR = currentPageArray[currentRow][5]
+                
+//                    let answerLabelL = cell.numberAnswerLabel
+//                    let answerLabelR = cell.numberAnswerTwoLabel
+                    
+                    func formatAnswer(answer: String, label: String) {
+                        if answer.contains("/") && answer.contains(" "){
+                            let unformattedAnswer = answer
+                            let formattedAnswer = unformattedAnswer.split(separator: " ")
+                            
+                            let answerText = NSMutableAttributedString(string: unformattedAnswer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
+                            answerText.addAttributes([NSAttributedStringKey.font: UIFont.fractionFont(ofSize: 10)], range: (unformattedAnswer as NSString).range(of: String(formattedAnswer[1])))
+                            
+                            if label == "L" {
+                                answerTextL = answerText
+                            } else {
+                                answerTextR = answerText
+                            }
+                        }
+                        else if answer.contains("/") {
+                            let answerText = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.fractionFont(ofSize: 10)])
+                            if label == "L" {
+                                answerTextL = answerText
+                            } else {
+                                answerTextR = answerText
+                            }
+                        } else {
+                            let answerText = NSMutableAttributedString(string: answer, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
+                            if label == "L" {
+                                answerTextL = answerText
+                            } else {
+                                answerTextR = answerText
+                            }
+                        }
+                    }
+                    formatAnswer(answer: answerL, label: "L")
+                    formatAnswer(answer: answerR, label: "R")
+                }
+                
+                pdf.beginHorizontalArrangement()
+                pdf.setContentAlignment(.left)
+                pdf.addText("\(currentPageArray[currentRow][0])", font: UIFont.systemFont(ofSize: 15), textColor: .black)
+                pdf.addHorizontalSpace(120)
+                pdf.addText("\(currentPageArray[currentRow][1])")
+                pdf.addHorizontalSpace(120)
+                
+                pdf.addAttributedText(answerTextL)
+                pdf.addHorizontalSpace(50)
+                pdf.setContentAlignment(.center)
+                pdf.addAttributedText(answerTextR)
+                pdf.endHorizontalArrangement()
+//            pdf.addLineSeparator(height: 0.01)
+            pdf.addVerticalSpace(18)
+            currentRow = currentRow + 1
+            }
             currentPageArrayStart = currentPageArrayStart + 20
-            pdf.addLineSpace(10)
+            
             pdf.addText("Created by WORKSHEET MAKER, download free on Apple AppStore", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             
             if currentPageArrayStart < cellNumber {
