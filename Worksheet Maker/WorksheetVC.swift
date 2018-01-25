@@ -98,10 +98,10 @@ public extension CGFloat {
 
 extension UIFont
 {
-    static func fractionFont(ofSize pointSize: CGFloat) -> UIFont
+    static func ftionFont(ofSize pointSize: CGFloat) -> UIFont
     {
         let systemFontDesc = UIFont.systemFont(ofSize: pointSize).fontDescriptor
-        let fractionFontDesc = systemFontDesc.addingAttributes(
+        let ftionFontDesc = systemFontDesc.addingAttributes(
             [
                 UIFontDescriptor.AttributeName.featureSettings: [
                     [
@@ -109,7 +109,7 @@ extension UIFont
                         UIFontDescriptor.FeatureKey.typeIdentifier: kDiagonalFractionsSelector,
                         ], ]
             ] )
-        return UIFont(descriptor: fractionFontDesc, size:pointSize)
+        return UIFont(descriptor: ftionFontDesc, size:pointSize)
     }
 }
 
@@ -127,21 +127,23 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     @IBOutlet weak var worksheetTableView: UITableView!
     
+    var randomOperationSign = 0
+    
     var numberOne = 0
     var numberTwo = 0
     var numberAnswerOne = 0
-    var numberOperation = ""
-    var numberThree = 0
-    var numberFour = 0
     var numberAnswerTwo = 0
-    var numberOperationTwo = ""
+    var numberOperation = ""
     var numberOpertaionSign = ""
     
+    var questionSetOne = ""
+    var questionSetTwo = ""
+    
     // Fraction
-    var fOneLN = 0
-    var fOneLD = 0
-    var fOneRN = 0
-    var fOneRD = 0
+    var fLN = 0
+    var fLD = 0
+    var fRN = 0
+    var fRD = 0
     var fOneAnswerN = 0
     var fOneAnswerD = 0
     var fTwoLN = 0
@@ -211,84 +213,119 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    
     func generatingRandomNumber(numberAMin: Int, numberAMax: Int, numberBMin: Int, numberBMax: Int) {
+
+        
         if numberOperation == "Plus" {
             numberOne = Int.random(min: numberAMin, max: numberAMax)
             numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberThree = Int.random(min: numberAMin, max: numberAMax)
-            numberFour = Int.random(min: numberBMin, max: numberBMax)
             numberAnswerOne = numberOne + numberTwo
-            numberAnswerTwo = numberThree + numberFour
+            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+            numberOne = Int.random(min: numberAMin, max: numberAMax)
+            numberTwo = Int.random(min: numberBMin, max: numberBMax)
+            numberAnswerTwo = numberOne + numberTwo
+            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
         } else if numberOperation == "Minus" {
             numberOne = Int.random(min: numberAMin, max: numberAMax)
             numberTwo = Int.random(min: numberBMin, max: numberOne)
-            numberThree = Int.random(min: numberAMin, max: numberAMax)
-            numberFour = Int.random(min: numberBMin, max: numberThree)
             numberAnswerOne = numberOne - numberTwo
-            numberAnswerTwo = numberThree - numberFour
+            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+            numberOne = Int.random(min: numberAMin, max: numberAMax)
+            numberTwo = Int.random(min: numberBMin, max: numberOne)
+            numberAnswerTwo = numberOne - numberTwo
+            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
         } else if numberOperation == "Times" {
             numberOne = Int.random(min: numberAMin, max: numberAMax)
             numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberThree = Int.random(min: numberAMin, max: numberAMax)
-            numberFour = Int.random(min: numberBMin, max: numberBMax)
             numberAnswerOne = numberOne * numberTwo
-            numberAnswerTwo = numberThree * numberFour
+            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+            numberOne = Int.random(min: numberAMin, max: numberAMax)
+            numberTwo = Int.random(min: numberBMin, max: numberBMax)
+            numberAnswerTwo = numberOne * numberTwo
+            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
         } else if numberOperation == "Division" {
             numberTwo = Int.random(min: numberAMin, max: numberAMax)
             numberAnswerOne = Int.random(min: numberBMin, max: numberBMax)
-            numberFour = Int.random(min: numberAMin, max: numberAMax)
-            numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
             numberOne = numberAnswerOne * numberTwo
-            numberThree = numberAnswerTwo * numberFour
-        } else if numberOperation == "Mixed" {
+            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
             numberTwo = Int.random(min: numberAMin, max: numberAMax)
-            numberAnswerOne = Int.random(min: numberBMin, max: numberBMax)
-            numberFour = Int.random(min: numberAMin, max: numberAMax)
             numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberOne = numberAnswerOne * numberTwo
-            numberThree = numberAnswerTwo * numberFour
+            numberOne = numberAnswerTwo * numberTwo
+            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
         }
+//        else if numberOperation == "Mixed" {
+//            numberTwo = Int.random(min: numberAMin, max: numberAMax)
+//            numberAnswerOne = Int.random(min: numberBMin, max: numberBMax)
+//            numberFour = Int.random(min: numberAMin, max: numberAMax)
+//            numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
+//            numberOne = numberAnswerOne * numberTwo
+//            numberThree = numberAnswerTwo * numberFour
+//        }
         
-        questionArray.append(["\(numberOne) \(numberOpertaionSign) \(numberTwo) = ", "\(numberThree) \(numberOpertaionSign) \(numberFour) = ", "", questionAnswerDivider, "\(numberAnswerOne) "," \(numberAnswerTwo)"])
+        questionArray.append([questionSetOne, questionSetTwo, "", questionAnswerDivider, "\(numberAnswerOne) "," \(numberAnswerTwo)"])
     }
     
     func generatingRandomFraction(nLMin: Int, nLMax: Int, dLMin: Int, dLMax: Int, nRMin: Int, nRMax: Int, dRMin: Int, dRMax: Int) {
-        fOneLN = Int.random(min: nLMin, max: nLMax)
-        fOneLD = Int.random(min: dLMin, max: dLMax)
-        fOneRN = Int.random(min: nRMin, max: nRMax)
-        fOneRD = Int.random(min: dRMin, max: dRMax)
+        fLN = Int.random(min: nLMin, max: nLMax)
+        fLD = Int.random(min: dLMin, max: dLMax)
+        fRN = Int.random(min: nRMin, max: nRMax)
+        fRD = Int.random(min: dRMin, max: dRMax)
         
-        fTwoLN = Int.random(min: nLMin, max: nLMax)
-        fTwoLD = Int.random(min: dLMin, max: dLMax)
-        fTwoRN = Int.random(min: nRMin, max: nRMax)
-        fTwoRD = Int.random(min: dRMin, max: dRMax)
+        fOneAnswerN = fLN * fRD + fRN * fLD
+        fOneAnswerD = fLD * fRD
+        questionSetOne = "\(fLN)/\(fLD) + \(fRN)/\(fRD) = "
         
-        fOneAnswerN = fOneLN * fOneRD + fOneRN * fOneLD
-        fOneAnswerD = fOneLD * fOneRD
+        fLN = Int.random(min: nLMin, max: nLMax)
+        fLD = Int.random(min: dLMin, max: dLMax)
+        fRN = Int.random(min: nRMin, max: nRMax)
+        fRD = Int.random(min: dRMin, max: dRMax)
         
-        fTwoAnswerN = fTwoLN * fTwoRD + fTwoRN * fTwoLD
-        fTwoAnswerD = fTwoLD * fTwoRD
+        fTwoAnswerN = fLN * fRD + fRN * fLD
+        fTwoAnswerD = fLD * fRD
+        questionSetTwo = "\(fLN)/\(fLD) + \(fRN)/\(fRD) = "
         
-        let simplifiedfOneAnswer = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
+        let simplifiedfAnswer = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
         let simplifiedfTwoAnswer = simplifiedFraction(numerator: fTwoAnswerN, denominator: fTwoAnswerD)
         
-        questionArray.append(["\(fOneLN)/\(fOneLD) + \(fOneRN)/\(fOneRD) = ", " \(fTwoLN)/\(fTwoLD) + \(fTwoRN)/\(fTwoRD) = ", "", questionAnswerDivider, simplifiedfOneAnswer, simplifiedfTwoAnswer])
+        questionArray.append([questionSetOne, questionSetTwo, "", questionAnswerDivider, simplifiedfAnswer, simplifiedfTwoAnswer])
     }
     
     func generatingRandomDecimal(numberAMin: Double, numberAMax: Double, numberBMin: Double, numberBMax: Double)
     {
+        var decNumberAnswer = 0.00
+    
+        func randomDecimalOperation() {
         decNumberOne = Double.random(min: numberAMin, max: numberAMax)
         decNumberOne = decNumberOne.rounded(toPlaces: 2)
         decNumberTwo = Double.random(min: numberBMin, max: numberBMax)
         decNumberTwo = decNumberTwo.rounded(toPlaces: 2)
-        decNumberThree = Double.random(min: numberAMin, max: numberAMax)
-        decNumberThree = decNumberThree.rounded(toPlaces: 2)
-        decNumberFour = Double.random(min: numberBMin, max: numberBMax)
-        decNumberFour = decNumberFour.rounded(toPlaces: 2)
-        decNumberAnswerOne = decNumberOne + decNumberTwo
-        decNumberAnswerTwo = decNumberThree + decNumberFour
+            
+            randomOperationSign = Int.random(min: 0, max: 4)
+            if randomOperationSign == 0 || randomOperationSign == 1 {
+                numberOpertaionSign = "+"
+                decNumberAnswer = decNumberOne + decNumberTwo
+            } else if randomOperationSign == 2 || randomOperationSign == 3 {
+                numberOpertaionSign = "-"
+                decNumberAnswer = decNumberOne
+                decNumberOne = decNumberAnswer + decNumberTwo
+                
+            } else if randomOperationSign == 4 {
+                numberOpertaionSign = "×"
+                decNumberTwo = decNumberTwo.rounded(toPlaces: 1)
+                decNumberAnswer = decNumberOne * decNumberTwo
+            }
+        }
+    
+        randomDecimalOperation()
+        questionSetOne = "\(decNumberOne) \(numberOpertaionSign) \(decNumberTwo) = "
+        decNumberAnswerOne = decNumberAnswer
         
-        questionArray.append(["\(decNumberOne) \(numberOpertaionSign) \(decNumberTwo) = ", "\(decNumberThree) \(numberOpertaionSign) \(decNumberFour) = ", "", questionAnswerDivider, "\(decNumberAnswerOne) "," \(decNumberAnswerTwo)"])
+        randomDecimalOperation()
+        questionSetTwo = "\(decNumberOne) \(numberOpertaionSign) \(decNumberTwo) = "
+        decNumberAnswerTwo = decNumberAnswer
+        
+        questionArray.append([questionSetOne, questionSetTwo, "", questionAnswerDivider, "\(decNumberAnswerOne) "," \(decNumberAnswerTwo)"])
     }
     
     
@@ -352,7 +389,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         if(remainder > 0)
         {
-            // see if we can simply the fraction part as well
+            // see if we can simply the ftion part as well
             if(newDenominator % remainder == 0) // no remainder means remainder can be simplified further
             {
                 finalDenominator = newDenominator / remainder;
@@ -367,7 +404,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         if(wholeNumbers > 0 && remainder > 0)
         {
-            // prints out whole number and fraction parts
+            // prints out whole number and ftion parts
             return("\(wholeNumbers) \(finalNumerator)/\(finalDenominator)")
         }
         else if (wholeNumbers > 0 && remainder == 0)
@@ -377,7 +414,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         else
         {
-            // prints out fraction part only
+            // prints out ftion part only
             return("\(finalNumerator)/\(finalDenominator)")
         }
     }
