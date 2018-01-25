@@ -48,6 +48,17 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
+    @IBAction func buttonDec(_ sender: Any) {
+        selectedOperation = "Decimal"
+        performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
+    }
+    
+    @IBAction func buttonMix(_ sender: Any) {
+        selectedOperation = "Mixed"
+        performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueCreateWorkSheet" {
         let destinationVC =  segue.destination as! WorksheetVC
