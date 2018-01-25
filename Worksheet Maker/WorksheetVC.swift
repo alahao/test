@@ -129,6 +129,9 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     var randomOperationSign = 0
     
+    // 0: EASY, 1: MEDIUM, 2: HARD
+    var difficulty = 0
+    
     var numberOne = 0
     var numberTwo = 0
     var numberAnswerOne = 0
@@ -213,10 +216,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
-    
+    // + - X / and Mixed
     func generatingRandomNumber(numberAMin: Int, numberAMax: Int, numberBMin: Int, numberBMax: Int) {
-
-        
         if numberOperation == "Plus" {
             numberOne = Int.random(min: numberAMin, max: numberAMax)
             numberTwo = Int.random(min: numberBMin, max: numberBMax)
@@ -253,19 +254,13 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
             numberOne = numberAnswerTwo * numberTwo
             questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+        } else if numberOperation == "Mixed" {
         }
-//        else if numberOperation == "Mixed" {
-//            numberTwo = Int.random(min: numberAMin, max: numberAMax)
-//            numberAnswerOne = Int.random(min: numberBMin, max: numberBMax)
-//            numberFour = Int.random(min: numberAMin, max: numberAMax)
-//            numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
-//            numberOne = numberAnswerOne * numberTwo
-//            numberThree = numberAnswerTwo * numberFour
-//        }
         
         questionArray.append([questionSetOne, questionSetTwo, "", questionAnswerDivider, "\(numberAnswerOne) "," \(numberAnswerTwo)"])
     }
     
+    // Fraction
     func generatingRandomFraction(nLMin: Int, nLMax: Int, dLMin: Int, dLMax: Int, nRMin: Int, nRMax: Int, dRMin: Int, dRMax: Int) {
         fLN = Int.random(min: nLMin, max: nLMax)
         fLD = Int.random(min: dLMin, max: dLMax)
@@ -291,15 +286,15 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         questionArray.append([questionSetOne, questionSetTwo, "", questionAnswerDivider, simplifiedfAnswer, simplifiedfTwoAnswer])
     }
     
-    func generatingRandomDecimal(numberAMin: Double, numberAMax: Double, numberBMin: Double, numberBMax: Double)
-    {
+    // Decimal
+    func generatingRandomDecimal(numberAMin: Double, numberAMax: Double, numberBMin: Double, numberBMax: Double, dPlaceOne : Int, dPlaceTwo: Int, dPlaceMul: Int) {
+        
         var decNumberAnswer = 0.00
-    
         func randomDecimalOperation() {
         decNumberOne = Double.random(min: numberAMin, max: numberAMax)
-        decNumberOne = decNumberOne.rounded(toPlaces: 2)
+        decNumberOne = decNumberOne.rounded(toPlaces: dPlaceOne)
         decNumberTwo = Double.random(min: numberBMin, max: numberBMax)
-        decNumberTwo = decNumberTwo.rounded(toPlaces: 2)
+        decNumberTwo = decNumberTwo.rounded(toPlaces: dPlaceTwo)
             
             randomOperationSign = Int.random(min: 0, max: 4)
             if randomOperationSign == 0 || randomOperationSign == 1 {
@@ -312,7 +307,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 
             } else if randomOperationSign == 4 {
                 numberOpertaionSign = "×"
-                decNumberTwo = decNumberTwo.rounded(toPlaces: 1)
+                decNumberTwo = decNumberTwo.rounded(toPlaces: dPlaceMul)
                 decNumberAnswer = decNumberOne * decNumberTwo
             }
         }
@@ -330,18 +325,104 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     
     //Operations
+    var aMin = 0
+    var aMax = 0
+    var bMin = 0
+    var bMax = 0
+    
     func OperationPlus() { // A+B=C
-        generatingRandomNumber(numberAMin: 11, numberAMax: 99, numberBMin: 11, numberBMax: 99)}
+        if difficulty == 0 {
+            aMin = 1
+            aMax = 9
+            bMin = 1
+            bMax = 9
+        } else if difficulty == 1 {
+            aMin = 1
+            aMax = 999
+            bMin = 1
+            bMax = 99
+        } else if difficulty == 2 {
+            aMin = 1
+            aMax = 99999
+            bMin = 1
+            bMax = 9999
+        }
+        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
     func OperationMinus() { // A-B=C
-        generatingRandomNumber(numberAMin: 11, numberAMax: 99, numberBMin: 11, numberBMax: 99)}
+        if difficulty == 0 {
+            aMin = 1
+            aMax = 9
+            bMin = 1
+            bMax = 9
+        } else if difficulty == 1 {
+            aMin = 1
+            aMax = 99
+            bMin = 1
+            bMax = 999
+        } else if difficulty == 2 {
+            aMin = 1
+            aMax = 999
+            bMin = 1
+            bMax = 9999
+        }
+        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
     func OperationMul() { // A*B=C
-        generatingRandomNumber(numberAMin: 11, numberAMax: 99, numberBMin: 11, numberBMax: 99)}
+        if difficulty == 0 {
+            aMin = 1
+            aMax = 9
+            bMin = 1
+            bMax = 9
+        } else if difficulty == 1 {
+            aMin = 1
+            aMax = 99
+            bMin = 1
+            bMax = 99
+        } else if difficulty == 2 {
+            aMin = 1
+            aMax = 9999
+            bMin = 1
+            bMax = 99
+        }
+        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
     func OperationDivision() { // C/A=B
-        generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
+        if difficulty == 0 {
+            aMin = 1
+            aMax = 9
+            bMin = 1
+            bMax = 9
+        } else if difficulty == 1 {
+            aMin = 1
+            aMax = 19
+            bMin = 1
+            bMax = 19
+        } else if difficulty == 2 {
+            aMin = 1
+            aMax = 99
+            bMin = 1
+            bMax = 99
+        }
+        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
     func OperationFraction() { // 1/4 + 2/4 = 3/4
         generatingRandomFraction(nLMin: 2, nLMax: 9, dLMin: 2, dLMax: 9, nRMin: 2, nRMax: 9, dRMin: 2, dRMax: 9)}
-    func OperationDecimal() { // 1/4 + 2/4 = 3/4
-        generatingRandomDecimal(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
+    func OperationDecimal() { // 1.3 + 2.3 = 3.6  Mixed Operation
+        var decimalPlacesOne = 0
+        var decimalPlacesTwo = 0
+        var decimalPlacesMul = 0
+        
+        if difficulty == 0 {
+            decimalPlacesOne = Int.random(min: 1, max: 1)
+            decimalPlacesTwo = Int.random(min: 0, max: 1)
+            decimalPlacesMul = Int.random(min: 0, max: 1)
+        } else if difficulty == 1 {
+            decimalPlacesOne = Int.random(min: 1, max: 2)
+            decimalPlacesTwo = Int.random(min: 0, max: 2)
+            decimalPlacesMul = Int.random(min: 0, max: 1)
+        } else if difficulty == 2 {
+            decimalPlacesOne = Int.random(min: 1, max: 3)
+            decimalPlacesTwo = Int.random(min: 0, max: 3)
+            decimalPlacesMul = Int.random(min: 0, max: 2)
+        }
+        generatingRandomDecimal(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9, dPlaceOne: decimalPlacesOne, dPlaceTwo: decimalPlacesTwo, dPlaceMul: decimalPlacesMul)}
     func OperationMixed() { // 1/4 + 2/4 = 3/4
         generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
     
@@ -458,11 +539,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func loadSimplePDF() {
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize)
-        pdf.setContentAlignment(.center)
         
         var tableDef = TableDefinition (
             alignments: [.center],
-            columnWidths: [220, 220, 70, 20, 20, 20],
+            columnWidths: [220, 220, 10, 20, 20, 20],
             fonts: [UIFont.systemFont(ofSize: 12),
                     UIFont.systemFont(ofSize: 12),
                     UIFont.systemFont(ofSize: 35),
@@ -475,7 +555,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if numberOperation == "Fraction" {
         tableDef = TableDefinition (
                 alignments: [.center],
-                columnWidths: [220, 220, 70, 20, 20, 20],
+                columnWidths: [220, 220, 10, 20, 20, 20],
                 fonts: [UIFont.systemFont(ofSize: 12),
                         UIFont.systemFont(ofSize: 12),
                         UIFont.systemFont(ofSize: 35),
@@ -487,12 +567,19 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
     
         // Create Table
+        
         while currentPageArrayStart + 19 < cellNumber {
+            pdf.setContentAlignment(.center)
             pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
             pdf.addLineSpace(10)
+            
+            pdf.setContentAlignment(.left)
+            pdf.addHorizontalSpace(50)
             let currentPageArray = questionArray[currentPageArrayStart...currentPageArrayStart + 19]
             pdf.addTable(currentPageArray.count, columnCount: 6, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
             currentPageArrayStart = currentPageArrayStart + 20
+            
+            pdf.setContentAlignment(.center)
             pdf.addLineSpace(10)
             pdf.addText("Created by WORKSHEET MAKER, download free on Apple AppStore", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             

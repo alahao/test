@@ -199,6 +199,9 @@
                                     <segment title="Hard"/>
                                 </segments>
                                 <color key="tintColor" red="0.6373115868" green="0.84554182259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentDifficulty:" destination="BYZ-38-t0r" eventType="valueChanged" id="4JR-9b-G9Q"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jut-54-3Co" userLabel="StepperView">
                                 <rect key="frame" x="84" y="162" width="222" height="55"/>
@@ -212,7 +215,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 page" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-LH-LhN">
-                                        <rect key="frame" x="41.5" y="8" width="53.5" height="22"/>
+                                        <rect key="frame" x="8" y="8" width="87" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.6373115868" green="0.84554182259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,6 +239,7 @@
                     <connections>
                         <outlet property="pageLabel" destination="7bb-LH-LhN" id="gek-QB-MSb"/>
                         <outlet property="pageQuestionLabel" destination="Fym-Ob-tot" id="0FC-hF-7Ut"/>
+                        <outlet property="segmentControl" destination="fMg-Hb-YHa" id="tte-yS-gor"/>
                         <segue destination="rXX-Zw-l36" kind="show" identifier="segueCreateWorkSheet" id="xOa-3n-Oxq"/>
                     </connections>
                 </viewController>

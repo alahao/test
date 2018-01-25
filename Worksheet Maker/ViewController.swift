@@ -17,12 +17,25 @@ class ViewController: UIViewController {
         pageQuestionLabel.text = "\(Int(sender.value) * 20) Questions"
     }
     
-    @IBOutlet weak var makeLabel: UIButton!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    @IBAction func segmentDifficulty(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            selectedDifficulty = 0
+        case 1:
+            selectedDifficulty = 1
+        case 2:
+            selectedDifficulty = 2
+        default:
+            break
+        }
+    }
     
     var selectedOperation = "+"
     var selectedPageNumber = 1
     var selectedOperationLabel = "Plus"
+    var selectedDifficulty = 0
     
     @IBAction func buttonPlus(_ sender: Any) {
         selectedOperation = "Plus"
@@ -64,6 +77,7 @@ class ViewController: UIViewController {
         let destinationVC =  segue.destination as! WorksheetVC
         destinationVC.numberOperation = selectedOperation
         destinationVC.pageNumber = selectedPageNumber
+        destinationVC.difficulty = selectedDifficulty
         
         }
     }
