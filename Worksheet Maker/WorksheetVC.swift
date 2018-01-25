@@ -287,6 +287,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         decNumberFour = decNumberFour.rounded(toPlaces: 2)
         decNumberAnswerOne = decNumberOne + decNumberTwo
         decNumberAnswerTwo = decNumberThree + decNumberFour
+        
+        questionArray.append(["\(decNumberOne) \(numberOpertaionSign) \(decNumberTwo) = ", "\(decNumberThree) \(numberOpertaionSign) \(decNumberFour) = ", "", questionAnswerDivider, "\(decNumberAnswerOne) "," \(decNumberAnswerTwo)"])
     }
     
     
@@ -302,7 +304,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func OperationFraction() { // 1/4 + 2/4 = 3/4
         generatingRandomFraction(nLMin: 2, nLMax: 9, dLMin: 2, dLMax: 9, nRMin: 2, nRMax: 9, dRMin: 2, dRMax: 9)}
     func OperationDecimal() { // 1/4 + 2/4 = 3/4
-        generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
+        generatingRandomDecimal(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
     func OperationMixed() { // 1/4 + 2/4 = 3/4
         generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
     
