@@ -9,6 +9,30 @@
 import UIKit
 import SimplePDF
 
+// START Digit Count
+public extension Int {
+    /// returns number of digits in Int number
+    public var digitCount: Int {
+        get {
+            return numberOfDigits(in: self)
+        }
+    }
+    /// returns number of useful digits in Int number
+  
+    // private recursive method for counting digits
+    private func numberOfDigits(in number: Int) -> Int {
+        if abs(number) < 10 {
+            return 1
+        } else {
+            return 1 + numberOfDigits(in: number/10)
+        }
+    }
+    // returns true if digit is useful in respect to self
+    private func isUseful(_ digit: Int) -> Bool {
+        return (digit != 0) && (self % digit == 0)
+    }
+}
+// END Digit Count
 
 public extension Int {
     
@@ -138,6 +162,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     var numberOne = 0
     var numberTwo = 0
+    var numberAnswer = 0
     var numberAnswerOne = 0
     var numberAnswerTwo = 0
     var numberOperation = ""
@@ -161,6 +186,9 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var fTwoAnswerD = 0
     var questionSetL = ""
     var questionSetR = ""
+    
+    var finalNumerator = 0
+    var finalDenominator = 0
     
     var wholeNumberCount = 0
     // End Fraction
@@ -187,7 +215,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     let questionAnswerDivider = "┊  "
     
     var questionNumber = 0
-    var questionArray = [["space","Quesion 1","Quesion 2", "space", "divider", "Answers1","Answers2"]]
+    var questionArray = [["Space", "Question 1", "Question 2", "Space", "divider", "Answers1", "Answers2"]]
     
     var currentPageArrayStart = 0
     
@@ -220,50 +248,67 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         cellNumber = 20 * pageNumber
         removeAllArray()
         for _ in 1...cellNumber {
-            operationType()
+            startAssignOpeartion()
         }
     }
     
     // + - X / and Mixed
-    func generatingRandomNumber(numberAMin: Int, numberAMax: Int, numberBMin: Int, numberBMax: Int) {
-        if numberOperation == "Plus" {
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberAnswerOne = numberOne + numberTwo
-            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberAnswerTwo = numberOne + numberTwo
-            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-        } else if numberOperation == "Minus" {
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberOne)
-            numberAnswerOne = numberOne - numberTwo
-            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberOne)
-            numberAnswerTwo = numberOne - numberTwo
-            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-        } else if numberOperation == "Times" {
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberAnswerOne = numberOne * numberTwo
-            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-            numberOne = Int.random(min: numberAMin, max: numberAMax)
-            numberTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberAnswerTwo = numberOne * numberTwo
-            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-        } else if numberOperation == "Division" {
-            numberTwo = Int.random(min: numberAMin, max: numberAMax)
-            numberAnswerOne = Int.random(min: numberBMin, max: numberBMax)
-            numberOne = numberAnswerOne * numberTwo
-            questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-            numberTwo = Int.random(min: numberAMin, max: numberAMax)
-            numberAnswerTwo = Int.random(min: numberBMin, max: numberBMax)
-            numberOne = numberAnswerTwo * numberTwo
-            questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
-        } else if numberOperation == "Mixed" {
+    func CalculateSetArrayPMTD() {
+        func calculate() {
+            var operation = 0
+            
+            if numberOperation == "Plus" {
+                operation = 0
+            } else if numberOperation == "Minus" {
+                operation = 1
+            } else if numberOperation == "Times" {
+                operation = 2
+            } else if numberOperation == "Division" {
+                operation = 3
+            } else if numberOperation == "Mixed" {
+                operation = Int.random(min: 0, max: 3)
+            }
+            
+            
+        if operation == 0 {
+            numberOpertaionSign = "+"
+            OperationDifficultyPlus()
+            numberOne = Int.random(min: aMin, max: aMax)
+            numberTwo = Int.random(min: bMin, max: bMax)
+            numberAnswer = numberOne + numberTwo
+        } else if operation == 1 {
+            numberOpertaionSign = "-"
+            OperationDifficultyMinus()
+            numberOne = Int.random(min: aMin, max: aMax)
+            numberTwo = Int.random(min: bMin, max: bMax)
+            if difficulty < 2 {
+            numberAnswer = numberOne
+            numberOne = numberAnswer + numberTwo
+            } else if difficulty == 2 {
+                numberAnswer = numberOne - numberTwo
+            }
+        } else if operation == 2 {
+            numberOpertaionSign = "×"
+            OperationDifficultyTimes()
+            numberOne = Int.random(min: aMin, max: aMax)
+            numberTwo = Int.random(min: bMin, max: bMax)
+            numberAnswer = numberOne * numberTwo
+        } else if operation == 3 {
+            numberOpertaionSign = "÷"
+            OperationDifficultyDivision()
+            numberTwo = Int.random(min: aMin, max: aMax)
+            numberAnswer = Int.random(min: bMin, max: bMax)
+            numberOne = numberAnswer * numberTwo
         }
+        }
+        
+        calculate()
+        questionSetOne = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+        numberAnswerOne = numberAnswer
+        calculate()
+        questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
+        numberAnswerTwo = numberAnswer
+        
         
         questionArray.append(["", questionSetOne, questionSetTwo, "", questionAnswerDivider, " \(numberAnswerOne) "," \(numberAnswerTwo)"])
     }
@@ -273,24 +318,44 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // Calculation
         func randomFractionOperation() {
         randomOperationSign = Int.random(min: 0, max: 5)
-        if randomOperationSign == 0 || randomOperationSign == 1 {
-            numberOpertaionSign = "+"
-            fOneAnswerN = fLN * fRD + fRN * fLD
-            fOneAnswerD = fLD * fRD
-        } else if randomOperationSign == 2 || randomOperationSign == 3 {
-            numberOpertaionSign = "-"
-            fOneAnswerN = fLN
-            fOneAnswerD = fLD
-            fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
-            fLD = fOneAnswerD * fRD
-        } else if randomOperationSign == 4 {
-            numberOpertaionSign = "×"
-            fOneAnswerN = fLN * fRN
-            fOneAnswerD = fLD * fRD
-        } else if randomOperationSign == 5 {
-            numberOpertaionSign = "÷"
-            fOneAnswerN = fLN * fRD
-            fOneAnswerD = fLD * fRN
+            if difficulty == 0 {
+                    numberOpertaionSign = "+"
+                    fOneAnswerN = fLN * fRD + fRN * fLD
+                    fOneAnswerD = fLD * fRD
+            }
+            else if difficulty == 1 {
+                if randomOperationSign < 4 {
+                    numberOpertaionSign = "+"
+                    fOneAnswerN = fLN * fRD + fRN * fLD
+                    fOneAnswerD = fLD * fRD
+                } else if randomOperationSign > 3 {
+                    numberOpertaionSign = "-"
+                    fOneAnswerN = fLN
+                    fOneAnswerD = fLD
+                    fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
+                    fLD = fOneAnswerD * fRD
+                }
+            }
+            else if difficulty == 2 {
+                if randomOperationSign < 2 {
+                    numberOpertaionSign = "+"
+                    fOneAnswerN = fLN * fRD + fRN * fLD
+                    fOneAnswerD = fLD * fRD
+                } else if randomOperationSign == 2 || randomOperationSign == 3 {
+                    numberOpertaionSign = "-"
+                    fOneAnswerN = fLN
+                    fOneAnswerD = fLD
+                    fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
+                    fLD = fOneAnswerD * fRD
+                } else if randomOperationSign == 4 {
+                    numberOpertaionSign = "×"
+                    fOneAnswerN = fLN * fRN
+                    fOneAnswerD = fLD * fRD
+                } else if randomOperationSign == 5 {
+                    numberOpertaionSign = "÷"
+                    fOneAnswerN = fLN * fRD
+                    fOneAnswerD = fLD * fRN
+                }
             }
         }
         
@@ -310,13 +375,16 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             wholeNumberCount = 0
             questionSetL = simplifiedFractionStepOne(numerator: fLN, denominator: fLD)
             questionSetR = simplifiedFractionStepOne(numerator: fRN, denominator: fRD)
+            
             if wholeNumberCount > 1 || fLN == fLD || fRN == fRD {
                 generateQuestionSet()
-                print("regenerate fraction")
+                print("regenerate fraction because of 2 whole numbers")
+            } else if finalDenominator.digitCount > 2 || finalNumerator > 2 {
+                generateQuestionSet()
+                print("regenerate fraction because numerator or denominator > 2 digits for non Hard Level")
             }
+            
         }
-        
-
         
         generateQuestionSet()
         questionSetOne = questionSetL + " \(numberOpertaionSign) " + questionSetR + " = "
@@ -373,13 +441,13 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     
-    //Operations
+    // MARK: Begin Difficulty Setting
     var aMin = 0
     var aMax = 0
     var bMin = 0
     var bMax = 0
     
-    func OperationPlus() { // Plus A+B=C
+    func OperationDifficultyPlus() {
         if difficulty == 0 {
             aMin = 1
             aMax = 9
@@ -396,9 +464,9 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             bMin = 1
             bMax = 9999
         }
-        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
+    }
     
-    func OperationMinus() { // Minus A-B=C
+    func OperationDifficultyMinus() {
         if difficulty == 0 {
             aMin = 1
             aMax = 9
@@ -415,45 +483,89 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             bMin = 1
             bMax = 9999
         }
-        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
+    }
     
-    func OperationMul() { // Multiplication A*B=C
+    func OperationDifficultyTimes() {
         if difficulty == 0 {
             aMin = 1
             aMax = 9
             bMin = 1
             bMax = 9
         } else if difficulty == 1 {
-            aMin = 1
+            aMin = 11
             aMax = 99
-            bMin = 1
+            bMin = 11
             bMax = 99
         } else if difficulty == 2 {
-            aMin = 1
+            aMin = 11
             aMax = 9999
-            bMin = 1
+            bMin = 11
             bMax = 99
         }
-        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
+    }
     
-    func OperationDivision() { // Division C/A=B
+    func OperationDifficultyDivision() {
         if difficulty == 0 {
             aMin = 1
             aMax = 9
             bMin = 1
             bMax = 9
         } else if difficulty == 1 {
-            aMin = 1
+            aMin = 2
             aMax = 19
-            bMin = 1
+            bMin = 2
             bMax = 19
         } else if difficulty == 2 {
-            aMin = 1
-            aMax = 99
-            bMin = 1
-            bMax = 99
+            aMin = 11
+            aMax = 49
+            bMin = 11
+            bMax = 49
         }
-        generatingRandomNumber(numberAMin: aMin, numberAMax: aMax, numberBMin: bMin, numberBMax: bMax)}
+    }
+    
+    // End Difficulty Setting
+    
+    func startAssignOpeartion() {
+        if numberOperation == "Plus" {
+            numberOpertaionSign = "+"
+            OperationPlus()
+        } else if numberOperation == "Minus" {
+            numberOpertaionSign = "−"
+            OperationMinus()
+        } else if numberOperation == "Times" {
+            numberOpertaionSign = "×"
+            OperationMul()
+        } else if numberOperation == "Division" {
+            numberOpertaionSign = "÷"
+            OperationDivision()
+        } else if numberOperation == "Fraction" {
+            OperationFraction()
+        } else if numberOperation == "Decimal" {
+            OperationDecimal()
+        } else if numberOperation == "Mixed" {
+            OperationMixed()
+        }
+    }
+    
+    func OperationPlus() { // Plus A+B=C
+        CalculateSetArrayPMTD()
+    }
+    
+    func OperationMinus() { // Minus A-B=C
+        CalculateSetArrayPMTD()
+    }
+    
+    func OperationMul() { // Multiplication A*B=C
+        CalculateSetArrayPMTD()
+    }
+    
+    func OperationMixed() { // Mixed 1/4 + 2/4 = 3/4
+        CalculateSetArrayPMTD()
+    }
+    
+    func OperationDivision() { // Division C/A=B
+        CalculateSetArrayPMTD()
+    }
     
     func OperationFraction() { // Fraction 1/4 + 2/4 = 3/4
         var nLMin = 2
@@ -533,31 +645,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             numberBMax = 99
         }
         generatingRandomDecimal(numberAMin: numberAMin, numberAMax: numberAMax, numberBMin: numberBMin, numberBMax: numberBMax, dPMin: dPMin, dPMax: dPMax, dPMulMin: dPMulMin, dPMulMax: dPMulMax)}
-    
-    func OperationMixed() { // Mixed 1/4 + 2/4 = 3/4
-        generatingRandomNumber(numberAMin: 2, numberAMax: 9, numberBMin: 2, numberBMax: 9)}
-    
-    func operationType() {
-        if numberOperation == "Plus" {
-            numberOpertaionSign = "+"
-            OperationPlus()
-        } else if numberOperation == "Minus" {
-            numberOpertaionSign = "−"
-            OperationMinus()
-        } else if numberOperation == "Times" {
-            numberOpertaionSign = "×"
-            OperationMul()
-        } else if numberOperation == "Division" {
-            numberOpertaionSign = "÷"
-            OperationDivision()
-        } else if numberOperation == "Fraction" {
-            OperationFraction()
-        } else if numberOperation == "Decimal" {
-            OperationDecimal()
-        } else if numberOperation == "Mixed" {
-            OperationMixed()
-        }
-    }
+
     
     func simplifiedFractionStepOne(numerator: Int, denominator: Int) -> (String)   {
         var x = numerator
@@ -572,8 +660,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let newNumerator = numerator/hcfVal
         let newDenominator = denominator/hcfVal
         
-        var finalNumerator = numerator
-        var finalDenominator = denominator
+        finalNumerator = numerator
+        finalDenominator = denominator
         
         let wholeNumbers:Int = newNumerator / newDenominator
         let remainder:Int = newNumerator % newDenominator
@@ -592,6 +680,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 finalDenominator = newDenominator;
             }
         }
+        
         if(wholeNumbers > 0 && remainder > 0)
         {
             // prints out whole number and ftion parts
@@ -679,8 +768,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         cellNumber = 20 * pageNumber
         return cellNumber
     }
-    
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "worksheetCell", for: indexPath) as! TableViewCell
