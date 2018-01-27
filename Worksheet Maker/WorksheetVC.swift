@@ -159,6 +159,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var fTwoRD = 0
     var fTwoAnswerN = 0
     var fTwoAnswerD = 0
+    var questionSetL = ""
+    var questionSetR = ""
+    
+    var wholeNumberCount = 0
     // End Fraction
     
     // Decimal
@@ -266,7 +270,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // Fraction
     func generatingRandomFraction(nLMin: Int, nLMax: Int, dLMin: Int, dLMax: Int, nRMin: Int, nRMax: Int, dRMin: Int, dRMax: Int) {
-        func randomDecimalOperation() {
+        // Calculation
+        func randomFractionOperation() {
         randomOperationSign = Int.random(min: 0, max: 5)
         if randomOperationSign == 0 || randomOperationSign == 1 {
             numberOpertaionSign = "+"
@@ -274,8 +279,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             fOneAnswerD = fLD * fRD
         } else if randomOperationSign == 2 || randomOperationSign == 3 {
             numberOpertaionSign = "-"
-            fOneAnswerN = fLN * fRD - fRN * fLD
-            fOneAnswerD = fLD * fRD
+            fOneAnswerN = fLN
+            fOneAnswerD = fLD
+            fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
+            fLD = fOneAnswerD * fRD
         } else if randomOperationSign == 4 {
             numberOpertaionSign = "×"
             fOneAnswerN = fLN * fRN
@@ -286,24 +293,43 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             fOneAnswerD = fLD * fRN
             }
         }
-        fLN = Int.random(min: nLMin, max: nLMax)
-        fLD = Int.random(min: dLMin, max: dLMax)
-        fRN = Int.random(min: nRMin, max: nRMax)
-        fRD = Int.random(min: dRMin, max: dRMax)
-        randomDecimalOperation()
-        questionSetOne = "\(fLN)/\(fLD) \(numberOpertaionSign) \(fRN)/\(fRD) = "
         
-        fLN = Int.random(min: nLMin, max: nLMax)
-        fLD = Int.random(min: dLMin, max: dLMax)
-        fRN = Int.random(min: nRMin, max: nRMax)
-        fRD = Int.random(min: dRMin, max: dRMax)
-        randomDecimalOperation()
-        questionSetTwo = "\(fLN)/\(fLD) \(numberOpertaionSign) \(fRN)/\(fRD) = "
+        // Function to Generate question set
+        func generateQuestionSet() {
+            fLN = Int.random(min: nLMin, max: nLMax)
+            fLD = Int.random(min: dLMin, max: dLMax)
+            fRN = Int.random(min: nRMin, max: nRMax)
+        if difficulty == 0 {
+            fRD = fLD
+        } else {
+            fRD = Int.random(min: dRMin, max: dRMax)
+        }
+            // Calculating Fraction One
+            randomFractionOperation()
+            // Simplifying Answer
+            wholeNumberCount = 0
+            questionSetL = simplifiedFractionStepOne(numerator: fLN, denominator: fLD)
+            questionSetR = simplifiedFractionStepOne(numerator: fRN, denominator: fRD)
+            if wholeNumberCount > 1 || fLN == fLD || fRN == fRD {
+                generateQuestionSet()
+                print("regenerate fraction")
+            }
+        }
         
-        let simplifiedfAnswer = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
-        let simplifiedfTwoAnswer = simplifiedFraction(numerator: fTwoAnswerN, denominator: fTwoAnswerD)
+
         
-        questionArray.append(["", questionSetOne, questionSetTwo, "", questionAnswerDivider, " \(simplifiedfAnswer)", simplifiedfTwoAnswer])
+        generateQuestionSet()
+        questionSetOne = questionSetL + " \(numberOpertaionSign) " + questionSetR + " = "
+        let simplifiedfAnswerOne = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
+        
+        // Generate question set two
+        generateQuestionSet()
+       
+        questionSetTwo = questionSetL + " \(numberOpertaionSign) " + questionSetR + " = "
+        let simplifiedfTwoAnswerTwo = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
+
+        // Write the two questions for a row
+        questionArray.append(["", questionSetOne, questionSetTwo, "", questionAnswerDivider, simplifiedfAnswerOne, simplifiedfTwoAnswerTwo])
     }
     
     // Decimal
@@ -334,9 +360,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 randomDecimalOperation()
             }
         }
-        
-       
-    
+
         randomDecimalOperation()
         questionSetOne = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " ="
         decNumberAnswerOne = decNumberAnswer
@@ -368,7 +392,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             bMax = 99
         } else if difficulty == 2 {
             aMin = 1
-            aMax = 99999
+            aMax = 9999
             bMin = 1
             bMax = 9999
         }
@@ -451,22 +475,22 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             dRMax = 9
         } else if difficulty == 1 {
             nLMin = 2
-            nLMax = 19
+            nLMax = 9
+            dLMin = 2
+            dLMax = 9
+            nRMin = 2
+            nRMax = 9
+            dRMin = 2
+            dRMax = 9
+        } else if difficulty == 2 {
+            nLMin = 2
+            nLMax = 9
             dLMin = 2
             dLMax = 19
             nRMin = 2
-            nRMax = 19
+            nRMax = 9
             dRMin = 2
             dRMax = 19
-        } else if difficulty == 2 {
-            nLMin = 2
-            nLMax = 99
-            dLMin = 2
-            dLMax = 99
-            nRMin = 2
-            nRMax = 99
-            dRMin = 2
-            dRMax = 99
         }
         generatingRandomFraction(nLMin: nLMin, nLMax: nLMax, dLMin: dLMin, dLMax: dLMax, nRMin: nRMin, nRMax: nRMax, dRMin: dRMin, dRMax: dRMax)}
     
@@ -535,6 +559,58 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    func simplifiedFractionStepOne(numerator: Int, denominator: Int) -> (String)   {
+        var x = numerator
+        var y = denominator
+        while (y != 0) {
+            let buffer = y
+            y = x % y
+            x = buffer
+        }
+        
+        let hcfVal = x
+        let newNumerator = numerator/hcfVal
+        let newDenominator = denominator/hcfVal
+        
+        var finalNumerator = numerator
+        var finalDenominator = denominator
+        
+        let wholeNumbers:Int = newNumerator / newDenominator
+        let remainder:Int = newNumerator % newDenominator
+        
+        if(remainder > 0)
+        {
+            // see if we can simply the ftion part as well
+            if(newDenominator % remainder == 0) // no remainder means remainder can be simplified further
+            {
+                finalDenominator = newDenominator / remainder;
+                finalNumerator = remainder / remainder;
+            }
+            else
+            {
+                finalNumerator = remainder;
+                finalDenominator = newDenominator;
+            }
+        }
+        if(wholeNumbers > 0 && remainder > 0)
+        {
+            // prints out whole number and ftion parts
+            return("\(wholeNumbers * finalDenominator + finalNumerator)/\(finalDenominator)")
+        }
+        if (wholeNumbers > 0 && remainder == 0)
+        {
+            // prints out whole number only
+            wholeNumberCount = wholeNumberCount + 1
+            print("whole number count = \(wholeNumberCount)")
+            return("\(wholeNumbers)")
+        }
+        else
+        {
+            // prints out ftion part only
+            return("\(finalNumerator)/\(finalDenominator)")
+        }
+    }
+    
     func simplifiedFraction(numerator: Int, denominator: Int) -> (String)
     {
         var x = numerator
@@ -549,8 +625,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let newNumerator = numerator/hcfVal
         let newDenominator = denominator/hcfVal
         
-        var finalNumerator = numerator;
-        var finalDenominator = denominator;
+        var finalNumerator = numerator
+        var finalDenominator = denominator
         
         let wholeNumbers:Int = newNumerator / newDenominator
         let remainder:Int = newNumerator % newDenominator
@@ -605,7 +681,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
 
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "worksheetCell", for: indexPath) as! TableViewCell
         
