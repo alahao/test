@@ -8,12 +8,44 @@
 
 import UIKit
 
+@IBDesignable extension UIButton {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageQuestionLabel: UILabel!
     @IBAction func stepperAction(_ sender: UIStepper) {
         selectedPageNumber = Int(sender.value)
-        pageLabel.text = "\(Int(sender.value)) Pages"
+        pageLabel.text = "\(Int(sender.value)) PAGES"
         pageQuestionLabel.text = "\(Int(sender.value) * 20) Questions"
     }
     
