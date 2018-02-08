@@ -159,6 +159,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // 0: EASY, 1: MEDIUM, 2: HARD
     var difficulty = 0
+    var showAnswer = true
     
     var numberOne = 0
     var numberTwo = 0
@@ -225,6 +226,43 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         loadSimplePDF()
         loadPDFAndShare()
     }
+    
+    // SWITCH
+//    func setRightNavButton() {
+//
+//        let switchControl = UISwitch(frame: CGRect(x: 0, y: 0, width: 51, height: 31))
+//        switchControl.isOn = true
+////        switchControl.onTintColor = K.Color.AppBackgroundColor
+//        switchControl.setOn(true, animated: false)
+//        switchControl.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
+//        let switchControlLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+//        self.navigationItem.rightBarButtonItems = [UIBarButtonItem.init(customView: switchControl), switchControlLabel]
+//
+//    }
+//
+    
+    
+    @IBAction func switchShowAnswer(_ sender: UISwitch) {
+        if sender.isOn {
+            showAnswer = true
+            worksheetTableView.reloadData()
+        } else{
+            showAnswer = false
+            worksheetTableView.reloadData()
+        }
+    }
+//
+//    @objc func switchValueDidChange(sender: UISwitch!)
+//    {
+//        if sender.isOn {
+//            showAnswer = true
+//            worksheetTableView.reloadData()
+//        } else{
+//            showAnswer = false
+//            worksheetTableView.reloadData()
+//        }
+//    }
+    
     
     //Pull to Refresh
     lazy var refreshControl: UIRefreshControl = {
@@ -754,6 +792,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setRightNavButton()
         generatingPage()
         worksheetTableView.delegate = self
         worksheetTableView.dataSource = self
@@ -774,14 +813,17 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         cell.RowNumber.text = String(indexPath.row * 2 + 1)
         cell.numberOneLabel.text = String(describing: questionArray[indexPath.row][1])
-        cell.numberAnswerLabel.text = String(describing: questionArray[indexPath.row][5])
-        
-        cell.numberAnswerLabel.sizeToFit()
         
         cell.RowNumberTwo.text = String(indexPath.row * 2 + 2)
         cell.numberThreeLabel.text = String(describing: questionArray[indexPath.row][2])
+        
+        if showAnswer == true {
+        cell.numberAnswerLabel.text = String(describing: questionArray[indexPath.row][5])
         cell.numberAnswerTwoLabel.text = String(describing: questionArray[indexPath.row][6])
-        cell.numberAnswerTwoLabel.sizeToFit()
+        } else {
+            cell.numberAnswerLabel.text = ""
+            cell.numberAnswerTwoLabel.text = ""
+        }
         return cell
     }
     
@@ -827,8 +869,16 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.setContentAlignment(.left)
             pdf.addHorizontalSpace(50)
+            
+            var columnCount = 7
+            if showAnswer == true {
+                columnCount = 7
+            } else {
+                columnCount = 4
+            }
+            
             let currentPageArray = questionArray[currentPageArrayStart...currentPageArrayStart + 19]
-            pdf.addTable(currentPageArray.count, columnCount: 7, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
+            pdf.addTable(currentPageArray.count, columnCount: columnCount, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
             currentPageArrayStart = currentPageArrayStart + 20
             
             pdf.setContentAlignment(.center)

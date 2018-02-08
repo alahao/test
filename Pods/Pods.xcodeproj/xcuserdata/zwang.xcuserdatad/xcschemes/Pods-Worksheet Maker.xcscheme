@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A0AB6CB9FF3F257210EF9DDE95D77E4"
+               BlueprintIdentifier = "08C74C6635FB23D0068DED6C6570F107"
                BuildableName = "Pods_Worksheet_Maker.framework"
                BlueprintName = "Pods-Worksheet Maker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8A0AB6CB9FF3F257210EF9DDE95D77E4"
+            BlueprintIdentifier = "08C74C6635FB23D0068DED6C6570F107"
             BuildableName = "Pods_Worksheet_Maker.framework"
             BlueprintName = "Pods-Worksheet Maker"
             ReferencedContainer = "container:Pods.xcodeproj">

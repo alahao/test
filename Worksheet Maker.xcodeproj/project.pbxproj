@@ -217,10 +217,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SimplePDF/SimplePDF.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimplePDF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,7 +382,7 @@
 				DEVELOPMENT_TEAM = 87WHN6T97D;
 				INFOPLIST_FILE = "Worksheet Maker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prettymotion.designer.Worksheet-Maker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanwang.paperworksheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,7 +398,7 @@
 				DEVELOPMENT_TEAM = 87WHN6T97D;
 				INFOPLIST_FILE = "Worksheet Maker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prettymotion.designer.Worksheet-Maker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanwang.paperworksheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

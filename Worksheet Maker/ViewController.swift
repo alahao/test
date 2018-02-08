@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import SwiftyStoreKit
+import StoreKit
+
+var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
 
 @IBDesignable extension UIButton {
     

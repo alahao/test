@@ -8,5 +8,6 @@ target 'Worksheet Maker' do
   # Pods for Worksheet Maker
 	
 pod 'SimplePDF'
+pod ‘SwiftyStoreKit’
 
 end

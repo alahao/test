@@ -7,71 +7,149 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29F48484E9FAF7DCFAFAC197EFB47106 /* Pods-Worksheet Maker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		441DCC3461F8C917D05F54D8D375FF8B /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */; };
-		47C07ADB2406AD83FFB16C68901F5746 /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3476843C36046B196DEBB3905A5D3E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		ABC4F2909FDF96C29043B385A6D5D968 /* Pods-Worksheet Maker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */; };
-		B30578001C078EF70BBC288075592D7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DC182D70C9FB0D81B3CA2BD8AD609C62 /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */; };
-		FFC00E58D21CB7E6819B673B75703D47 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C0DF80CA59B82A830FC73A375EB8251 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */; };
+		19D8FAC2F76F4F959CDFADF819E62FD1 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */; };
+		2AA0F83D444DEC198D6632366DC9484B /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E8ACF23892E8B16E861617ABD1DB8E /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */; };
+		350129BF6C43EBCFF46BC7C227FD75D8 /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */; };
+		54A1B57C913B8C748753927EA27A1AA7 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */; };
+		566CB1B4A71A95219ACC087660CED8BE /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */; };
+		590657A39644044BEFD26737E32E1109 /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */; };
+		5977677FA75B5055A91FBAD76633D220 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */; };
+		5C44CE3CC5CFEDF9BD793858BC20D239 /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */; };
+		5E886C0C533915B113CFCE6CC619F2CE /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BFC88FCFB076FFD6405899DFDE680BE /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */; };
+		77684D04F1E9B69AF3E19C4A83341C70 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */; };
+		7E3F98AD105BD3B875E8A156E107702D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		86E98AC42CC03A786C63AD7FF8CC1F5C /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */; };
+		8E10D3149FEDFA9D82C94ED225F7C7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9C2822E08DE8B7661AB0DB4E69F19963 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9D048B6B941BC8F99B6D049EB45D445D /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */; };
+		B974A09BD2A7D46F011FE6745B0670CD /* Pods-Worksheet Maker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D11D99888E2583112888C187809C235F /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC49E5CC069E9501640CC8FA9BB66E6F /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */; };
+		ED343E4099B562B7969C72E067B1EB49 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582C393222847D8458D202C3A282432 /* SimplePDF.swift */; };
+		EDAC0A7A4640BC2CDA856E94D3500E68 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */; };
+		F228B2BC00EF2BD4D5B39056D7ACACE0 /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */; };
+		FD6684CA12DBC37799B6365F14A8EC71 /* Pods-Worksheet Maker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B7B7BCBA96AF40328233249C17DFC3A /* PBXContainerItemProxy */ = {
+		0B02354747083D18A58ACD6617EEE88A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F0CE67F2319EC9DC18A0959ACD77DD5;
+			remoteGlobalIDString = FBCC628130BC94D1F8069EFE1CC64DE0;
 			remoteInfo = SimplePDF;
+		};
+		572AF1230E8C9BC407ACFD5039854680 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDF3CA571BB2F1B8B3FC48F7D058776A;
+			remoteInfo = SwiftyStoreKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
+		03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
+		13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
 		1815A74F4422ED3A4D13E3E90F7DCA91 /* Pods-Worksheet Maker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Worksheet Maker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Worksheet_Maker.framework; path = "Pods-Worksheet Maker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Worksheet_Maker.framework; path = "Pods-Worksheet Maker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
+		28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
+		31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		35ECDA5B183074CE03B48E536B9A13CB /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
+		370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
 		45A906648A55C881C2B22078D08C2ADE /* Pods-Worksheet Maker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-frameworks.sh"; sourceTree = "<group>"; };
+		4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5678815429C65F423ABF9D1124CD478F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C559B2AD25D61EFFF2483F6AE2ADCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7ACA8C64F43DDB78DA7C315EFE15AA92 /* Pods-Worksheet Maker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-resources.sh"; sourceTree = "<group>"; };
-		91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
+		7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
+		819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97113EF5ADD0E21754BF2A8B80D6817D /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
 		A1FF2C4D244C4C5D84A9A4EE2482976D /* Pods-Worksheet Maker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Worksheet Maker.modulemap"; sourceTree = "<group>"; };
-		AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		A582C393222847D8458D202C3A282432 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
+		ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
+		B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
+		B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
+		B9E56C74EA5AB4ABEC277E96134EC9A2 /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
 		BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.release.xcconfig"; sourceTree = "<group>"; };
+		BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
 		C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Worksheet Maker-umbrella.h"; sourceTree = "<group>"; };
 		C9C1C84B4A1B3F2762D6F64CB806967C /* Pods-Worksheet Maker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Worksheet Maker-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD442ED433A7E5D11E8B6DD2B9341BAB /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
+		CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
+		CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
 		D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Worksheet Maker-dummy.m"; sourceTree = "<group>"; };
-		E3963EE8494DB1FBC6AAB94DC6A5F412 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
+		DD679238CE877CF7BE48060ED8AAD554 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+		E122F2533565170BC25A5497DC95B604 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
 		EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.debug.xcconfig"; sourceTree = "<group>"; };
-		F124219945C607C47C3BD96DA5A728E1 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+		F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
+		F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C3D7C554C94600D8F3EDB303E23A807C /* Frameworks */ = {
+		2948B72908D63570A427BC89B2002444 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3476843C36046B196DEBB3905A5D3E9 /* Foundation.framework in Frameworks */,
+				9C2822E08DE8B7661AB0DB4E69F19963 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E172A44CBC7FD7E1F9BE58D51A94562F /* Frameworks */ = {
+		BEA99A485D3EA221C95E45B514A88E4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30578001C078EF70BBC288075592D7F /* Foundation.framework in Frameworks */,
+				7E3F98AD105BD3B875E8A156E107702D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA590E1FB762202524ED3B68D8A1CA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E10D3149FEDFA9D82C94ED225F7C7BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22F6D05041EF099CB62829FD339C33B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57C559B2AD25D61EFFF2483F6AE2ADCB /* Info.plist */,
+				DD679238CE877CF7BE48060ED8AAD554 /* SimplePDF.modulemap */,
+				E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */,
+				28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */,
+				B9E56C74EA5AB4ABEC277E96134EC9A2 /* SimplePDF-prefix.pch */,
+				819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimplePDF";
+			sourceTree = "<group>";
+		};
+		40B7D4DBBEEB7E04682DFCA1203413D0 /* SimplePDF */ = {
+			isa = PBXGroup;
+			children = (
+				31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */,
+				A582C393222847D8458D202C3A282432 /* SimplePDF.swift */,
+				22F6D05041EF099CB62829FD339C33B0 /* Support Files */,
+			);
+			name = SimplePDF;
+			path = SimplePDF;
+			sourceTree = "<group>";
+		};
 		64A5F21F21355825DCE0C337290A8160 /* Pods-Worksheet Maker */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,48 +168,15 @@
 			path = "Target Support Files/Pods-Worksheet Maker";
 			sourceTree = "<group>";
 		};
-		79431D09EF65B45A54BB33F408D2ECA8 /* SimplePDF */ = {
-			isa = PBXGroup;
-			children = (
-				AA2C42361F54176DB39F4B0CF9BCE80E /* SimplePDF.h */,
-				09CEEC4F76788CCDB7EBFCB5A9072A65 /* SimplePDF.swift */,
-				916039991E9B120E8F228B14583FC29A /* Support Files */,
-			);
-			name = SimplePDF;
-			path = SimplePDF;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BB5870201C60248D69A41FE3CB200E6A /* Pods */,
-				DA10602ED234EC97C3C644B0EC521774 /* Products */,
+				BDE7E3D6206A826E44B69C4838B3269C /* Pods */,
+				F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */,
 				D62EB3BAEDDB02570911EDDC7AA3CFB5 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		916039991E9B120E8F228B14583FC29A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E3963EE8494DB1FBC6AAB94DC6A5F412 /* Info.plist */,
-				F124219945C607C47C3BD96DA5A728E1 /* SimplePDF.modulemap */,
-				E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */,
-				91FC27EFAE199E557C920AF21A760198 /* SimplePDF-dummy.m */,
-				CD442ED433A7E5D11E8B6DD2B9341BAB /* SimplePDF-prefix.pch */,
-				2EA7F94DE5C89D7F662B1B9DCC925F29 /* SimplePDF-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SimplePDF";
-			sourceTree = "<group>";
-		};
-		BB5870201C60248D69A41FE3CB200E6A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				79431D09EF65B45A54BB33F408D2ECA8 /* SimplePDF */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -140,6 +185,38 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD51AA745219BAAA799B09F37B101136 /* SwiftyStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */,
+				03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */,
+				7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */,
+				F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */,
+				E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */,
+				ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */,
+				7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */,
+				21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */,
+				CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */,
+				CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */,
+				B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */,
+				8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */,
+				BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */,
+				2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */,
+				F61E802A5043960173113D790538A07A /* Support Files */,
+			);
+			name = SwiftyStoreKit;
+			path = SwiftyStoreKit;
+			sourceTree = "<group>";
+		};
+		BDE7E3D6206A826E44B69C4838B3269C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40B7D4DBBEEB7E04682DFCA1203413D0 /* SimplePDF */,
+				BD51AA745219BAAA799B09F37B101136 /* SwiftyStoreKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -158,45 +235,104 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DA10602ED234EC97C3C644B0EC521774 /* Products */ = {
+		F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */,
-				99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */,
+				1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */,
+				4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */,
+				370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F61E802A5043960173113D790538A07A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E122F2533565170BC25A5497DC95B604 /* Info.plist */,
+				97113EF5ADD0E21754BF2A8B80D6817D /* SwiftyStoreKit.modulemap */,
+				B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */,
+				4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */,
+				35ECDA5B183074CE03B48E536B9A13CB /* SwiftyStoreKit-prefix.pch */,
+				F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyStoreKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		04812C754C89538CBCE91D2FA59B8F29 /* Headers */ = {
+		7412CF0E07A687A454960057ACBC048A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47C07ADB2406AD83FFB16C68901F5746 /* SimplePDF-umbrella.h in Headers */,
-				FFC00E58D21CB7E6819B673B75703D47 /* SimplePDF.h in Headers */,
+				D11D99888E2583112888C187809C235F /* SimplePDF-umbrella.h in Headers */,
+				5E886C0C533915B113CFCE6CC619F2CE /* SimplePDF.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55672CB111BB588104874C2F49A74537 /* Headers */ = {
+		ABC8DDE8AB6B122E5BB7CCCE511D7864 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F48484E9FAF7DCFAFAC197EFB47106 /* Pods-Worksheet Maker-umbrella.h in Headers */,
+				2AA0F83D444DEC198D6632366DC9484B /* SwiftyStoreKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE0897C69D70198B49817431EA3BF40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B974A09BD2A7D46F011FE6745B0670CD /* Pods-Worksheet Maker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */ = {
+		08C74C6635FB23D0068DED6C6570F107 /* Pods-Worksheet Maker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B0200D90533242A0F2009DCA8B7587D /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildConfigurationList = 867DEC0CE37574E7E15986CC5BC63A1D /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */;
 			buildPhases = (
-				40E9B9B29824E25F8478BA1825ED7644 /* Sources */,
-				E172A44CBC7FD7E1F9BE58D51A94562F /* Frameworks */,
-				04812C754C89538CBCE91D2FA59B8F29 /* Headers */,
+				EEDA2B87C1409BB9227705A3DAF3B902 /* Sources */,
+				DDA590E1FB762202524ED3B68D8A1CA3 /* Frameworks */,
+				BAE0897C69D70198B49817431EA3BF40 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E482603CDE65F3AC741942AEB9DE12C /* PBXTargetDependency */,
+				803A6D1F9FC4CF18B2AE6772CA33B2EE /* PBXTargetDependency */,
+			);
+			name = "Pods-Worksheet Maker";
+			productName = "Pods-Worksheet Maker";
+			productReference = 1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE5E66520018BBB87341AA713E51452C /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
+			buildPhases = (
+				21C88FA4231DEC52C5AABC2A77FE0AB2 /* Sources */,
+				2948B72908D63570A427BC89B2002444 /* Frameworks */,
+				ABC8DDE8AB6B122E5BB7CCCE511D7864 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyStoreKit;
+			productName = SwiftyStoreKit;
+			productReference = 370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5861EA1E5CC128DB186294CF181EB8 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildPhases = (
+				B737380225D6559ACEF69E2094E6B968 /* Sources */,
+				BEA99A485D3EA221C95E45B514A88E4C /* Frameworks */,
+				7412CF0E07A687A454960057ACBC048A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -204,25 +340,7 @@
 			);
 			name = SimplePDF;
 			productName = SimplePDF;
-			productReference = 99FDC09697A75630E23C04A50A109E40 /* SimplePDF.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8A0AB6CB9FF3F257210EF9DDE95D77E4 /* Pods-Worksheet Maker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C74C4BDB4F46377C75811F040A38C8DD /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */;
-			buildPhases = (
-				1056216EBF87674972A39AF326858388 /* Sources */,
-				C3D7C554C94600D8F3EDB303E23A807C /* Frameworks */,
-				55672CB111BB588104874C2F49A74537 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4067228EB9B0AA0D24DD0E2CEF928F36 /* PBXTargetDependency */,
-			);
-			name = "Pods-Worksheet Maker";
-			productName = "Pods-Worksheet Maker";
-			productReference = 1EBF3F8CF58B65B590218A57B7E4463E /* Pods_Worksheet_Maker.framework */;
+			productReference = 4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -242,42 +360,71 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DA10602ED234EC97C3C644B0EC521774 /* Products */;
+			productRefGroup = F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A0AB6CB9FF3F257210EF9DDE95D77E4 /* Pods-Worksheet Maker */,
-				2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */,
+				08C74C6635FB23D0068DED6C6570F107 /* Pods-Worksheet Maker */,
+				FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */,
+				BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1056216EBF87674972A39AF326858388 /* Sources */ = {
+		21C88FA4231DEC52C5AABC2A77FE0AB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC4F2909FDF96C29043B385A6D5D968 /* Pods-Worksheet Maker-dummy.m in Sources */,
+				566CB1B4A71A95219ACC087660CED8BE /* AppleReceiptValidator.swift in Sources */,
+				350129BF6C43EBCFF46BC7C227FD75D8 /* CompleteTransactionsController.swift in Sources */,
+				F228B2BC00EF2BD4D5B39056D7ACACE0 /* InAppProductQueryRequest.swift in Sources */,
+				54A1B57C913B8C748753927EA27A1AA7 /* InAppReceipt.swift in Sources */,
+				9D048B6B941BC8F99B6D049EB45D445D /* InAppReceiptRefreshRequest.swift in Sources */,
+				5977677FA75B5055A91FBAD76633D220 /* InAppReceiptVerificator.swift in Sources */,
+				0C0DF80CA59B82A830FC73A375EB8251 /* OS.swift in Sources */,
+				590657A39644044BEFD26737E32E1109 /* PaymentQueueController.swift in Sources */,
+				77684D04F1E9B69AF3E19C4A83341C70 /* PaymentsController.swift in Sources */,
+				EDAC0A7A4640BC2CDA856E94D3500E68 /* ProductsInfoController.swift in Sources */,
+				5C44CE3CC5CFEDF9BD793858BC20D239 /* RestorePurchasesController.swift in Sources */,
+				34E8ACF23892E8B16E861617ABD1DB8E /* SKProduct+LocalizedPrice.swift in Sources */,
+				EC49E5CC069E9501640CC8FA9BB66E6F /* SwiftyStoreKit+Types.swift in Sources */,
+				6BFC88FCFB076FFD6405899DFDE680BE /* SwiftyStoreKit-dummy.m in Sources */,
+				19D8FAC2F76F4F959CDFADF819E62FD1 /* SwiftyStoreKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40E9B9B29824E25F8478BA1825ED7644 /* Sources */ = {
+		B737380225D6559ACEF69E2094E6B968 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC182D70C9FB0D81B3CA2BD8AD609C62 /* SimplePDF-dummy.m in Sources */,
-				441DCC3461F8C917D05F54D8D375FF8B /* SimplePDF.swift in Sources */,
+				86E98AC42CC03A786C63AD7FF8CC1F5C /* SimplePDF-dummy.m in Sources */,
+				ED343E4099B562B7969C72E067B1EB49 /* SimplePDF.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDA2B87C1409BB9227705A3DAF3B902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6684CA12DBC37799B6365F14A8EC71 /* Pods-Worksheet Maker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4067228EB9B0AA0D24DD0E2CEF928F36 /* PBXTargetDependency */ = {
+		6E482603CDE65F3AC741942AEB9DE12C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SimplePDF;
-			target = 2F0CE67F2319EC9DC18A0959ACD77DD5 /* SimplePDF */;
-			targetProxy = 7B7B7BCBA96AF40328233249C17DFC3A /* PBXContainerItemProxy */;
+			target = FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */;
+			targetProxy = 0B02354747083D18A58ACD6617EEE88A /* PBXContainerItemProxy */;
+		};
+		803A6D1F9FC4CF18B2AE6772CA33B2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyStoreKit;
+			target = BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */;
+			targetProxy = 572AF1230E8C9BC407ACFD5039854680 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -326,9 +473,9 @@
 			};
 			name = Release;
 		};
-		494298BB1AA571772A421FEC61B4F95A /* Debug */ = {
+		520320275FC3C44DA6FED044EEE1B3BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */;
+			baseConfigurationReference = B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -342,14 +489,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SimplePDF;
+				PRODUCT_NAME = SwiftyStoreKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -410,80 +557,7 @@
 			};
 			name = Debug;
 		};
-		7E3FDAA981BF7D042E73599762E9BC8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Worksheet_Maker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A129C4FD953198352FCB5879AE784421 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E902A3FCA6BE15E7D309D966817A393A /* SimplePDF.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SimplePDF;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D2C24224D3E7CE45CC611F59F53BE52A /* Debug */ = {
+		59813A5CC7FBE3187B5CA1975E231399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */;
 			buildSettings = {
@@ -522,6 +596,149 @@
 			};
 			name = Debug;
 		};
+		5FE1A0964B6D5ABEC7B64CF931D44244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61A745FF161B1E9974985BA2DF19E75D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9551538709D140A70321ECBB2CFEB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E82166DE39D66CC66839B4BF0A48DD59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Worksheet_Maker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,20 +751,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B0200D90533242A0F2009DCA8B7587D /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+		867DEC0CE37574E7E15986CC5BC63A1D /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				494298BB1AA571772A421FEC61B4F95A /* Debug */,
-				A129C4FD953198352FCB5879AE784421 /* Release */,
+				59813A5CC7FBE3187B5CA1975E231399 /* Debug */,
+				E82166DE39D66CC66839B4BF0A48DD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C74C4BDB4F46377C75811F040A38C8DD /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */ = {
+		AB5861EA1E5CC128DB186294CF181EB8 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2C24224D3E7CE45CC611F59F53BE52A /* Debug */,
-				7E3FDAA981BF7D042E73599762E9BC8C /* Release */,
+				61A745FF161B1E9974985BA2DF19E75D /* Debug */,
+				A9551538709D140A70321ECBB2CFEB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5E66520018BBB87341AA713E51452C /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520320275FC3C44DA6FED044EEE1B3BE /* Debug */,
+				5FE1A0964B6D5ABEC7B64CF931D44244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
