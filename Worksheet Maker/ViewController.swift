@@ -12,6 +12,29 @@ import StoreKit
 
 var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
 
+enum RegisteredPurchase: String {
+    case unlock = "geniuslevel"
+}
+
+class NetworkActivityIndicatorManager : NSObject {
+    private static var loadingCount = 0
+    
+    class func NetworkOperationStarted() {
+        if loadingCount == 0 {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        }
+        loadingCount += 1
+    }
+    class func networkOperationFinished() {
+        if loadingCount > 0 {
+            loadingCount -= 1
+        }
+        if loadingCount == 0 {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+    }
+}
+
 @IBDesignable extension UIButton {
     
     @IBInspectable var borderWidth: CGFloat {
@@ -45,6 +68,12 @@ var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
 }
 
 class ViewController: UIViewController {
+    
+    let bundleID =  "com.nanwang.paperworksheet"
+    
+    var unlock = RegisteredPurchase.unlock
+    
+    
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageQuestionLabel: UILabel!
     @IBAction func stepperAction(_ sender: UIStepper) {
@@ -105,6 +134,44 @@ class ViewController: UIViewController {
     @IBAction func buttonMix(_ sender: Any) {
         selectedOperation = "Mixed"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
+    }
+    
+    func getInfo(purchase : RegisteredPurchase) {
+        NetworkActivityIndicatorManager.NetworkOperationStarted()
+        SwiftyStoreKit.retrieveProductsInfo([bundleID + "." + purchase.rawValue], completion: {
+            result in
+            NetworkActivityIndicatorManager.networkOperationFinished()
+        })
+    }
+    
+    func purchase(purchase : RegisteredPurchase) {
+         NetworkActivityIndicatorManager.NetworkOperationStarted()
+        SwiftyStoreKit.purchaseProduct(bundleID + "." + purchase.rawValue, completion: {
+            result in
+            NetworkActivityIndicatorManager.networkOperationFinished()
+        })
+    }
+    
+    func restorePurchases() {
+        NetworkActivityIndicatorManager.NetworkOperationStarted()
+        SwiftyStoreKit.restorePurchases(atomically: true, applicationUsername: String, completion: {
+            result in
+            NetworkActivityIndicatorManager.networkOperationFinished()
+        })
+    }
+    
+    func verifyReceipt() {
+        NetworkActivityIndicatorManager.NetworkOperationStarted()
+        SwiftyStoreKit.verifyReceipt(using: sharedSeret, completion: {
+            result in
+            NetworkActivityIndicatorManager.networkOperationFinished()
+        })
+    }
+    
+    func verifyPurchase() {
+        NetworkActivityIndicatorManager.NetworkOperationStarted()
+        SwiftyStoreKit.verifyReceipt(using: <#T##ReceiptValidator#>, completion: <#T##(VerifyReceiptResult) -> Void#>)
+        
     }
     
     
