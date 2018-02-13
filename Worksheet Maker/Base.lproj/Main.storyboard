@@ -262,11 +262,14 @@
                         <outlet property="pageQuestionLabel" destination="Fym-Ob-tot" id="0FC-hF-7Ut"/>
                         <outlet property="segmentControl" destination="fMg-Hb-YHa" id="tte-yS-gor"/>
                         <segue destination="rXX-Zw-l36" kind="show" identifier="segueCreateWorkSheet" id="xOa-3n-Oxq"/>
+                        <segue destination="kMX-oQ-Sdx" kind="popoverPresentation" id="Plr-wY-zZp">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="132.68365817091455"/>
+            <point key="canvasLocation" x="418.84057971014494" y="132.06521739130434"/>
         </scene>
         <!--WorksheetVC-->
         <scene sceneID="60n-n7-dhD">
@@ -436,6 +439,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeZ-mg-AAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="131.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="skd-eV-MUH">
+            <objects>
+                <viewController id="kMX-oQ-Sdx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6n4-nd-YIn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywt-Q5-jXY">
+                                <rect key="frame" x="83" y="195" width="248" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="PURCHASE"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88c-4q-b7Q">
+                                <rect key="frame" x="83" y="269" width="248" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="RESTORE"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="APb-NY-5xp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0K-fb-j31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mIN-K9-DJZ">

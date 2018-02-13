@@ -8,32 +8,11 @@
 
 import UIKit
 import SwiftyStoreKit
-import StoreKit
+
 
 var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
+let inAppPurchaseID = "com.nanwang.paperworksheet.geniuslevel"
 
-enum RegisteredPurchase: String {
-    case unlock = "geniuslevel"
-}
-
-class NetworkActivityIndicatorManager : NSObject {
-    private static var loadingCount = 0
-    
-    class func NetworkOperationStarted() {
-        if loadingCount == 0 {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        }
-        loadingCount += 1
-    }
-    class func networkOperationFinished() {
-        if loadingCount > 0 {
-            loadingCount -= 1
-        }
-        if loadingCount == 0 {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-    }
-}
 
 @IBDesignable extension UIButton {
     
@@ -68,11 +47,6 @@ class NetworkActivityIndicatorManager : NSObject {
 }
 
 class ViewController: UIViewController {
-    
-    let bundleID =  "com.nanwang.paperworksheet"
-    
-    var unlock = RegisteredPurchase.unlock
-    
     
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageQuestionLabel: UILabel!
@@ -136,43 +110,6 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
-    func getInfo(purchase : RegisteredPurchase) {
-        NetworkActivityIndicatorManager.NetworkOperationStarted()
-        SwiftyStoreKit.retrieveProductsInfo([bundleID + "." + purchase.rawValue], completion: {
-            result in
-            NetworkActivityIndicatorManager.networkOperationFinished()
-        })
-    }
-    
-    func purchase(purchase : RegisteredPurchase) {
-         NetworkActivityIndicatorManager.NetworkOperationStarted()
-        SwiftyStoreKit.purchaseProduct(bundleID + "." + purchase.rawValue, completion: {
-            result in
-            NetworkActivityIndicatorManager.networkOperationFinished()
-        })
-    }
-    
-    func restorePurchases() {
-        NetworkActivityIndicatorManager.NetworkOperationStarted()
-        SwiftyStoreKit.restorePurchases(atomically: true, applicationUsername: String, completion: {
-            result in
-            NetworkActivityIndicatorManager.networkOperationFinished()
-        })
-    }
-    
-    func verifyReceipt() {
-        NetworkActivityIndicatorManager.NetworkOperationStarted()
-        SwiftyStoreKit.verifyReceipt(using: sharedSeret, completion: {
-            result in
-            NetworkActivityIndicatorManager.networkOperationFinished()
-        })
-    }
-    
-    func verifyPurchase() {
-        NetworkActivityIndicatorManager.NetworkOperationStarted()
-        SwiftyStoreKit.verifyReceipt(using: <#T##ReceiptValidator#>, completion: <#T##(VerifyReceiptResult) -> Void#>)
-        
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -188,6 +125,76 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        //Storekit
+        SwiftyStoreKit.retrieveProductsInfo([inAppPurchaseID]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(result.error)")
+            }
+        }
+        verifyPurchase()
+        purchaseProduct(with: inAppPurchaseID)
+    }
+    
+    func purchaseProduct(with id: String) {
+        SwiftyStoreKit.retrieveProductsInfo([id]) { result in
+            if let product = result.retrievedProducts.first {
+                SwiftyStoreKit.purchaseProduct(product, quantity: 1, atomically: true) { result in
+                    switch result {
+                    case .success(let product):
+                        // fetch content from your server, then:
+                        if product.needsFinishTransaction {
+                            SwiftyStoreKit.finishTransaction(product.transaction)
+                        }
+                        print("Purchase Success: \(product.productId)")
+                    case .error(let error):
+                        switch error.code {
+                        case .unknown: print("Unknown error. Please contact support")
+                        case .clientInvalid: print("Not allowed to make the payment")
+                        case .paymentCancelled: break
+                        case .paymentInvalid: print("The purchase identifier was invalid")
+                        case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                        case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                        case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                        case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                        case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    func verifyPurchase() {
+        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: sharedSeret)
+        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+            switch result {
+            case .success(let receipt):
+                let productId = inAppPurchaseID
+                // Verify the purchase of Consumable or NonConsumable
+                let purchaseResult = SwiftyStoreKit.verifyPurchase(
+                    productId: productId,
+                    inReceipt: receipt)
+                
+                switch purchaseResult {
+                case .purchased(let receiptItem):
+                    print("\(productId) is purchased: \(receiptItem)")
+                case .notPurchased:
+                    print("The user has never purchased \(productId)")
+                }
+            case .error(let error):
+                print("Receipt verification failed: \(error)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
