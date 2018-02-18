@@ -15,6 +15,7 @@
 		3D8497001FAF994500CCCE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8496FE1FAF994500CCCE55 /* LaunchScreen.storyboard */; };
 		3D84970C1FAFA22A00CCCE55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */; };
 		3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */; };
+		3D8A7BC22039589200C61BB8 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A7BC12039589200C61BB8 /* IAPViewController.swift */; };
 		9061A669D7C013735689AC0B /* Pods_Worksheet_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		3D8497011FAF994500CCCE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksheetVC.swift; sourceTree = "<group>"; };
+		3D8A7BC12039589200C61BB8 /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Worksheet_Maker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF9C9B68DBB2ED6F57E8031 /* Pods-Worksheet Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worksheet Maker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				3D8497011FAF994500CCCE55 /* Info.plist */,
 				3D8496F61FAF994500CCCE55 /* Main.storyboard */,
 				3D8496F41FAF994500CCCE55 /* ViewController.swift */,
+				3D8A7BC12039589200C61BB8 /* IAPViewController.swift */,
 				3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */,
 				3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */,
 				3D0968E51FB5E2B700570933 /* Assets */,
@@ -241,6 +244,7 @@
 				3D8496FB1FAF994500CCCE55 /* Worksheet_Maker.xcdatamodeld in Sources */,
 				3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */,
 				3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */,
+				3D8A7BC22039589200C61BB8 /* IAPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

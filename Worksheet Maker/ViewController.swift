@@ -12,6 +12,8 @@ import SwiftyStoreKit
 
 var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
 let inAppPurchaseID = "com.nanwang.paperworksheet.geniuslevel"
+var IAPstatus = false
+var currentSwitch = 0
 
 
 @IBDesignable extension UIButton {
@@ -62,10 +64,18 @@ class ViewController: UIViewController {
         switch segmentControl.selectedSegmentIndex {
         case 0:
             selectedDifficulty = 0
+            currentSwitch = 0
         case 1:
             selectedDifficulty = 1
+            currentSwitch = 1
         case 2:
+            if IAPstatus == false {
+                performSegue(withIdentifier: "segueIAP", sender: self)
+                segmentControl.selectedSegmentIndex = currentSwitch
+            } else {
             selectedDifficulty = 2
+            currentSwitch = 2
+            }
         default:
             break
         }
@@ -140,8 +150,9 @@ class ViewController: UIViewController {
                 print("Error: \(result.error)")
             }
         }
+        
         verifyPurchase()
-        purchaseProduct(with: inAppPurchaseID)
+//        purchaseProduct(with: inAppPurchaseID)
     }
     
     func purchaseProduct(with id: String) {
@@ -187,8 +198,10 @@ class ViewController: UIViewController {
                 
                 switch purchaseResult {
                 case .purchased(let receiptItem):
+                    IAPstatus = true
                     print("\(productId) is purchased: \(receiptItem)")
                 case .notPurchased:
+                    IAPstatus = false
                     print("The user has never purchased \(productId)")
                 }
             case .error(let error):
