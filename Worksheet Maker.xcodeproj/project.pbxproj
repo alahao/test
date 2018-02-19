@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D267602203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */; };
 		3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F21FAF994500CCCE55 /* AppDelegate.swift */; };
 		3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F41FAF994500CCCE55 /* ViewController.swift */; };
 		3D8496F81FAF994500CCCE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8496F61FAF994500CCCE55 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		029E62401DA3D9994D7B1B4B /* Pods-Worksheet Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worksheet Maker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.debug.xcconfig"; sourceTree = "<group>"; };
+		3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		3D8496EF1FAF994500CCCE55 /* Worksheet Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Worksheet Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8496F21FAF994500CCCE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8496F41FAF994500CCCE55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				3D8A7BC12039589200C61BB8 /* IAPViewController.swift */,
 				3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */,
 				3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */,
+				3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */,
 				3D0968E51FB5E2B700570933 /* Assets */,
 			);
 			path = "Worksheet Maker";
@@ -241,6 +244,7 @@
 			files = (
 				3D84970C1FAFA22A00CCCE55 /* TableViewCell.swift in Sources */,
 				3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */,
+				3D267602203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift in Sources */,
 				3D8496FB1FAF994500CCCE55 /* Worksheet_Maker.xcdatamodeld in Sources */,
 				3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */,
 				3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */,

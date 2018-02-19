@@ -226,21 +226,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         loadSimplePDF()
         loadPDFAndShare()
     }
-    
-    // SWITCH
-//    func setRightNavButton() {
-//
-//        let switchControl = UISwitch(frame: CGRect(x: 0, y: 0, width: 51, height: 31))
-//        switchControl.isOn = true
-////        switchControl.onTintColor = K.Color.AppBackgroundColor
-//        switchControl.setOn(true, animated: false)
-//        switchControl.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
-//        let switchControlLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-//        self.navigationItem.rightBarButtonItems = [UIBarButtonItem.init(customView: switchControl), switchControlLabel]
-//
-//    }
-//
-    
+        
     
     @IBAction func switchShowAnswer(_ sender: UISwitch) {
         if sender.isOn {
@@ -251,19 +237,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             worksheetTableView.reloadData()
         }
     }
-//
-//    @objc func switchValueDidChange(sender: UISwitch!)
-//    {
-//        if sender.isOn {
-//            showAnswer = true
-//            worksheetTableView.reloadData()
-//        } else{
-//            showAnswer = false
-//            worksheetTableView.reloadData()
-//        }
-//    }
-    
-    
+
     //Pull to Refresh
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
