@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,14 +21,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-a9-IQm">
-                                <rect key="frame" x="-56.333333333333343" y="355.66666666666669" width="487.66666666666674" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-a9-IQm">
+                                <rect key="frame" x="50" y="171" width="220" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-wh-Gn7">
-                                        <rect key="frame" x="157" y="0.0" width="173.66666666666663" height="50"/>
+                                        <rect key="frame" x="23.5" y="0.0" width="173.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Kvj-ml-lko"/>
                                         </constraints>
@@ -38,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-Qo-ECT">
-                                        <rect key="frame" x="147" y="50" width="193.66666666666663" height="50"/>
+                                        <rect key="frame" x="13" y="48" width="194" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="XMF-Fb-YI1"/>
                                         </constraints>
@@ -47,15 +46,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gHv-a9-IQm" secondAttribute="height" multiplier="244:50" id="O2S-gk-cre"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.96806294059999998" green="0.9808817715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gHv-a9-IQm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HEc-77-cRt"/>
-                            <constraint firstItem="gHv-a9-IQm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iLd-lh-uak"/>
+                            <constraint firstItem="gHv-a9-IQm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-20" id="86b-m2-O93"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHv-a9-IQm" secondAttribute="trailing" constant="50" id="JNf-uK-Ceu"/>
+                            <constraint firstItem="gHv-a9-IQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cQD-gS-mlP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
