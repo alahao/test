@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D267602203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */; };
+		3D53F2C820547D2700679CD9 /* icons8-sync-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2C720547D2700679CD9 /* icons8-sync-filled-100.png */; };
+		3D53F2CB20547DE100679CD9 /* icons8-refresh-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2C920547DE000679CD9 /* icons8-refresh-filled-50.png */; };
+		3D53F2CC20547DE100679CD9 /* icons8-sync-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CA20547DE000679CD9 /* icons8-sync-filled-50.png */; };
+		3D53F2D02054A0EB00679CD9 /* icons8-print-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CD2054A0E900679CD9 /* icons8-print-filled-100.png */; };
+		3D53F2D12054A0EB00679CD9 /* icons8-add-list-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */; };
+		3D53F2D22054A0EB00679CD9 /* icons8-export-pdf-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CF2054A0EB00679CD9 /* icons8-export-pdf-filled-100.png */; };
 		3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F21FAF994500CCCE55 /* AppDelegate.swift */; };
 		3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F41FAF994500CCCE55 /* ViewController.swift */; };
 		3D8496F81FAF994500CCCE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8496F61FAF994500CCCE55 /* Main.storyboard */; };
@@ -16,14 +21,18 @@
 		3D8497001FAF994500CCCE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8496FE1FAF994500CCCE55 /* LaunchScreen.storyboard */; };
 		3D84970C1FAFA22A00CCCE55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */; };
 		3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */; };
-		3D8A7BC22039589200C61BB8 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A7BC12039589200C61BB8 /* IAPViewController.swift */; };
 		9061A669D7C013735689AC0B /* Pods_Worksheet_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		029E62401DA3D9994D7B1B4B /* Pods-Worksheet Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worksheet Maker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.debug.xcconfig"; sourceTree = "<group>"; };
-		3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
-		3D8496EF1FAF994500CCCE55 /* Worksheet Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Worksheet Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D53F2C720547D2700679CD9 /* icons8-sync-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-sync-filled-100.png"; path = "../../../../../Downloads/icons8-sync-filled-100.png"; sourceTree = "<group>"; };
+		3D53F2C920547DE000679CD9 /* icons8-refresh-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-refresh-filled-50.png"; sourceTree = "<group>"; };
+		3D53F2CA20547DE000679CD9 /* icons8-sync-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-sync-filled-50.png"; sourceTree = "<group>"; };
+		3D53F2CD2054A0E900679CD9 /* icons8-print-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-print-filled-100.png"; sourceTree = "<group>"; };
+		3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-add-list-filled-100.png"; sourceTree = "<group>"; };
+		3D53F2CF2054A0EB00679CD9 /* icons8-export-pdf-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-export-pdf-filled-100.png"; sourceTree = "<group>"; };
+		3D8496EF1FAF994500CCCE55 /* Worksheet Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Worksheet Maker.app"; path = PaperWorksheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8496F21FAF994500CCCE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8496F41FAF994500CCCE55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D8496F71FAF994500CCCE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,7 +42,6 @@
 		3D8497011FAF994500CCCE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksheetVC.swift; sourceTree = "<group>"; };
-		3D8A7BC12039589200C61BB8 /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Worksheet_Maker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF9C9B68DBB2ED6F57E8031 /* Pods-Worksheet Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worksheet Maker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +70,12 @@
 		3D0968E51FB5E2B700570933 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */,
+				3D53F2CF2054A0EB00679CD9 /* icons8-export-pdf-filled-100.png */,
+				3D53F2CD2054A0E900679CD9 /* icons8-print-filled-100.png */,
+				3D53F2C920547DE000679CD9 /* icons8-refresh-filled-50.png */,
+				3D53F2CA20547DE000679CD9 /* icons8-sync-filled-50.png */,
+				3D53F2C720547D2700679CD9 /* icons8-sync-filled-100.png */,
 				3D8496F21FAF994500CCCE55 /* AppDelegate.swift */,
 				3D8496FC1FAF994500CCCE55 /* Assets.xcassets */,
 				3D8496FE1FAF994500CCCE55 /* LaunchScreen.storyboard */,
@@ -94,10 +108,8 @@
 				3D8497011FAF994500CCCE55 /* Info.plist */,
 				3D8496F61FAF994500CCCE55 /* Main.storyboard */,
 				3D8496F41FAF994500CCCE55 /* ViewController.swift */,
-				3D8A7BC12039589200C61BB8 /* IAPViewController.swift */,
 				3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */,
 				3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */,
-				3D267601203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift */,
 				3D0968E51FB5E2B700570933 /* Assets */,
 			);
 			path = "Worksheet Maker";
@@ -114,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D8496EE1FAF994500CCCE55 /* Worksheet Maker */ = {
+		3D8496EE1FAF994500CCCE55 /* PaperWorksheet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D8497041FAF994500CCCE55 /* Build configuration list for PBXNativeTarget "Worksheet Maker" */;
+			buildConfigurationList = 3D8497041FAF994500CCCE55 /* Build configuration list for PBXNativeTarget "PaperWorksheet" */;
 			buildPhases = (
 				51509870A8029A877DEFA73F /* [CP] Check Pods Manifest.lock */,
 				3D8496EB1FAF994500CCCE55 /* Sources */,
@@ -129,7 +141,7 @@
 			);
 			dependencies = (
 			);
-			name = "Worksheet Maker";
+			name = PaperWorksheet;
 			productName = "Worksheet Maker";
 			productReference = 3D8496EF1FAF994500CCCE55 /* Worksheet Maker.app */;
 			productType = "com.apple.product-type.application";
@@ -150,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D8496EA1FAF994500CCCE55 /* Build configuration list for PBXProject "Worksheet Maker" */;
+			buildConfigurationList = 3D8496EA1FAF994500CCCE55 /* Build configuration list for PBXProject "PaperWorksheet" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D8496EE1FAF994500CCCE55 /* Worksheet Maker */,
+				3D8496EE1FAF994500CCCE55 /* PaperWorksheet */,
 			);
 		};
 /* End PBXProject section */
@@ -175,7 +187,13 @@
 			files = (
 				3D8497001FAF994500CCCE55 /* LaunchScreen.storyboard in Resources */,
 				3D8496FD1FAF994500CCCE55 /* Assets.xcassets in Resources */,
+				3D53F2C820547D2700679CD9 /* icons8-sync-filled-100.png in Resources */,
+				3D53F2CB20547DE100679CD9 /* icons8-refresh-filled-50.png in Resources */,
 				3D8496F81FAF994500CCCE55 /* Main.storyboard in Resources */,
+				3D53F2CC20547DE100679CD9 /* icons8-sync-filled-50.png in Resources */,
+				3D53F2D02054A0EB00679CD9 /* icons8-print-filled-100.png in Resources */,
+				3D53F2D22054A0EB00679CD9 /* icons8-export-pdf-filled-100.png in Resources */,
+				3D53F2D12054A0EB00679CD9 /* icons8-add-list-filled-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +262,9 @@
 			files = (
 				3D84970C1FAFA22A00CCCE55 /* TableViewCell.swift in Sources */,
 				3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */,
-				3D267602203A9A1D00C9589E /* NetworkActivityIndicatorManager.swift in Sources */,
 				3D8496FB1FAF994500CCCE55 /* Worksheet_Maker.xcdatamodeld in Sources */,
 				3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */,
 				3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */,
-				3D8A7BC22039589200C61BB8 /* IAPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D8496EA1FAF994500CCCE55 /* Build configuration list for PBXProject "Worksheet Maker" */ = {
+		3D8496EA1FAF994500CCCE55 /* Build configuration list for PBXProject "PaperWorksheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D8497021FAF994500CCCE55 /* Debug */,
@@ -425,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D8497041FAF994500CCCE55 /* Build configuration list for PBXNativeTarget "Worksheet Maker" */ = {
+		3D8497041FAF994500CCCE55 /* Build configuration list for PBXNativeTarget "PaperWorksheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D8497051FAF994500CCCE55 /* Debug */,

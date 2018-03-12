@@ -11,9 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Bold</string>
-            <string>AppleSDGothicNeo-Light</string>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-BoldItalic</string>
+            <string>AvenirNext-HeavyItalic</string>
         </array>
     </customFonts>
     <scenes>
@@ -26,23 +26,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-a9-IQm">
-                                <rect key="frame" x="65.333333333333329" y="366.33333333333331" width="244.66666666666669" height="79.333333333333314"/>
+                                <rect key="frame" x="-56.333333333333343" y="355.66666666666669" width="487.66666666666674" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papermath" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-wh-Gn7">
-                                        <rect key="frame" x="0.33333333333334281" y="0.0" width="244.33333333333334" height="60"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="50"/>
-                                        <color key="textColor" red="0.29920160769999998" green="0.60023695229999996" blue="0.81237965820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-wh-Gn7">
+                                        <rect key="frame" x="157" y="0.0" width="173.66666666666663" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Kvj-ml-lko"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-HeavyItalic" family="Avenir Next" pointSize="58"/>
+                                        <color key="textColor" red="1" green="0.66342687476297235" blue="0.046765271016755094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRINT MATH WORKSHEET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-3G-QBq">
-                                        <rect key="frame" x="33.666666666666671" y="60.000000000000007" width="177.66666666666663" height="19.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-Qo-ECT">
+                                        <rect key="frame" x="147" y="50" width="193.66666666666663" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XMF-Fb-YI1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="78"/>
                                         <color key="textColor" red="0.29920160769999998" green="0.60023695229999996" blue="0.81237965820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gHv-a9-IQm" secondAttribute="height" multiplier="244:79" id="O2S-gk-cre"/>
+                                    <constraint firstAttribute="width" secondItem="gHv-a9-IQm" secondAttribute="height" multiplier="244:50" id="O2S-gk-cre"/>
                                 </constraints>
                             </stackView>
                         </subviews>

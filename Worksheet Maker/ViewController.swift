@@ -7,12 +7,7 @@
 //
 
 import UIKit
-import SwiftyStoreKit
 
-
-var sharedSeret = "d7ab595b24b94295918edfcf10c176eb"
-let inAppPurchaseID = "com.nanwang.paperworksheet.geniuslevel"
-var IAPstatus = false
 var currentSwitch = 0
 
 
@@ -54,8 +49,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageQuestionLabel: UILabel!
     @IBAction func stepperAction(_ sender: UIStepper) {
         selectedPageNumber = Int(sender.value)
+        if selectedPageNumber == 1 {
+            pageLabel.text = "\(Int(sender.value)) PAGE"
+        } else {
         pageLabel.text = "\(Int(sender.value)) PAGES"
-        pageQuestionLabel.text = "\(Int(sender.value) * 20) Questions"
+        }
+        pageQuestionLabel.text = "\(Int(sender.value) * 20) QUESTIONS TOTAL"
     }
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -69,13 +68,8 @@ class ViewController: UIViewController {
             selectedDifficulty = 1
             currentSwitch = 1
         case 2:
-            if IAPstatus == false {
-                performSegue(withIdentifier: "segueIAP", sender: self)
-                segmentControl.selectedSegmentIndex = currentSwitch
-            } else {
             selectedDifficulty = 2
             currentSwitch = 2
-            }
         default:
             break
         }
@@ -135,52 +129,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        //Storekit
-        SwiftyStoreKit.retrieveProductsInfo([inAppPurchaseID]) { result in
-            if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
-                print("Product: \(product.localizedDescription), price: \(priceString)")
-            }
-            else if let invalidProductId = result.invalidProductIDs.first {
-                print("Invalid product identifier: \(invalidProductId)")
-            }
-            else {
-                print("Error: \(String(describing: result.error))")
-            }
-        }
-        
-        verifyPurchase()
-//        purchaseProduct(with: inAppPurchaseID)
     }
-    
-    
-    func verifyPurchase() {
-        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: sharedSeret)
-        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
-            switch result {
-            case .success(let receipt):
-                let productId = inAppPurchaseID
-                // Verify the purchase of Consumable or NonConsumable
-                let purchaseResult = SwiftyStoreKit.verifyPurchase(
-                    productId: productId,
-                    inReceipt: receipt)
-                
-                switch purchaseResult {
-                case .purchased(let receiptItem):
-                    IAPstatus = true
-                    print("\(productId) is purchased: \(receiptItem)")
-                case .notPurchased:
-                    IAPstatus = false
-                    print("The user has never purchased \(productId)")
-                }
-            case .error(let error):
-                print("Receipt verification failed: \(error)")
-            }
-        }
-    }
-    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

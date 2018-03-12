@@ -222,11 +222,31 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
+        loadSimplePDF()
+        let printController = UIPrintInteractionController.shared
+        let printInfo = UIPrintInfo(dictionary : nil)
+        printInfo.duplex = .longEdge
+        printInfo.outputType = .general
+        printInfo.jobName = "PaperMath Worksheet"
+        printController.printInfo = printInfo
+        printController.printingItem = docURL
+        printController.present(animated : true, completionHandler : nil)
+    }
+        
+    @IBAction func PDFRefresh(_ sender: Any) {
+        removeAllArray()
+        generatingPage()
+        self.worksheetTableView.reloadData()
+    }
+    
+    @IBAction func PDFExport(_ sender: Any) {
         print("# Button Pressed")
         loadSimplePDF()
         loadPDFAndShare()
+
     }
-        
+   
+    
     
     @IBAction func switchShowAnswer(_ sender: UISwitch) {
         if sender.isOn {
@@ -838,7 +858,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         while currentPageArrayStart + 19 < cellNumber {
             pdf.setContentAlignment(.center)
-            pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
+            pdf.addText("PaperMath - \(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
             pdf.addLineSpace(10)
             
             pdf.setContentAlignment(.left)
@@ -857,7 +877,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.setContentAlignment(.center)
             pdf.addLineSpace(10)
-            pdf.addText("Created by WORKSHEET MAKER, download free on Apple AppStore", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
+            pdf.addText("Created by PaperMath. Get it on the iPhone App Store!", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()
@@ -868,7 +888,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         // Save as a local file
         docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
-        docURL = docURL.appendingPathComponent("WorksheetMaker.pdf")
+        docURL = docURL.appendingPathComponent("PaperWorksheet.pdf")
         try? pdfData.write(to: docURL as URL, options: .atomic)
     }
     

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Worksheet Maker.xcodeproj">
+      location = "group:/Users/zwang/Dropbox (NBCUniversal)/Xcode/Worksheet Maker/PaperWorksheet.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
