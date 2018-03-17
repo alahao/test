@@ -45,6 +45,7 @@ var currentSwitch = 0
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var goToAnswer: UIBarButtonItem!
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageQuestionLabel: UILabel!
     @IBAction func stepperAction(_ sender: UIStepper) {

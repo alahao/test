@@ -8,6 +8,7 @@
 
 import UIKit
 import SimplePDF
+import GameKit
 
 // START Digit Count
 public extension Int {
@@ -155,6 +156,9 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     @IBOutlet weak var worksheetTableView: UITableView!
     
+    let answerSeed = GKMersenneTwisterRandomSource()
+    var answerSeedNumber : UInt64 = UInt64(Int.random(min: 10000, max: 99999))
+    
     var randomOperationSign = 0
     
     // 0: EASY, 1: MEDIUM, 2: HARD
@@ -220,8 +224,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     var currentPageArrayStart = 0
     
+   
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
+        
         loadSimplePDF()
         let printController = UIPrintInteractionController.shared
         let printInfo = UIPrintInfo(dictionary : nil)
@@ -234,6 +240,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
         
     @IBAction func PDFRefresh(_ sender: Any) {
+        answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
         removeAllArray()
         generatingPage()
         self.worksheetTableView.reloadData()
@@ -286,6 +293,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // + - X / and Mixed
     func CalculateSetArrayPMTD() {
+        
         func calculate() {
             var operation = 0
             
@@ -305,14 +313,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if operation == 0 {
             numberOpertaionSign = "+"
             OperationDifficultyPlus()
-            numberOne = Int.random(min: aMin, max: aMax)
-            numberTwo = Int.random(min: bMin, max: bMax)
+            numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: aMin, highestValue: aMax).nextInt()
+            numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: bMin, highestValue: bMax).nextInt()
             numberAnswer = numberOne + numberTwo
         } else if operation == 1 {
             numberOpertaionSign = "-"
             OperationDifficultyMinus()
-            numberOne = Int.random(min: aMin, max: aMax)
-            numberTwo = Int.random(min: bMin, max: bMax)
+            numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: aMin, highestValue: aMax).nextInt()
+            numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: bMin, highestValue: bMax).nextInt()
             if difficulty < 2 {
             numberAnswer = numberOne
             numberOne = numberAnswer + numberTwo
@@ -322,14 +330,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         } else if operation == 2 {
             numberOpertaionSign = "×"
             OperationDifficultyTimes()
-            numberOne = Int.random(min: aMin, max: aMax)
-            numberTwo = Int.random(min: bMin, max: bMax)
+            numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: aMin, highestValue: aMax).nextInt()
+            numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: bMin, highestValue: bMax).nextInt()
             numberAnswer = numberOne * numberTwo
         } else if operation == 3 {
             numberOpertaionSign = "÷"
             OperationDifficultyDivision()
-            numberTwo = Int.random(min: aMin, max: aMax)
-            numberAnswer = Int.random(min: bMin, max: bMax)
+            numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: aMin, highestValue: aMax).nextInt()
+            numberAnswer = GKRandomDistribution(randomSource: answerSeed, lowestValue: bMin, highestValue: bMax).nextInt()
             numberOne = numberAnswer * numberTwo
         }
         }
@@ -349,7 +357,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func generatingRandomFraction(nLMin: Int, nLMax: Int, dLMin: Int, dLMax: Int, nRMin: Int, nRMax: Int, dRMin: Int, dRMax: Int) {
         // Calculation
         func randomFractionOperation() {
-        randomOperationSign = Int.random(min: 0, max: 5)
+        randomOperationSign = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 5).nextInt()
             if difficulty == 0 {
                     numberOpertaionSign = "+"
                     fOneAnswerN = fLN * fRD + fRN * fLD
@@ -393,13 +401,13 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         // Function to Generate question set
         func generateQuestionSet() {
-            fLN = Int.random(min: nLMin, max: nLMax)
-            fLD = Int.random(min: dLMin, max: dLMax)
-            fRN = Int.random(min: nRMin, max: nRMax)
+            fLN = GKRandomDistribution(randomSource: answerSeed, lowestValue: nLMin, highestValue: nLMax).nextInt()
+            fLD = GKRandomDistribution(randomSource: answerSeed, lowestValue: dLMin, highestValue: dLMax).nextInt()
+            fRN = GKRandomDistribution(randomSource: answerSeed, lowestValue: nRMin, highestValue: nRMax).nextInt()
         if difficulty == 0 {
             fRD = fLD
         } else {
-            fRD = Int.random(min: dRMin, max: dRMax)
+            fRD = GKRandomDistribution(randomSource: answerSeed, lowestValue: dRMin, highestValue: dRMax).nextInt()
         }
             // Calculating Fraction One
             randomFractionOperation()
@@ -433,15 +441,18 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     // Decimal
-    func generatingRandomDecimal(numberAMin: Double, numberAMax: Double, numberBMin: Double, numberBMax: Double, dPMin : Int, dPMax : Int, dPMulMin: Int, dPMulMax: Int) {
+    func generatingRandomDecimal(numberAMin: Int, numberAMax: Int, numberBMin: Int, numberBMax: Int, dPMin : Int, dPMax : Int, dPMulMin: Int, dPMulMax: Int) {
         var decNumberAnswer = 0.00
         func randomDecimalOperation() {
-        decNumberOne = Double.random(min: numberAMin, max: numberAMax)
-        decNumberOne = decNumberOne.rounded(toPlaces: Int.random(min: dPMin, max: dPMax))
-        decNumberTwo = Double.random(min: numberBMin, max: numberBMax)
-        decNumberTwo = decNumberTwo.rounded(toPlaces: Int.random(min: dPMin, max: dPMax))
+        let decNumberOneInt = GKRandomDistribution(randomSource: answerSeed, lowestValue: numberAMin * 10000, highestValue: numberAMax * 10000).nextInt()
+        
+        decNumberOne = Double(decNumberOneInt) / 10000
+        decNumberOne = decNumberOne.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMin, highestValue: dPMax).nextInt())
+        let decNumberTwoInt = GKRandomDistribution(randomSource: answerSeed, lowestValue: numberBMin * 10000, highestValue: numberBMax * 10000).nextInt()
+        decNumberTwo = Double(decNumberTwoInt) / 1000
+        decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMin, highestValue: dPMax).nextInt())
             
-            randomOperationSign = Int.random(min: 0, max: 4)
+            randomOperationSign = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 4).nextInt()
             if randomOperationSign == 0 || randomOperationSign == 1 {
                 numberOpertaionSign = "+"
                 decNumberAnswer = decNumberOne + decNumberTwo
@@ -452,7 +463,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 
             } else if randomOperationSign == 4 {
                 numberOpertaionSign = "×"
-                decNumberTwo = decNumberTwo.rounded(toPlaces: Int.random(min: dPMulMin, max: dPMulMax))
+                decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
                 decNumberAnswer = decNumberOne * decNumberTwo
             }
             
@@ -643,10 +654,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         var dPMax = 0
         var dPMulMin = 0
         var dPMulMax = 0
-        var numberAMin = 0.0
-        var numberAMax = 0.0
-        var numberBMin = 0.0
-        var numberBMax = 0.0
+        var numberAMin = 0
+        var numberAMax = 0
+        var numberBMin = 0
+        var numberBMax = 0
         
         if difficulty == 0 {
             dPMin = 1
@@ -787,6 +798,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setRightNavButton()
+        answerSeed.seed = answerSeedNumber
         generatingPage()
         worksheetTableView.delegate = self
         worksheetTableView.dataSource = self
