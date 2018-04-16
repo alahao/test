@@ -10,13 +10,26 @@ import UIKit
 
 
 class AnswersVC: UIViewController {
+    
+    var answerCodeLText = ""
+    var answerCodeRText = ""
+    
     @IBOutlet weak var answerCodeL: UITextField!
     
     @IBOutlet weak var answerCodeR: UITextField!
     
+    @IBAction func showAnswerButton(_ sender: Any) {
+        
+//        cell.numberAnswerLabel.text = String(describing: question.questionArray[indexPath.row][5])
+//        cell.numberAnswerTwoLabel.text = String(describing: question.questionArray[indexPath.row][6])
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerCodeL.text = answerCodeLText
+        answerCodeR.text = answerCodeRText
 
         // Do any additional setup after loading the view.
     }
@@ -27,14 +40,5 @@ class AnswersVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }

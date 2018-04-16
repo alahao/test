@@ -16,6 +16,8 @@
 		3D53F2D12054A0EB00679CD9 /* icons8-add-list-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */; };
 		3D53F2D22054A0EB00679CD9 /* icons8-export-pdf-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D53F2CF2054A0EB00679CD9 /* icons8-export-pdf-filled-100.png */; };
 		3D68BD64205CE62100C9F428 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68BD63205CE62100C9F428 /* Operation.swift */; };
+		3D68BD66205D9CB000C9F428 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68BD65205D9CB000C9F428 /* Difficulty.swift */; };
+		3D68BD68205D9FEC00C9F428 /* QuestionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */; };
 		3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F21FAF994500CCCE55 /* AppDelegate.swift */; };
 		3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8496F41FAF994500CCCE55 /* ViewController.swift */; };
 		3D8496F81FAF994500CCCE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8496F61FAF994500CCCE55 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-add-list-filled-100.png"; sourceTree = "<group>"; };
 		3D53F2CF2054A0EB00679CD9 /* icons8-export-pdf-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-export-pdf-filled-100.png"; sourceTree = "<group>"; };
 		3D68BD63205CE62100C9F428 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		3D68BD65205D9CB000C9F428 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionArray.swift; sourceTree = "<group>"; };
 		3D8496EF1FAF994500CCCE55 /* Worksheet Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Worksheet Maker.app"; path = PaperWorksheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8496F21FAF994500CCCE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8496F41FAF994500CCCE55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				3D34943D205B900700A6571B /* AnswersVC.swift */,
 				3D68BD63205CE62100C9F428 /* Operation.swift */,
 				3D34943F205B942A00A6571B /* TextFieldMaxLengths.swift */,
+				3D68BD65205D9CB000C9F428 /* Difficulty.swift */,
+				3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */,
 				3D0968E51FB5E2B700570933 /* Assets */,
 			);
 			path = "Worksheet Maker";
@@ -274,6 +280,8 @@
 				3D8496F51FAF994500CCCE55 /* ViewController.swift in Sources */,
 				3D68BD64205CE62100C9F428 /* Operation.swift in Sources */,
 				3D8496FB1FAF994500CCCE55 /* Worksheet_Maker.xcdatamodeld in Sources */,
+				3D68BD68205D9FEC00C9F428 /* QuestionArray.swift in Sources */,
+				3D68BD66205D9CB000C9F428 /* Difficulty.swift in Sources */,
 				3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */,
 				3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */,
 				3D349440205B942A00A6571B /* TextFieldMaxLengths.swift in Sources */,

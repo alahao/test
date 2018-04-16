@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -364,16 +363,16 @@
                                                             <rect key="frame" x="10" y="14" width="315" height="15.666666666666664"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-kn-f3l">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="15.666666666666666"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="15.666666666666666"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yqm-fc-ich">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="21" height="15.666666666666666"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="28.333333333333332" height="15.666666666666666"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-at-pjg">
-                                                                            <rect key="frame" x="26" y="0.0" width="84" height="15.666666666666666"/>
+                                                                            <rect key="frame" x="33.333333333333336" y="0.0" width="114.33333333333331" height="15.666666666666666"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -381,48 +380,24 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-Gh-91f">
-                                                                    <rect key="frame" x="130" y="0.0" width="109.66666666666669" height="15.666666666666666"/>
+                                                                    <rect key="frame" x="167.66666666666663" y="0.0" width="147.33333333333337" height="15.666666666666666"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nHf-fs-vgm">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="21" height="15.666666666666666"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="28.333333333333332" height="15.666666666666666"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-fF-LsA" userLabel="Number Three Label">
-                                                                            <rect key="frame" x="26.000000000000007" y="0.0" width="83.666666666666686" height="15.666666666666666"/>
+                                                                            <rect key="frame" x="33.333333333333343" y="0.0" width="114" height="15.666666666666666"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zsw-jA-45F" userLabel="Stack View Answer">
-                                                                    <rect key="frame" x="259.66666666666669" y="0.0" width="55.333333333333314" height="15.666666666666666"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lx7-Pi-2XU">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="24.666666666666668" height="15.666666666666666"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slt-tw-Ya8" userLabel="Number Answer Two Label">
-                                                                            <rect key="frame" x="30.666666666666629" y="0.0" width="24.666666666666671" height="15.666666666666666"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" red="0.28236889079999999" green="0.4514536743" blue="0.64792968750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                                            <integer key="value" value="1"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="zsw-jA-45F" firstAttribute="width" secondItem="XMg-Gh-91f" secondAttribute="width" multiplier="1:2" id="OiJ-ik-1yf"/>
                                                                 <constraint firstItem="XMg-Gh-91f" firstAttribute="width" secondItem="JDp-kn-f3l" secondAttribute="width" id="yJm-eF-MbP"/>
                                                             </constraints>
                                                         </stackView>
@@ -437,8 +412,6 @@
                                                 <connections>
                                                     <outlet property="RowNumber" destination="yqm-fc-ich" id="cWH-j9-X8v"/>
                                                     <outlet property="RowNumberTwo" destination="nHf-fs-vgm" id="P6Y-yO-qLY"/>
-                                                    <outlet property="numberAnswerLabel" destination="lx7-Pi-2XU" id="Ar3-4m-hc9"/>
-                                                    <outlet property="numberAnswerTwoLabel" destination="slt-tw-Ya8" id="asO-8Q-H9u"/>
                                                     <outlet property="numberOneLabel" destination="uUw-at-pjg" id="18I-hU-vn7"/>
                                                     <outlet property="numberThreeLabel" destination="BhU-fF-LsA" id="Rp7-Tk-7i6"/>
                                                 </connections>
@@ -477,28 +450,14 @@
                         <viewLayoutGuide key="safeArea" id="SWf-tf-xXX"/>
                     </view>
                     <navigationItem key="navigationItem" id="LGT-4X-xnX">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="rp7-l9-mSw">
-                                <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="JSf-iu-5nl">
-                                    <rect key="frame" x="308" y="6.6666666666666679" width="51" height="31.000000000000004"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <connections>
-                                        <action selector="switchShowAnswer:" destination="rXX-Zw-l36" eventType="valueChanged" id="kc4-CU-vIf"/>
-                                    </connections>
-                                </switch>
-                            </barButtonItem>
-                            <barButtonItem title="Show Answers" style="plain" id="XJI-LP-cvX">
-                                <color key="tintColor" red="0.87647687649999995" green="0.93826055289999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="NSForegroundColorAttributeName.UIColor">
-                                        <color key="value" red="0.28260567780000001" green="0.45480930809999998" blue="0.65830320119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="NSForegroundColorAttributeName.forState" value=".Disabled"/>
-                                </userDefinedRuntimeAttributes>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="o6x-gU-2Gq">
+                            <connections>
+                                <segue destination="K4j-R1-4L4" kind="show" identifier="segueShowAnswer" id="SrL-tt-QQt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerButton" destination="o6x-gU-2Gq" id="Drf-gf-JIv"/>
                         <outlet property="worksheetTableView" destination="Yvj-C8-chX" id="OIF-9j-ad3"/>
                     </connections>
                 </viewController>
@@ -574,6 +533,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmE-ae-WWT">
                                         <rect key="frame" x="209" y="9.6666666666666572" width="76" height="30"/>
                                         <state key="normal" title="Show"/>
+                                        <connections>
+                                            <action selector="showAnswerButton:" destination="K4j-R1-4L4" eventType="touchUpInside" id="zYO-cd-GKm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -648,4 +610,7 @@
         <image name="icons8-export-pdf-filled-100.png" width="100" height="100"/>
         <image name="icons8-sync-filled-100.png" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SrL-tt-QQt"/>
+    </inferredMetricsTieBreakers>
 </document>

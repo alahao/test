@@ -120,7 +120,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueCreateWorkSheet" {
         let destinationVC =  segue.destination as! WorksheetVC
-        destinationVC.numberOperation = selectedOperation
+        numberOperation = selectedOperation
         destinationVC.pageNumber = selectedPageNumber
         destinationVC.difficulty = selectedDifficulty
         

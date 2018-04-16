@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 // 1
 private var maxLengths = [UITextField: Int]()
 
