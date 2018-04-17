@@ -78,21 +78,21 @@ class ViewController: UIViewController {
     
     var selectedOperation = "+"
     var selectedPageNumber = 1
-    var selectedOperationLabel = "Plus"
+    var selectedOperationLabel = "Addition"
     var selectedDifficulty = 0
     
     @IBAction func buttonPlus(_ sender: Any) {
-        selectedOperation = "Plus"
+        selectedOperation = "Addition"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMinus(_ sender: Any) {
-        selectedOperation = "Minus"
+        selectedOperation = "Subtraction"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     
     @IBAction func buttonMul(_ sender: Any) {
-        selectedOperation = "Times"
+        selectedOperation = "Multiplication"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     @IBAction func buttonDiv(_ sender: Any) {

@@ -8,12 +8,14 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-    @IBOutlet weak var numberOneLabel: UILabel!
-    @IBOutlet weak var numberThreeLabel: UILabel!
- 
-    @IBOutlet weak var RowNumber: UILabel!
-    @IBOutlet weak var RowNumberTwo: UILabel!
+class TableViewAnswerCell: UITableViewCell {
+  
+    @IBOutlet weak var setLQN: UILabel!
+    @IBOutlet weak var setLQ: UILabel!
+    
+    @IBOutlet weak var setRQN: UILabel!
+    @IBOutlet weak var setRQ: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

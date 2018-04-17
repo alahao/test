@@ -12,31 +12,25 @@ import GameKit
 
 var numberOperation = ""
 var questionNumber = 0
+var seedOperation = ""
 
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     @IBOutlet weak var answerButton: UIBarButtonItem!
-    
     let question = questionArray()
     let operation = Operation()
-    
     var difficulty = 0
     
     @IBOutlet weak var worksheetTableView: UITableView!
     
-    
     // VARIBLES
-    let answerSeed = GKMersenneTwisterRandomSource()
-    var answerSeedNumber : UInt64 = UInt64(Int.random(min: 10000, max: 99999))
+    var answerSeedNumber : UInt64 = 0
     
     var numberOne = 0
     var numberTwo = 0
     var numberAnswer = 0
     var numberAnswerOne = 0
     var numberAnswerTwo = 0
-
     var numberOpertaionSign = ""
-    
     var questionSetOne = ""
     var questionSetTwo = ""
     
@@ -55,10 +49,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var fTwoAnswerD = 0
     var questionSetL = ""
     var questionSetR = ""
-    
     var finalNumerator = 0
     var finalDenominator = 0
-    
     var wholeNumberCount = 0
   
     
@@ -74,17 +66,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var decNumberOpertaionSignL = ""
     var decNumberOpertaionSignR = ""
     
-    var docURL : URL!
     
+    var docURL : URL!
     var cellNumber = 20
     var pageNumber = 2
     let defaultCellHeight = 40
     var cellHeight = 40
-    let questionAnswerDivider = "┊  "
-    
-  
     var currentPageArrayStart = 0
-    
+
     
     
     // START
@@ -93,21 +82,21 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     // 1. VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerSeed.seed = answerSeedNumber
-        print("QArray 0 is \(question.questionArray)")
+        print("QArray is \(question.questionArray)")
         generatingPage()
-       
-        print("QArray 1 is \(question.questionArray)")
         worksheetTableView.delegate = self
         worksheetTableView.dataSource = self
     }
     
     // 2. GENERATE 20 lines of questions per page
     func generatingPage() {
-        cellNumber = 20 * pageNumber
         question.questionArray.removeAll()
         questionNumber = 0
-        answerButton.title = "Answer Key \(numberOperation.characters.first!)-\(answerSeedNumber)"
+        cellNumber = 20 * pageNumber
+        answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
+     
+        answerSeed.seed = answerSeedNumber
+        answerButton.title = "Answer Key \(numberOperation.prefix(3))-\(Int(answerSeedNumber) * 100 + pageNumber)"
         print("removed Array, new Array is \(question.questionArray)")
         for _ in 1...cellNumber {
             assignOpeartion()
@@ -117,23 +106,30 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // 3. ASSIGN OPERATION TYPE, Send to Opertaion Class to calculate
     func assignOpeartion() {
-        if numberOperation == "Plus" { // Plus A+B=C
+        if numberOperation == "Addition" { // Addition A+B=C
             numberOpertaionSign = "+"
+            seedOperation = "A"
             question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Minus" { // Minus A-B=C
+        } else if numberOperation == "Subtraction" { // Subtraction A-B=C
             numberOpertaionSign = "−"
+            seedOperation = "B"
             question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Times" { // Multiplication A*B=C
+        } else if numberOperation == "Multiplication" { // Multiplication A*B=C
             numberOpertaionSign = "×"
+            seedOperation = "C"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Division" { // Division C/A=B
             numberOpertaionSign = "÷"
+            seedOperation = "D"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Fraction" { // Fraction
+            seedOperation = "E"
             question.questionArray = operation.OperationFraction()
         } else if numberOperation == "Decimal" { //Decimal
+            seedOperation = "F"
             question.questionArray = operation.OperationDecimal()
         } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
+            seedOperation = "G"
             question.questionArray.append(operation.CalculatePMTD())
         }
     }
@@ -153,27 +149,15 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "worksheetCell", for: indexPath) as! TableViewCell
-        
         cell.RowNumber.text = String(describing: question.questionArray[indexPath.row][0])
         cell.numberOneLabel.text = String(describing: question.questionArray[indexPath.row][1])
-        
         cell.RowNumberTwo.text = String(describing: question.questionArray[indexPath.row][2])
         cell.numberThreeLabel.text = String(describing: question.questionArray[indexPath.row][3])
-        
-       
         return cell
     }
-    
-    
-    
-    
 // END
     
-    
-    
-    
-    
-    
+
     
     // SIMPLE PDF
     func loadSimplePDF() {
@@ -206,7 +190,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         
         // Create PDF Table
-        
         while currentPageArrayStart + 19 < cellNumber {
             pdf.setContentAlignment(.center)
             pdf.addText("PaperMath - \(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
@@ -289,8 +272,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueShowAnswer" {
             let destinationVC =  segue.destination as! AnswersVC
-            destinationVC.answerCodeLText = String(numberOperation.characters.first!)
-            destinationVC.answerCodeRText = String(answerSeedNumber)
+            destinationVC.answerCodeLText = "\(seedOperation)\(pageNumber)"
+            destinationVC.answerCodeRText = String(Int(answerSeedNumber))
         }
     }
 }

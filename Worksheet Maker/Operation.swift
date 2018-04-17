@@ -9,10 +9,11 @@
 import Foundation
 import GameKit
 
+let answerSeed = GKMersenneTwisterRandomSource()
+
+
 class Operation {
     var randomOperationSign = 0
-    
-    let answerSeed = GKMersenneTwisterRandomSource()
     let question = questionArray()
     let difficultySetting = Difficulty()
     
@@ -68,16 +69,16 @@ class Operation {
         func calculate() {
             var operation = 0
             
-            if numberOperation == "Plus" {
+            if numberOperation == "Addition" {
                 operation = 0
-            } else if numberOperation == "Minus" {
+            } else if numberOperation == "Subtraction" {
                 operation = 1
-            } else if numberOperation == "Times" {
+            } else if numberOperation == "Multiplication" {
                 operation = 2
             } else if numberOperation == "Division" {
                 operation = 3
             } else if numberOperation == "Mixed" {
-                operation = Int.random(min: 0, max: 3)
+                operation = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 3).nextInt()
             }
             
             
@@ -87,6 +88,7 @@ class Operation {
                 numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.aMin, highestValue: difficultySetting.aMax).nextInt()
                 numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.bMin, highestValue: difficultySetting.bMax).nextInt()
                 numberAnswer = numberOne + numberTwo
+                print("$\(answerSeed.seed)")
             } else if operation == 1 {
                 numberOpertaionSign = "-"
                 difficultySetting.OperationDifficultyMinus()
@@ -278,7 +280,7 @@ class Operation {
         question.questionArray.append(["", questionSetOne, questionSetTwo, "", " \(decNumberAnswerOne.cleanValue)", decNumberAnswerTwo.cleanValue])
         }
         return question.questionArray
-       }
+        }
     
     
 
