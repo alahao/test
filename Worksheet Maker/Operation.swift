@@ -9,9 +9,6 @@
 import Foundation
 import GameKit
 
-let answerSeed = GKMersenneTwisterRandomSource()
-
-
 class Operation {
     var randomOperationSign = 0
     let question = questionArray()
@@ -78,39 +75,39 @@ class Operation {
             } else if numberOperation == "Division" {
                 operation = 3
             } else if numberOperation == "Mixed" {
-                operation = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 3).nextInt()
+                operation = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 3).nextInt()
             }
             
             
             if operation == 0 {
                 numberOpertaionSign = "+"
                 difficultySetting.OperationDifficultyPlus()
-                numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.aMin, highestValue: difficultySetting.aMax).nextInt()
-                numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.bMin, highestValue: difficultySetting.bMax).nextInt()
+                numberOne = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
+                numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberAnswer = numberOne + numberTwo
-                print("$\(answerSeed.seed)")
+              
             } else if operation == 1 {
                 numberOpertaionSign = "-"
                 difficultySetting.OperationDifficultyMinus()
-                numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.aMin, highestValue: difficultySetting.aMax).nextInt()
-                numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.bMin, highestValue: difficultySetting.bMax).nextInt()
-                if difficultySetting.difficulty < 2 {
+                numberOne = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
+                numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
+                if difficulty! < 2 {
                     numberAnswer = numberOne
                     numberOne = numberAnswer + numberTwo
-                } else if difficultySetting.difficulty == 2 {
+                } else if difficulty == 2 {
                     numberAnswer = numberOne - numberTwo
                 }
             } else if operation == 2 {
                 numberOpertaionSign = "×"
                 difficultySetting.OperationDifficultyTimes()
-                numberOne = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.aMin, highestValue: difficultySetting.aMax).nextInt()
-                numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.bMin, highestValue: difficultySetting.bMax).nextInt()
+                numberOne = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
+                numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberAnswer = numberOne * numberTwo
             } else if operation == 3 {
                 numberOpertaionSign = "÷"
                 difficultySetting.OperationDifficultyDivision()
-                numberTwo = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.aMin, highestValue: difficultySetting.aMax).nextInt()
-                numberAnswer = GKRandomDistribution(randomSource: answerSeed, lowestValue: difficultySetting.bMin, highestValue: difficultySetting.bMax).nextInt()
+                numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
+                numberAnswer = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberOne = numberAnswer * numberTwo
             }
         }
@@ -127,31 +124,23 @@ class Operation {
         answerTwo = numberAnswer
        
         
-        let array = ["\(questionNumberL)", questionSetOne, "\(questionNumberR)", questionSetTwo, " \(answerOne) "," \(answerTwo)"]
+        let array = [String(questionNumberL), questionSetOne, String(questionNumberR), questionSetTwo, String(answerOne), String(answerTwo)]
        
         return array
     }
     
     // ***** Calculate ***** Fraction
-    func OperationFraction() -> [[String]] { // Fraction 1/4 + 2/4 = 3/4
-    
-        let nLMin = difficultySetting.nLMin
-        let nLMax = difficultySetting.nLMax
-        let dLMin = difficultySetting.dLMin
-        let dLMax = difficultySetting.dLMax
-        let nRMin = difficultySetting.nRMin
-        let nRMax = difficultySetting.dRMax
-        let dRMin = difficultySetting.dRMin
-        let dRMax = difficultySetting.dRMax
+    func OperationFraction() -> [String] { // Fraction 1/4 + 2/4 = 3/4
         
         func randomFractionOperation() {
-            randomOperationSign = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 5).nextInt()
-            if difficultySetting.difficulty == 0 {
+            difficultySetting.OperationDifficultyFraction()
+            randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 5).nextInt()
+            if difficulty == 0 {
                 numberOpertaionSign = "+"
                 fOneAnswerN = fLN * fRD + fRN * fLD
                 fOneAnswerD = fLD * fRD
             }
-            else if difficultySetting.difficulty == 1 {
+            else if difficulty == 1 {
                 if randomOperationSign < 4 {
                     numberOpertaionSign = "+"
                     fOneAnswerN = fLN * fRD + fRN * fLD
@@ -164,7 +153,7 @@ class Operation {
                     fLD = fOneAnswerD * fRD
                 }
             }
-            else if difficultySetting.difficulty == 2 {
+            else if difficulty == 2 {
                 if randomOperationSign < 2 {
                     numberOpertaionSign = "+"
                     fOneAnswerN = fLN * fRD + fRN * fLD
@@ -189,13 +178,13 @@ class Operation {
         
         // Function to Generate question set
         func generateQuestionSet() {
-            fLN = GKRandomDistribution(randomSource: answerSeed, lowestValue: nLMin, highestValue: nLMax).nextInt()
-            fLD = GKRandomDistribution(randomSource: answerSeed, lowestValue: dLMin, highestValue: dLMax).nextInt()
-            fRN = GKRandomDistribution(randomSource: answerSeed, lowestValue: nRMin, highestValue: nRMax).nextInt()
-            if difficultySetting.difficulty == 0 {
+            fLN = GKRandomDistribution(randomSource: answerSeed!, lowestValue: nLMin, highestValue: nLMax).nextInt()
+            fLD = GKRandomDistribution(randomSource: answerSeed!, lowestValue: dLMin, highestValue: dLMax).nextInt()
+            fRN = GKRandomDistribution(randomSource: answerSeed!, lowestValue: nRMin, highestValue: nRMax).nextInt()
+            if difficulty == 0 {
                 fRD = fLD
             } else {
-                fRD = GKRandomDistribution(randomSource: answerSeed, lowestValue: dRMin, highestValue: dRMax).nextInt()
+                fRD = GKRandomDistribution(randomSource: answerSeed!, lowestValue: dRMin, highestValue: dRMax).nextInt()
             }
             // Calculating Fraction One
             randomFractionOperation()
@@ -212,44 +201,38 @@ class Operation {
                 print("regenerate fraction because numerator or denominator > 2 digits for non Hard Level")
             }
         }
-        
+        questionNumber = questionNumber + 1
+        let questionNumberL = questionNumber
         generateQuestionSet()
         questionSetOne = questionSetL + " \(numberOpertaionSign) " + questionSetR + " = "
         let simplifiedfAnswerOne = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
         
+        questionNumber = questionNumber + 1
+        let questionNumberR = questionNumber
         generateQuestionSet()
         questionSetTwo = questionSetL + " \(numberOpertaionSign) " + questionSetR + " = "
         let simplifiedfTwoAnswerTwo = simplifiedFraction(numerator: fOneAnswerN, denominator: fOneAnswerD)
         
         // Write the two questions for a row
-        question.questionArray.append(["", questionSetOne, questionSetTwo, "", simplifiedfAnswerOne, simplifiedfTwoAnswerTwo])
-        return question.questionArray
+        let array = [String(questionNumberL), questionSetOne, String(questionNumberR), questionSetTwo, simplifiedfAnswerOne, simplifiedfTwoAnswerTwo]
+        return array
     }
     
         // ***** Calculate ***** Decimal
-    func OperationDecimal() -> [[String]] { // Decimal 1.3 + 2.3 = 3.6  Mixed Operation
-    
-        let numberAMin = difficultySetting.numberAMin
-        let numberAMax = difficultySetting.numberAMax
-        let numberBMin = difficultySetting.numberBMin
-        let numberBMax = difficultySetting.numberBMax
-        let dPMin = difficultySetting.dPMin
-        let dPMax = difficultySetting.dPMax
-        let dPMulMin = difficultySetting.dPMulMin
-        let dPMulMax = difficultySetting.dPMulMax
-        
+    func OperationDecimal() -> [String] { // Decimal 1.3 + 2.3 = 3.6  Mixed Operation
         
         var decNumberAnswer = 0.00
         func randomDecimalOperation() {
-            let decNumberOneInt = GKRandomDistribution(randomSource: answerSeed, lowestValue: numberAMin * 10000, highestValue: numberAMax * 10000).nextInt()
-            
+            difficultySetting.OperationDifficultyDecimal()
+            let decNumberOneInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberAMin * 10000, highestValue: numberAMax * 10000).nextInt()
+            print("$seed number 2 is \(answerSeed!.seed), \(decNumberOneInt)")
             decNumberOne = Double(decNumberOneInt) / 10000
-            decNumberOne = decNumberOne.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMin, highestValue: dPMax).nextInt())
-            let decNumberTwoInt = GKRandomDistribution(randomSource: answerSeed, lowestValue: numberBMin * 10000, highestValue: numberBMax * 10000).nextInt()
+            decNumberOne = decNumberOne.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
+            let decNumberTwoInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberBMin * 10000, highestValue: numberBMax * 10000).nextInt()
             decNumberTwo = Double(decNumberTwoInt) / 1000
-            decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMin, highestValue: dPMax).nextInt())
+            decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
             
-            randomOperationSign = GKRandomDistribution(randomSource: answerSeed, lowestValue: 0, highestValue: 4).nextInt()
+            randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 4).nextInt()
             if randomOperationSign == 0 || randomOperationSign == 1 {
                 numberOpertaionSign = "+"
                 decNumberAnswer = decNumberOne + decNumberTwo
@@ -260,27 +243,32 @@ class Operation {
                 
             } else if randomOperationSign == 4 {
                 numberOpertaionSign = "×"
-                decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
+                decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
                 decNumberAnswer = decNumberOne * decNumberTwo
             }
             
             if decNumberOne.truncatingRemainder(dividingBy: 1) == 0 && decNumberTwo.truncatingRemainder(dividingBy: 1) == 0 {
                 randomDecimalOperation()
-            
+            }
         }
         
+        questionNumber = questionNumber + 1
+        let questionNumberL = questionNumber
         randomDecimalOperation()
         questionSetOne = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " ="
         decNumberAnswerOne = decNumberAnswer
         
+        questionNumber = questionNumber + 1
+        let questionNumberR = questionNumber
         randomDecimalOperation()
         questionSetTwo = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " ="
         decNumberAnswerTwo = decNumberAnswer
         
-        question.questionArray.append(["", questionSetOne, questionSetTwo, "", " \(decNumberAnswerOne.cleanValue)", decNumberAnswerTwo.cleanValue])
+        let array = [String(questionNumberL), questionSetOne, String(questionNumberR), questionSetTwo, String(decNumberAnswerOne.cleanValue), String(decNumberAnswerTwo.cleanValue)]
+            
+        return array
         }
-        return question.questionArray
-        }
+    
     
     
 

@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         let destinationVC =  segue.destination as! WorksheetVC
         numberOperation = selectedOperation
         destinationVC.pageNumber = selectedPageNumber
-        destinationVC.difficulty = selectedDifficulty
+        difficulty = selectedDifficulty
         
         }
     }

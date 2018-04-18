@@ -13,12 +13,11 @@ import GameKit
 var numberOperation = ""
 var questionNumber = 0
 var seedOperation = ""
-
+let answerSeed : GKMersenneTwisterRandomSource? = GKMersenneTwisterRandomSource()
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var answerButton: UIBarButtonItem!
     let question = questionArray()
     let operation = Operation()
-    var difficulty = 0
     
     @IBOutlet weak var worksheetTableView: UITableView!
     
@@ -94,14 +93,13 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         questionNumber = 0
         cellNumber = 20 * pageNumber
         answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
-     
-        answerSeed.seed = answerSeedNumber
-        answerButton.title = "Answer Key \(numberOperation.prefix(3))-\(Int(answerSeedNumber) * 100 + pageNumber)"
+        answerSeed?.seed = answerSeedNumber
         print("removed Array, new Array is \(question.questionArray)")
         for _ in 1...cellNumber {
             assignOpeartion()
             print("QArray assigned is \(question.questionArray)")
         }
+        answerButton.title = "Answer Key: " + seedOperation + String(difficulty!) + "\(pageNumber)-\(Int(answerSeedNumber))"
     }
     
     // 3. ASSIGN OPERATION TYPE, Send to Opertaion Class to calculate
@@ -124,10 +122,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Fraction" { // Fraction
             seedOperation = "E"
-            question.questionArray = operation.OperationFraction()
+            question.questionArray.append(operation.OperationFraction())
         } else if numberOperation == "Decimal" { //Decimal
             seedOperation = "F"
-            question.questionArray = operation.OperationDecimal()
+            question.questionArray.append(operation.OperationDecimal())
         } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
             seedOperation = "G"
             question.questionArray.append(operation.CalculatePMTD())
@@ -272,7 +270,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueShowAnswer" {
             let destinationVC =  segue.destination as! AnswersVC
-            destinationVC.answerCodeLText = "\(seedOperation)\(pageNumber)"
+            destinationVC.answerCodeLText = String(seedOperation) + String(difficulty!) + String(pageNumber)
             destinationVC.answerCodeRText = String(Int(answerSeedNumber))
         }
     }

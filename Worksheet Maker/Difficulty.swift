@@ -8,39 +8,36 @@
 
 import Foundation
 
+var difficulty : Int? = 0
+
+// MARK: Begin Difficulty Setting
+var aMin = 0
+var aMax = 0
+var bMin = 0
+var bMax = 0
+
+// Fraction
+var nLMin = 2
+var nLMax = 9
+var dLMin = 2
+var dLMax = 9
+var nRMin = 2
+var nRMax = 9
+var dRMin = 2
+var dRMax = 9
+
+// Decimal
+var dPMin = 0
+var dPMax = 0
+var dPMulMin = 0
+var dPMulMax = 0
+var numberAMin = 0
+var numberAMax = 0
+var numberBMin = 0
+var numberBMax = 0
+
+
 class Difficulty {
-    
-    var difficulty = 0
-    
-    // MARK: Begin Difficulty Setting
-    var aMin = 0
-    var aMax = 0
-    var bMin = 0
-    var bMax = 0
-    
-    // Fraction
-    var nLMin = 2
-    var nLMax = 9
-    var dLMin = 2
-    var dLMax = 9
-    var nRMin = 2
-    var nRMax = 9
-    var dRMin = 2
-    var dRMax = 9
-    
-    // Decimal
-    var dPMin = 0
-    var dPMax = 0
-    var dPMulMin = 0
-    var dPMulMax = 0
-    var numberAMin = 0
-    var numberAMax = 0
-    var numberBMin = 0
-    var numberBMax = 0
-    
-    
-    
-    
     
     // FUNC
     

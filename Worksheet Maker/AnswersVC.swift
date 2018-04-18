@@ -17,11 +17,12 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var cellNumber = 2
     var answerCodeLText = ""
     var answerCodeRText = ""
-    var pageNumber = 1
+    var pageNumber : Int? = 1
     var cellHeight = 40
  
     @IBOutlet weak var answerTableView: UITableView!
     
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var answerCodeL: UITextField!
     @IBOutlet weak var answerCodeR: UITextField!
     
@@ -29,24 +30,91 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         answerCodeL.text = answerCodeLText
         answerCodeR.text = answerCodeRText
+        errorMessage.text = ""
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func showAnswerButton(_ sender: Any) {
-        answerSeed.seed = UInt64(answerCodeR.text!)!
-        print("$seed number is \(answerSeed.seed)")
-        answerTableView.delegate = self
-        answerTableView.dataSource = self
-        question.questionArray.removeAll()
-        generatingPage()
-        self.answerTableView.reloadData()
+        
+        
+        enum codeError : Error {
+            case invalidA
+            case invalidPageNumber
+            case invalidKey
+            case invalidDifficulty
+        }
+        
+        func checkError() throws {
+            guard let userPageNumber = Int(answerCodeL.text!.dropFirst(2)), userPageNumber > 0, userPageNumber <= 20 else {
+                throw codeError.invalidPageNumber
+            }
+            
+            guard let userDifficulty = Int(answerCodeL.text!.dropFirst(1).prefix(1)), userDifficulty >= 0, userDifficulty < 3 else {
+                throw codeError.invalidDifficulty
+            }
+            
+            guard let userAnswerCodeR = answerCodeR.text, userAnswerCodeR != "" else {
+                throw codeError.invalidKey
+            }
+            errorMessage.text = ""
+            answerSeed?.seed = UInt64(answerCodeR.text!)!
+            answerTableView.delegate = self
+            answerTableView.dataSource = self
+            question.questionArray.removeAll()
+            pageNumber = Int(answerCodeL.text!.dropFirst(2))!
+            difficulty = Int(answerCodeL.text!.dropFirst(1).prefix(1))!
+        
+            generatingPage()
+            self.answerTableView.reloadData()
+            print("good array is \(question.questionArray)")
+        }
+        
+        do {
+        try checkError()
+        } catch codeError.invalidPageNumber {
+            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
+            print("Invalid page code, please re-enter, eg. A12-12345.")
+            question.questionArray.removeAll()
+            pageNumber = 0
+            
+            print("array is \(question.questionArray)")
+            self.answerTableView.reloadData()
+            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
+        } catch codeError.invalidDifficulty {
+            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
+            print("Invalid diff code, please re-enter, eg. A12-12345.")
+            question.questionArray.removeAll()
+            pageNumber = 0
+           
+            print("array is \(question.questionArray)")
+            self.answerTableView.reloadData()
+            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
+        }  catch codeError.invalidKey {
+            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
+            print("Invalid key code, please re-enter, eg. A12-12345.")
+            question.questionArray.removeAll()
+            pageNumber = 0
+            
+            print("array is \(question.questionArray)")
+            self.answerTableView.reloadData()
+            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
+        } catch let otherError {
+            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
+            print("Invalid code, please re-enter, eg. A12-12345.")
+            question.questionArray.removeAll()
+            pageNumber = 0
+           
+            print("array is \(question.questionArray)")
+            self.answerTableView.reloadData()
+            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
+        }
     }
     
     
         // 2. GENERATE 20 lines of questions per page
         func generatingPage() {
-            pageNumber = Int(answerCodeL.text!.dropFirst())!
+            print("generate page")
             if answerCodeL.text!.prefix(1) == "A" {
                 numberOperation = "Addition"
             } else if answerCodeL.text!.prefix(1) == "B" {
@@ -63,10 +131,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 numberOperation = "Mixed"
             }
             
-            print("$pageNumber is \(pageNumber)")
-            print("$First Letter is \(answerCodeL.text!.prefix(0))")
-            print("$AssignedO is \(numberOperation)")
-            cellNumber = 20 * pageNumber
+            cellNumber = 20 * pageNumber!
             question.questionArray.removeAll()
             questionNumber = 0
             
@@ -91,9 +156,9 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 numberOpertaionSign = "÷"
                 question.questionArray.append(operation.CalculatePMTD())
             } else if numberOperation == "Fraction" { // Fraction
-                question.questionArray = operation.OperationFraction()
+                question.questionArray.append(operation.OperationFraction())
             } else if numberOperation == "Decimal" { //Decimal
-                question.questionArray = operation.OperationDecimal()
+                question.questionArray.append(operation.OperationDecimal())
             } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
                 question.questionArray.append(operation.CalculatePMTD())
             }
@@ -103,7 +168,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // 4. CREATE TABLEVIEW
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellNumber = 20 * pageNumber
+        cellNumber = 20 * pageNumber!
         return cellNumber
     }
     
