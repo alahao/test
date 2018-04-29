@@ -106,28 +106,28 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func assignOpeartion() {
         if numberOperation == "Addition" { // Addition A+B=C
             numberOpertaionSign = "+"
-            seedOperation = "A"
+            seedOperation = "1"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Subtraction" { // Subtraction A-B=C
             numberOpertaionSign = "−"
-            seedOperation = "B"
+            seedOperation = "2"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Multiplication" { // Multiplication A*B=C
             numberOpertaionSign = "×"
-            seedOperation = "C"
+            seedOperation = "3"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Division" { // Division C/A=B
             numberOpertaionSign = "÷"
-            seedOperation = "D"
+            seedOperation = "4"
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Fraction" { // Fraction
-            seedOperation = "E"
+            seedOperation = "5"
             question.questionArray.append(operation.OperationFraction())
         } else if numberOperation == "Decimal" { //Decimal
-            seedOperation = "F"
+            seedOperation = "6"
             question.questionArray.append(operation.OperationDecimal())
         } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
-            seedOperation = "G"
+            seedOperation = "7"
             question.questionArray.append(operation.CalculatePMTD())
         }
     }
@@ -162,7 +162,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize)
         
-        var tableDef = TableDefinition (
+        let tableDef = TableDefinition (
             alignments: [.center],
             columnWidths: [20, 220, 20, 220],
             fonts: [UIFont.systemFont(ofSize: 8),
@@ -170,27 +170,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     UIFont.systemFont(ofSize: 8),
                     UIFont.systemFont(ofSize: 12)],
             textColors: [UIColor.lightGray, UIColor.black, UIColor.lightGray, UIColor.black])
-        
-        
-        if numberOperation == "Fraction" || numberOperation == "Decimal" {
-            tableDef = TableDefinition (
-                alignments: [.center],
-                columnWidths: [20, 200, 200, 10, 20, 30, 30],
-                fonts: [UIFont.systemFont(ofSize: 12),
-                        UIFont.systemFont(ofSize: 12),
-                        UIFont.systemFont(ofSize: 12),
-                        UIFont.systemFont(ofSize: 35),
-                        UIFont.systemFont(ofSize: 35),
-                        UIFont.systemFont(ofSize: 4),
-                        UIFont.systemFont(ofSize: 4)],
-                textColors: [UIColor.black, UIColor.black, UIColor.black, UIColor.lightGray, UIColor.lightGray, UIColor.darkGray, UIColor.darkGray])
-        }
+
         
         
         // Create PDF Table
         while currentPageArrayStart + 19 < cellNumber {
             pdf.setContentAlignment(.center)
-            pdf.addText("PaperMath - \(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 35)!, textColor: UIColor.black)
+            pdf.addText("\(numberOperation) Worksheet by PaperMath", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
+            pdf.addText("View answers using the PaperMath app.  Enter answer key: \(seedOperation)\(difficulty!)\(pageNumber)-\(Int(answerSeedNumber))", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
             pdf.addLineSpace(10)
             
             pdf.setContentAlignment(.left)
@@ -205,7 +192,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.setContentAlignment(.center)
             pdf.addLineSpace(10)
-            pdf.addText("Created by PaperMath. Get it on the iPhone App Store!", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
+            pdf.addText("Created by PaperMath. Available on iPhone and iPad app store.", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()

@@ -28,6 +28,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
         answerCodeL.text = answerCodeLText
         answerCodeR.text = answerCodeRText
         errorMessage.text = ""
@@ -37,6 +38,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func showAnswerButton(_ sender: Any) {
         
+        self.view.endEditing(true)
         
         enum codeError : Error {
             case invalidA
@@ -73,61 +75,46 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         do {
         try checkError()
         } catch codeError.invalidPageNumber {
-            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
-            print("Invalid page code, please re-enter, eg. A12-12345.")
+            errorMessage.text = "Invalid code, please re-enter, eg. 112-12345"
             question.questionArray.removeAll()
             pageNumber = 0
-            
-            print("array is \(question.questionArray)")
             self.answerTableView.reloadData()
-            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
         } catch codeError.invalidDifficulty {
-            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
-            print("Invalid diff code, please re-enter, eg. A12-12345.")
+            errorMessage.text = "Invalid code, please re-enter, eg. 112-12345"
             question.questionArray.removeAll()
             pageNumber = 0
-           
-            print("array is \(question.questionArray)")
             self.answerTableView.reloadData()
-            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
         }  catch codeError.invalidKey {
-            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
-            print("Invalid key code, please re-enter, eg. A12-12345.")
+            errorMessage.text = "Invalid code, please re-enter, eg. 112-12345"
             question.questionArray.removeAll()
             pageNumber = 0
-            
-            print("array is \(question.questionArray)")
             self.answerTableView.reloadData()
-            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
-        } catch let otherError {
-            errorMessage.text = "Invalid code, please re-enter, eg. A12-12345."
-            print("Invalid code, please re-enter, eg. A12-12345.")
-            question.questionArray.removeAll()
-            pageNumber = 0
            
-            print("array is \(question.questionArray)")
+        } catch let otherError {
+            errorMessage.text = "Invalid code, please re-enter, eg. 112-12345"
+            question.questionArray.removeAll()
+            pageNumber = 0
             self.answerTableView.reloadData()
-            print("difficulty is \(answerCodeL.text) \(answerCodeR.text)")
-        }
+            }
     }
     
     
         // 2. GENERATE 20 lines of questions per page
         func generatingPage() {
             print("generate page")
-            if answerCodeL.text!.prefix(1) == "A" {
+            if answerCodeL.text!.prefix(1) == "1" {
                 numberOperation = "Addition"
-            } else if answerCodeL.text!.prefix(1) == "B" {
+            } else if answerCodeL.text!.prefix(1) == "2" {
                 numberOperation = "Subtraction"
-            } else if answerCodeL.text!.prefix(1) == "C" {
+            } else if answerCodeL.text!.prefix(1) == "3" {
                 numberOperation = "Multiplication"
-            } else if answerCodeL.text!.prefix(1) == "D" {
+            } else if answerCodeL.text!.prefix(1) == "4" {
                 numberOperation = "Division"
-            } else if answerCodeL.text!.prefix(1) == "E" {
+            } else if answerCodeL.text!.prefix(1) == "5" {
                 numberOperation = "Fraction"
-            } else if answerCodeL.text!.prefix(1) == "F" {
+            } else if answerCodeL.text!.prefix(1) == "6" {
                 numberOperation = "Decimal"
-            } else if answerCodeL.text!.prefix(1) == "G" {
+            } else if answerCodeL.text!.prefix(1) == "7" {
                 numberOperation = "Mixed"
             }
             
@@ -192,7 +179,21 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
 
- 
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 }
