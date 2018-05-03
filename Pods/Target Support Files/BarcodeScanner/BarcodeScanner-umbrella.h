@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Worksheet_MakerVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Worksheet_MakerVersionString[];
+FOUNDATION_EXPORT double BarcodeScannerVersionNumber;
+FOUNDATION_EXPORT const unsigned char BarcodeScannerVersionString[];
 

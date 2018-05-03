@@ -119,6 +119,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         } else if numberOperation == "Division" { // Division C/A=B
             numberOpertaionSign = "÷"
             seedOperation = "4"
+            
             question.questionArray.append(operation.CalculatePMTD())
         } else if numberOperation == "Fraction" { // Fraction
             seedOperation = "5"
@@ -128,12 +129,24 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             question.questionArray.append(operation.OperationDecimal())
         } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
             seedOperation = "7"
-            question.questionArray.append(operation.CalculatePMTD())
+            question.questionArray.append(operation.readOpertaions())
         }
     }
     
+    // GENERATE BAR CODE
+    func generateBarCode() {
+    let imageView = UIImageView()
+    let codeGenerator = FCBBarCodeGenerator()
+    let size = CGSize(width: 100, height: 100)
+    let code = "My Code"
+    let type = FCBBarcodeType.qrcode
     
-
+    if let image = codeGenerator.barcode(code: code, type: type, size: size) {
+        imageView.image = image
+    } else {
+        imageView.image = nil
+    }
+    }
     
     // 4. CREATE TABLEVIEW
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -176,8 +189,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // Create PDF Table
         while currentPageArrayStart + 19 < cellNumber {
             pdf.setContentAlignment(.center)
-            pdf.addText("\(numberOperation) Worksheet by PaperMath", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
-            pdf.addText("View answers using the PaperMath app.  Enter answer key: \(seedOperation)\(difficulty!)\(pageNumber)-\(Int(answerSeedNumber))", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
+            pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
             pdf.addLineSpace(10)
             
             pdf.setContentAlignment(.left)
@@ -192,7 +204,17 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.setContentAlignment(.center)
             pdf.addLineSpace(10)
-            pdf.addText("Created by PaperMath. Available on iPhone and iPad app store.", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
+            pdf.addText("Download the PaperMath app (iOS only) and scan answer key: \(seedOperation)\(difficulty!)\(pageNumber)-\(Int(answerSeedNumber))", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
+            
+            
+            let codeGenerator = FCBBarCodeGenerator()
+            let size = CGSize(width: 200, height: 30)
+            let code = "My Code"
+            let type = FCBBarcodeType.code128
+            
+            if let image = codeGenerator.barcode(code: code, type: type, size: size) {
+                pdf.addImage(image)
+            }
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()

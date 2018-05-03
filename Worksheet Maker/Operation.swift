@@ -45,6 +45,8 @@ class Operation {
     var finalDenominator = 0
     
     var wholeNumberCount = 0
+    
+    var operation = 0
  
     
     // Decimal
@@ -58,26 +60,52 @@ class Operation {
     var decNumberOperationTwo = ""
     var decNumberOpertaionSignL = ""
     var decNumberOpertaionSignR = ""
+    var operationArray = [0]
+   
+    
+    func readOpertaions() -> [String] {
+        var result = [""]
+        operationArray.removeAll()
+        
+        if selectedOpertaions["plus"] == true {
+            operationArray.append(0)
+        }
+        if selectedOpertaions["minus"] == true {
+            operationArray.append(1)
+        }
+        if selectedOpertaions["multiplication"] == true {
+            operationArray.append(2)
+        }
+        if selectedOpertaions["division"] == true {
+            operationArray.append(3)
+        }
+        if selectedOpertaions["fraction"] == true {
+            operationArray.append(4)
+        }
+        if selectedOpertaions["decimal"] == true {
+            operationArray.append(5)
+        }
+        
+        let shuffledOperation = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: operationArray)
+        operation = shuffledOperation[0] as! Int
+        
+        if operation <= 3 {
+            result = CalculatePMTD()
+        } else if operation == 4 {
+            result = OperationFraction()
+        } else if operation == 5 {
+            result = OperationDecimal()
+        }
+        return result
+    }
+    
+    
     
     
     // ***** Calculate ***** + - X / and Mixed
     func CalculatePMTD() -> [String] {
     
         func calculate() {
-            var operation = 0
-            
-            if numberOperation == "Addition" {
-                operation = 0
-            } else if numberOperation == "Subtraction" {
-                operation = 1
-            } else if numberOperation == "Multiplication" {
-                operation = 2
-            } else if numberOperation == "Division" {
-                operation = 3
-            } else if numberOperation == "Mixed" {
-                operation = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 3).nextInt()
-            }
-            
             
             if operation == 0 {
                 numberOpertaionSign = "+"
@@ -123,7 +151,6 @@ class Operation {
         questionSetTwo = "\(numberOne) \(numberOpertaionSign) \(numberTwo) = "
         answerTwo = numberAnswer
        
-        
         let array = [String(questionNumberL), questionSetOne, String(questionNumberR), questionSetTwo, String(answerOne), String(answerTwo)]
        
         return array

@@ -7,253 +7,392 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C0DF80CA59B82A830FC73A375EB8251 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */; };
-		19D8FAC2F76F4F959CDFADF819E62FD1 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */; };
-		2AA0F83D444DEC198D6632366DC9484B /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34E8ACF23892E8B16E861617ABD1DB8E /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */; };
-		350129BF6C43EBCFF46BC7C227FD75D8 /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */; };
-		54A1B57C913B8C748753927EA27A1AA7 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */; };
-		566CB1B4A71A95219ACC087660CED8BE /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */; };
-		590657A39644044BEFD26737E32E1109 /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */; };
-		5977677FA75B5055A91FBAD76633D220 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */; };
-		5C44CE3CC5CFEDF9BD793858BC20D239 /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */; };
-		5E886C0C533915B113CFCE6CC619F2CE /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BFC88FCFB076FFD6405899DFDE680BE /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */; };
-		77684D04F1E9B69AF3E19C4A83341C70 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */; };
-		7E3F98AD105BD3B875E8A156E107702D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		86E98AC42CC03A786C63AD7FF8CC1F5C /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */; };
-		8E10D3149FEDFA9D82C94ED225F7C7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9C2822E08DE8B7661AB0DB4E69F19963 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9D048B6B941BC8F99B6D049EB45D445D /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */; };
-		B974A09BD2A7D46F011FE6745B0670CD /* Pods-Worksheet Maker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D11D99888E2583112888C187809C235F /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC49E5CC069E9501640CC8FA9BB66E6F /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */; };
-		ED343E4099B562B7969C72E067B1EB49 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582C393222847D8458D202C3A282432 /* SimplePDF.swift */; };
-		EDAC0A7A4640BC2CDA856E94D3500E68 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */; };
-		F228B2BC00EF2BD4D5B39056D7ACACE0 /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */; };
-		FD6684CA12DBC37799B6365F14A8EC71 /* Pods-Worksheet Maker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */; };
+		0394FD0353D43CFBF4A4B4B0006A93DD /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */; };
+		0721A1F340FB2A2E9551DD98764B200C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
+		07CFA2FAE3CB3C218442A54486348BEA /* FocusViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */; };
+		17B09A519BE601A0E22A832ABC01261B /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */; };
+		199C78D8F86C4750F36793AAA760CEEC /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */; };
+		1E4189DF2C828D6897EB85039EAB1034 /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F954AC1F029E700A93ED0B6F5420199 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */; };
+		30B67EC05C0F02133FC1ACCA36DC9202 /* BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37806CA7536EF2187B0BCD9814E68349 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */; };
+		3A03FCFE1122F53973B4B6D6AA71DF8F /* BarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */; };
+		3B328301770392444E6191E0F3F4074C /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C4A20E04AC720BFC21F8D63DD50412B /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */; };
+		4D788308AD57ECC2E4FB97A7BE15F823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
+		4F3C610CB80397D0BA60EC25F2A5E638 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */; };
+		54FABD5DD832875EE12658AFD07377A7 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57DD96D05F722890BFFCF43B22BCD79A /* flashOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */; };
+		5A6C91DE5991AAE40BAE91EF436130DB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688A0C01D3E93B79DC94641669B33FF /* State.swift */; };
+		6248E59DB9809EDE706469E4A7B0B3AA /* Pods-PaperWorksheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */; };
+		66FC729983908847F32BAC921C33295B /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */; };
+		6D7BD9D0955E0A51B3F9F13EB30B0CF0 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */; };
+		7B1B6BC2290E3C05A40DB9FE0B2666BB /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */; };
+		828901D718306D8625CA57FA43E2E758 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */; };
+		8577A16F1E644130ED69603AA320A72F /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */; };
+		8691F39DA2978E9B503D51B6D6C4DDD1 /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */; };
+		8B477B845F1B3C6276D3F217A2D289A2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */; };
+		8D20A9D4EFC142CAFBC17E6F620B0C9A /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */; };
+		8E66F858A67C972CA8042EB348017D34 /* flashOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */; };
+		954D21F9A07D517EC5927DC2F205BC2E /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */; };
+		A37A9D29762FCB5E98E41F5BAEF38966 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */; };
+		A41C3626C0E4EA206AB777EA1EE6F5AE /* TorchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536941C93369589540A0DB7AED678054 /* TorchMode.swift */; };
+		A620E88793E5E9E2317010C9FDA0C9D5 /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */; };
+		AA46F80C33D9986E37EE40F8B4DF24AF /* BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */; };
+		B0204633C1C75E353078A4B21BB1C700 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2603AA8F9084549D2F9A56D532159D /* Config.swift */; };
+		B7200D9BCE24BF7995BB70FB766B22BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */; };
+		BA58F3AA0F56AA1F914BD7F4289AB88D /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */; };
+		BEC7ACBC328B7E76B742488A035CFF6E /* Pods-PaperWorksheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C124119521F3EB43C9DA933B843E41C9 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */; };
+		D1A53A1829D2EAB6973B67A23764FF20 /* BarcodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */; };
+		D905174023B900AF38E312D7230FDE3B /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */; };
+		E4EA2956E67F7EC0A4BF0D4864083290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
+		E81F711E021B4DA32ED95907F67D2928 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */; };
+		F0A9E1E8CA5658E7E990557D3384AE35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
+		F76D64DBD0263DD40AD32789353D6F38 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B02354747083D18A58ACD6617EEE88A /* PBXContainerItemProxy */ = {
+		001717C010D73494C32116C0733CBE31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FBCC628130BC94D1F8069EFE1CC64DE0;
+			remoteGlobalIDString = 19E6534ABB2C9C66491D60CEEB16712C;
+			remoteInfo = BarcodeScanner;
+		};
+		31F6AB765AD63AC8B9F14B6FD86DEF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C4001A5A446D34942C9F5565D774457;
+			remoteInfo = SwiftyStoreKit;
+		};
+		46A722A8BB03F8BA8B6332BED16F2DB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41AB57C778C3649C78485C9E51311DD2;
+			remoteInfo = "BarcodeScanner-BarcodeScanner";
+		};
+		E8657C68E33CE58FF41DD225343E8ED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E80CD0B437BBF39F2D3F003ECB9C2FAB;
 			remoteInfo = SimplePDF;
 		};
-		572AF1230E8C9BC407ACFD5039854680 /* PBXContainerItemProxy */ = {
+		EB1E7A8207FDF919173CE80C72C71524 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BDF3CA571BB2F1B8B3FC48F7D058776A;
-			remoteInfo = SwiftyStoreKit;
+			remoteGlobalIDString = 7546A3D3D2027B77D96BBDDF19EAD866;
+			remoteInfo = "BarcodeScanner-Localization";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
-		13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
-		1815A74F4422ED3A4D13E3E90F7DCA91 /* Pods-Worksheet Maker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Worksheet Maker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Worksheet_Maker.framework; path = "Pods-Worksheet Maker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
-		28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
-		2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
-		31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
-		35ECDA5B183074CE03B48E536B9A13CB /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
-		370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
-		45A906648A55C881C2B22078D08C2ADE /* Pods-Worksheet Maker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-frameworks.sh"; sourceTree = "<group>"; };
-		4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5678815429C65F423ABF9D1124CD478F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57C559B2AD25D61EFFF2483F6AE2ADCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7ACA8C64F43DDB78DA7C315EFE15AA92 /* Pods-Worksheet Maker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Worksheet Maker-resources.sh"; sourceTree = "<group>"; };
-		7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
-		7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
-		819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
-		8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		076C80687BC5CFE765468338BE7D52FF /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		159A953DFD9137396EE52DD0A67F74C5 /* Pods-PaperWorksheet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-frameworks.sh"; sourceTree = "<group>"; };
+		1688A0C01D3E93B79DC94641669B33FF /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		1ACC0A9A4481D18C09AD27E5F31DCB20 /* Pods-PaperWorksheet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaperWorksheet-acknowledgements.plist"; sourceTree = "<group>"; };
+		1C3E3BBE094DD0A611D9EDB4C3F40C40 /* ResourceBundle-BarcodeScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BarcodeScanner-Info.plist"; sourceTree = "<group>"; };
+		1D37D829FF6CF5070C61EE66316AC3E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2603AA8F9084549D2F9A56D532159D /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Config.swift; sourceTree = "<group>"; };
+		1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOn@3x.png"; path = "Images/flashOn@3x.png"; sourceTree = "<group>"; };
+		2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
+		2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
+		3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E46D3C7DE1190175CDF339CE2EC464 /* BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BarcodeScanner.modulemap; sourceTree = "<group>"; };
+		37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.debug.xcconfig"; sourceTree = "<group>"; };
+		4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusViewType.swift; path = Sources/FocusViewType.swift; sourceTree = "<group>"; };
+		536941C93369589540A0DB7AED678054 /* TorchMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TorchMode.swift; path = Sources/TorchMode.swift; sourceTree = "<group>"; };
+		54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
+		55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "info@3x.png"; path = "Images/info@3x.png"; sourceTree = "<group>"; };
+		589F4B0621AA4D68B18565BFB9AD4914 /* ResourceBundle-Localization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Localization-Info.plist"; sourceTree = "<group>"; };
+		5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
+		634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaperWorksheet-dummy.m"; sourceTree = "<group>"; };
+		636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
+		63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Localization.bundle; path = "BarcodeScanner-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
+		794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
+		80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaperWorksheet-umbrella.h"; sourceTree = "<group>"; };
+		868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
+		88A047DCEA1DD514BEB6D8C0208F1157 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
+		8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarcodeScanner.xcconfig; sourceTree = "<group>"; };
+		9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97113EF5ADD0E21754BF2A8B80D6817D /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
-		A1FF2C4D244C4C5D84A9A4EE2482976D /* Pods-Worksheet Maker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Worksheet Maker.modulemap"; sourceTree = "<group>"; };
-		A582C393222847D8458D202C3A282432 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
-		ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
-		B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
-		B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
-		B9E56C74EA5AB4ABEC277E96134EC9A2 /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
-		BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.release.xcconfig"; sourceTree = "<group>"; };
-		BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
-		C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Worksheet Maker-umbrella.h"; sourceTree = "<group>"; };
-		C9C1C84B4A1B3F2762D6F64CB806967C /* Pods-Worksheet Maker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Worksheet Maker-acknowledgements.plist"; sourceTree = "<group>"; };
-		CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
-		CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
-		D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Worksheet Maker-dummy.m"; sourceTree = "<group>"; };
-		DD679238CE877CF7BE48060ED8AAD554 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimplePDF.modulemap; sourceTree = "<group>"; };
-		E122F2533565170BC25A5497DC95B604 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
-		E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
-		EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Worksheet Maker.debug.xcconfig"; sourceTree = "<group>"; };
-		F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
-		F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
+		96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BarcodeScanner.bundle; path = "BarcodeScanner-BarcodeScanner.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A7590A6DFDC365ED17DF81507841ED /* BarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
+		99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
+		A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
+		A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = Sources/HeaderView.swift; sourceTree = "<group>"; };
+		A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = Sources/InfoView.swift; sourceTree = "<group>"; };
+		A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
+		AB85A128F5F6D5CD0F1841A8F28DEE1D /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
+		B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
+		B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
+		C434D53019D824DD188D4D86193189AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
+		CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D19D662ACBBF5306D464D9274F3E624D /* Pods-PaperWorksheet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PaperWorksheet-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D213C418D07ED7FC000D49DED48DD8A6 /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
+		D38787F3412A85BC37CB71E2B983368A /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+		D59DC64FAAF1EBD5AB3052FDE97A8723 /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
+		D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		D95E53662C00959C38CDD62192F6BCFC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaperWorksheet.framework; path = "Pods-PaperWorksheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
+		DEAD9DE97987045F46B100DAE9B3A929 /* Pods-PaperWorksheet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-resources.sh"; sourceTree = "<group>"; };
+		E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOff@3x.png"; path = "Images/flashOff@3x.png"; sourceTree = "<group>"; };
+		E3BE846588C30DF4AFB04C8BB01BEBA2 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
+		E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
+		EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		EBFAF1A9C5DDDE2830E1F1C01912AECE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBA8187D0FA4C0AF2280EEE5D3324FB /* Pods-PaperWorksheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaperWorksheet.modulemap"; sourceTree = "<group>"; };
+		F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BarcodeScanner.framework; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarcodeScannerController.swift; path = Sources/BarcodeScannerController.swift; sourceTree = "<group>"; };
+		FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2948B72908D63570A427BC89B2002444 /* Frameworks */ = {
+		0266EE707AC72F25EDBBC2E85675EA7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C2822E08DE8B7661AB0DB4E69F19963 /* Foundation.framework in Frameworks */,
+				B7200D9BCE24BF7995BB70FB766B22BB /* AVFoundation.framework in Frameworks */,
+				0721A1F340FB2A2E9551DD98764B200C /* Foundation.framework in Frameworks */,
+				A37A9D29762FCB5E98E41F5BAEF38966 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEA99A485D3EA221C95E45B514A88E4C /* Frameworks */ = {
+		6C53FB71C45DBAED147C930052067D1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E3F98AD105BD3B875E8A156E107702D /* Foundation.framework in Frameworks */,
+				E4EA2956E67F7EC0A4BF0D4864083290 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDA590E1FB762202524ED3B68D8A1CA3 /* Frameworks */ = {
+		9E68ADE66F74BF92477340E945DAF92D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E10D3149FEDFA9D82C94ED225F7C7BD /* Foundation.framework in Frameworks */,
+				F0A9E1E8CA5658E7E990557D3384AE35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B23E20069ADD724A06C9183585A8F4DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D788308AD57ECC2E4FB97A7BE15F823 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6DA6199B5C55E612A82C310D534D115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E912000ED78AAE6A302EEE52D8878CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22F6D05041EF099CB62829FD339C33B0 /* Support Files */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				57C559B2AD25D61EFFF2483F6AE2ADCB /* Info.plist */,
-				DD679238CE877CF7BE48060ED8AAD554 /* SimplePDF.modulemap */,
-				E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */,
-				28988916E3234D51CE83B6F84162F23E /* SimplePDF-dummy.m */,
-				B9E56C74EA5AB4ABEC277E96134EC9A2 /* SimplePDF-prefix.pch */,
-				819184E2AB8EFC5538FD37F1E9D007E6 /* SimplePDF-umbrella.h */,
+				715827B6A84C2549CD0FBA09A28FA485 /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SimplePDF";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40B7D4DBBEEB7E04682DFCA1203413D0 /* SimplePDF */ = {
+		1FABD7EF9AEC0A1B603BE9C7F11F2D59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31E521EE1B5C1A076479AC74D43B9549 /* SimplePDF.h */,
-				A582C393222847D8458D202C3A282432 /* SimplePDF.swift */,
-				22F6D05041EF099CB62829FD339C33B0 /* Support Files */,
+				37CF26EF4BB4CE4DC4A55700127443F5 /* BarcodeScanner */,
+				26D1D0EC33A19D49FE9FC21BD9DBDF6C /* SimplePDF */,
+				CF79FDC7753BA91730EF41A79B0E96FA /* SwiftyStoreKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		26D1D0EC33A19D49FE9FC21BD9DBDF6C /* SimplePDF */ = {
+			isa = PBXGroup;
+			children = (
+				C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */,
+				C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */,
+				BEE1A0B138EC31BB1AE4DAB8EC29FC97 /* Support Files */,
 			);
 			name = SimplePDF;
 			path = SimplePDF;
 			sourceTree = "<group>";
 		};
-		64A5F21F21355825DCE0C337290A8160 /* Pods-Worksheet Maker */ = {
+		37CF26EF4BB4CE4DC4A55700127443F5 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				5678815429C65F423ABF9D1124CD478F /* Info.plist */,
-				A1FF2C4D244C4C5D84A9A4EE2482976D /* Pods-Worksheet Maker.modulemap */,
-				1815A74F4422ED3A4D13E3E90F7DCA91 /* Pods-Worksheet Maker-acknowledgements.markdown */,
-				C9C1C84B4A1B3F2762D6F64CB806967C /* Pods-Worksheet Maker-acknowledgements.plist */,
-				D09DFE96F3BDB7D0177E19542F9A37E1 /* Pods-Worksheet Maker-dummy.m */,
-				45A906648A55C881C2B22078D08C2ADE /* Pods-Worksheet Maker-frameworks.sh */,
-				7ACA8C64F43DDB78DA7C315EFE15AA92 /* Pods-Worksheet Maker-resources.sh */,
-				C048D92183A70130237A75F48A06F892 /* Pods-Worksheet Maker-umbrella.h */,
-				EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */,
-				BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */,
+				F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */,
+				1F2603AA8F9084549D2F9A56D532159D /* Config.swift */,
+				4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */,
+				A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */,
+				A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */,
+				1688A0C01D3E93B79DC94641669B33FF /* State.swift */,
+				536941C93369589540A0DB7AED678054 /* TorchMode.swift */,
+				63A953502C5C2DC9D08A8FFC8A856212 /* Resources */,
+				A07D645B0D1D2C9C8F1E08EAA737157D /* Support Files */,
 			);
-			name = "Pods-Worksheet Maker";
-			path = "Target Support Files/Pods-Worksheet Maker";
+			name = BarcodeScanner;
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		5E3D2068812DA3663589624B28448E0C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78B9DB2E7CC0A7AD2E0EF259AFC394AE /* Pods-PaperWorksheet */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		63A953502C5C2DC9D08A8FFC8A856212 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */,
+				1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */,
+				55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */,
+				1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		715827B6A84C2549CD0FBA09A28FA485 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */,
+				CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */,
+				63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		78B9DB2E7CC0A7AD2E0EF259AFC394AE /* Pods-PaperWorksheet */ = {
+			isa = PBXGroup;
+			children = (
+				C434D53019D824DD188D4D86193189AB /* Info.plist */,
+				ECBA8187D0FA4C0AF2280EEE5D3324FB /* Pods-PaperWorksheet.modulemap */,
+				D19D662ACBBF5306D464D9274F3E624D /* Pods-PaperWorksheet-acknowledgements.markdown */,
+				1ACC0A9A4481D18C09AD27E5F31DCB20 /* Pods-PaperWorksheet-acknowledgements.plist */,
+				634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */,
+				159A953DFD9137396EE52DD0A67F74C5 /* Pods-PaperWorksheet-frameworks.sh */,
+				DEAD9DE97987045F46B100DAE9B3A929 /* Pods-PaperWorksheet-resources.sh */,
+				80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */,
+				37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */,
+				5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */,
+			);
+			name = "Pods-PaperWorksheet";
+			path = "Target Support Files/Pods-PaperWorksheet";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BDE7E3D6206A826E44B69C4838B3269C /* Pods */,
-				F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */,
-				D62EB3BAEDDB02570911EDDC7AA3CFB5 /* Targets Support Files */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				1FABD7EF9AEC0A1B603BE9C7F11F2D59 /* Pods */,
+				C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */,
+				5E3D2068812DA3663589624B28448E0C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		A07D645B0D1D2C9C8F1E08EAA737157D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				33E46D3C7DE1190175CDF339CE2EC464 /* BarcodeScanner.modulemap */,
+				8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */,
+				636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */,
+				97A7590A6DFDC365ED17DF81507841ED /* BarcodeScanner-prefix.pch */,
+				2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */,
+				88A047DCEA1DD514BEB6D8C0208F1157 /* Info.plist */,
+				1C3E3BBE094DD0A611D9EDB4C3F40C40 /* ResourceBundle-BarcodeScanner-Info.plist */,
+				589F4B0621AA4D68B18565BFB9AD4914 /* ResourceBundle-Localization-Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/BarcodeScanner";
 			sourceTree = "<group>";
 		};
-		BD51AA745219BAAA799B09F37B101136 /* SwiftyStoreKit */ = {
+		BEE1A0B138EC31BB1AE4DAB8EC29FC97 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				13AC28D08BA9644F93BC36A46E34C809 /* AppleReceiptValidator.swift */,
-				03F229BA3D8CBA84154D051E63EE2C73 /* CompleteTransactionsController.swift */,
-				7BBBDC3F697F7E639E3C2E52F8274CC1 /* InAppProductQueryRequest.swift */,
-				F39748023FC7D5201A7BF25EED966376 /* InAppReceipt.swift */,
-				E2B0162F0405A1BA99B30F5AF8AE344E /* InAppReceiptRefreshRequest.swift */,
-				ABAEB6C911C953CDFBC0882B41234563 /* InAppReceiptVerificator.swift */,
-				7FD746F3E596609FF15A8D5BC4C76C13 /* OS.swift */,
-				21FFDF55EEC48113078F9F3FE1F30C1F /* PaymentQueueController.swift */,
-				CD3D2163AF7A225678D8AA25F2245951 /* PaymentsController.swift */,
-				CAF6E6C759E14E724F2F47D3DED6E2B4 /* ProductsInfoController.swift */,
-				B7BD789B5B7509C352E46E2CB7B59985 /* RestorePurchasesController.swift */,
-				8996EDB427780181DC7742618E50E5E6 /* SKProduct+LocalizedPrice.swift */,
-				BFCF9D2BD6A902AD0AA960E01CDD99EC /* SwiftyStoreKit.swift */,
-				2E70694B481ED835A8EEC26A02129B9B /* SwiftyStoreKit+Types.swift */,
-				F61E802A5043960173113D790538A07A /* Support Files */,
+				EBFAF1A9C5DDDE2830E1F1C01912AECE /* Info.plist */,
+				D38787F3412A85BC37CB71E2B983368A /* SimplePDF.modulemap */,
+				868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */,
+				EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */,
+				AB85A128F5F6D5CD0F1841A8F28DEE1D /* SimplePDF-prefix.pch */,
+				D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimplePDF";
+			sourceTree = "<group>";
+		};
+		C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */,
+				F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */,
+				6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */,
+				DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */,
+				B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */,
+				3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF79FDC7753BA91730EF41A79B0E96FA /* SwiftyStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */,
+				99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */,
+				54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */,
+				794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */,
+				4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */,
+				724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */,
+				8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */,
+				B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */,
+				E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */,
+				A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */,
+				A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */,
+				A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */,
+				9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */,
+				FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */,
+				DE9E64248F3EF62EC688CA36693EC952 /* Support Files */,
 			);
 			name = SwiftyStoreKit;
 			path = SwiftyStoreKit;
 			sourceTree = "<group>";
 		};
-		BDE7E3D6206A826E44B69C4838B3269C /* Pods */ = {
+		DE9E64248F3EF62EC688CA36693EC952 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				40B7D4DBBEEB7E04682DFCA1203413D0 /* SimplePDF */,
-				BD51AA745219BAAA799B09F37B101136 /* SwiftyStoreKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		D62EB3BAEDDB02570911EDDC7AA3CFB5 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				64A5F21F21355825DCE0C337290A8160 /* Pods-Worksheet Maker */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */,
-				4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */,
-				370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F61E802A5043960173113D790538A07A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E122F2533565170BC25A5497DC95B604 /* Info.plist */,
-				97113EF5ADD0E21754BF2A8B80D6817D /* SwiftyStoreKit.modulemap */,
-				B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */,
-				4404470643B786E3BC1EB011FDC48F11 /* SwiftyStoreKit-dummy.m */,
-				35ECDA5B183074CE03B48E536B9A13CB /* SwiftyStoreKit-prefix.pch */,
-				F826F2EFE5FA2A4DF075FCCD4369B3A8 /* SwiftyStoreKit-umbrella.h */,
+				1D37D829FF6CF5070C61EE66316AC3E2 /* Info.plist */,
+				D59DC64FAAF1EBD5AB3052FDE97A8723 /* SwiftyStoreKit.modulemap */,
+				DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */,
+				B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */,
+				D213C418D07ED7FC000D49DED48DD8A6 /* SwiftyStoreKit-prefix.pch */,
+				E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyStoreKit";
@@ -262,60 +401,106 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7412CF0E07A687A454960057ACBC048A /* Headers */ = {
+		26A90366985628EA5EE48577B9228274 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D11D99888E2583112888C187809C235F /* SimplePDF-umbrella.h in Headers */,
-				5E886C0C533915B113CFCE6CC619F2CE /* SimplePDF.h in Headers */,
+				3B328301770392444E6191E0F3F4074C /* SwiftyStoreKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABC8DDE8AB6B122E5BB7CCCE511D7864 /* Headers */ = {
+		40F75E03B9DFBF04D06405DA2D3DE577 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AA0F83D444DEC198D6632366DC9484B /* SwiftyStoreKit-umbrella.h in Headers */,
+				30B67EC05C0F02133FC1ACCA36DC9202 /* BarcodeScanner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAE0897C69D70198B49817431EA3BF40 /* Headers */ = {
+		812CB40DEE494CF0A849874D4B2A8EF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B974A09BD2A7D46F011FE6745B0670CD /* Pods-Worksheet Maker-umbrella.h in Headers */,
+				1E4189DF2C828D6897EB85039EAB1034 /* SimplePDF-umbrella.h in Headers */,
+				54FABD5DD832875EE12658AFD07377A7 /* SimplePDF.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D36F4BE9A0BF8EC2EE99693B17DC5920 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC7ACBC328B7E76B742488A035CFF6E /* Pods-PaperWorksheet-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		08C74C6635FB23D0068DED6C6570F107 /* Pods-Worksheet Maker */ = {
+		09876A0BE34D15CAD125F61C667ED45D /* Pods-PaperWorksheet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 867DEC0CE37574E7E15986CC5BC63A1D /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */;
+			buildConfigurationList = 4538EED6C447A72B31BEA6FBA1DF275F /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */;
 			buildPhases = (
-				EEDA2B87C1409BB9227705A3DAF3B902 /* Sources */,
-				DDA590E1FB762202524ED3B68D8A1CA3 /* Frameworks */,
-				BAE0897C69D70198B49817431EA3BF40 /* Headers */,
+				BD9AF1D398A763718E419E7E2D422BEF /* Sources */,
+				6C53FB71C45DBAED147C930052067D1F /* Frameworks */,
+				D36F4BE9A0BF8EC2EE99693B17DC5920 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E482603CDE65F3AC741942AEB9DE12C /* PBXTargetDependency */,
-				803A6D1F9FC4CF18B2AE6772CA33B2EE /* PBXTargetDependency */,
+				6C4B3FA297D141921E053095B2B42156 /* PBXTargetDependency */,
+				FC40C8865B65A93B63DA851C77EB919F /* PBXTargetDependency */,
+				48A21874F51AE8AC4D5E59C6FC0F1FAD /* PBXTargetDependency */,
 			);
-			name = "Pods-Worksheet Maker";
-			productName = "Pods-Worksheet Maker";
-			productReference = 1A7C462FBB589F1BC06722A37A97E80D /* Pods_Worksheet_Maker.framework */;
+			name = "Pods-PaperWorksheet";
+			productName = "Pods-PaperWorksheet";
+			productReference = DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */ = {
+		19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE5E66520018BBB87341AA713E51452C /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
+			buildConfigurationList = 34148F93A604303381BF9C7EF0018A69 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */;
 			buildPhases = (
-				21C88FA4231DEC52C5AABC2A77FE0AB2 /* Sources */,
-				2948B72908D63570A427BC89B2002444 /* Frameworks */,
-				ABC8DDE8AB6B122E5BB7CCCE511D7864 /* Headers */,
+				DEAE142E694351E59B28D0B0AB840FF4 /* Sources */,
+				0266EE707AC72F25EDBBC2E85675EA7C /* Frameworks */,
+				65B3910273305BADCB6B3823118EB790 /* Resources */,
+				40F75E03B9DFBF04D06405DA2D3DE577 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4494DD132CB1A81707909F303E812EA8 /* PBXTargetDependency */,
+				0205FF451E61B245CCAA3C3EFB540707 /* PBXTargetDependency */,
+			);
+			name = BarcodeScanner;
+			productName = BarcodeScanner;
+			productReference = F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19973854906DFA57FE48F55ECEC1E9D3 /* Build configuration list for PBXNativeTarget "BarcodeScanner-BarcodeScanner" */;
+			buildPhases = (
+				BA06814C1234A120BFEEA5BE3C1E2894 /* Sources */,
+				E912000ED78AAE6A302EEE52D8878CF2 /* Frameworks */,
+				1630787EDBB7C96B6E74728C4E85CC89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BarcodeScanner-BarcodeScanner";
+			productName = "BarcodeScanner-BarcodeScanner";
+			productReference = 96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F72804370AA035F3AD4E62E1C54C5EB /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
+			buildPhases = (
+				4EBFBD19B660B72902A54EB273C554D3 /* Sources */,
+				9E68ADE66F74BF92477340E945DAF92D /* Frameworks */,
+				26A90366985628EA5EE48577B9228274 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -323,16 +508,33 @@
 			);
 			name = SwiftyStoreKit;
 			productName = SwiftyStoreKit;
-			productReference = 370924ACEC848E24A1CE4B14590E52D7 /* SwiftyStoreKit.framework */;
+			productReference = 3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */ = {
+		7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB5861EA1E5CC128DB186294CF181EB8 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildConfigurationList = 891A695D008364DAB210EADF3DD85E3A /* Build configuration list for PBXNativeTarget "BarcodeScanner-Localization" */;
 			buildPhases = (
-				B737380225D6559ACEF69E2094E6B968 /* Sources */,
-				BEA99A485D3EA221C95E45B514A88E4C /* Frameworks */,
-				7412CF0E07A687A454960057ACBC048A /* Headers */,
+				49349BA683BB0005D15BF537430D999C /* Sources */,
+				E6DA6199B5C55E612A82C310D534D115 /* Frameworks */,
+				F0FDD235068C6713EAEE87FE0580C94E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BarcodeScanner-Localization";
+			productName = "BarcodeScanner-Localization";
+			productReference = 6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5647417E2FFEBD1E21D8F0C9A8462B95 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildPhases = (
+				F2F61F4BD890EA4812A3E7492C204D0E /* Sources */,
+				B23E20069ADD724A06C9183585A8F4DB /* Frameworks */,
+				812CB40DEE494CF0A849874D4B2A8EF5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -340,7 +542,7 @@
 			);
 			name = SimplePDF;
 			productName = SimplePDF;
-			productReference = 4DFCCC7F2877C9CE5C57A263B798A65C /* SimplePDF.framework */;
+			productReference = B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -349,8 +551,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,142 +562,338 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F50E8F4FA7599CDBE6A34C3DADDFDA36 /* Products */;
+			productRefGroup = C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08C74C6635FB23D0068DED6C6570F107 /* Pods-Worksheet Maker */,
-				FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */,
-				BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */,
+				19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */,
+				41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */,
+				7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */,
+				09876A0BE34D15CAD125F61C667ED45D /* Pods-PaperWorksheet */,
+				E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */,
+				6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1630787EDBB7C96B6E74728C4E85CC89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DD96D05F722890BFFCF43B22BCD79A /* flashOff@3x.png in Resources */,
+				8E66F858A67C972CA8042EB348017D34 /* flashOn@3x.png in Resources */,
+				4C4A20E04AC720BFC21F8D63DD50412B /* info@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65B3910273305BADCB6B3823118EB790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A03FCFE1122F53973B4B6D6AA71DF8F /* BarcodeScanner.bundle in Resources */,
+				66FC729983908847F32BAC921C33295B /* Localization.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FDD235068C6713EAEE87FE0580C94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81F711E021B4DA32ED95907F67D2928 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		21C88FA4231DEC52C5AABC2A77FE0AB2 /* Sources */ = {
+		49349BA683BB0005D15BF537430D999C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566CB1B4A71A95219ACC087660CED8BE /* AppleReceiptValidator.swift in Sources */,
-				350129BF6C43EBCFF46BC7C227FD75D8 /* CompleteTransactionsController.swift in Sources */,
-				F228B2BC00EF2BD4D5B39056D7ACACE0 /* InAppProductQueryRequest.swift in Sources */,
-				54A1B57C913B8C748753927EA27A1AA7 /* InAppReceipt.swift in Sources */,
-				9D048B6B941BC8F99B6D049EB45D445D /* InAppReceiptRefreshRequest.swift in Sources */,
-				5977677FA75B5055A91FBAD76633D220 /* InAppReceiptVerificator.swift in Sources */,
-				0C0DF80CA59B82A830FC73A375EB8251 /* OS.swift in Sources */,
-				590657A39644044BEFD26737E32E1109 /* PaymentQueueController.swift in Sources */,
-				77684D04F1E9B69AF3E19C4A83341C70 /* PaymentsController.swift in Sources */,
-				EDAC0A7A4640BC2CDA856E94D3500E68 /* ProductsInfoController.swift in Sources */,
-				5C44CE3CC5CFEDF9BD793858BC20D239 /* RestorePurchasesController.swift in Sources */,
-				34E8ACF23892E8B16E861617ABD1DB8E /* SKProduct+LocalizedPrice.swift in Sources */,
-				EC49E5CC069E9501640CC8FA9BB66E6F /* SwiftyStoreKit+Types.swift in Sources */,
-				6BFC88FCFB076FFD6405899DFDE680BE /* SwiftyStoreKit-dummy.m in Sources */,
-				19D8FAC2F76F4F959CDFADF819E62FD1 /* SwiftyStoreKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B737380225D6559ACEF69E2094E6B968 /* Sources */ = {
+		4EBFBD19B660B72902A54EB273C554D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E98AC42CC03A786C63AD7FF8CC1F5C /* SimplePDF-dummy.m in Sources */,
-				ED343E4099B562B7969C72E067B1EB49 /* SimplePDF.swift in Sources */,
+				A620E88793E5E9E2317010C9FDA0C9D5 /* AppleReceiptValidator.swift in Sources */,
+				BA58F3AA0F56AA1F914BD7F4289AB88D /* CompleteTransactionsController.swift in Sources */,
+				7B1B6BC2290E3C05A40DB9FE0B2666BB /* InAppProductQueryRequest.swift in Sources */,
+				828901D718306D8625CA57FA43E2E758 /* InAppReceipt.swift in Sources */,
+				199C78D8F86C4750F36793AAA760CEEC /* InAppReceiptRefreshRequest.swift in Sources */,
+				F76D64DBD0263DD40AD32789353D6F38 /* InAppReceiptVerificator.swift in Sources */,
+				6D7BD9D0955E0A51B3F9F13EB30B0CF0 /* OS.swift in Sources */,
+				8D20A9D4EFC142CAFBC17E6F620B0C9A /* PaymentQueueController.swift in Sources */,
+				D905174023B900AF38E312D7230FDE3B /* PaymentsController.swift in Sources */,
+				8577A16F1E644130ED69603AA320A72F /* ProductsInfoController.swift in Sources */,
+				0394FD0353D43CFBF4A4B4B0006A93DD /* RestorePurchasesController.swift in Sources */,
+				2F954AC1F029E700A93ED0B6F5420199 /* SKProduct+LocalizedPrice.swift in Sources */,
+				954D21F9A07D517EC5927DC2F205BC2E /* SwiftyStoreKit+Types.swift in Sources */,
+				8691F39DA2978E9B503D51B6D6C4DDD1 /* SwiftyStoreKit-dummy.m in Sources */,
+				C124119521F3EB43C9DA933B843E41C9 /* SwiftyStoreKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEDA2B87C1409BB9227705A3DAF3B902 /* Sources */ = {
+		BA06814C1234A120BFEEA5BE3C1E2894 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD6684CA12DBC37799B6365F14A8EC71 /* Pods-Worksheet Maker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD9AF1D398A763718E419E7E2D422BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6248E59DB9809EDE706469E4A7B0B3AA /* Pods-PaperWorksheet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAE142E694351E59B28D0B0AB840FF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA46F80C33D9986E37EE40F8B4DF24AF /* BarcodeScanner-dummy.m in Sources */,
+				D1A53A1829D2EAB6973B67A23764FF20 /* BarcodeScannerController.swift in Sources */,
+				B0204633C1C75E353078A4B21BB1C700 /* Config.swift in Sources */,
+				07CFA2FAE3CB3C218442A54486348BEA /* FocusViewType.swift in Sources */,
+				4F3C610CB80397D0BA60EC25F2A5E638 /* HeaderView.swift in Sources */,
+				8B477B845F1B3C6276D3F217A2D289A2 /* InfoView.swift in Sources */,
+				5A6C91DE5991AAE40BAE91EF436130DB /* State.swift in Sources */,
+				A41C3626C0E4EA206AB777EA1EE6F5AE /* TorchMode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2F61F4BD890EA4812A3E7492C204D0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B09A519BE601A0E22A832ABC01261B /* SimplePDF-dummy.m in Sources */,
+				37806CA7536EF2187B0BCD9814E68349 /* SimplePDF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E482603CDE65F3AC741942AEB9DE12C /* PBXTargetDependency */ = {
+		0205FF451E61B245CCAA3C3EFB540707 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SimplePDF;
-			target = FBCC628130BC94D1F8069EFE1CC64DE0 /* SimplePDF */;
-			targetProxy = 0B02354747083D18A58ACD6617EEE88A /* PBXContainerItemProxy */;
+			name = "BarcodeScanner-Localization";
+			target = 7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */;
+			targetProxy = EB1E7A8207FDF919173CE80C72C71524 /* PBXContainerItemProxy */;
 		};
-		803A6D1F9FC4CF18B2AE6772CA33B2EE /* PBXTargetDependency */ = {
+		4494DD132CB1A81707909F303E812EA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BarcodeScanner-BarcodeScanner";
+			target = 41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */;
+			targetProxy = 46A722A8BB03F8BA8B6332BED16F2DB6 /* PBXContainerItemProxy */;
+		};
+		48A21874F51AE8AC4D5E59C6FC0F1FAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyStoreKit;
-			target = BDF3CA571BB2F1B8B3FC48F7D058776A /* SwiftyStoreKit */;
-			targetProxy = 572AF1230E8C9BC407ACFD5039854680 /* PBXContainerItemProxy */;
+			target = 6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */;
+			targetProxy = 31F6AB765AD63AC8B9F14B6FD86DEF36 /* PBXContainerItemProxy */;
+		};
+		6C4B3FA297D141921E053095B2B42156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BarcodeScanner;
+			target = 19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */;
+			targetProxy = 001717C010D73494C32116C0733CBE31 /* PBXContainerItemProxy */;
+		};
+		FC40C8865B65A93B63DA851C77EB919F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimplePDF;
+			target = E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */;
+			targetProxy = E8657C68E33CE58FF41DD225343E8ED4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95E53662C00959C38CDD62192F6BCFC /* Localizable.strings */,
+				076C80687BC5CFE765468338BE7D52FF /* Localizable.strings */,
+				E3BE846588C30DF4AFB04C8BB01BEBA2 /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = Localization;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		33F8F7AAAA85E50D89ADDD29179D4D1C /* Release */ = {
+		151626C4D30E8C81A3068B58589BE8E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-BarcodeScanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = BarcodeScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		287F66680BBDD24E0B11EB2251BD62EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PaperWorksheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		520320275FC3C44DA6FED044EEE1B3BE /* Debug */ = {
+		3A8E8881738BDA26FCE736F72694CE48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BarcodeScanner/BarcodeScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BarcodeScanner/BarcodeScanner.modulemap";
+				PRODUCT_MODULE_NAME = BarcodeScanner;
+				PRODUCT_NAME = BarcodeScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C6B8983888DC5CFE8390249C1B30184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BarcodeScanner/BarcodeScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BarcodeScanner/BarcodeScanner.modulemap";
+				PRODUCT_MODULE_NAME = BarcodeScanner;
+				PRODUCT_NAME = BarcodeScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		597D5F7EB5D96D97AB9720CC0961D420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				PRODUCT_MODULE_NAME = SimplePDF;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		68E3EA967445F611B215A576F1EA18E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_MODULE_NAME = SwiftyStoreKit;
 				PRODUCT_NAME = SwiftyStoreKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -508,272 +906,339 @@
 			};
 			name = Debug;
 		};
-		56730A192FBFEB01207F5FA841EB3964 /* Debug */ = {
+		A539C9DBDA0BA7A7571295E3A1BD05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStoreKit;
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B17B2BD78821087BE384BCFE0A981144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Localization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B6D3F60E95BBF6C7320C1ECC0F8E5F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PaperWorksheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9E73EEF88C1E1CA19653D9EAC879238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				PRODUCT_MODULE_NAME = SimplePDF;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD76D91FBB3569774B6E7AB023932D1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		59813A5CC7FBE3187B5CA1975E231399 /* Debug */ = {
+		D004329E236DC147B97EF965D57304EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAA1190C588EA0251E770A5FB8F77E9D /* Pods-Worksheet Maker.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Worksheet_Maker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5FE1A0964B6D5ABEC7B64CF931D44244 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2183F19AEFC0BD1A9E53018C97CFF43 /* SwiftyStoreKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyStoreKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		61A745FF161B1E9974985BA2DF19E75D /* Debug */ = {
+		EAB504016D06DF50AD640BB8666E0B43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SimplePDF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-BarcodeScanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = BarcodeScanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A9551538709D140A70321ECBB2CFEB52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E874810359A0D9AB5BBA6DF0BB103783 /* SimplePDF.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SimplePDF;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		E82166DE39D66CC66839B4BF0A48DD59 /* Release */ = {
+		F432D3EC2699B5C087CC874B95D42B69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD97A1CD4FBBAB05E6867D988B0ED713 /* Pods-Worksheet Maker.release.xcconfig */;
+			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Worksheet Maker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Worksheet Maker/Pods-Worksheet Maker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Worksheet_Maker;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Localization;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19973854906DFA57FE48F55ECEC1E9D3 /* Build configuration list for PBXNativeTarget "BarcodeScanner-BarcodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151626C4D30E8C81A3068B58589BE8E7 /* Debug */,
+				EAB504016D06DF50AD640BB8666E0B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56730A192FBFEB01207F5FA841EB3964 /* Debug */,
-				33F8F7AAAA85E50D89ADDD29179D4D1C /* Release */,
+				CD76D91FBB3569774B6E7AB023932D1D /* Debug */,
+				D004329E236DC147B97EF965D57304EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		867DEC0CE37574E7E15986CC5BC63A1D /* Build configuration list for PBXNativeTarget "Pods-Worksheet Maker" */ = {
+		34148F93A604303381BF9C7EF0018A69 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59813A5CC7FBE3187B5CA1975E231399 /* Debug */,
-				E82166DE39D66CC66839B4BF0A48DD59 /* Release */,
+				3A8E8881738BDA26FCE736F72694CE48 /* Debug */,
+				3C6B8983888DC5CFE8390249C1B30184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB5861EA1E5CC128DB186294CF181EB8 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+		4538EED6C447A72B31BEA6FBA1DF275F /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61A745FF161B1E9974985BA2DF19E75D /* Debug */,
-				A9551538709D140A70321ECBB2CFEB52 /* Release */,
+				B6D3F60E95BBF6C7320C1ECC0F8E5F97 /* Debug */,
+				287F66680BBDD24E0B11EB2251BD62EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE5E66520018BBB87341AA713E51452C /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
+		4F72804370AA035F3AD4E62E1C54C5EB /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				520320275FC3C44DA6FED044EEE1B3BE /* Debug */,
-				5FE1A0964B6D5ABEC7B64CF931D44244 /* Release */,
+				68E3EA967445F611B215A576F1EA18E3 /* Debug */,
+				A539C9DBDA0BA7A7571295E3A1BD05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5647417E2FFEBD1E21D8F0C9A8462B95 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				597D5F7EB5D96D97AB9720CC0961D420 /* Debug */,
+				B9E73EEF88C1E1CA19653D9EAC879238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		891A695D008364DAB210EADF3DD85E3A /* Build configuration list for PBXNativeTarget "BarcodeScanner-Localization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17B2BD78821087BE384BCFE0A981144 /* Debug */,
+				F432D3EC2699B5C087CC874B95D42B69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
