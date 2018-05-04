@@ -63,29 +63,9 @@ class Operation {
     var operationArray = [0]
    
     
-    func readOpertaions() -> [String] {
+    func runOperation() -> [String] {
+        assignOperation()
         var result = [""]
-        operationArray.removeAll()
-        
-        if selectedOpertaions["plus"] == true {
-            operationArray.append(0)
-        }
-        if selectedOpertaions["minus"] == true {
-            operationArray.append(1)
-        }
-        if selectedOpertaions["multiplication"] == true {
-            operationArray.append(2)
-        }
-        if selectedOpertaions["division"] == true {
-            operationArray.append(3)
-        }
-        if selectedOpertaions["fraction"] == true {
-            operationArray.append(4)
-        }
-        if selectedOpertaions["decimal"] == true {
-            operationArray.append(5)
-        }
-        
         let shuffledOperation = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: operationArray)
         operation = shuffledOperation[0] as! Int
         
@@ -97,6 +77,51 @@ class Operation {
             result = OperationDecimal()
         }
         return result
+    }
+    
+    
+    
+    func assignOperation() {
+        operationArray.removeAll()
+        
+        if selectedOpertaions["plus"] == true {
+            operationArray.append(0)
+            seedOperation[0] = 1
+            
+        } else {
+            seedOperation[0] = 0
+        }
+        if selectedOpertaions["minus"] == true {
+            operationArray.append(1)
+            seedOperation[1] = 1
+        } else {
+            seedOperation[1] = 0
+        }
+        if selectedOpertaions["multiplication"] == true {
+            operationArray.append(2)
+            seedOperation[2] = 1
+        } else {
+            seedOperation[2] = 0
+        }
+        if selectedOpertaions["division"] == true {
+            operationArray.append(3)
+            seedOperation[3] = 1
+        } else {
+            seedOperation[3] = 0
+        }
+        if selectedOpertaions["fraction"] == true {
+            operationArray.append(4)
+            seedOperation[4] = 1
+        } else {
+            seedOperation[4] = 0
+        }
+        if selectedOpertaions["decimal"] == true {
+            operationArray.append(5)
+            seedOperation[5] = 1
+        } else {
+            seedOperation[5] = 0
+        }
+        
     }
     
     
@@ -137,6 +162,7 @@ class Operation {
                 numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
                 numberAnswer = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberOne = numberAnswer * numberTwo
+                print("division ran, numberTwo is \(numberTwo)")
             }
         }
         
@@ -252,11 +278,11 @@ class Operation {
         func randomDecimalOperation() {
             difficultySetting.OperationDifficultyDecimal()
             let decNumberOneInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberAMin * 10000, highestValue: numberAMax * 10000).nextInt()
-            print("$seed number 2 is \(answerSeed!.seed), \(decNumberOneInt)")
+            print("$seed number 2 is \(answerSeed!.seed), decNumberOneInt is \(decNumberOneInt), numberAMin is \(numberAMin), numberAMax is \(numberAMax)")
             decNumberOne = Double(decNumberOneInt) / 10000
             decNumberOne = decNumberOne.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
             let decNumberTwoInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberBMin * 10000, highestValue: numberBMax * 10000).nextInt()
-            decNumberTwo = Double(decNumberTwoInt) / 1000
+            decNumberTwo = Double(decNumberTwoInt) / 10000
             decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
             
             randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 4).nextInt()

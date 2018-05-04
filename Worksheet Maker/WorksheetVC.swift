@@ -12,8 +12,11 @@ import GameKit
 
 var numberOperation = ""
 var questionNumber = 0
-var seedOperation = ""
+var seedOperation = [0,0,0,0,0,0]
 let answerSeed : GKMersenneTwisterRandomSource? = GKMersenneTwisterRandomSource()
+var worksheetAnswerCode = ""
+
+
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var answerButton: UIBarButtonItem!
     let question = questionArray()
@@ -23,7 +26,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // VARIBLES
     var answerSeedNumber : UInt64 = 0
-    
     var numberOne = 0
     var numberTwo = 0
     var numberAnswer = 0
@@ -73,7 +75,12 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var cellHeight = 40
     var currentPageArrayStart = 0
 
-    
+//    var seed1 = 0
+//    var seed2 = 0
+//    var seed3 = 0
+//    var seed4 = 0
+//    var seed5 = 0
+//    var seed6 = 0
     
     // START
     
@@ -96,49 +103,23 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         answerSeed?.seed = answerSeedNumber
         print("removed Array, new Array is \(question.questionArray)")
         for _ in 1...cellNumber {
-            assignOpeartion()
+            question.questionArray.append(operation.runOperation())
             print("QArray assigned is \(question.questionArray)")
         }
-        answerButton.title = "Answer Key: " + seedOperation + String(difficulty!) + "\(pageNumber)-\(Int(answerSeedNumber))"
+        let stringSeedOperation = seedOperation.map{String($0)}.joined()
+        print("$stringSeedOperation is \(stringSeedOperation)")
+        worksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
+        answerButton.title = "Answer Key: " + worksheetAnswerCode
+         print("$worksheetAnswerCode is \(worksheetAnswerCode)")
     }
     
-    // 3. ASSIGN OPERATION TYPE, Send to Opertaion Class to calculate
-    func assignOpeartion() {
-        if numberOperation == "Addition" { // Addition A+B=C
-            numberOpertaionSign = "+"
-            seedOperation = "1"
-            question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Subtraction" { // Subtraction A-B=C
-            numberOpertaionSign = "−"
-            seedOperation = "2"
-            question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Multiplication" { // Multiplication A*B=C
-            numberOpertaionSign = "×"
-            seedOperation = "3"
-            question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Division" { // Division C/A=B
-            numberOpertaionSign = "÷"
-            seedOperation = "4"
-            
-            question.questionArray.append(operation.CalculatePMTD())
-        } else if numberOperation == "Fraction" { // Fraction
-            seedOperation = "5"
-            question.questionArray.append(operation.OperationFraction())
-        } else if numberOperation == "Decimal" { //Decimal
-            seedOperation = "6"
-            question.questionArray.append(operation.OperationDecimal())
-        } else if numberOperation == "Mixed" { // Mixed 1/4 + 2/4 = 3/4
-            seedOperation = "7"
-            question.questionArray.append(operation.readOpertaions())
-        }
-    }
     
     // GENERATE BAR CODE
     func generateBarCode() {
     let imageView = UIImageView()
     let codeGenerator = FCBBarCodeGenerator()
     let size = CGSize(width: 100, height: 100)
-    let code = "My Code"
+    let code = worksheetAnswerCode
     let type = FCBBarcodeType.qrcode
     
     if let image = codeGenerator.barcode(code: code, type: type, size: size) {
@@ -189,7 +170,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // Create PDF Table
         while currentPageArrayStart + 19 < cellNumber {
             pdf.setContentAlignment(.center)
-            pdf.addText("\(numberOperation) Worksheet", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
+            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 30)!, textColor: UIColor.black)
             pdf.addLineSpace(10)
             
             pdf.setContentAlignment(.left)
@@ -204,13 +185,15 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.setContentAlignment(.center)
             pdf.addLineSpace(10)
-            pdf.addText("Download the PaperMath app (iOS only) and scan answer key: \(seedOperation)\(difficulty!)\(pageNumber)-\(Int(answerSeedNumber))", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
-            
-            
+           
+        
+        pdf.addText("Download the PaperMath app (iOS only) and scan answer key: \(worksheetAnswerCode)", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
+        
+        
             let codeGenerator = FCBBarCodeGenerator()
             let size = CGSize(width: 200, height: 30)
-            let code = "My Code"
-            let type = FCBBarcodeType.code128
+            let code = String(worksheetAnswerCode)
+            let type = FCBBarcodeType.pdf417
             
             if let image = codeGenerator.barcode(code: code, type: type, size: size) {
                 pdf.addImage(image)
@@ -279,8 +262,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueShowAnswer" {
             let destinationVC =  segue.destination as! AnswersVC
-            destinationVC.answerCodeLText = String(seedOperation) + String(difficulty!) + String(pageNumber)
-            destinationVC.answerCodeRText = String(Int(answerSeedNumber))
+//            destinationVC.answerCodeRText = String(Int(answerSeedNumber))
         }
     }
 }

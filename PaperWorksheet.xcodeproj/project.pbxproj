@@ -33,6 +33,7 @@
 		3D84970C1FAFA22A00CCCE55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */; };
 		3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */; };
 		3DF9EE8A209AB49C00FD00CE /* FCBBarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */; };
+		3DF9EE8C209AC7D300FD00CE /* icons8-barcode-scanner-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */; };
 		631ED7ED1D09FBB6D0EB66AB /* Pods_PaperWorksheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */; };
 		9061A669D7C013735689AC0B /* Pods_Worksheet_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksheetVC.swift; sourceTree = "<group>"; };
 		3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBBarCodeGenerator.swift; sourceTree = "<group>"; };
+		3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-barcode-scanner-25.png"; sourceTree = "<group>"; };
 		4EBCC59431F46514498689F4 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperWorksheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
 		6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Worksheet_Maker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperWorksheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 		3D0968E51FB5E2B700570933 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */,
 				3D2270A420886C8D00ACF235 /* icons8-google-web-search-filled-30.png */,
 				3D22709C2088688B00ACF235 /* icons8-info-50.png */,
 				3D53F2CE2054A0EA00679CD9 /* icons8-add-list-filled-100.png */,
@@ -236,6 +239,7 @@
 				3D53F2CB20547DE100679CD9 /* icons8-refresh-filled-50.png in Resources */,
 				3D2270A720886DE500ACF235 /* icons8-go-30.png in Resources */,
 				3D8496F81FAF994500CCCE55 /* Main.storyboard in Resources */,
+				3DF9EE8C209AC7D300FD00CE /* icons8-barcode-scanner-25.png in Resources */,
 				3D53F2CC20547DE100679CD9 /* icons8-sync-filled-50.png in Resources */,
 				3D22709D2088688C00ACF235 /* icons8-info-50.png in Resources */,
 				3D53F2D02054A0EB00679CD9 /* icons8-print-filled-100.png in Resources */,

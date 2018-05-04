@@ -183,7 +183,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // GENERATE BUTTON
     @IBAction func generatePressed(_ sender: Any) {
         checkEmptySelection()
-        selectedOperation = "Mixed"
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
     }
     

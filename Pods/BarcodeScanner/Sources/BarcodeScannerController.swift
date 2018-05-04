@@ -144,7 +144,7 @@ open class BarcodeScannerController: UIViewController {
 
   /// Calculated frame for the info view.
   var infoFrame: CGRect {
-    let height = status.state != .processing ? 75 : view.bounds.height
+    let height = status.state != .processing ? 100 : view.bounds.height
     return CGRect(x: 0, y: view.bounds.height - height,
       width: view.bounds.width, height: height)
   }
@@ -320,8 +320,8 @@ open class BarcodeScannerController: UIViewController {
 
   // MARK: - Layout
   func setupFrame() {
-    headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 64)
-    flashButton.frame = CGRect(x: view.frame.width - 50, y: 73, width: 37, height: 37)
+    headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 120)
+    flashButton.frame = CGRect(x: view.frame.width - 50, y: 50, width: 37, height: 37)
     infoView.frame = infoFrame
 
     if let videoPreviewLayer = videoPreviewLayer {
