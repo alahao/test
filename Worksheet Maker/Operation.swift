@@ -207,7 +207,7 @@ class Operation {
                 }
             }
             else if difficulty == 2 {
-                if randomOperationSign < 2 {
+                if randomOperationSign < 2 { //make + and - more likely to happen
                     numberOpertaionSign = "+"
                     fOneAnswerN = fLN * fRD + fRN * fLD
                     fOneAnswerD = fLD * fRD
@@ -285,7 +285,7 @@ class Operation {
             decNumberTwo = Double(decNumberTwoInt) / 10000
             decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
             
-            randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 4).nextInt()
+            randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 5).nextInt()
             if randomOperationSign == 0 || randomOperationSign == 1 {
                 numberOpertaionSign = "+"
                 decNumberAnswer = decNumberOne + decNumberTwo
@@ -296,6 +296,10 @@ class Operation {
                 
             } else if randomOperationSign == 4 {
                 numberOpertaionSign = "×"
+                decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
+                decNumberAnswer = decNumberOne * decNumberTwo
+            } else if randomOperationSign == 4 {
+                numberOpertaionSign = "÷"
                 decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
                 decNumberAnswer = decNumberOne * decNumberTwo
             }

@@ -14,6 +14,7 @@ var selectedOpertaions = ["plus": true, "minus": false, "multiplication": false,
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     func checkEmptySelection() {
+        print("$\(selectedOpertaions)")
         if selectedOpertaions.values.contains(true) == false {
             let alert = UIAlertController(title: "Something is missing...", message: "Please select at least one operation.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -204,6 +205,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
         selectedOpertaions["plus"] = true
+        print("$\(selectedOpertaions)")
         
         
         // Do any additional setup after loading the view, typically from a nib.

@@ -35,49 +35,63 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        worksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))
+        generatingPage()
         
-        let viewController = makeBarcodeScannerViewController()
-        viewController.title = "ANSWERS"
-        present(viewController, animated: true, completion: nil)
+        //        let viewController = makeBarcodeScannerViewController()
+        //        viewController.title = "ANSWER"
+        //        present(viewController, animated: true, completion: nil)
         
         // Do any additional setup after loading the view.
     }
     
-   
     
     
-    // 2. GENERATE 20 lines of questions per page
+    
+    // 2. GENERATE 10 lines of questions per page
     func generatingPage() {
+        answerTableView.delegate = self
+        answerTableView.dataSource = self
+        
         print("generate page")
         
-        cellNumber = 20 * pageNumber!
-        question.questionArray.removeAll()
-        questionNumber = 0
-        print("$ new cell number is \(cellNumber)")
-        for _ in 1...cellNumber {
+        localAssignOperation()
+        pageNumber = Int((worksheetAnswerCode[7] * 10) + worksheetAnswerCode[8])
+        print("Scanned Page Number is \(String(describing: pageNumber!))")
+        difficulty = Int(worksheetAnswerCode[6])
+        print("Scanned difficulty is \(String(describing: difficulty!))")
+        answerSeed?.seed = UInt64(worksheetAnswerCode.suffix(5).map{String($0)}.joined())!
+        print("$answerseed scanned is \(String(describing: answerSeed!.seed))")
+            
+            question.questionArray.removeAll()
+            questionNumber = 0
+            print("$ new cell number is \(cellNumber)")
+            cellNumber = 10 * pageNumber!
+        if cellNumber > 0 {
+            for _ in 1...cellNumber {
             question.questionArray.append(operation.runOperation())
-        }
-    }
+            
+            }
+            self.answerTableView.reloadData()
+        }}
     
     
     // 4. CREATE TABLEVIEW
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellNumber = 20 * pageNumber!
+        cellNumber = 10 * pageNumber!
         return cellNumber
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerSheetCell", for: indexPath) as! TableViewAnswerCell
-        
+        //Display Anwsers
         cell.setLQN.text = String(describing: question.questionArray[indexPath.row][0])
         cell.setLQ.text = "\(question.questionArray[indexPath.row][1] + question.questionArray[indexPath.row][4])"
         cell.setRQN.text = String(describing: question.questionArray[indexPath.row][2])
         cell.setRQ.text = "\(question.questionArray[indexPath.row][3] + question.questionArray[indexPath.row][5])"
-        
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(cellHeight)
@@ -99,8 +113,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension UIViewController
-{
+extension UIViewController {
     func hideKeyboard()
     {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
@@ -120,35 +133,33 @@ extension UIViewController
 // MARK: - BarcodeScannerCodeDelegate
 
 extension AnswersVC: BarcodeScannerCodeDelegate {
-    
-    
     func localAssignOperation() {
-        if seedOperation[0] == 1 {
+        if worksheetAnswerCode[0] == 1 {
             selectedOpertaions["plus"] = true
         } else {
             selectedOpertaions["plus"] = false
         }
-        if seedOperation[1] == 1 {
+        if worksheetAnswerCode[1] == 1 {
             selectedOpertaions["minus"] = true
         } else {
             selectedOpertaions["minus"] = false
         }
-        if seedOperation[2] == 1 {
+        if worksheetAnswerCode[2] == 1 {
             selectedOpertaions["multiplication"] = true
         } else {
             selectedOpertaions["multiplication"] = false
         }
-        if seedOperation[3] == 1 {
+        if worksheetAnswerCode[3] == 1 {
             selectedOpertaions["division"] = true
         } else {
             selectedOpertaions["division"] = false
         }
-        if seedOperation[4] == 1 {
+        if worksheetAnswerCode[4] == 1 {
             selectedOpertaions["fraction"] = true
         } else {
             selectedOpertaions["fraction"] = false
         }
-        if seedOperation[5] == 1 {
+        if worksheetAnswerCode[5] == 1 {
             selectedOpertaions["decimal"] = true
         } else {
             selectedOpertaions["decimal"] = false
@@ -156,8 +167,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
     }
     
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
-        seedOperation = code.compactMap{Int(String($0))}
-        print("count is \(seedOperation.count)")
+        worksheetAnswerCode = code.compactMap{Int(String($0))}
         
         enum codeError : Error {
             case invalidA
@@ -171,37 +181,22 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
                 throw codeError.invalidPageNumber
             }
             
-            guard let userDifficulty = Int?(seedOperation[6]), userDifficulty >= 0, userDifficulty < 3 else {
+            guard let userDifficulty = Int?(worksheetAnswerCode[6]), userDifficulty >= 0, userDifficulty < 3 else {
                 print("error difficulty")
                 throw codeError.invalidDifficulty
             }
-
             
-            answerTableView.delegate = self
-            answerTableView.dataSource = self
             print("Barcode Data: \(code)")
             print("Symbology Type: \(type)")
-            print("$Scanned seedOperation is \(seedOperation)")
+            print("$Scanned worksheetAnswerCode is \(worksheetAnswerCode)")
             
-            localAssignOperation()
-            
-            pageNumber = Int((seedOperation[7] * 10) + seedOperation[8])
-            print("Scanned Page Number is \(String(describing: pageNumber!))")
-            difficulty = Int(seedOperation[6])
-            print("Scanned difficulty is \(String(describing: difficulty!))")
-            answerSeed?.seed = UInt64(seedOperation.suffix(5).map{String($0)}.joined())!
-            print("$answerseed scanned is \(String(describing: answerSeed!.seed))")
-            question.questionArray.removeAll()
             generatingPage()
-            self.answerTableView.reloadData()
             
             controller.dismiss(animated: true, completion: nil)
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                 controller.resetWithError()
             }
         }
-        
         
         
         do {
@@ -209,26 +204,26 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
         } catch codeError.invalidPageNumber {
             print("$invalidPageNumber")
             controller.resetWithError()
-            seedOperation.removeAll()
+            worksheetAnswerCode.removeAll()
             question.questionArray.removeAll()
-        
+            
         } catch codeError.invalidDifficulty {
             print("$invalidDifficulty")
             controller.resetWithError()
-            seedOperation.removeAll()
+            worksheetAnswerCode.removeAll()
             question.questionArray.removeAll()
-           
+            
         }  catch codeError.invalidKey {
             print("$invalidKey")
             controller.resetWithError(message: "Error message")
-            seedOperation.removeAll()
+            worksheetAnswerCode.removeAll()
             question.questionArray.removeAll()
-           
+            
             
         } catch let otherError {
             print("$otherError")
             controller.resetWithError(message: "Error message")
-            seedOperation.removeAll()
+            worksheetAnswerCode.removeAll()
             question.questionArray.removeAll()
         }
     }

@@ -18,13 +18,13 @@ var bMax = 0
 
 // Fraction
 var nLMin = 2
-var nLMax = 9
+var nLMax = 10
 var dLMin = 2
-var dLMax = 9
+var dLMax = 10
 var nRMin = 2
-var nRMax = 9
+var nRMax = 10
 var dRMin = 2
-var dRMax = 9
+var dRMax = 10
 
 // Decimal
 var dPMin = 0
@@ -44,38 +44,38 @@ class Difficulty {
     func OperationDifficultyPlus() {
         if difficulty == 0 {
             aMin = 1
-            aMax = 9
+            aMax = 10
             bMin = 1
-            bMax = 9
+            bMax = 10
         } else if difficulty == 1 {
-            aMin = 1
-            aMax = 999
-            bMin = 1
-            bMax = 99
+            aMin = 10
+            aMax = 1000
+            bMin = 10
+            bMax = 100
         } else if difficulty == 2 {
-            aMin = 1
-            aMax = 9999
-            bMin = 1
-            bMax = 9999
+            aMin = 10
+            aMax = 10000
+            bMin = 10
+            bMax = 10000
         }
     }
     
     func OperationDifficultyMinus() {
         if difficulty == 0 {
             aMin = 1
-            aMax = 9
+            aMax = 10
             bMin = 1
-            bMax = 9
+            bMax = 10
         } else if difficulty == 1 {
-            aMin = 1
-            aMax = 99
-            bMin = 1
-            bMax = 999
+            aMin = 10
+            aMax = 100
+            bMin = 10
+            bMax = 1000
         } else if difficulty == 2 {
-            aMin = 1
-            aMax = 999
-            bMin = 1
-            bMax = 9999
+            aMin = 10
+            aMax = 10000
+            bMin = 10
+            bMax = 10000
         }
     }
     
@@ -83,38 +83,38 @@ class Difficulty {
     func OperationDifficultyTimes() {
         if difficulty == 0 {
             aMin = 1
-            aMax = 9
+            aMax = 10
             bMin = 1
-            bMax = 9
+            bMax = 10
         } else if difficulty == 1 {
-            aMin = 11
-            aMax = 99
-            bMin = 11
-            bMax = 99
+            aMin = 10
+            aMax = 100
+            bMin = 10
+            bMax = 50
         } else if difficulty == 2 {
-            aMin = 11
-            aMax = 9999
-            bMin = 11
-            bMax = 99
+            aMin = 10
+            aMax = 10000
+            bMin = 10
+            bMax = 100
         }
     }
     
     func OperationDifficultyDivision() {
         if difficulty == 0 {
             aMin = 1
-            aMax = 9
+            aMax = 10
             bMin = 1
-            bMax = 9
+            bMax = 10
         } else if difficulty == 1 {
             aMin = 2
-            aMax = 19
+            aMax = 20
             bMin = 2
-            bMax = 19
+            bMax = 20
         } else if difficulty == 2 {
-            aMin = 11
-            aMax = 49
-            bMin = 11
-            bMax = 49
+            aMin = 10
+            aMax = 50
+            bMin = 10
+            bMax = 50
         }
     }
     
@@ -122,31 +122,31 @@ class Difficulty {
     func OperationDifficultyFraction() {
         if difficulty == 0 {
             nLMin = 2
-            nLMax = 9
+            nLMax = 10
             dLMin = 2
-            dLMax = 9
+            dLMax = 10
             nRMin = 2
-            nRMax = 9
+            nRMax = 10
             dRMin = 2
-            dRMax = 9
+            dRMax = 10
         } else if difficulty == 1 {
             nLMin = 2
-            nLMax = 9
+            nLMax = 10
             dLMin = 2
-            dLMax = 9
+            dLMax = 10
             nRMin = 2
-            nRMax = 9
+            nRMax = 10
             dRMin = 2
-            dRMax = 9
+            dRMax = 10
         } else if difficulty == 2 {
             nLMin = 2
-            nLMax = 9
+            nLMax = 10
             dLMin = 2
-            dLMax = 19
+            dLMax = 20
             nRMin = 2
-            nRMax = 9
+            nRMax = 10
             dRMin = 2
-            dRMax = 19
+            dRMax = 20
         }
     }
     
@@ -157,27 +157,27 @@ class Difficulty {
             dPMulMin = 0
             dPMulMax = 1
             numberAMin = 2
-            numberAMax = 9
+            numberAMax = 10
             numberBMin = 2
-            numberBMax = 9
+            numberBMax = 10
         } else if difficulty == 1 {
             dPMin = 1
             dPMax = 2
             dPMulMin = 0
             dPMulMax = 1
             numberAMin = 2
-            numberAMax = 19
+            numberAMax = 20
             numberBMin = 2
-            numberBMax = 19
+            numberBMax = 20
         } else if difficulty == 2 {
             dPMin = 1
             dPMax = 3
             dPMulMin = 0
             dPMulMax = 2
             numberAMin = 2
-            numberAMax = 99
+            numberAMax = 100
             numberBMin = 2
-            numberBMax = 99
+            numberBMax = 100
         }
     }
     

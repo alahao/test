@@ -14,8 +14,7 @@ var numberOperation = ""
 var questionNumber = 0
 var seedOperation = [0,0,0,0,0,0]
 let answerSeed : GKMersenneTwisterRandomSource? = GKMersenneTwisterRandomSource()
-var worksheetAnswerCode = ""
-
+var worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var answerButton: UIBarButtonItem!
@@ -54,7 +53,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var finalDenominator = 0
     var wholeNumberCount = 0
   
-    
     // Decimal
     var decNumberOne = 0.00
     var decNumberTwo = 0.00
@@ -67,23 +65,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var decNumberOpertaionSignL = ""
     var decNumberOpertaionSignR = ""
     
-    
     var docURL : URL!
-    var cellNumber = 20
+    var cellNumber = 10
     var pageNumber = 2
     let defaultCellHeight = 40
-    var cellHeight = 40
+    var cellHeight = 50
     var currentPageArrayStart = 0
-
-//    var seed1 = 0
-//    var seed2 = 0
-//    var seed3 = 0
-//    var seed4 = 0
-//    var seed5 = 0
-//    var seed6 = 0
     
     // START
-    
     
     // 1. VIEW DID LOAD
     override func viewDidLoad() {
@@ -94,11 +83,11 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         worksheetTableView.dataSource = self
     }
     
-    // 2. GENERATE 20 lines of questions per page
+    // 2. GENERATE 10 lines of questions per page
     func generatingPage() {
         question.questionArray.removeAll()
         questionNumber = 0
-        cellNumber = 20 * pageNumber
+        cellNumber = 10 * pageNumber
         answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
         answerSeed?.seed = answerSeedNumber
         print("removed Array, new Array is \(question.questionArray)")
@@ -108,18 +97,18 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         let stringSeedOperation = seedOperation.map{String($0)}.joined()
         print("$stringSeedOperation is \(stringSeedOperation)")
-        worksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
-        answerButton.title = "Answer Key: " + worksheetAnswerCode
-         print("$worksheetAnswerCode is \(worksheetAnswerCode)")
+        let stringWorksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
+        worksheetAnswerCode = stringWorksheetAnswerCode.compactMap{Int(String($0))}
+//        answerButton.title = "Answer Key: " + worksheetAnswerCode.map{String($0)}.joined()
+         print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
     }
-    
     
     // GENERATE BAR CODE
     func generateBarCode() {
     let imageView = UIImageView()
     let codeGenerator = FCBBarCodeGenerator()
     let size = CGSize(width: 100, height: 100)
-    let code = worksheetAnswerCode
+    let code = worksheetAnswerCode.map{String($0)}.joined()
     let type = FCBBarcodeType.qrcode
     
     if let image = codeGenerator.barcode(code: code, type: type, size: size) {
@@ -135,7 +124,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellNumber = 20 * pageNumber
+        cellNumber = 10 * pageNumber
         return cellNumber
     }
     
@@ -147,9 +136,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         cell.numberThreeLabel.text = String(describing: question.questionArray[indexPath.row][3])
         return cell
     }
-// END
-    
-
+    // END
     
     // SIMPLE PDF
     func loadSimplePDF() {
@@ -168,36 +155,76 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         
         // Create PDF Table
-        while currentPageArrayStart + 19 < cellNumber {
+        while currentPageArrayStart + 9 < cellNumber {
+            pdf.beginHorizontalArrangement()
+            pdf.setContentAlignment(.left)
+            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 15)!, textColor: UIColor.black)
             pdf.setContentAlignment(.center)
-            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 30)!, textColor: UIColor.black)
-            pdf.addLineSpace(10)
+            pdf.addText("Name")
+            pdf.addHorizontalSpace(800)
+            pdf.addText("Date")
+            
+            
+            pdf.endHorizontalArrangement()
+            
+            pdf.addLineSeparator(height: 0.2)
             
             pdf.setContentAlignment(.left)
-            pdf.addHorizontalSpace(50)
             
             let columnCount = 4
-
+            let currentPageArray = question.questionArray[currentPageArrayStart...currentPageArrayStart + 9]
+            pdf.addTable(currentPageArray.count, columnCount: columnCount, rowHeight: 70.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
+            currentPageArrayStart = currentPageArrayStart + 10
             
-            let currentPageArray = question.questionArray[currentPageArrayStart...currentPageArrayStart + 19]
-            pdf.addTable(currentPageArray.count, columnCount: columnCount, rowHeight: 36.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
-            currentPageArrayStart = currentPageArrayStart + 20
             
+            pdf.addLineSpace(40)
+            pdf.addLineSeparator(height: 0.2)
+            pdf.addLineSpace(4)
             pdf.setContentAlignment(.center)
-            pdf.addLineSpace(10)
-           
         
-        pdf.addText("Download the PaperMath app (iOS only) and scan answer key: \(worksheetAnswerCode)", font: UIFont.systemFont(ofSize: 7), textColor: UIColor.black)
-        
+            pdf.addText("To reveal answers, use the PaperMath iPhone/iPad app and scan the barcode below.", font: UIFont.systemFont(ofSize: 8), textColor: UIColor.black)
+            pdf.addLineSpace(4)
+            func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+                let size = image.size
+                let widthRatio  = targetSize.width  / size.width
+                let heightRatio = targetSize.height / size.height
+                
+                // Figure out what our orientation is, and use that to form the rectangle
+                var newSize: CGSize
+                if(widthRatio > heightRatio) {
+                    newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+                } else {
+                    newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+                }
+                
+                // This is the rect that we've calculated out and this is what is actually used below
+                let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+                
+                // Actually do the resizing to the rect using the ImageContext stuff
+                UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+                image.draw(in: rect)
+                let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                
+                return newImage!
+            }
+            let appStoreIcon = UIImage(named:"appStoreIcon@4x")!
+            
         
             let codeGenerator = FCBBarCodeGenerator()
-            let size = CGSize(width: 200, height: 30)
-            let code = String(worksheetAnswerCode)
+            let size = CGSize(width: 180, height: 20)
+            let code = worksheetAnswerCode.map{String($0)}.joined()
             let type = FCBBarcodeType.pdf417
+            
+            pdf.beginHorizontalArrangement()
             
             if let image = codeGenerator.barcode(code: code, type: type, size: size) {
                 pdf.addImage(image)
             }
+            pdf.addHorizontalSpace(50)
+            
+            pdf.addImage(appStoreIcon)
+            pdf.endHorizontalArrangement()
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()
@@ -261,8 +288,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueShowAnswer" {
-            let destinationVC =  segue.destination as! AnswersVC
-//            destinationVC.answerCodeRText = String(Int(answerSeedNumber))
+            let destinationVC = segue.destination as! AnswersVC
+            
         }
     }
 }
