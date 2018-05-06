@@ -281,7 +281,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
-        
+        Flurry.logEvent("PDF Printed, \(worksheetAnswerCode.map{String($0)}.joined())");
         loadSimplePDF()
         let printController = UIPrintInteractionController.shared
         let printInfo = UIPrintInfo(dictionary : nil)
@@ -294,6 +294,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     @IBAction func PDFRefresh(_ sender: Any) {
+        Flurry.logEvent("PDF Refreshed, \(worksheetAnswerCode.map{String($0)}.joined())");
         answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
         question.questionArray.removeAll()
         generatingPage()
@@ -301,6 +302,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     @IBAction func PDFExport(_ sender: Any) {
+        Flurry.logEvent("PDF Exported, \(worksheetAnswerCode.map{String($0)}.joined())");
         print("# Button Pressed")
         loadSimplePDF()
         loadPDFAndShare()
