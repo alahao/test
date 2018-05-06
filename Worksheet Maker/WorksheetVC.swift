@@ -92,15 +92,20 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         answerSeed?.seed = answerSeedNumber
         print("removed Array, new Array is \(question.questionArray)")
         for _ in 1...cellNumber {
-            question.questionArray.append(operation.runOperation())
+            var resultArray = operation.runOperation()
+            if question.questionArray.contains(resultArray) {
+                print("$caught duplicated questions")
+                resultArray = operation.runOperation()
+            } else {
+            question.questionArray.append(resultArray)
             print("QArray assigned is \(question.questionArray)")
+            }
         }
         let stringSeedOperation = seedOperation.map{String($0)}.joined()
         print("$stringSeedOperation is \(stringSeedOperation)")
         let stringWorksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
         worksheetAnswerCode = stringWorksheetAnswerCode.compactMap{Int(String($0))}
-//        answerButton.title = "Answer Key: " + worksheetAnswerCode.map{String($0)}.joined()
-         print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
+        print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
     }
     
     // GENERATE BAR CODE
@@ -140,6 +145,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // SIMPLE PDF
     func loadSimplePDF() {
+        var currentPageNumber = 1
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize)
         
@@ -149,28 +155,20 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             fonts: [UIFont.systemFont(ofSize: 8),
                     UIFont.systemFont(ofSize: 12),
                     UIFont.systemFont(ofSize: 8),
-                    UIFont.systemFont(ofSize: 12)],
-            textColors: [UIColor.lightGray, UIColor.black, UIColor.lightGray, UIColor.black])
+                    UIFont.systemFont(ofSize: 12),],
+            textColors: [UIColor.gray, UIColor.black, UIColor.gray, UIColor.black])
 
         
         
         // Create PDF Table
         while currentPageArrayStart + 9 < cellNumber {
-            pdf.beginHorizontalArrangement()
-            pdf.setContentAlignment(.left)
-            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 15)!, textColor: UIColor.black)
+
             pdf.setContentAlignment(.center)
-            pdf.addText("Name")
-            pdf.addHorizontalSpace(800)
-            pdf.addText("Date")
-            
-            
-            pdf.endHorizontalArrangement()
-            
-            pdf.addLineSeparator(height: 0.2)
+            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
+
             
             pdf.setContentAlignment(.left)
-            
+
             let columnCount = 4
             let currentPageArray = question.questionArray[currentPageArrayStart...currentPageArrayStart + 9]
             pdf.addTable(currentPageArray.count, columnCount: columnCount, rowHeight: 70.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
@@ -178,12 +176,20 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             
             pdf.addLineSpace(40)
-            pdf.addLineSeparator(height: 0.2)
+            pdf.addLineSeparator(height: 0.1)
             pdf.addLineSpace(4)
+
+          pdf.beginHorizontalArrangement()
+            pdf.setContentAlignment(.left)
+            // page number
+            pdf.addText("Page \(currentPageNumber)/\(pageNumber)", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
+            
             pdf.setContentAlignment(.center)
-        
-            pdf.addText("To reveal answers, use the PaperMath iPhone/iPad app and scan the barcode below.", font: UIFont.systemFont(ofSize: 8), textColor: UIColor.black)
+            pdf.addText("For answer keys, scan barcode using the PaperMath app.", font: UIFont.systemFont(ofSize: 8), textColor: UIColor.black)
+
+            pdf.endHorizontalArrangement()
             pdf.addLineSpace(4)
+            
             func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
                 let size = image.size
                 let widthRatio  = targetSize.width  / size.width
@@ -208,9 +214,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 
                 return newImage!
             }
-            let appStoreIcon = UIImage(named:"appStoreIcon@4x")!
-            
-        
+
             let codeGenerator = FCBBarCodeGenerator()
             let size = CGSize(width: 180, height: 20)
             let code = worksheetAnswerCode.map{String($0)}.joined()
@@ -218,13 +222,23 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.beginHorizontalArrangement()
             
+  
+            
+            pdf.setContentAlignment(.center)
+            // bar code
             if let image = codeGenerator.barcode(code: code, type: type, size: size) {
                 pdf.addImage(image)
             }
-            pdf.addHorizontalSpace(50)
+           
             
+            pdf.setContentAlignment(.right)
+            // app store icon
+            let appStoreIcon = UIImage(named:"appStoreIcon@4x")!
             pdf.addImage(appStoreIcon)
+            
             pdf.endHorizontalArrangement()
+            
+            currentPageNumber = currentPageNumber + 1
             
             if currentPageArrayStart < cellNumber {
                 pdf.beginNewPage()

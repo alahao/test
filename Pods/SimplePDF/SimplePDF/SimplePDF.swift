@@ -16,7 +16,7 @@ private enum SimplePDFCommand {
     case addLineSpace(CGFloat)
     case addHorizontalSpace(CGFloat)
     case addLineSeparator(height: CGFloat)
-    case addTable(rowCount: Int, columnCount: Int, rowHeight: CGFloat, columnWidth: CGFloat?, tableLineWidth: CGFloat, font: UIFont?, tableDefinition: TableDefinition?, dataArray: Array<Array<String>>)
+    case addTable(rowCount: Int, columnCount: Int, rowHeight: CGFloat, columnWidth: CGFloat?, tableLineWidth: CGFloat, font: UIFont?, tableDefinition:TableDefinition?, dataArray: Array<Array<String>>)
     
     case setContentAlignment(ContentAlignment)
     case beginNewPage

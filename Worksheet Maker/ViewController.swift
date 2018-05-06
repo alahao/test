@@ -74,10 +74,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 1
     }
     
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return pagePickers[row]
-//    }
-    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         pickerLabel.textColor = UIColor(red: 76.0/255.0, green: 153.0/255.0, blue: 207.0/255.0, alpha: 1.0)
@@ -205,7 +201,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
         selectedOpertaions["plus"] = true
-        print("$\(selectedOpertaions)")
+        print("$selectedOperation:\(selectedOpertaions), $worksheetAnswerCode: \(worksheetAnswerCode)")
         
         
         // Do any additional setup after loading the view, typically from a nib.

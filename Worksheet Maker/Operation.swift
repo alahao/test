@@ -138,6 +138,8 @@ class Operation {
                 numberOne = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
                 numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberAnswer = numberOne + numberTwo
+                print("plus ran, worksheetAnswerCode is \(worksheetAnswerCode), answerseed is \(answerSeed)")
+                
               
             } else if operation == 1 {
                 numberOpertaionSign = "-"

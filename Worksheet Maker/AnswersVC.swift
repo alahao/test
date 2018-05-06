@@ -35,12 +35,9 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        worksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))
+        print("$A_worksheetAnswerCode: \(worksheetAnswerCode)")
+        translatingSeed()
         generatingPage()
-        
-        //        let viewController = makeBarcodeScannerViewController()
-        //        viewController.title = "ANSWER"
-        //        present(viewController, animated: true, completion: nil)
         
         // Do any additional setup after loading the view.
     }
@@ -55,14 +52,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         print("generate page")
         
-        localAssignOperation()
-        pageNumber = Int((worksheetAnswerCode[7] * 10) + worksheetAnswerCode[8])
-        print("Scanned Page Number is \(String(describing: pageNumber!))")
-        difficulty = Int(worksheetAnswerCode[6])
-        print("Scanned difficulty is \(String(describing: difficulty!))")
-        answerSeed?.seed = UInt64(worksheetAnswerCode.suffix(5).map{String($0)}.joined())!
-        print("$answerseed scanned is \(String(describing: answerSeed!.seed))")
-            
+        
             question.questionArray.removeAll()
             questionNumber = 0
             print("$ new cell number is \(cellNumber)")
@@ -133,7 +123,7 @@ extension UIViewController {
 // MARK: - BarcodeScannerCodeDelegate
 
 extension AnswersVC: BarcodeScannerCodeDelegate {
-    func localAssignOperation() {
+    func translatingSeed() {
         if worksheetAnswerCode[0] == 1 {
             selectedOpertaions["plus"] = true
         } else {
@@ -164,10 +154,17 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
         } else {
             selectedOpertaions["decimal"] = false
         }
+        pageNumber = Int((worksheetAnswerCode[7] * 10) + worksheetAnswerCode[8])
+        print("Scanned Page Number is \(String(describing: pageNumber!))")
+        difficulty = Int(worksheetAnswerCode[6])
+        print("Scanned difficulty is \(String(describing: difficulty!))")
+        answerSeed?.seed = UInt64(worksheetAnswerCode.suffix(5).map{String($0)}.joined())!
+        print("$answerseed scanned is \(String(describing: answerSeed!.seed))")
     }
     
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         worksheetAnswerCode = code.compactMap{Int(String($0))}
+        translatingSeed()
         
         enum codeError : Error {
             case invalidA
@@ -204,26 +201,26 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
         } catch codeError.invalidPageNumber {
             print("$invalidPageNumber")
             controller.resetWithError()
-            worksheetAnswerCode.removeAll()
+            worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         } catch codeError.invalidDifficulty {
             print("$invalidDifficulty")
             controller.resetWithError()
-            worksheetAnswerCode.removeAll()
+            worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         }  catch codeError.invalidKey {
             print("$invalidKey")
             controller.resetWithError(message: "Error message")
-            worksheetAnswerCode.removeAll()
+            worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
             
         } catch let otherError {
             print("$otherError")
             controller.resetWithError(message: "Error message")
-            worksheetAnswerCode.removeAll()
+            worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
         }
     }
