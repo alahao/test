@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 var currentSwitch = 0
 var selectedOpertaions = ["plus": true, "minus": false, "multiplication": false, "division": false, "fraction": false, "decimal": false]
@@ -198,6 +199,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.logEvent("App Launched")
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
         selectedOpertaions["plus"] = true

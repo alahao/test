@@ -9,6 +9,7 @@
 import UIKit
 import GameKit
 import BarcodeScanner
+import Flurry_iOS_SDK
 
 class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -165,6 +166,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         worksheetAnswerCode = code.compactMap{Int(String($0))}
         translatingSeed()
+
         
         enum codeError : Error {
             case invalidA
@@ -189,6 +191,10 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             
             generatingPage()
             
+            let stringWorksheetAnswerCode = worksheetAnswerCode.map{String($0)}.joined()
+            let pageParams = ["WorksheetAnswerCode": stringWorksheetAnswerCode];
+            Flurry.logEvent("Answer code scanned successfully", withParameters: pageParams);
+            
             controller.dismiss(animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                 controller.resetWithError()
@@ -200,18 +206,21 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             try checkError()
         } catch codeError.invalidPageNumber {
             print("$invalidPageNumber")
+            Flurry.logEvent("Scan with error, invalidPageNumber")
             controller.resetWithError()
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         } catch codeError.invalidDifficulty {
             print("$invalidDifficulty")
+            Flurry.logEvent("Scan with error, invalidDifficulty")
             controller.resetWithError()
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         }  catch codeError.invalidKey {
             print("$invalidKey")
+            Flurry.logEvent("Scan with error, invalidKey")
             controller.resetWithError(message: "Error message")
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
@@ -219,6 +228,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             
         } catch let otherError {
             print("$otherError")
+            Flurry.logEvent("Scan with error, otherError")
             controller.resetWithError(message: "Error message")
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()

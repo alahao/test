@@ -1,24 +1,27 @@
 PODS:
   - BarcodeScanner (3.0.0)
+  - Flurry-iOS-SDK/FlurryAds (8.3.2):
+    - Flurry-iOS-SDK/FlurrySDK
+  - Flurry-iOS-SDK/FlurrySDK (8.3.2)
   - SimplePDF (3.0.0)
-  - SwiftyStoreKit (0.11.0)
 
 DEPENDENCIES:
   - BarcodeScanner
+  - Flurry-iOS-SDK/FlurryAds
+  - Flurry-iOS-SDK/FlurrySDK
   - SimplePDF
-  - SwiftyStoreKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - BarcodeScanner
+    - Flurry-iOS-SDK
     - SimplePDF
-    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   BarcodeScanner: 4ba61e8b2d50da7b17685085d4bb8e1a0c14613e
+  Flurry-iOS-SDK: 499b7ac3b8d83dda274206c1f1f2335d3fab87f6
   SimplePDF: 903143ede36965886997a5c1bc6b8940b082ba20
-  SwiftyStoreKit: c5cb38110cb01b55b9c5f25d7f69d0083650b2a4
 
-PODFILE CHECKSUM: 0f1f8a05a9375891d3287bd1791f2ad036834568
+PODFILE CHECKSUM: 691103aec3dae6cccc820dd1a948a4b1dc720905
 
 COCOAPODS: 1.5.0

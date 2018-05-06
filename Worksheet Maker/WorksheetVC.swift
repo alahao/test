@@ -9,6 +9,7 @@
 import UIKit
 import SimplePDF
 import GameKit
+import Flurry_iOS_SDK
 
 var numberOperation = ""
 var questionNumber = 0
@@ -106,6 +107,11 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let stringWorksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
         worksheetAnswerCode = stringWorksheetAnswerCode.compactMap{Int(String($0))}
         print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
+        
+        // FLURRY
+        let pageParams = ["worksheetAnswerCode": stringWorksheetAnswerCode, "Page Number": String(pageNumber)];
+        Flurry.logEvent("Generated Page Count", withParameters: pageParams);
+        Flurry.logEvent("Selected Operations", withParameters: selectedOpertaions);
     }
     
     // GENERATE BAR CODE

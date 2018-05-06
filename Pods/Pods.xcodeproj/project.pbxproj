@@ -7,65 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0394FD0353D43CFBF4A4B4B0006A93DD /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */; };
-		0721A1F340FB2A2E9551DD98764B200C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
-		07CFA2FAE3CB3C218442A54486348BEA /* FocusViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */; };
-		17B09A519BE601A0E22A832ABC01261B /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */; };
-		199C78D8F86C4750F36793AAA760CEEC /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */; };
-		1E4189DF2C828D6897EB85039EAB1034 /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F954AC1F029E700A93ED0B6F5420199 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */; };
-		30B67EC05C0F02133FC1ACCA36DC9202 /* BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37806CA7536EF2187B0BCD9814E68349 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */; };
-		3A03FCFE1122F53973B4B6D6AA71DF8F /* BarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */; };
-		3B328301770392444E6191E0F3F4074C /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C4A20E04AC720BFC21F8D63DD50412B /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */; };
-		4D788308AD57ECC2E4FB97A7BE15F823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
-		4F3C610CB80397D0BA60EC25F2A5E638 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */; };
-		54FABD5DD832875EE12658AFD07377A7 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57DD96D05F722890BFFCF43B22BCD79A /* flashOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */; };
-		5A6C91DE5991AAE40BAE91EF436130DB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688A0C01D3E93B79DC94641669B33FF /* State.swift */; };
-		6248E59DB9809EDE706469E4A7B0B3AA /* Pods-PaperWorksheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */; };
-		66FC729983908847F32BAC921C33295B /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */; };
-		6D7BD9D0955E0A51B3F9F13EB30B0CF0 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */; };
-		7B1B6BC2290E3C05A40DB9FE0B2666BB /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */; };
-		828901D718306D8625CA57FA43E2E758 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */; };
-		8577A16F1E644130ED69603AA320A72F /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */; };
-		8691F39DA2978E9B503D51B6D6C4DDD1 /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */; };
-		8B477B845F1B3C6276D3F217A2D289A2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */; };
-		8D20A9D4EFC142CAFBC17E6F620B0C9A /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */; };
-		8E66F858A67C972CA8042EB348017D34 /* flashOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */; };
-		954D21F9A07D517EC5927DC2F205BC2E /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */; };
-		A37A9D29762FCB5E98E41F5BAEF38966 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */; };
-		A41C3626C0E4EA206AB777EA1EE6F5AE /* TorchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536941C93369589540A0DB7AED678054 /* TorchMode.swift */; };
-		A620E88793E5E9E2317010C9FDA0C9D5 /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */; };
-		AA46F80C33D9986E37EE40F8B4DF24AF /* BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */; };
-		B0204633C1C75E353078A4B21BB1C700 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2603AA8F9084549D2F9A56D532159D /* Config.swift */; };
-		B7200D9BCE24BF7995BB70FB766B22BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */; };
-		BA58F3AA0F56AA1F914BD7F4289AB88D /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */; };
-		BEC7ACBC328B7E76B742488A035CFF6E /* Pods-PaperWorksheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C124119521F3EB43C9DA933B843E41C9 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */; };
-		D1A53A1829D2EAB6973B67A23764FF20 /* BarcodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */; };
-		D905174023B900AF38E312D7230FDE3B /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */; };
-		E4EA2956E67F7EC0A4BF0D4864083290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
-		E81F711E021B4DA32ED95907F67D2928 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */; };
-		F0A9E1E8CA5658E7E990557D3384AE35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */; };
-		F76D64DBD0263DD40AD32789353D6F38 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */; };
+		03B7CEAE33640FB734AB0C1603AAEFA9 /* Flurry-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F8B7746AF8D961DEC7B5D368AA317C /* Flurry-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06AA66B17C12209F2DD3B74166B594E6 /* Pods-PaperWorksheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06D1B2A95D29FB492FB61F0AD8249D84 /* FlurryAdInterstitial.h in Headers */ = {isa = PBXBuildFile; fileRef = 078F2B2FC03478B8E5A0239BC86E49F8 /* FlurryAdInterstitial.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0721A1F340FB2A2E9551DD98764B200C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
+		07CFA2FAE3CB3C218442A54486348BEA /* FocusViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E3674D6F56959A28085311B21086B /* FocusViewType.swift */; };
+		08754DB0F32871C39048EC6944B6DA15 /* Flurry-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD7050E7FAA5FE5085B1E157385A8D /* Flurry-iOS-SDK-dummy.m */; };
+		0E3A6F70DE4D8FAC5758BBE91BCEDD1C /* FlurryAdNativeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E3E497436CB90B65F6F1ABDE1358EA8 /* FlurryAdNativeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14298637336BC7EA962B55EBCB997474 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */; };
+		2035133A228C38795DA85D99E8D96372 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A5900ED87FC9C02ACFFB8DB26EFE4D /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20D068398EB519885127475403D6E441 /* FlurryAdNativeAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = EA521C72987CC3515CBD1A4A86E7C21D /* FlurryAdNativeAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B67EC05C0F02133FC1ACCA36DC9202 /* BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FDA4FA2C03E8DBC142EC4C1442564E1 /* BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		329F7E5040E6E7FB469D3EDC5B450AAF /* FlurryAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B0EBF6A8ECF723A456D6C6E9491041 /* FlurryAdError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35032786AD6B62409E297E9336780546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
+		3A03FCFE1122F53973B4B6D6AA71DF8F /* BarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */; };
+		4C4A20E04AC720BFC21F8D63DD50412B /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AFA29FFA52731E8D47CA0DA1F7A04EE /* info@3x.png */; };
+		4F3C610CB80397D0BA60EC25F2A5E638 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650EC0FD402517C67A2BCC530EBD10 /* HeaderView.swift */; };
+		57DD96D05F722890BFFCF43B22BCD79A /* flashOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376715E976018F35B91C0AF3810B8417 /* flashOff@3x.png */; };
+		5A6C91DE5991AAE40BAE91EF436130DB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A260FB548DA4FE7CD45D18613CAFE5 /* State.swift */; };
+		5AA3AA43BDABCC0128353C7415785195 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */; };
+		616CE981B714FE8D5D780601FE3B8D70 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C891D088B3C4AECC645B7817C7DB8A /* Flurry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66FC729983908847F32BAC921C33295B /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 756C954615866E691E67450C309B716B /* Localization.bundle */; };
+		6B9E608F2B41F0739AD8E6F33288FCDF /* FlurryAdNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1CBEA0532904F69ACDF6609176F2A9 /* FlurryAdNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C80B1457C60C0C342779F3BAC799B5B /* Pods-PaperWorksheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */; };
+		78D98526A9757F6F74E12BEE8C94CC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
+		79BCE5755199943145DD0491E1CBDA1E /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEC71839FD5DF9EF2BB8B52810D131 /* SimplePDF.swift */; };
+		7FE32010F1998DF2F44A8C9CCE0A17E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */; };
+		893F130B18CD608E18C0682D0F7E6A36 /* FlurryAdDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 68516E088B9D5362E8FD19C09653898A /* FlurryAdDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B477B845F1B3C6276D3F217A2D289A2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3018E56F4CADF6B24EFCE9F7016B32D /* InfoView.swift */; };
+		8DB2FAE82A0734926DFC53CD5B9EB2B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */; };
+		8E66F858A67C972CA8042EB348017D34 /* flashOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4697CD6E155E26F1486F241081B6BC28 /* flashOn@3x.png */; };
+		A37A9D29762FCB5E98E41F5BAEF38966 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C981449FA5B920EBD22DB663451986 /* UIKit.framework */; };
+		A41C3626C0E4EA206AB777EA1EE6F5AE /* TorchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25945E8B259107EDCAA7DA05664A201 /* TorchMode.swift */; };
+		AA46F80C33D9986E37EE40F8B4DF24AF /* BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD93AA53ADEBA9D079F9089C4ADEE5F /* BarcodeScanner-dummy.m */; };
+		AC0700C1ADFF1AD897F5CB3541CC7556 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C981449FA5B920EBD22DB663451986 /* UIKit.framework */; };
+		AF7804FF89763F902C8A605B7180BC02 /* FlurrySessionBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2A3B0C9CC60528B0FECDDD6B700C58 /* FlurrySessionBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0204633C1C75E353078A4B21BB1C700 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193A1734D92A5E8D1990BF02CBBCA1D /* Config.swift */; };
+		B7200D9BCE24BF7995BB70FB766B22BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */; };
+		C284F662BECB88755531061EC31E0761 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */; };
+		D1A53A1829D2EAB6973B67A23764FF20 /* BarcodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A380F16E5FEF73B31841E34274EBE9 /* BarcodeScannerController.swift */; };
+		D285057643B14E34F95C093C71AF0880 /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A0ADC5BE25D23C69E8B37A364B388C /* SimplePDF-dummy.m */; };
+		D63EB7D1A41DDF426D83662FC517AEB5 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8870FD51BF9975B0EDF6779A14FC5 /* FlurryEmpty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D724E7F85ECBB91D3E091072F635B020 /* FlurryAdNativeStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 471FF42BE60EFFF56BF6A7DC66CAF975 /* FlurryAdNativeStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9E59EA9C99442B497D9FEEFBA5B944D /* FlurryAdsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = B72CFA6D938632545D1FE45F4AFE8E1C /* FlurryAdsEmpty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB899F9A90EC08B7A677113DEDD9AFA2 /* FlurryAdBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD11CEA41F53DC69AB49CC9C7C70EC2 /* FlurryAdBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBDC235BC3223CF1496DF919098B3685 /* FlurryAdBannerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D30C47CF64F56C855E36F1B8024C2F3 /* FlurryAdBannerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC146C2C6D12EAAA4DEC69A3BAE9C9F4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */; };
+		DCE711E74EC663D92DB69FC3B820AB00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
+		DDC302F17892A69F9A576BAD3CA6981B /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48FBE987FAB9431DF2ADBD3E5895961A /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1E31DC6A9E79CE2117EF066F025CCCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875CA153137FA714270D015903881898 /* SystemConfiguration.framework */; };
+		E81F711E021B4DA32ED95907F67D2928 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0E9BE84D5AEF0E82B7A55A82BA499D4 /* Localizable.strings */; };
+		EB25AC57B961729D0519A61656191193 /* FlurryAdTargeting.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BCC2C9F8CD2CACF72A9CC32497EB827 /* FlurryAdTargeting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F49E992A854398357A301032FE147458 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */; };
+		F79A872ACDC8FB408B6480DDF73DD77D /* FlurryAdInterstitialDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2457A34D32BF3B203F9825A93716E1 /* FlurryAdInterstitialDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		001717C010D73494C32116C0733CBE31 /* PBXContainerItemProxy */ = {
+		226D47906E26ED1C4A22BB03FA2F5D29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19E6534ABB2C9C66491D60CEEB16712C;
-			remoteInfo = BarcodeScanner;
-		};
-		31F6AB765AD63AC8B9F14B6FD86DEF36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C4001A5A446D34942C9F5565D774457;
-			remoteInfo = SwiftyStoreKit;
+			remoteGlobalIDString = 1FF416944BFAE7682C1FD6B9C7363B5F;
+			remoteInfo = SimplePDF;
 		};
 		46A722A8BB03F8BA8B6332BED16F2DB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,12 +77,12 @@
 			remoteGlobalIDString = 41AB57C778C3649C78485C9E51311DD2;
 			remoteInfo = "BarcodeScanner-BarcodeScanner";
 		};
-		E8657C68E33CE58FF41DD225343E8ED4 /* PBXContainerItemProxy */ = {
+		715AB66DF3E2D4764D3B403B0DBC65AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E80CD0B437BBF39F2D3F003ECB9C2FAB;
-			remoteInfo = SimplePDF;
+			remoteGlobalIDString = BB4B3E2FB90F4E6A4B3A154BF3EA52E5;
+			remoteInfo = "Flurry-iOS-SDK";
 		};
 		EB1E7A8207FDF919173CE80C72C71524 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -88,78 +91,95 @@
 			remoteGlobalIDString = 7546A3D3D2027B77D96BBDDF19EAD866;
 			remoteInfo = "BarcodeScanner-Localization";
 		};
+		F9848A777174390C79E42A51FF9BE5AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19E6534ABB2C9C66491D60CEEB16712C;
+			remoteInfo = BarcodeScanner;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		076C80687BC5CFE765468338BE7D52FF /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		0492D62A3960E247856A90A249E3CCD5 /* Flurry-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		06A5900ED87FC9C02ACFFB8DB26EFE4D /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		078F2B2FC03478B8E5A0239BC86E49F8 /* FlurryAdInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdInterstitial.h; path = FlurryAds/FlurryAdInterstitial/FlurryAdInterstitial.h; sourceTree = "<group>"; };
+		07A0C8B074AD4C5FF42D0000D8EACF12 /* libFlurryAds_8.3.2.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurryAds_8.3.2.a; path = FlurryAds/libFlurryAds_8.3.2.a; sourceTree = "<group>"; };
+		0AFEB1B916C6621974878E9301E967D4 /* Flurry-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Flurry-iOS-SDK.modulemap"; sourceTree = "<group>"; };
 		159A953DFD9137396EE52DD0A67F74C5 /* Pods-PaperWorksheet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-frameworks.sh"; sourceTree = "<group>"; };
-		1688A0C01D3E93B79DC94641669B33FF /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		16C891D088B3C4AECC645B7817C7DB8A /* Flurry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Flurry/Flurry.h; sourceTree = "<group>"; };
+		16DA82B8C9183D78BAC124DCB5FC0C58 /* ResourceBundle-BarcodeScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BarcodeScanner-Info.plist"; sourceTree = "<group>"; };
+		1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarcodeScanner.xcconfig; sourceTree = "<group>"; };
 		1ACC0A9A4481D18C09AD27E5F31DCB20 /* Pods-PaperWorksheet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaperWorksheet-acknowledgements.plist"; sourceTree = "<group>"; };
-		1C3E3BBE094DD0A611D9EDB4C3F40C40 /* ResourceBundle-BarcodeScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BarcodeScanner-Info.plist"; sourceTree = "<group>"; };
-		1D37D829FF6CF5070C61EE66316AC3E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F2603AA8F9084549D2F9A56D532159D /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Config.swift; sourceTree = "<group>"; };
-		1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOn@3x.png"; path = "Images/flashOn@3x.png"; sourceTree = "<group>"; };
-		2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
-		2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
-		3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33E46D3C7DE1190175CDF339CE2EC464 /* BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BarcodeScanner.modulemap; sourceTree = "<group>"; };
+		1BD11CEA41F53DC69AB49CC9C7C70EC2 /* FlurryAdBanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdBanner.h; path = FlurryAds/FlurryAdBanner/FlurryAdBanner.h; sourceTree = "<group>"; };
+		1E0AA3B3C97403CB24821C6AA7ADF2B3 /* BarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
+		2AFA29FFA52731E8D47CA0DA1F7A04EE /* info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "info@3x.png"; path = "Images/info@3x.png"; sourceTree = "<group>"; };
+		2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BarcodeScanner.framework; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FDA4FA2C03E8DBC142EC4C1442564E1 /* BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
+		30F8B7746AF8D961DEC7B5D368AA317C /* Flurry-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		318BADD665CEDC77395C4502B20E3733 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33FB593685AA2B985BD36CF507AAD79A /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+		35A380F16E5FEF73B31841E34274EBE9 /* BarcodeScannerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarcodeScannerController.swift; path = Sources/BarcodeScannerController.swift; sourceTree = "<group>"; };
 		37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.debug.xcconfig"; sourceTree = "<group>"; };
-		4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
-		4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusViewType.swift; path = Sources/FocusViewType.swift; sourceTree = "<group>"; };
-		536941C93369589540A0DB7AED678054 /* TorchMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TorchMode.swift; path = Sources/TorchMode.swift; sourceTree = "<group>"; };
-		54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
-		55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "info@3x.png"; path = "Images/info@3x.png"; sourceTree = "<group>"; };
-		589F4B0621AA4D68B18565BFB9AD4914 /* ResourceBundle-Localization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Localization-Info.plist"; sourceTree = "<group>"; };
+		376715E976018F35B91C0AF3810B8417 /* flashOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOff@3x.png"; path = "Images/flashOff@3x.png"; sourceTree = "<group>"; };
+		3B6E3674D6F56959A28085311B21086B /* FocusViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusViewType.swift; path = Sources/FocusViewType.swift; sourceTree = "<group>"; };
+		3E3E497436CB90B65F6F1ABDE1358EA8 /* FlurryAdNativeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeDelegate.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeDelegate.h; sourceTree = "<group>"; };
+		44A260FB548DA4FE7CD45D18613CAFE5 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		4697CD6E155E26F1486F241081B6BC28 /* flashOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOn@3x.png"; path = "Images/flashOn@3x.png"; sourceTree = "<group>"; };
+		471FF42BE60EFFF56BF6A7DC66CAF975 /* FlurryAdNativeStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeStyle.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeStyle.h; sourceTree = "<group>"; };
+		47E8870FD51BF9975B0EDF6779A14FC5 /* FlurryEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlurryEmpty.m; path = Flurry/FlurryEmpty.m; sourceTree = "<group>"; };
+		48FBE987FAB9431DF2ADBD3E5895961A /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		4A9DEA4E83E567135FBCEE0F78BD4491 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		51A0ADC5BE25D23C69E8B37A364B388C /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		55CDC0F7918DFDAF9FCA80E5ADF74E3A /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
+		55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		5AD93AA53ADEBA9D079F9089C4ADEE5F /* BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
 		5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
+		6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Flurry_iOS_SDK.framework; path = "Flurry-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BarcodeScanner.bundle; path = "BarcodeScanner-BarcodeScanner.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaperWorksheet-dummy.m"; sourceTree = "<group>"; };
-		636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
-		63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Localization.bundle; path = "BarcodeScanner-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
-		794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
+		68516E088B9D5362E8FD19C09653898A /* FlurryAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdDelegate.h; path = FlurryAds/StaticAPI/FlurryAdDelegate.h; sourceTree = "<group>"; };
+		69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaperWorksheet.framework; path = "Pods-PaperWorksheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		756C954615866E691E67450C309B716B /* Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Localization.bundle; path = "BarcodeScanner-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77650EC0FD402517C67A2BCC530EBD10 /* HeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = Sources/HeaderView.swift; sourceTree = "<group>"; };
+		79C981449FA5B920EBD22DB663451986 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaperWorksheet-umbrella.h"; sourceTree = "<group>"; };
-		868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
-		88A047DCEA1DD514BEB6D8C0208F1157 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
-		8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarcodeScanner.xcconfig; sourceTree = "<group>"; };
-		9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
+		847B509D9F48513131839DABDDE031B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		875CA153137FA714270D015903881898 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		8F2A3B0C9CC60528B0FECDDD6B700C58 /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurrySessionBuilder.h; path = Flurry/FlurrySessionBuilder.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BarcodeScanner.bundle; path = "BarcodeScanner-BarcodeScanner.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97A7590A6DFDC365ED17DF81507841ED /* BarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
-		99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
-		A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
-		A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
-		A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = Sources/HeaderView.swift; sourceTree = "<group>"; };
-		A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = Sources/InfoView.swift; sourceTree = "<group>"; };
-		A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
-		AB85A128F5F6D5CD0F1841A8F28DEE1D /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
-		B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
-		B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
+		9B1CBEA0532904F69ACDF6609176F2A9 /* FlurryAdNative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNative.h; path = FlurryAds/FlurryAdNative/FlurryAdNative.h; sourceTree = "<group>"; };
+		9B68DE9264A90D08C69033BB755B5DA5 /* BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BarcodeScanner.modulemap; sourceTree = "<group>"; };
+		9BCC2C9F8CD2CACF72A9CC32497EB827 /* FlurryAdTargeting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdTargeting.h; path = FlurryAds/Shared/FlurryAdTargeting.h; sourceTree = "<group>"; };
+		9D30C47CF64F56C855E36F1B8024C2F3 /* FlurryAdBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdBannerDelegate.h; path = FlurryAds/FlurryAdBanner/FlurryAdBannerDelegate.h; sourceTree = "<group>"; };
+		A19D5F31BB8BBE423B79E46F1F9FB20D /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A6249409078248EDE5DEFB2ACE77C05D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2DEFD8CA85A97CC8203B6D8A1A8C3D /* libFlurry_8.3.2.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurry_8.3.2.a; path = Flurry/libFlurry_8.3.2.a; sourceTree = "<group>"; };
+		B25945E8B259107EDCAA7DA05664A201 /* TorchMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TorchMode.swift; path = Sources/TorchMode.swift; sourceTree = "<group>"; };
+		B72CFA6D938632545D1FE45F4AFE8E1C /* FlurryAdsEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlurryAdsEmpty.m; path = FlurryAds/FlurryAdsEmpty.m; sourceTree = "<group>"; };
 		C434D53019D824DD188D4D86193189AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
-		C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
-		CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C58541F9E388794A760BD37984394572 /* Flurry-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Flurry-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		D193A1734D92A5E8D1990BF02CBBCA1D /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Config.swift; sourceTree = "<group>"; };
 		D19D662ACBBF5306D464D9274F3E624D /* Pods-PaperWorksheet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PaperWorksheet-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D213C418D07ED7FC000D49DED48DD8A6 /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
-		D38787F3412A85BC37CB71E2B983368A /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimplePDF.modulemap; sourceTree = "<group>"; };
-		D59DC64FAAF1EBD5AB3052FDE97A8723 /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
-		D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
-		D95E53662C00959C38CDD62192F6BCFC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaperWorksheet.framework; path = "Pods-PaperWorksheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
+		D3018E56F4CADF6B24EFCE9F7016B32D /* InfoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = Sources/InfoView.swift; sourceTree = "<group>"; };
+		DDC72C3F8733AB5F87601DFCC59EC0AB /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
+		DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD9DE97987045F46B100DAE9B3A929 /* Pods-PaperWorksheet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-resources.sh"; sourceTree = "<group>"; };
-		E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOff@3x.png"; path = "Images/flashOff@3x.png"; sourceTree = "<group>"; };
-		E3BE846588C30DF4AFB04C8BB01BEBA2 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
-		E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
-		EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
-		EBFAF1A9C5DDDE2830E1F1C01912AECE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CD7050E7FAA5FE5085B1E157385A8D /* Flurry-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flurry-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		E5B0EBF6A8ECF723A456D6C6E9491041 /* FlurryAdError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdError.h; path = FlurryAds/Shared/FlurryAdError.h; sourceTree = "<group>"; };
+		EA521C72987CC3515CBD1A4A86E7C21D /* FlurryAdNativeAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeAsset.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeAsset.h; sourceTree = "<group>"; };
+		EC7806DD65087318D59ECC94CE114CBE /* ResourceBundle-Localization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Localization-Info.plist"; sourceTree = "<group>"; };
 		ECBA8187D0FA4C0AF2280EEE5D3324FB /* Pods-PaperWorksheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaperWorksheet.modulemap"; sourceTree = "<group>"; };
-		F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BarcodeScanner.framework; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarcodeScannerController.swift; path = Sources/BarcodeScannerController.swift; sourceTree = "<group>"; };
-		FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
+		F69FE6994A23884A16EDFCB8607F9840 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		FA2457A34D32BF3B203F9825A93716E1 /* FlurryAdInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdInterstitialDelegate.h; path = FlurryAds/FlurryAdInterstitial/FlurryAdInterstitialDelegate.h; sourceTree = "<group>"; };
+		FAA9EA47A75BC2A5CAF2F92EE7F598D2 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FCEEC71839FD5DF9EF2BB8B52810D131 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,27 +193,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C53FB71C45DBAED147C930052067D1F /* Frameworks */ = {
+		2D362E702565FC989EFAE770D0A3AEFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4EA2956E67F7EC0A4BF0D4864083290 /* Foundation.framework in Frameworks */,
+				DCE711E74EC663D92DB69FC3B820AB00 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E68ADE66F74BF92477340E945DAF92D /* Frameworks */ = {
+		3A51499BDA0A5508797F53799758B8FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A9E1E8CA5658E7E990557D3384AE35 /* Foundation.framework in Frameworks */,
+				35032786AD6B62409E297E9336780546 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B23E20069ADD724A06C9183585A8F4DB /* Frameworks */ = {
+		797AD51DB0E4434D2825A52F966FAB01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D788308AD57ECC2E4FB97A7BE15F823 /* Foundation.framework in Frameworks */,
+				F49E992A854398357A301032FE147458 /* AVFoundation.framework in Frameworks */,
+				7FE32010F1998DF2F44A8C9CCE0A17E0 /* CoreGraphics.framework in Frameworks */,
+				14298637336BC7EA962B55EBCB997474 /* CoreMedia.framework in Frameworks */,
+				C284F662BECB88755531061EC31E0761 /* CoreTelephony.framework in Frameworks */,
+				78D98526A9757F6F74E12BEE8C94CC41 /* Foundation.framework in Frameworks */,
+				5AA3AA43BDABCC0128353C7415785195 /* MediaPlayer.framework in Frameworks */,
+				8DB2FAE82A0734926DFC53CD5B9EB2B7 /* Security.framework in Frameworks */,
+				E1E31DC6A9E79CE2117EF066F025CCCF /* SystemConfiguration.framework in Frameworks */,
+				AC0700C1ADFF1AD897F5CB3541CC7556 /* UIKit.framework in Frameworks */,
+				DC146C2C6D12EAAA4DEC69A3BAE9C9F4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,50 +243,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		24D7925DB9082B8E30728F6C0BBD9467 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				715827B6A84C2549CD0FBA09A28FA485 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1FABD7EF9AEC0A1B603BE9C7F11F2D59 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				37CF26EF4BB4CE4DC4A55700127443F5 /* BarcodeScanner */,
-				26D1D0EC33A19D49FE9FC21BD9DBDF6C /* SimplePDF */,
-				CF79FDC7753BA91730EF41A79B0E96FA /* SwiftyStoreKit */,
+				D8B428B240D359C4DC4713868CF66131 /* BarcodeScanner */,
+				3F998D6DF6093FB89E78FC40A4A2084F /* Flurry-iOS-SDK */,
+				A6B038AC22EF84053362809A8286E8C6 /* SimplePDF */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		26D1D0EC33A19D49FE9FC21BD9DBDF6C /* SimplePDF */ = {
+		3B7F6422CD3BCAB77ADF116257E36B47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C50F40FE7C1E5FEED5FFF7E31B46F260 /* SimplePDF.h */,
-				C7C420254344C7D3E48700A397794DE0 /* SimplePDF.swift */,
-				BEE1A0B138EC31BB1AE4DAB8EC29FC97 /* Support Files */,
+				AE2DEFD8CA85A97CC8203B6D8A1A8C3D /* libFlurry_8.3.2.a */,
 			);
-			name = SimplePDF;
-			path = SimplePDF;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		37CF26EF4BB4CE4DC4A55700127443F5 /* BarcodeScanner */ = {
+		3F998D6DF6093FB89E78FC40A4A2084F /* Flurry-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				F393763C05AB748C90F019C7243DD586 /* BarcodeScannerController.swift */,
-				1F2603AA8F9084549D2F9A56D532159D /* Config.swift */,
-				4F8E554C3331C0162D07EC598C7D2E81 /* FocusViewType.swift */,
-				A6878B424DD90B536D94CE03A4F23BD5 /* HeaderView.swift */,
-				A87CCEDA1DBBA78502E2BBF75AFB818E /* InfoView.swift */,
-				1688A0C01D3E93B79DC94641669B33FF /* State.swift */,
-				536941C93369589540A0DB7AED678054 /* TorchMode.swift */,
-				63A953502C5C2DC9D08A8FFC8A856212 /* Resources */,
-				A07D645B0D1D2C9C8F1E08EAA737157D /* Support Files */,
+				E92ED30E86E5B22DB436E6A54C02401F /* FlurryAds */,
+				429974F8106F66F54B89E1155D1294B4 /* FlurrySDK */,
+				52CDD1FC5102B4D67ABA486B87B71922 /* Support Files */,
 			);
-			name = BarcodeScanner;
-			path = BarcodeScanner;
+			name = "Flurry-iOS-SDK";
+			path = "Flurry-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		429974F8106F66F54B89E1155D1294B4 /* FlurrySDK */ = {
+			isa = PBXGroup;
+			children = (
+				16C891D088B3C4AECC645B7817C7DB8A /* Flurry.h */,
+				47E8870FD51BF9975B0EDF6779A14FC5 /* FlurryEmpty.m */,
+				8F2A3B0C9CC60528B0FECDDD6B700C58 /* FlurrySessionBuilder.h */,
+				3B7F6422CD3BCAB77ADF116257E36B47 /* Frameworks */,
+			);
+			name = FlurrySDK;
+			sourceTree = "<group>";
+		};
+		52CDD1FC5102B4D67ABA486B87B71922 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AFEB1B916C6621974878E9301E967D4 /* Flurry-iOS-SDK.modulemap */,
+				C58541F9E388794A760BD37984394572 /* Flurry-iOS-SDK.xcconfig */,
+				E2CD7050E7FAA5FE5085B1E157385A8D /* Flurry-iOS-SDK-dummy.m */,
+				0492D62A3960E247856A90A249E3CCD5 /* Flurry-iOS-SDK-prefix.pch */,
+				30F8B7746AF8D961DEC7B5D368AA317C /* Flurry-iOS-SDK-umbrella.h */,
+				A6249409078248EDE5DEFB2ACE77C05D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Flurry-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		5E3D2068812DA3663589624B28448E0C /* Targets Support Files */ = {
@@ -266,27 +303,6 @@
 				78B9DB2E7CC0A7AD2E0EF259AFC394AE /* Pods-PaperWorksheet */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		63A953502C5C2DC9D08A8FFC8A856212 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E1CB99C80FAA9C02589561B05D0DE50F /* flashOff@3x.png */,
-				1F2664F661C1E15C052AF792ACB07D6C /* flashOn@3x.png */,
-				55C2FC8A6C78A49D0BBD7600756F0219 /* info@3x.png */,
-				1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		715827B6A84C2549CD0FBA09A28FA485 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				FD3A287BB87F4D3C474EC576926A0F89 /* AVFoundation.framework */,
-				CB87367D9B5B48A3CBB2B5DFD7573959 /* Foundation.framework */,
-				63C4BD65EEF247D4C8A723C0F18B326C /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		78B9DB2E7CC0A7AD2E0EF259AFC394AE /* Pods-PaperWorksheet */ = {
@@ -311,101 +327,178 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				1FABD7EF9AEC0A1B603BE9C7F11F2D59 /* Pods */,
-				C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */,
+				876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */,
+				24D7925DB9082B8E30728F6C0BBD9467 /* Pods */,
+				A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */,
 				5E3D2068812DA3663589624B28448E0C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A07D645B0D1D2C9C8F1E08EAA737157D /* Support Files */ = {
+		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33E46D3C7DE1190175CDF339CE2EC464 /* BarcodeScanner.modulemap */,
-				8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */,
-				636E5667F187551F120EE191F374E39D /* BarcodeScanner-dummy.m */,
-				97A7590A6DFDC365ED17DF81507841ED /* BarcodeScanner-prefix.pch */,
-				2FE056C1C0060933E5D22EDADC30C397 /* BarcodeScanner-umbrella.h */,
-				88A047DCEA1DD514BEB6D8C0208F1157 /* Info.plist */,
-				1C3E3BBE094DD0A611D9EDB4C3F40C40 /* ResourceBundle-BarcodeScanner-Info.plist */,
-				589F4B0621AA4D68B18565BFB9AD4914 /* ResourceBundle-Localization-Info.plist */,
+				89DAFB3154DBA2CFA28E11B305E021EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89DAFB3154DBA2CFA28E11B305E021EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */,
+				F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */,
+				578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */,
+				03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */,
+				847B509D9F48513131839DABDDE031B4 /* Foundation.framework */,
+				55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */,
+				69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */,
+				875CA153137FA714270D015903881898 /* SystemConfiguration.framework */,
+				79C981449FA5B920EBD22DB663451986 /* UIKit.framework */,
+				2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */,
+				2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */,
+				6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */,
+				756C954615866E691E67450C309B716B /* Localization.bundle */,
+				6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */,
+				DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6B038AC22EF84053362809A8286E8C6 /* SimplePDF */ = {
+			isa = PBXGroup;
+			children = (
+				06A5900ED87FC9C02ACFFB8DB26EFE4D /* SimplePDF.h */,
+				FCEEC71839FD5DF9EF2BB8B52810D131 /* SimplePDF.swift */,
+				E43A575A5EB05E887F01A3FB6FCD7646 /* Support Files */,
+			);
+			name = SimplePDF;
+			path = SimplePDF;
+			sourceTree = "<group>";
+		};
+		D8B428B240D359C4DC4713868CF66131 /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				35A380F16E5FEF73B31841E34274EBE9 /* BarcodeScannerController.swift */,
+				D193A1734D92A5E8D1990BF02CBBCA1D /* Config.swift */,
+				3B6E3674D6F56959A28085311B21086B /* FocusViewType.swift */,
+				77650EC0FD402517C67A2BCC530EBD10 /* HeaderView.swift */,
+				D3018E56F4CADF6B24EFCE9F7016B32D /* InfoView.swift */,
+				44A260FB548DA4FE7CD45D18613CAFE5 /* State.swift */,
+				B25945E8B259107EDCAA7DA05664A201 /* TorchMode.swift */,
+				F48F93B57A7488EE198793C0765637B0 /* Resources */,
+				E2DF151933C62F10D3B372E26E582B16 /* Support Files */,
+			);
+			name = BarcodeScanner;
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		E2DF151933C62F10D3B372E26E582B16 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B68DE9264A90D08C69033BB755B5DA5 /* BarcodeScanner.modulemap */,
+				1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */,
+				5AD93AA53ADEBA9D079F9089C4ADEE5F /* BarcodeScanner-dummy.m */,
+				1E0AA3B3C97403CB24821C6AA7ADF2B3 /* BarcodeScanner-prefix.pch */,
+				2FDA4FA2C03E8DBC142EC4C1442564E1 /* BarcodeScanner-umbrella.h */,
+				F69FE6994A23884A16EDFCB8607F9840 /* Info.plist */,
+				16DA82B8C9183D78BAC124DCB5FC0C58 /* ResourceBundle-BarcodeScanner-Info.plist */,
+				EC7806DD65087318D59ECC94CE114CBE /* ResourceBundle-Localization-Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BarcodeScanner";
 			sourceTree = "<group>";
 		};
-		BEE1A0B138EC31BB1AE4DAB8EC29FC97 /* Support Files */ = {
+		E43A575A5EB05E887F01A3FB6FCD7646 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EBFAF1A9C5DDDE2830E1F1C01912AECE /* Info.plist */,
-				D38787F3412A85BC37CB71E2B983368A /* SimplePDF.modulemap */,
-				868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */,
-				EB9C39D40B71344C596354D4CC887A25 /* SimplePDF-dummy.m */,
-				AB85A128F5F6D5CD0F1841A8F28DEE1D /* SimplePDF-prefix.pch */,
-				D6AF8599842045E08D2C572E0ADAFF93 /* SimplePDF-umbrella.h */,
+				318BADD665CEDC77395C4502B20E3733 /* Info.plist */,
+				33FB593685AA2B985BD36CF507AAD79A /* SimplePDF.modulemap */,
+				55CDC0F7918DFDAF9FCA80E5ADF74E3A /* SimplePDF.xcconfig */,
+				51A0ADC5BE25D23C69E8B37A364B388C /* SimplePDF-dummy.m */,
+				DDC72C3F8733AB5F87601DFCC59EC0AB /* SimplePDF-prefix.pch */,
+				48FBE987FAB9431DF2ADBD3E5895961A /* SimplePDF-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SimplePDF";
 			sourceTree = "<group>";
 		};
-		C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */ = {
+		E92ED30E86E5B22DB436E6A54C02401F /* FlurryAds */ = {
 			isa = PBXGroup;
 			children = (
-				96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */,
-				F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */,
-				6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */,
-				DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */,
-				B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */,
-				3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */,
+				1BD11CEA41F53DC69AB49CC9C7C70EC2 /* FlurryAdBanner.h */,
+				9D30C47CF64F56C855E36F1B8024C2F3 /* FlurryAdBannerDelegate.h */,
+				68516E088B9D5362E8FD19C09653898A /* FlurryAdDelegate.h */,
+				E5B0EBF6A8ECF723A456D6C6E9491041 /* FlurryAdError.h */,
+				078F2B2FC03478B8E5A0239BC86E49F8 /* FlurryAdInterstitial.h */,
+				FA2457A34D32BF3B203F9825A93716E1 /* FlurryAdInterstitialDelegate.h */,
+				9B1CBEA0532904F69ACDF6609176F2A9 /* FlurryAdNative.h */,
+				EA521C72987CC3515CBD1A4A86E7C21D /* FlurryAdNativeAsset.h */,
+				3E3E497436CB90B65F6F1ABDE1358EA8 /* FlurryAdNativeDelegate.h */,
+				471FF42BE60EFFF56BF6A7DC66CAF975 /* FlurryAdNativeStyle.h */,
+				B72CFA6D938632545D1FE45F4AFE8E1C /* FlurryAdsEmpty.m */,
+				9BCC2C9F8CD2CACF72A9CC32497EB827 /* FlurryAdTargeting.h */,
+				FE07503FC6517EE1CF4914B1D4948843 /* Frameworks */,
 			);
-			name = Products;
+			name = FlurryAds;
 			sourceTree = "<group>";
 		};
-		CF79FDC7753BA91730EF41A79B0E96FA /* SwiftyStoreKit */ = {
+		F48F93B57A7488EE198793C0765637B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2D76A18F19022F4DAA076322C5B7FFFF /* AppleReceiptValidator.swift */,
-				99C17C27EAB989160D6FE2CCD1DB7957 /* CompleteTransactionsController.swift */,
-				54EEDE4963D47339298AFDF7DE74BC37 /* InAppProductQueryRequest.swift */,
-				794E89CE296E51BBC7C120E22961F419 /* InAppReceipt.swift */,
-				4AE36F66EE3DEEC5E20C20BA99FA35B3 /* InAppReceiptRefreshRequest.swift */,
-				724BCD3280282ECD0F1729D1744FE513 /* InAppReceiptVerificator.swift */,
-				8A59DAFFC2A8FA2CCA5ACC15CF48841B /* OS.swift */,
-				B42F6340F7B33679C7372A5653E0761A /* PaymentQueueController.swift */,
-				E6B59E4568666FF853D799EFE28D43E5 /* PaymentsController.swift */,
-				A0FBF51F8641B2D50AAC21E8A83ECACA /* ProductsInfoController.swift */,
-				A92AC038F954EE8DD5C49566EBCE5C63 /* RestorePurchasesController.swift */,
-				A2539D28B5D0B53135AA2C0E1E596527 /* SKProduct+LocalizedPrice.swift */,
-				9124D1B8C406AA8AA07C3B9956BF209F /* SwiftyStoreKit.swift */,
-				FE27E4AB50DACFA084487E7C2AF78371 /* SwiftyStoreKit+Types.swift */,
-				DE9E64248F3EF62EC688CA36693EC952 /* Support Files */,
+				376715E976018F35B91C0AF3810B8417 /* flashOff@3x.png */,
+				4697CD6E155E26F1486F241081B6BC28 /* flashOn@3x.png */,
+				2AFA29FFA52731E8D47CA0DA1F7A04EE /* info@3x.png */,
+				A0E9BE84D5AEF0E82B7A55A82BA499D4 /* Localizable.strings */,
 			);
-			name = SwiftyStoreKit;
-			path = SwiftyStoreKit;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		DE9E64248F3EF62EC688CA36693EC952 /* Support Files */ = {
+		FE07503FC6517EE1CF4914B1D4948843 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D37D829FF6CF5070C61EE66316AC3E2 /* Info.plist */,
-				D59DC64FAAF1EBD5AB3052FDE97A8723 /* SwiftyStoreKit.modulemap */,
-				DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */,
-				B9E159A0ED66F37CA79E51B87FF90975 /* SwiftyStoreKit-dummy.m */,
-				D213C418D07ED7FC000D49DED48DD8A6 /* SwiftyStoreKit-prefix.pch */,
-				E764150637B560141406B0C5F4FB2B9C /* SwiftyStoreKit-umbrella.h */,
+				07A0C8B074AD4C5FF42D0000D8EACF12 /* libFlurryAds_8.3.2.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyStoreKit";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		26A90366985628EA5EE48577B9228274 /* Headers */ = {
+		20904F0C638FEA5DE14ABBFE7C460D61 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B328301770392444E6191E0F3F4074C /* SwiftyStoreKit-umbrella.h in Headers */,
+				DDC302F17892A69F9A576BAD3CA6981B /* SimplePDF-umbrella.h in Headers */,
+				2035133A228C38795DA85D99E8D96372 /* SimplePDF.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7899BC548E24A3DE8922E8113FB063 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B7CEAE33640FB734AB0C1603AAEFA9 /* Flurry-iOS-SDK-umbrella.h in Headers */,
+				616CE981B714FE8D5D780601FE3B8D70 /* Flurry.h in Headers */,
+				DB899F9A90EC08B7A677113DEDD9AFA2 /* FlurryAdBanner.h in Headers */,
+				DBDC235BC3223CF1496DF919098B3685 /* FlurryAdBannerDelegate.h in Headers */,
+				893F130B18CD608E18C0682D0F7E6A36 /* FlurryAdDelegate.h in Headers */,
+				329F7E5040E6E7FB469D3EDC5B450AAF /* FlurryAdError.h in Headers */,
+				06D1B2A95D29FB492FB61F0AD8249D84 /* FlurryAdInterstitial.h in Headers */,
+				F79A872ACDC8FB408B6480DDF73DD77D /* FlurryAdInterstitialDelegate.h in Headers */,
+				6B9E608F2B41F0739AD8E6F33288FCDF /* FlurryAdNative.h in Headers */,
+				20D068398EB519885127475403D6E441 /* FlurryAdNativeAsset.h in Headers */,
+				0E3A6F70DE4D8FAC5758BBE91BCEDD1C /* FlurryAdNativeDelegate.h in Headers */,
+				D724E7F85ECBB91D3E091072F635B020 /* FlurryAdNativeStyle.h in Headers */,
+				EB25AC57B961729D0519A61656191193 /* FlurryAdTargeting.h in Headers */,
+				AF7804FF89763F902C8A605B7180BC02 /* FlurrySessionBuilder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,46 +510,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		812CB40DEE494CF0A849874D4B2A8EF5 /* Headers */ = {
+		A377651121847B431E716AFF60C972EA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4189DF2C828D6897EB85039EAB1034 /* SimplePDF-umbrella.h in Headers */,
-				54FABD5DD832875EE12658AFD07377A7 /* SimplePDF.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D36F4BE9A0BF8EC2EE99693B17DC5920 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEC7ACBC328B7E76B742488A035CFF6E /* Pods-PaperWorksheet-umbrella.h in Headers */,
+				06AA66B17C12209F2DD3B74166B594E6 /* Pods-PaperWorksheet-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		09876A0BE34D15CAD125F61C667ED45D /* Pods-PaperWorksheet */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4538EED6C447A72B31BEA6FBA1DF275F /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */;
-			buildPhases = (
-				BD9AF1D398A763718E419E7E2D422BEF /* Sources */,
-				6C53FB71C45DBAED147C930052067D1F /* Frameworks */,
-				D36F4BE9A0BF8EC2EE99693B17DC5920 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6C4B3FA297D141921E053095B2B42156 /* PBXTargetDependency */,
-				FC40C8865B65A93B63DA851C77EB919F /* PBXTargetDependency */,
-				48A21874F51AE8AC4D5E59C6FC0F1FAD /* PBXTargetDependency */,
-			);
-			name = "Pods-PaperWorksheet";
-			productName = "Pods-PaperWorksheet";
-			productReference = DB0FAE661A0ECE64E729E3687DE04EFA /* Pods_PaperWorksheet.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34148F93A604303381BF9C7EF0018A69 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */;
@@ -474,7 +538,44 @@
 			);
 			name = BarcodeScanner;
 			productName = BarcodeScanner;
-			productReference = F06821E6C26FB8587C8F955BCB46B074 /* BarcodeScanner.framework */;
+			productReference = 2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 288DCF12FF434F9B009BE86AFAB28EB3 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildPhases = (
+				D7E0273F188C40C99D716173698996A0 /* Sources */,
+				2D362E702565FC989EFAE770D0A3AEFD /* Frameworks */,
+				20904F0C638FEA5DE14ABBFE7C460D61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplePDF;
+			productName = SimplePDF;
+			productReference = DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		34656C2120EDF5FB436ECA9D3E8432A7 /* Pods-PaperWorksheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AD6494B0F237B4297C3D9B263E85EE /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */;
+			buildPhases = (
+				16746E3564942CF6BF37B751A55A7D93 /* Sources */,
+				3A51499BDA0A5508797F53799758B8FF /* Frameworks */,
+				A377651121847B431E716AFF60C972EA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0804CF98026F942A20876669A087E34 /* PBXTargetDependency */,
+				17AC8D39BAD6637ACDA3A4FCB40A9ECE /* PBXTargetDependency */,
+				756D53011EDA4E1732351BDF16242799 /* PBXTargetDependency */,
+			);
+			name = "Pods-PaperWorksheet";
+			productName = "Pods-PaperWorksheet";
+			productReference = 6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */ = {
@@ -491,25 +592,8 @@
 			);
 			name = "BarcodeScanner-BarcodeScanner";
 			productName = "BarcodeScanner-BarcodeScanner";
-			productReference = 96A6D4C86C14AA628A24F3F9D15376B5 /* BarcodeScanner.bundle */;
+			productReference = 61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F72804370AA035F3AD4E62E1C54C5EB /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
-			buildPhases = (
-				4EBFBD19B660B72902A54EB273C554D3 /* Sources */,
-				9E68ADE66F74BF92477340E945DAF92D /* Frameworks */,
-				26A90366985628EA5EE48577B9228274 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyStoreKit;
-			productName = SwiftyStoreKit;
-			productReference = 3125A9F3462918DA8F6FFDCC0CE33B7A /* SwiftyStoreKit.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */ = {
 			isa = PBXNativeTarget;
@@ -525,24 +609,24 @@
 			);
 			name = "BarcodeScanner-Localization";
 			productName = "BarcodeScanner-Localization";
-			productReference = 6F629E92880B84BF8A6D28EB743E9D6A /* Localization.bundle */;
+			productReference = 756C954615866E691E67450C309B716B /* Localization.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */ = {
+		BB4B3E2FB90F4E6A4B3A154BF3EA52E5 /* Flurry-iOS-SDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5647417E2FFEBD1E21D8F0C9A8462B95 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildConfigurationList = F157F376924E21DB7D6DD4B0BD204421 /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */;
 			buildPhases = (
-				F2F61F4BD890EA4812A3E7492C204D0E /* Sources */,
-				B23E20069ADD724A06C9183585A8F4DB /* Frameworks */,
-				812CB40DEE494CF0A849874D4B2A8EF5 /* Headers */,
+				D3FB3458C0A4AA9D97AAD6D6910A83BC /* Sources */,
+				797AD51DB0E4434D2825A52F966FAB01 /* Frameworks */,
+				2D7899BC548E24A3DE8922E8113FB063 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SimplePDF;
-			productName = SimplePDF;
-			productReference = B1B2E63F44BDB5F4D8015473EEDEE3FE /* SimplePDF.framework */;
+			name = "Flurry-iOS-SDK";
+			productName = "Flurry-iOS-SDK";
+			productReference = 6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -562,16 +646,16 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C5DD50F0DC735E97E9CC8F3A393202F3 /* Products */;
+			productRefGroup = A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */,
 				41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */,
 				7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */,
-				09876A0BE34D15CAD125F61C667ED45D /* Pods-PaperWorksheet */,
-				E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */,
-				6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */,
+				BB4B3E2FB90F4E6A4B3A154BF3EA52E5 /* Flurry-iOS-SDK */,
+				34656C2120EDF5FB436ECA9D3E8432A7 /* Pods-PaperWorksheet */,
+				1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */,
 			);
 		};
 /* End PBXProject section */
@@ -607,32 +691,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		16746E3564942CF6BF37B751A55A7D93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C80B1457C60C0C342779F3BAC799B5B /* Pods-PaperWorksheet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49349BA683BB0005D15BF537430D999C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EBFBD19B660B72902A54EB273C554D3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A620E88793E5E9E2317010C9FDA0C9D5 /* AppleReceiptValidator.swift in Sources */,
-				BA58F3AA0F56AA1F914BD7F4289AB88D /* CompleteTransactionsController.swift in Sources */,
-				7B1B6BC2290E3C05A40DB9FE0B2666BB /* InAppProductQueryRequest.swift in Sources */,
-				828901D718306D8625CA57FA43E2E758 /* InAppReceipt.swift in Sources */,
-				199C78D8F86C4750F36793AAA760CEEC /* InAppReceiptRefreshRequest.swift in Sources */,
-				F76D64DBD0263DD40AD32789353D6F38 /* InAppReceiptVerificator.swift in Sources */,
-				6D7BD9D0955E0A51B3F9F13EB30B0CF0 /* OS.swift in Sources */,
-				8D20A9D4EFC142CAFBC17E6F620B0C9A /* PaymentQueueController.swift in Sources */,
-				D905174023B900AF38E312D7230FDE3B /* PaymentsController.swift in Sources */,
-				8577A16F1E644130ED69603AA320A72F /* ProductsInfoController.swift in Sources */,
-				0394FD0353D43CFBF4A4B4B0006A93DD /* RestorePurchasesController.swift in Sources */,
-				2F954AC1F029E700A93ED0B6F5420199 /* SKProduct+LocalizedPrice.swift in Sources */,
-				954D21F9A07D517EC5927DC2F205BC2E /* SwiftyStoreKit+Types.swift in Sources */,
-				8691F39DA2978E9B503D51B6D6C4DDD1 /* SwiftyStoreKit-dummy.m in Sources */,
-				C124119521F3EB43C9DA933B843E41C9 /* SwiftyStoreKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,11 +713,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD9AF1D398A763718E419E7E2D422BEF /* Sources */ = {
+		D3FB3458C0A4AA9D97AAD6D6910A83BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6248E59DB9809EDE706469E4A7B0B3AA /* Pods-PaperWorksheet-dummy.m in Sources */,
+				08754DB0F32871C39048EC6944B6DA15 /* Flurry-iOS-SDK-dummy.m in Sources */,
+				D9E59EA9C99442B497D9FEEFBA5B944D /* FlurryAdsEmpty.m in Sources */,
+				D63EB7D1A41DDF426D83662FC517AEB5 /* FlurryEmpty.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E0273F188C40C99D716173698996A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D285057643B14E34F95C093C71AF0880 /* SimplePDF-dummy.m in Sources */,
+				79BCE5755199943145DD0491E1CBDA1E /* SimplePDF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,15 +747,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2F61F4BD890EA4812A3E7492C204D0E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17B09A519BE601A0E22A832ABC01261B /* SimplePDF-dummy.m in Sources */,
-				37806CA7536EF2187B0BCD9814E68349 /* SimplePDF.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -684,39 +756,39 @@
 			target = 7546A3D3D2027B77D96BBDDF19EAD866 /* BarcodeScanner-Localization */;
 			targetProxy = EB1E7A8207FDF919173CE80C72C71524 /* PBXContainerItemProxy */;
 		};
+		17AC8D39BAD6637ACDA3A4FCB40A9ECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Flurry-iOS-SDK";
+			target = BB4B3E2FB90F4E6A4B3A154BF3EA52E5 /* Flurry-iOS-SDK */;
+			targetProxy = 715AB66DF3E2D4764D3B403B0DBC65AC /* PBXContainerItemProxy */;
+		};
 		4494DD132CB1A81707909F303E812EA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BarcodeScanner-BarcodeScanner";
 			target = 41AB57C778C3649C78485C9E51311DD2 /* BarcodeScanner-BarcodeScanner */;
 			targetProxy = 46A722A8BB03F8BA8B6332BED16F2DB6 /* PBXContainerItemProxy */;
 		};
-		48A21874F51AE8AC4D5E59C6FC0F1FAD /* PBXTargetDependency */ = {
+		756D53011EDA4E1732351BDF16242799 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyStoreKit;
-			target = 6C4001A5A446D34942C9F5565D774457 /* SwiftyStoreKit */;
-			targetProxy = 31F6AB765AD63AC8B9F14B6FD86DEF36 /* PBXContainerItemProxy */;
+			name = SimplePDF;
+			target = 1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */;
+			targetProxy = 226D47906E26ED1C4A22BB03FA2F5D29 /* PBXContainerItemProxy */;
 		};
-		6C4B3FA297D141921E053095B2B42156 /* PBXTargetDependency */ = {
+		B0804CF98026F942A20876669A087E34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BarcodeScanner;
 			target = 19E6534ABB2C9C66491D60CEEB16712C /* BarcodeScanner */;
-			targetProxy = 001717C010D73494C32116C0733CBE31 /* PBXContainerItemProxy */;
-		};
-		FC40C8865B65A93B63DA851C77EB919F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SimplePDF;
-			target = E80CD0B437BBF39F2D3F003ECB9C2FAB /* SimplePDF */;
-			targetProxy = E8657C68E33CE58FF41DD225343E8ED4 /* PBXContainerItemProxy */;
+			targetProxy = F9848A777174390C79E42A51FF9BE5AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1558BD0313C7F46F1D8187D8E6B965CB /* Localizable.strings */ = {
+		A0E9BE84D5AEF0E82B7A55A82BA499D4 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D95E53662C00959C38CDD62192F6BCFC /* Localizable.strings */,
-				076C80687BC5CFE765468338BE7D52FF /* Localizable.strings */,
-				E3BE846588C30DF4AFB04C8BB01BEBA2 /* Localizable.strings */,
+				4A9DEA4E83E567135FBCEE0F78BD4491 /* Localizable.strings */,
+				FAA9EA47A75BC2A5CAF2F92EE7F598D2 /* Localizable.strings */,
+				A19D5F31BB8BBE423B79E46F1F9FB20D /* Localizable.strings */,
 			);
 			name = Localizable.strings;
 			path = Localization;
@@ -727,7 +799,7 @@
 /* Begin XCBuildConfiguration section */
 		151626C4D30E8C81A3068B58589BE8E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -741,45 +813,9 @@
 			};
 			name = Debug;
 		};
-		287F66680BBDD24E0B11EB2251BD62EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PaperWorksheet/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3A8E8881738BDA26FCE736F72694CE48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -811,7 +847,7 @@
 		};
 		3C6B8983888DC5CFE8390249C1B30184 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -842,120 +878,7 @@
 			};
 			name = Release;
 		};
-		597D5F7EB5D96D97AB9720CC0961D420 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				PRODUCT_MODULE_NAME = SimplePDF;
-				PRODUCT_NAME = SimplePDF;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		68E3EA967445F611B215A576F1EA18E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyStoreKit;
-				PRODUCT_NAME = SwiftyStoreKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A539C9DBDA0BA7A7571295E3A1BD05C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD0BB5A881D197EEC611D25FFE9629A9 /* SwiftyStoreKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyStoreKit;
-				PRODUCT_NAME = SwiftyStoreKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B17B2BD78821087BE384BCFE0A981144 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
-				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = Localization;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		B6D3F60E95BBF6C7320C1ECC0F8E5F97 /* Debug */ = {
+		768BF50EC497D63FBD69EC1EE90BC47F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */;
 			buildSettings = {
@@ -991,9 +914,56 @@
 			};
 			name = Debug;
 		};
-		B9E73EEF88C1E1CA19653D9EAC879238 /* Release */ = {
+		B17B2BD78821087BE384BCFE0A981144 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868BCE599550A12193BEDB48E9B6D6EF /* SimplePDF.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Localization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B66D7BA1D4FD569C0019B26752C40265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C58541F9E388794A760BD37984394572 /* Flurry-iOS-SDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Flurry-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK.modulemap";
+				PRODUCT_MODULE_NAME = Flurry_iOS_SDK;
+				PRODUCT_NAME = Flurry_iOS_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB753E5D0655D8ED02892F941FF21E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CDC0F7918DFDAF9FCA80E5ADF74E3A /* SimplePDF.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1015,14 +985,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		CD76D91FBB3569774B6E7AB023932D1D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1145,9 +1114,78 @@
 			};
 			name = Release;
 		};
+		D51CD36C42CBC2E7C04B73507DC3F315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PaperWorksheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA8200786B9F87FDA2D6949ABBFF9D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CDC0F7918DFDAF9FCA80E5ADF74E3A /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				PRODUCT_MODULE_NAME = SimplePDF;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EAB504016D06DF50AD640BB8666E0B43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -1161,9 +1199,41 @@
 			};
 			name = Release;
 		};
+		EB8B8223629B2E9DFD8DA9F8E42633AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C58541F9E388794A760BD37984394572 /* Flurry-iOS-SDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Flurry-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK.modulemap";
+				PRODUCT_MODULE_NAME = Flurry_iOS_SDK;
+				PRODUCT_NAME = Flurry_iOS_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F432D3EC2699B5C087CC874B95D42B69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C9AC071FE15BDA00CCE669E6C1FCB16 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 1A37E86D845E36A0ABB0D591E2439AA9 /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -1189,6 +1259,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		288DCF12FF434F9B009BE86AFAB28EB3 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB753E5D0655D8ED02892F941FF21E8F /* Debug */,
+				DA8200786B9F87FDA2D6949ABBFF9D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1207,38 +1286,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4538EED6C447A72B31BEA6FBA1DF275F /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6D3F60E95BBF6C7320C1ECC0F8E5F97 /* Debug */,
-				287F66680BBDD24E0B11EB2251BD62EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4F72804370AA035F3AD4E62E1C54C5EB /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68E3EA967445F611B215A576F1EA18E3 /* Debug */,
-				A539C9DBDA0BA7A7571295E3A1BD05C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5647417E2FFEBD1E21D8F0C9A8462B95 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				597D5F7EB5D96D97AB9720CC0961D420 /* Debug */,
-				B9E73EEF88C1E1CA19653D9EAC879238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		891A695D008364DAB210EADF3DD85E3A /* Build configuration list for PBXNativeTarget "BarcodeScanner-Localization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B17B2BD78821087BE384BCFE0A981144 /* Debug */,
 				F432D3EC2699B5C087CC874B95D42B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AD6494B0F237B4297C3D9B263E85EE /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768BF50EC497D63FBD69EC1EE90BC47F /* Debug */,
+				D51CD36C42CBC2E7C04B73507DC3F315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F157F376924E21DB7D6DD4B0BD204421 /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66D7BA1D4FD569C0019B26752C40265 /* Debug */,
+				EB8B8223629B2E9DFD8DA9F8E42633AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
