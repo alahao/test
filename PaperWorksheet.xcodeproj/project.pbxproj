@@ -53,6 +53,8 @@
 		3D34943D205B900700A6571B /* AnswersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersVC.swift; sourceTree = "<group>"; };
 		3D34943F205B942A00A6571B /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
 		3D34F64A208528A30086879B /* TableViewAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAnswerCell.swift; sourceTree = "<group>"; };
+		3D49E9ED209F392B00F4DAB6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D49E9EF209F394B00F4DAB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3D53F2C720547D2700679CD9 /* icons8-sync-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-sync-filled-100.png"; path = "../../../../../Downloads/icons8-sync-filled-100.png"; sourceTree = "<group>"; };
 		3D53F2C920547DE000679CD9 /* icons8-refresh-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-refresh-filled-50.png"; sourceTree = "<group>"; };
 		3D53F2CA20547DE000679CD9 /* icons8-sync-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-sync-filled-50.png"; sourceTree = "<group>"; };
@@ -179,6 +181,8 @@
 		761A36C30CBFD33048A49A1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D49E9EF209F394B00F4DAB6 /* SystemConfiguration.framework */,
+				3D49E9ED209F392B00F4DAB6 /* Security.framework */,
 				6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */,
 				73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */,
 			);

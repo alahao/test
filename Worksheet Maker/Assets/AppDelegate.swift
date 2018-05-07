@@ -18,18 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-            // see notes below for the meaning of Atomic / Non-Atomic
             
-            //FLURRY BY YAHOO
-          Flurry.startSession("ZDQNTD8WPVBJQWZF2QG9", with: FlurrySessionBuilder
-      .init()
-      .withCrashReporting(true)
-      .withLogLevel(FlurryLogLevelAll))
-            
-            
-            return true
-        }
+        //FLURRY BY YAHOO
+        Flurry.startSession("K5994BBY9HHFVBJS4V5Q", with: FlurrySessionBuilder
+            .init()
+            .withCrashReporting(true)
+            .withLogLevel(FlurryLogLevelAll))
         return true
     }
 

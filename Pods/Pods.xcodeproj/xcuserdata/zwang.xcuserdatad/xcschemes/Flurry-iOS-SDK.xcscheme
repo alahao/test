@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB4B3E2FB90F4E6A4B3A154BF3EA52E5"
+               BlueprintIdentifier = "961DE7189B68AFE7A59D4ADA2A709444"
                BuildableName = "Flurry_iOS_SDK.framework"
                BlueprintName = "Flurry-iOS-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB4B3E2FB90F4E6A4B3A154BF3EA52E5"
+            BlueprintIdentifier = "961DE7189B68AFE7A59D4ADA2A709444"
             BuildableName = "Flurry_iOS_SDK.framework"
             BlueprintName = "Flurry-iOS-SDK"
             ReferencedContainer = "container:Pods.xcodeproj">

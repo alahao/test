@@ -93,8 +93,8 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    private func makeBarcodeScannerViewController() -> BarcodeScannerController {
-        let viewController = BarcodeScannerController()
+    private func makeBarcodeScannerViewController() -> BarcodeScannerViewController {
+        let viewController = BarcodeScannerViewController()
         viewController.codeDelegate = self
         viewController.errorDelegate = self
         viewController.dismissalDelegate = self
@@ -163,7 +163,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
         print("$answerseed scanned is \(String(describing: answerSeed!.seed))")
     }
     
-    func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
+    func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         worksheetAnswerCode = code.compactMap{Int(String($0))}
         translatingSeed()
 
@@ -192,8 +192,8 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             generatingPage()
             
             let stringWorksheetAnswerCode = worksheetAnswerCode.map{String($0)}.joined()
-            let pageParams = ["WorksheetAnswerCode": stringWorksheetAnswerCode];
-            Flurry.logEvent("Answer code scanned successfully", withParameters: pageParams);
+            Flurry.logEvent("Scanned Answer Code", withParameters: ["Code" : stringWorksheetAnswerCode])
+            Flurry.logEvent("Scanned Answer Code Operation", withParameters: selectedOpertaions)
             
             controller.dismiss(animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
@@ -239,7 +239,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
 // MARK: - BarcodeScannerErrorDelegate
 
 extension AnswersVC: BarcodeScannerErrorDelegate {
-    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
+    func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
         print(error)
     }
 }
@@ -247,7 +247,7 @@ extension AnswersVC: BarcodeScannerErrorDelegate {
 // MARK: - BarcodeScannerDismissalDelegate
 
 extension AnswersVC: BarcodeScannerDismissalDelegate {
-    func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
+    func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
 }

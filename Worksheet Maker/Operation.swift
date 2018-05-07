@@ -138,8 +138,7 @@ class Operation {
                 numberOne = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
                 numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberAnswer = numberOne + numberTwo
-                print("plus ran, worksheetAnswerCode is \(worksheetAnswerCode), answerseed is \(answerSeed)")
-                
+               
               
             } else if operation == 1 {
                 numberOpertaionSign = "-"
@@ -164,7 +163,7 @@ class Operation {
                 numberTwo = GKRandomDistribution(randomSource: answerSeed!, lowestValue: aMin, highestValue: aMax).nextInt()
                 numberAnswer = GKRandomDistribution(randomSource: answerSeed!, lowestValue: bMin, highestValue: bMax).nextInt()
                 numberOne = numberAnswer * numberTwo
-                print("division ran, numberTwo is \(numberTwo)")
+                
             }
         }
         
@@ -250,10 +249,10 @@ class Operation {
             
             if wholeNumberCount > 1 || fLN == fLD || fRN == fRD {
                 generateQuestionSet()
-                print("regenerate fraction because of 2 whole numbers")
+//                print("regenerate fraction because of 2 whole numbers")
             } else if finalDenominator.digitCount > 2 || finalNumerator > 2 {
                 generateQuestionSet()
-                print("regenerate fraction because numerator or denominator > 2 digits for non Hard Level")
+//                print("regenerate fraction because numerator or denominator > 2 digits for non Hard Level")
             }
         }
         questionNumber = questionNumber + 1
@@ -280,7 +279,7 @@ class Operation {
         func randomDecimalOperation() {
             difficultySetting.OperationDifficultyDecimal()
             let decNumberOneInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberAMin * 10000, highestValue: numberAMax * 10000).nextInt()
-            print("$seed number 2 is \(answerSeed!.seed), decNumberOneInt is \(decNumberOneInt), numberAMin is \(numberAMin), numberAMax is \(numberAMax)")
+            
             decNumberOne = Double(decNumberOneInt) / 10000
             decNumberOne = decNumberOne.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMin, highestValue: dPMax).nextInt())
             let decNumberTwoInt = GKRandomDistribution(randomSource: answerSeed!, lowestValue: numberBMin * 10000, highestValue: numberBMax * 10000).nextInt()
@@ -380,7 +379,7 @@ class Operation {
         {
             // prints out whole number only
             wholeNumberCount = wholeNumberCount + 1
-            print("whole number count = \(wholeNumberCount)")
+           
             return("\(wholeNumbers)")
         }
         else
