@@ -105,11 +105,44 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         worksheetAnswerCode = stringWorksheetAnswerCode.compactMap{Int(String($0))}
         print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
         
+        
+        
         // FLURRY
-        let pageParams = ["Difficulty": String(difficulty!), "Page Number": String(pageNumber), "Seed": String(answerSeedNumber)]
-        Flurry.logEvent("Worksheet Generated", withParameters: pageParams)
+        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Generated"])
+        Flurry.logEvent("Worksheet Generated", withParameters: getLogOperations())
+        print(getLogOperations())
 
     }
+    
+    // Prepare Event for Flurry
+    func getLogOperations() -> [String : String] {
+    
+        //Pl,Mi,Mu,Di,Fr,De
+        var logOperation = [String]()
+        if selectedOpertaions["plus"] == true {
+            logOperation.append("Pl")
+        }
+        if selectedOpertaions["minus"] == true {
+            logOperation.append("Mi")
+        }
+        if selectedOpertaions["multiplication"] == true {
+            logOperation.append("Mu")
+        }
+        if selectedOpertaions["division"] == true {
+            logOperation.append("Di")
+        }
+        if selectedOpertaions["fraction"] == true {
+            logOperation.append("Fr")
+        }
+        if selectedOpertaions["decimal"] == true {
+            logOperation.append("De")
+        }
+        
+        let params = ["Difficulty": String(difficulty!), "Page Number": String(pageNumber), "Seed": String(answerSeedNumber), "Operation": logOperation.map{String($0)}.joined(separator: " ")]
+        
+        return params
+    }
+    
     
     // GENERATE BAR CODE
     func generateBarCode() {
@@ -279,9 +312,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
         loadSimplePDF()
-        let printParams = ["Difficulty": String(difficulty!), "Page Number": String(pageNumber), "Seed": String(answerSeedNumber)]
-        Flurry.logEvent("Worksheet Printed", withParameters: printParams)
-        Flurry.logEvent("Worksheet Printed Operation", withParameters: selectedOpertaions)
+        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Printed"])
+        Flurry.logEvent("Worksheet Printed", withParameters: getLogOperations())
+        print(getLogOperations())
+
         
         let printController = UIPrintInteractionController.shared
         let printInfo = UIPrintInfo(dictionary : nil)
@@ -294,8 +328,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     @IBAction func PDFRefresh(_ sender: Any) {
-        
-        Flurry.logEvent("Worksheet Refreshed", withParameters: ["Code": worksheetAnswerCode.map{String($0)}.joined()])
+        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Refreshed"])
         answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
         question.questionArray.removeAll()
         generatingPage()
@@ -303,7 +336,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     @IBAction func PDFExport(_ sender: Any) {
-        Flurry.logEvent("Worksheet Exported", withParameters: ["Code": worksheetAnswerCode.map{String($0)}.joined()])
+        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Exported"])
+        Flurry.logEvent("Worksheet Exported", withParameters: getLogOperations())
+        print(getLogOperations())
+
         
         loadSimplePDF()
         loadPDFAndShare()

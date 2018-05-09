@@ -165,7 +165,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         worksheetAnswerCode = code.compactMap{Int(String($0))}
-        translatingSeed()
+        print("$$worksheetAnswerCode: \(worksheetAnswerCode), code is: \(code)")
 
         
         enum codeError : Error {
@@ -176,14 +176,22 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
         }
         
         func checkError() throws {
-            guard let userPageNumber = pageNumber, userPageNumber > 0, userPageNumber <= 10 else {
+            guard let ws : Int = worksheetAnswerCode.count, ws > 13 && ws < 15 else {
+                print("$$error code count")
+                throw codeError.invalidKey
+            }
+            
+            guard let userPageNumber = Int?((worksheetAnswerCode[7] * 10) + worksheetAnswerCode[8]), userPageNumber > 0 && userPageNumber <= 10 else {
+                print("$$error pageNumber")
                 throw codeError.invalidPageNumber
             }
             
-            guard let userDifficulty = Int?(worksheetAnswerCode[6]), userDifficulty >= 0, userDifficulty < 3 else {
-                print("error difficulty")
+            guard let userDifficulty = Int?(worksheetAnswerCode[6]), userDifficulty >= 0 && userDifficulty < 3 else {
+                print("$$error difficulty")
                 throw codeError.invalidDifficulty
             }
+            
+            translatingSeed()
             
             print("Barcode Data: \(code)")
             print("Symbology Type: \(type)")
@@ -191,14 +199,38 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             
             generatingPage()
             
-            let stringWorksheetAnswerCode = worksheetAnswerCode.map{String($0)}.joined()
-            Flurry.logEvent("Scanned Answer Code", withParameters: ["Code" : stringWorksheetAnswerCode])
-            Flurry.logEvent("Scanned Answer Code Operation", withParameters: selectedOpertaions)
-            
-            controller.dismiss(animated: true, completion: nil)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                controller.resetWithError()
+            //Pl,Mi,Mu,Di,Fr,De
+            var logOperation = [String]()
+            if selectedOpertaions["plus"] == true {
+                logOperation.append("Pl")
             }
+            if selectedOpertaions["minus"] == true {
+                logOperation.append("Mi")
+            }
+            if selectedOpertaions["multiplication"] == true {
+                logOperation.append("Mu")
+            }
+            if selectedOpertaions["division"] == true {
+                logOperation.append("Di")
+            }
+            if selectedOpertaions["fraction"] == true {
+                logOperation.append("Fr")
+            }
+            if selectedOpertaions["decimal"] == true {
+                logOperation.append("De")
+            }
+            
+            let printParams = ["Difficulty": String(difficulty!), "Page Number": String(pageNumber!), "Seed": worksheetAnswerCode.suffix(5).map{String($0)}.joined(), "Operation": logOperation.map{String($0)}.joined(separator: " ")]
+            
+            Flurry.logEvent("Scanned Answer Code", withParameters: printParams)
+            Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Scanned"])
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                controller.dismiss(animated: true, completion: nil)
+            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//                controller.resetWithError(message: "Invalid Barcode")
+//            }
         }
         
         
@@ -206,30 +238,37 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             try checkError()
         } catch codeError.invalidPageNumber {
             print("$invalidPageNumber")
-            Flurry.logEvent("Scan with error, invalidPageNumber")
-            controller.resetWithError()
+            Flurry.logEvent("Event", withParameters: ["Errors" : "Scan error, invalidPageNumber"])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                controller.resetWithError(message: "Invalid Barcode, please try again.")
+            }
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         } catch codeError.invalidDifficulty {
             print("$invalidDifficulty")
-            Flurry.logEvent("Scan with error, invalidDifficulty")
-            controller.resetWithError()
+            Flurry.logEvent("Event", withParameters: ["Errors" : "Scan error, invalidDifficulty"])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                controller.resetWithError(message: "Invalid Barcode, please try again.")            }
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
         }  catch codeError.invalidKey {
             print("$invalidKey")
-            Flurry.logEvent("Scan with error, invalidKey")
-            controller.resetWithError(message: "Error message")
+            Flurry.logEvent("Event", withParameters: ["Errors" : "Scan error, wrong number of code digits"])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                controller.resetWithError(message: "Invalid Barcode, please try again.")
+            }
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
             
             
         } catch let otherError {
             print("$otherError")
-            Flurry.logEvent("Scan with error, otherError")
-            controller.resetWithError(message: "Error message")
+            Flurry.logEvent("Event", withParameters: ["Errors" : "Scan error, otherError"])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                controller.resetWithError(message: "Invalid Barcode, please try again.")
+            }
             worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             question.questionArray.removeAll()
         }
@@ -240,7 +279,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
 
 extension AnswersVC: BarcodeScannerErrorDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
-        print(error)
+        print("$error: \(error)")
     }
 }
 

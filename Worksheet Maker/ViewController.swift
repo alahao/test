@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+    
     @IBOutlet weak var goToAnswer: UIBarButtonItem!
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageQuestionLabel: UILabel!
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var selectedDifficulty = 0
     
     let pagePickersPage = ["1 Page", "2 Pages", "3 Pages", "4 Pages", "5 Pages", "6 Pages", "7 Pages", "8 Pages", "9 Pages", "10 Pages"]
-    let pagePickrsQuestion = [", 40 Questions", ", 80 Questions", ", 120 Questions", ", 160 Questions", ", 200 Questions", ", 240 Questions", ", 280 Questions", ", 320 Questions", ", 360 Questions", ", 400 Questions"]
+    let pagePickrsQuestion = [", 20 Questions", ", 40 Questions", ", 60 Questions", ", 80 Questions", ", 100 Questions", ", 120 Questions", ", 140 Questions", ", 160 Questions", ", 180 Questions", ", 200 Questions"]
     
     @IBOutlet weak var pagePicker: UIPickerView!
     @IBOutlet weak var buttonPlusColor: UIButton!
@@ -182,6 +183,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func generatePressed(_ sender: Any) {
         checkEmptySelection()
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
+        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Generate Button Pressed"])
     }
     
     
@@ -199,7 +201,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Flurry.logEvent("Main Menu")
+//        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Main Menu"])
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
         selectedOpertaions["plus"] = true

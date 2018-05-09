@@ -9,7 +9,7 @@ target 'PaperWorksheet' do
 	
 pod 'SimplePDF'
 pod 'BarcodeScanner'
+pod 'Firebase/Core'
 pod 'Flurry-iOS-SDK/FlurrySDK'
-pod 'Flurry-iOS-SDK/FlurryAds'
 
 end

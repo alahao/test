@@ -7,83 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		024844BD597432FD68C0D25ED6330B5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9B52DA87F53CB52B71CEB4DB9935CE7 /* Localizable.strings */; };
-		03269A4F93E12F84E9604BCBF841134B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */; };
-		06AA66B17C12209F2DD3B74166B594E6 /* Pods-PaperWorksheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		126EEF8957E8D6D7DCC79D1ABB116B5E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DC4D27B7FB204F2B913AD299C3080 /* MessageViewController.swift */; };
-		17EB24EE12E8323ED6F75AEBFDF2B019 /* FlurryAdTargeting.h in Headers */ = {isa = PBXBuildFile; fileRef = 947667CD1B06E94555AD4591EF84B81A /* FlurryAdTargeting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B627CF608DFE0152F7D1EFA63C9E949 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */; };
-		2035133A228C38795DA85D99E8D96372 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = 350209493D31446D218F1531CC957341 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22D01E0457C5B6558BBD6FD168FABCFD /* FlurryAdBannerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EDB14B593EFC5298D1E3A1611E5679F /* FlurryAdBannerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23F7F998F52FE0FBB4E1281E02AF225B /* FlurryAdInterstitial.h in Headers */ = {isa = PBXBuildFile; fileRef = DE41BFAB8A08E020397DEC589231E105 /* FlurryAdInterstitial.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24188445B2B585D3CDDD2F573D270DD5 /* BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E10A32C3C0685FD8BA200726CC33BF /* BarcodeScanner-dummy.m */; };
-		24BE27D1D247713E9BCD4709E650D7A4 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87CB8B6F1269CC3697AB8EEF02273C /* FlurryEmpty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		33445FAFE5125FB63E5966AC8E91E329 /* TorchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F75C1120491141DC9B553A3CCB364B /* TorchMode.swift */; };
-		35032786AD6B62409E297E9336780546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
-		3DB2E0CE20A8F7116C0483381568923F /* FlurryAdNativeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2D53BDC66764B1212832B9F718DD8E /* FlurryAdNativeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F92654762486979AF8C523CFA256AF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */; };
-		5227649CA26AC8122F5C03831578F95A /* FlurryAdNativeAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DA37093051C4D78437C644EA6E89CB /* FlurryAdNativeAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56C0DBCBACBCAD62EE61DBEB660F5C8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */; };
-		601A15B2AA9B39EB14DD7AC0ED6EB354 /* FocusViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE55046E4C377E68202499CBD53C71 /* FocusViewType.swift */; };
-		61A9A8C41D5EB1D947CE4A1D482A01B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875CA153137FA714270D015903881898 /* SystemConfiguration.framework */; };
-		6264CE70056D8D9B08DCDAF03C3607A2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1178EDCF3FFF1D64C9A1B0D63448305 /* UIViewController+Extensions.swift */; };
-		64F0E6FFAF2B0DA39A84F3D5833BA336 /* BarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */; };
-		69EB412CE1201005EEDAD28867F3F147 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */; };
-		6C80B1457C60C0C342779F3BAC799B5B /* Pods-PaperWorksheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */; };
-		7983A2D7A3B8ADA223BF5989AEFEC698 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */; };
-		79BCE5755199943145DD0491E1CBDA1E /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E602DD0C4BAF507C7EBEFCAC99109EC /* SimplePDF.swift */; };
-		7DEBF203AF6520D5C001AB5E40BC58FF /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5DAAC05062060B54545BA21191F0FE /* NSLayoutConstraint+Extensions.swift */; };
-		84C735080B910C2A8956F2D84F65EF46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C981449FA5B920EBD22DB663451986 /* UIKit.framework */; };
-		8CB13EC389DD7417BD448AADFA7848F0 /* Flurry-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF06BC4446C1B625A31CE76AB9E820F3 /* Flurry-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EF10657044DC151C6831F977B210925 /* BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD70506DCA6BE6ABB0A591B7F326BE6 /* BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		909A6AD6F6B5CA03F9967B2A15FDE8EB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0474B5E73583C6E35DDD5FBBBC8AE2 /* State.swift */; };
-		90E99127ABD1CF9584B62212550AD73A /* FlurryAdNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 640207E814AA4892F5B8A9A0ED3115AC /* FlurryAdNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94B7257D9E9495297065C139BD9DFF50 /* flashOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DD673CB3CC7841833AD30E8D8B7D60 /* flashOn@3x.png */; };
-		985EB884F14B7B2EFC40B8F78F3F1135 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359955C6B4B96F4298DDB13DF7B7DE6 /* UIView+Extensions.swift */; };
-		9F8C8EAD57BA98D9D0B89FB8E373CFA5 /* AVMetadataObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC0DE9261B88C95ABA564C44495D5C /* AVMetadataObject+Extensions.swift */; };
-		A03D704119995F040F237425A9740C5B /* FlurryConsent.h in Headers */ = {isa = PBXBuildFile; fileRef = B05639C8853794D76890BEB01A55BB0B /* FlurryConsent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A16EC3A50C8C7551D4097CF07D804E36 /* FlurryAdNativeStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = BC2A59E7456B87EB1A1B1A67A00F933A /* FlurryAdNativeStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A280F8B2F6017283CA95885D9A055951 /* cameraRotate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00515E7A50F2F6E3163AB3BD709B02BB /* cameraRotate@3x.png */; };
-		A89C9D745474BB1B92D173CE73B3FFEF /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E8558BABD2692481D57224AEEBDAF /* BarcodeScannerViewController.swift */; };
-		A986CEBCDBF7D28E1AE00083F7FFB0E0 /* FlurryAdDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 631D83FBF8BAAC652668E80979620D1C /* FlurryAdDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA70887AC6C132843C543EFEF041413F /* FlurryAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = F0B748C8ABBAD7F10A724CBD682D2DBE /* FlurryAdError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF2B8864E7F088952AB0A1001A5C147F /* flashOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EA39786D6227552F072947B4118DBF /* flashOff@3x.png */; };
-		C1A025D03E65DB0666EECC4A253E12E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
-		C2B08074D8E0811E0960A007786DEE22 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3889C8E82EA82FE0C31ABEF2827C58E4 /* Flurry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D18110C37F6C4B2D444B5B46D38D2F55 /* FlurryAdInterstitialDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C57F9D17D6929F7FBC9AB894A1E4FBC4 /* FlurryAdInterstitialDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D285057643B14E34F95C093C71AF0880 /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19D78590D49C6439973C8B34848BB5 /* SimplePDF-dummy.m */; };
-		D4F32D9E96FD7AED2E4BD88656AA9A02 /* VideoPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D3A78A1F69D3E12D2B22E9EADAF22 /* VideoPermissionService.swift */; };
-		DCE711E74EC663D92DB69FC3B820AB00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
-		DDC302F17892A69F9A576BAD3CA6981B /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D73C03D5CD97313C99F1FDB9869048 /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC26C4ABDFE5D2D3CFC2B91054546C9 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C101B602C60AAEC2087A1AF1D46EAE /* Functions.swift */; };
-		EB3CA7BDB731E8B094D67535A4C1806A /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246633AD98A988696489435C884A114C /* HeaderViewController.swift */; };
-		EBA0C3D3A8E2FC89D4A0CD46E28FB20A /* FlurryAdsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB6D83FF7264A4BAF2DE3ADE08B764E /* FlurryAdsEmpty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		ECD9A5434C6A165E6A44EF5ACDC2BE1B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507EE1C7498E0125C4D6DA7FC3C0D32 /* CameraViewController.swift */; };
-		F00F01C9CBFDC86D2D62F83B33077E59 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */; };
-		F14615DEB8A6E8C5EA0C969B6B6B59D7 /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9D8891B8603ACAB05B57BB05823962 /* info@3x.png */; };
-		F2626E62836B28935D95C2DE01D09B35 /* Flurry-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF544DE38E9B75A0FB7E50EFEA8B6287 /* Flurry-iOS-SDK-dummy.m */; };
-		F416D1124475754024091EC394221457 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 756C954615866E691E67450C309B716B /* Localization.bundle */; };
-		F4AA3B67422CD7AAD355701312F33D8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B509D9F48513131839DABDDE031B4 /* Foundation.framework */; };
-		FA30EF8DD4AE435AE3E91A010F114260 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */; };
-		FA7BAC580CE148F6D7F961224FC02BB9 /* FlurryAdBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 65FD596FAD01317ECAE560C1DDA8997B /* FlurryAdBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD8FD27560A6F2DFD848E138FD186E29 /* FlurrySessionBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA17B1166D18052CC620FE23D1C557B /* FlurrySessionBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE04A514E05559DCACC8D87BC69BAD06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C981449FA5B920EBD22DB663451986 /* UIKit.framework */; };
+		024844BD597432FD68C0D25ED6330B5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F28AF1FB7DDC229D36AB9262E98AC597 /* Localizable.strings */; };
+		05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		05F97FB862DED24F1B1905C862373C6F /* FIRBundleUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE19E323D6C081445B24802566CBD4C /* FIRBundleUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		070AB4EEDA92B4A7489D4C0898B8086B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		0ABF3961C14F4E2D012936D83C5C724A /* FIRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = E09B472C58406243485A8F5A163C8FA4 /* FIRErrors.m */; };
+		107E4C1F8DDA3E9E99848C4137CA3CED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5AD5BFCC510CA11220CC58002BA835 /* UIKit.framework */; };
+		126EEF8957E8D6D7DCC79D1ABB116B5E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD037F7D64772927BF738AF075553A /* MessageViewController.swift */; };
+		143100A79BA6D038E3EB1CE9C304F195 /* Pods-PaperWorksheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */; };
+		1F19C59101F5F9B66F8730F9EF625A1F /* FIRAppAssociationRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F9ACF58EFE4A2BFBE5EE91344385CE /* FIRAppAssociationRegistration.m */; };
+		1FD11A578D78250D186EADB1DE6732F7 /* FIRBundleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1106254C2A24213364971E220789B /* FIRBundleUtil.m */; };
+		24188445B2B585D3CDDD2F573D270DD5 /* BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F2230F54DA95DFF73A95516A81B6AE /* BarcodeScanner-dummy.m */; };
+		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF2C399720BB4F176BFCD1C4316A303 /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAFE7A2E5F7C163B3F9A55000557F72 /* FIRNetworkURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 198B01D5C8D467A3CFBEE7E34C9C66B5 /* FIRNetworkURLSession.m */; };
+		33445FAFE5125FB63E5966AC8E91E329 /* TorchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB01C41DAE448DC797B138D0DBD9D469 /* TorchMode.swift */; };
+		381AED7B43FE7EAD4E6C7A48FE4CB740 /* FIRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2FEA3785D8C9BA34B83235F6753AAF /* FIRLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3883B72198499726B04F847CA9D1F627 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EE03AA5F390BC23E2BDB21C424112DEC /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 137584E3E0EB514BC007420F9BA9CE29 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = BFEA6BD6F95553251407832058DFA934 /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
+		3BD66D6656842D316A18D8F595045BF0 /* FIRConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1258DA6EF5D12D24886F661AF8A203B5 /* FIRConfiguration.m */; };
+		3D87E3A862C9B32F401A6F6F561B5046 /* FIRReachabilityChecker+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 581DF4555486FB000E2F0D2C5DBF5506 /* FIRReachabilityChecker+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		41D10CE405433B469CBE8C40B42865E1 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA3D146A3581FF2DCA49A51E9297FEB /* GoogleToolboxForMac-dummy.m */; };
+		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C669C7CE088005ECD3A5F6C7C3FEAE4 /* nanopb-dummy.m */; };
+		4E9E3F4C76FDD56538C1D94D6E004488 /* FIRAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB2AC70C822087DBE52C4360B89A645 /* FIRAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4FB56F6CF1214292B65508F5374418AE /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = A38D331AF29E9154DDBBCE2D7A4FCF9C /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5176D8C2F911883FC75A97525B5567CB /* FIRReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 803BA873D044636CDE4520CE243C899C /* FIRReachabilityChecker.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 8091793194F8911E9B30D5E05F0D0B18 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D405EABC375E6A148CB7015A018FC15 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		5695878E65D6718D3B41618940C35B80 /* SimplePDF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F629CDEA06428CE3D64022A2EEA2C01A /* SimplePDF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58A4DA15799705E46B6A18BA48838897 /* FirebaseCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8249A07B08ADB5334BE02BC120DC3816 /* FirebaseCore-dummy.m */; };
+		59867D44168D25421EA214436E77E019 /* SimplePDF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A39B43367E50B524D0D17B534B66C541 /* SimplePDF-dummy.m */; };
+		5B46B9D656F626D2AB2033FE60A5FDF3 /* FIRNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2360B9CDEF0A4E552FE5A076D36AE8 /* FIRNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5D9AA53D7EE9557AF76D6A42A67CEA68 /* SimplePDF.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FE9505039247E05ACCC9D0E5B6B4F31 /* SimplePDF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		601A15B2AA9B39EB14DD7AC0ED6EB354 /* FocusViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC2295FB62D811E6263FB0ED78CA63 /* FocusViewType.swift */; };
+		60B7BA865F238DCB79D436D764A37AB2 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58B4F163D46BF3DC4D116B732797BD /* FlurryEmpty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6264CE70056D8D9B08DCDAF03C3607A2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E20BCF923CF392CBD499B6A15B9DA /* UIViewController+Extensions.swift */; };
+		64F0E6FFAF2B0DA39A84F3D5833BA336 /* BarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29AA13E49447D4FFBC892241AE8BC5CB /* BarcodeScanner.bundle */; };
+		65736E1FDF516AE1EF4927AA623D5486 /* FIRAppAssociationRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = CE26CAB3CB8AA528E7AA9B0998604FB9 /* FIRAppAssociationRegistration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		69EB412CE1201005EEDAD28867F3F147 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C29220EA0667CE11109A9AD70A356A5 /* AVFoundation.framework */; };
+		7525390045039F998FF0DADC322488CB /* FIRAnalyticsConfiguration+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE3AD2BF8C3DF1410918D820349E080 /* FIRAnalyticsConfiguration+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7C60F3F2D3C370D53E2AE3F87052DB4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE7FB4E50C970A1E3B8454A33B9F9AE /* SystemConfiguration.framework */; };
+		7DEBF203AF6520D5C001AB5E40BC58FF /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A23B6F4E06E01ED2075C536B45DE99 /* NSLayoutConstraint+Extensions.swift */; };
+		7EF7379A0CC562D025B9F38F0B087CFF /* FIRLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A034A5592B68469C83C32E3F676454 /* FIRLoggerLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F4AA65D92E3D0816B06B40CD2E025D4 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84C735080B910C2A8956F2D84F65EF46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5AD5BFCC510CA11220CC58002BA835 /* UIKit.framework */; };
+		8B595D1E703A57549BB98A1AF0F257DA /* FIRAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C80920DD1B46615ECD96CC3C701A0A1 /* FIRAppEnvironmentUtil.m */; };
+		8EE159FBED69B43B9C83CD37195753F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		8EF10657044DC151C6831F977B210925 /* BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 063B63CD86EACA11FA763615A1DB9A6D /* BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F0FFA270E768BC335C0AB4DDC229B9A /* FIRAnalyticsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA4AA2A9C07B017D35EC1947CCF8E3F /* FIRAnalyticsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		909A6AD6F6B5CA03F9967B2A15FDE8EB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F05DAAC5A7A93511F08659F9B6075DC /* State.swift */; };
+		94B7257D9E9495297065C139BD9DFF50 /* flashOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C374176CDB778B04310BF860CD6F4F /* flashOn@3x.png */; };
+		985EB884F14B7B2EFC40B8F78F3F1135 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B814A7ED7F1CDB00441DE0CA5DE3D86 /* UIView+Extensions.swift */; };
+		9B3BB0BB63055112AE0B41146D80AA04 /* FIRNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F56EFB8C7F25AF7CD44165882AB994C /* FIRNetwork.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9F8C8EAD57BA98D9D0B89FB8E373CFA5 /* AVMetadataObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03312EF9B91E4A5A1E48F6F61E25AE9 /* AVMetadataObject+Extensions.swift */; };
+		A1910C42D44099DC241B389D9BCC26C1 /* FIRConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 393213A0013F01F91386182B9CC94C99 /* FIRConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A280F8B2F6017283CA95885D9A055951 /* cameraRotate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C297ADBAC970061518C955C84E2B843 /* cameraRotate@3x.png */; };
+		A2F909CC11B88E87A6596EA0C29ECB1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		A89C9D745474BB1B92D173CE73B3FFEF /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9F35CD01200C741532B90433C9DD9 /* BarcodeScannerViewController.swift */; };
+		AEF047E0FD3DF3C4BD5FAB3C48F2E6A7 /* Flurry-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE67AB04698DAF61D90E6D06938196 /* Flurry-iOS-SDK-dummy.m */; };
+		AF2B8864E7F088952AB0A1001A5C147F /* flashOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CCBBD66676DA9B4F89BC57F90EF7D47 /* flashOff@3x.png */; };
+		B65CB6EF3292BEB782D1C68597EB362F /* FIRReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68747BD95B87AD3C899E83F4B17E9255 /* FIRReachabilityChecker.m */; };
+		B7762CCB1BF67C5F8451AF095A678D42 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8939B3E03C0D31A03FCDD27060E8FD73 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B84F2CAC383B421F70BF52E83ECBA4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		BA24CA38124523697E11F3907295DC09 /* Pods-PaperWorksheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBA1FDE1E431403AF7AB2306084135AB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9981363E3AEFD0E84D6F6D4A9B5395 /* Security.framework */; };
+		BCFCC26DCC06D3ACB27C6FFD19BCF57A /* FlurryConsent.h in Headers */ = {isa = PBXBuildFile; fileRef = 136B022BB90E7759C736EA6478396A7D /* FlurryConsent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C04AADE8E4A470C4074FCA8EE90CF4C2 /* FIROptions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEB24C8DD0C1D9EFDBFB80D0586F456 /* FIROptions.m */; };
+		C14BCC00F75331E60F28F82F7D3F9EA9 /* FIRVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC738A81BB2EB84223A76B31F52483 /* FIRVersion.m */; };
+		C1A025D03E65DB0666EECC4A253E12E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		C6A62647679E0E0A21720EEB3159C2CC /* Flurry-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FF56BFC92B6CD3EDA8F859EFE4DDD1 /* Flurry-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C90C7F0C221C834D74182CBE60BACDC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE7FB4E50C970A1E3B8454A33B9F9AE /* SystemConfiguration.framework */; };
+		CAAD8C8007C5868AEC3DEB72D6D1D74A /* FIRLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2812E20486E2091CA00EE7D4977D30 /* FIRLogger.m */; };
+		CDB2195B09973FF1A90E093B2DA73FEE /* FirebaseCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7430738C2CA457DCBDFE7571277104C /* FirebaseCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE0F11B7D13AF6CDA079F544A127554 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F46F9D3AB9F8DBFB85A17579D9864E /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D29CE79FEAC31AF8DCD45E23844312FF /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F49178C110A03022291B82AFA330EBB /* Flurry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D47BB0CC6827B1CECC05EF7500A67E1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */; };
+		D4D85DCC77C00686249407005DBAA53E /* FIRMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 214B8DDC233625EB2375421E3F563C0A /* FIRMutableDictionary.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D4F32D9E96FD7AED2E4BD88656AA9A02 /* VideoPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463BD54441AAEC2735F6E6A6C6D51DC8 /* VideoPermissionService.swift */; };
+		DA625BE200A2E8AD3A51CB233D33B598 /* FIRNetworkURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AAAC80AC2114F4EABD84148462BB4FF /* FIRNetworkURLSession.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DEC26C4ABDFE5D2D3CFC2B91054546C9 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BDC3128CA080CE2FA3CADA88352B4 /* Functions.swift */; };
+		DFB4D54E24E9B7EBD4A66946569162E6 /* FIRNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2887EF787EFC2AA4C3414E873B078768 /* FIRNetworkConstants.m */; };
+		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC48F1EF40E6A5101225678ABE9A30D /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1959EA54A2CBA1858855C530C844337 /* FIRNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4D0DD93056C896B615732F30FDA095 /* FIRNetworkConstants.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E5A5D0A0FE946574D88719130B234B84 /* FIRErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3FAB2E6470A4E9EF1B36B9B6F2EAFC /* FIRErrorCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E5A9D2CE28C86B77DD53C0C78B75C917 /* FlurrySessionBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A5D0788AEF3C435FF0634A796B894F /* FlurrySessionBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5D01D1436ED6AED3103E3ECA01F6C4E /* FIRMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85AD50D84715EEC79899F1BA0030CE /* FIRMutableDictionary.m */; };
+		EB3CA7BDB731E8B094D67535A4C1806A /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62719E5E36E112CCE9C75B1AAF7B0E2 /* HeaderViewController.swift */; };
+		EBDEB68E8A470B9A82FA5AF8315E1CC4 /* FIRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = B09DD87B813599CD0DA62E72C39434ED /* FIRErrors.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ECD9A5434C6A165E6A44EF5ACDC2BE1B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B16C4B0A02629BE13F9910D5C111A /* CameraViewController.swift */; };
+		ECDED525D94D5EB2C6E2A2430C263091 /* FIRApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F18C6C0F355CF22BF1BB1BF39C3757A /* FIRApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14615DEB8A6E8C5EA0C969B6B6B59D7 /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1683D55DE11828FE5984010EABE7B6 /* info@3x.png */; };
+		F14DE07709E12D0D1913F2590548B202 /* FIRNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5DB053E526E008804EF22C0798737E /* FIRNetworkMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F416D1124475754024091EC394221457 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4F1817DC2B79A839E08E155D483E9D0 /* Localization.bundle */; };
+		F48F32411C56B14902BD1CD937E74716 /* FIRAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2ACD345D43D3A4C05ADDE9B3DE6BA3 /* FIRAnalyticsConfiguration.m */; };
+		F4D8DA24C4BF579C3BC481E2C376A988 /* FIRVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = F66CDA0D51127DCB2ADA03B0C6A42EFB /* FIRVersion.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F6E4719DEDBA73D6404445A113521CA2 /* FIROptionsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = B63E553BB4FC79EA9F16139C6DDAE6AC /* FIROptionsInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F82C7DF4CBBE4EFF86EEB12C209720EB /* FIRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F31F5F397E1EFEBCE33B0E995FA84E96 /* FIRNetwork.m */; };
+		F8DBD58316DBB71F05CD1CD597ACDAFE /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F792E1B258093A306A70E00613B57D2 /* SimplePDF.swift */; };
+		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E37EF40F06B2D00C7E6ECB206AF71E /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA5FD415B2981BB2D8F0DBEAC41F705B /* FIROptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D14DF136931AA5EBBFCF6D48FEAB2A /* FIROptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB11BD2C3420AB15D25927163B7B5883 /* FIRAppInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DB4ADF7662DA095C51B463F43B2A4E9 /* FIRAppInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FDF3FB90B18F1F4C211F38110EE750A3 /* FIRApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FF6BDED94A32C9F639601262AF3417 /* FIRApp.m */; };
+		FE57FA66A59CFE7BF9DEE193BA04EA63 /* FirebaseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DDA5E70B992749AF33223F8F164479F /* FirebaseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		226D47906E26ED1C4A22BB03FA2F5D29 /* PBXContainerItemProxy */ = {
+		1F9B6A6D848037836C443D2B5E8E1923 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1FF416944BFAE7682C1FD6B9C7363B5F;
+			remoteGlobalIDString = CAE12E9C1D04A409B9BD189020043E4D;
+			remoteInfo = "Flurry-iOS-SDK";
+		};
+		2374DCBB6AC1AF3EA5E2D6E5452CBEEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCFF857B29A61E3BCDA7C64D9C616D21;
+			remoteInfo = BarcodeScanner;
+		};
+		54D5E18D452A5EDA7693AB371ADF56BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3535EDFA606E7F458C510BC81D8F03A;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		9377B2F1F56304D0C30928EA85E97C75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3535EDFA606E7F458C510BC81D8F03A;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		C580DBEADC728FD9F9D43255BC0EE790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA347384995648D74B3511AFF8348EFC;
 			remoteInfo = SimplePDF;
 		};
-		715AB66DF3E2D4764D3B403B0DBC65AC /* PBXContainerItemProxy */ = {
+		C9A88C1791A18CC31254D0DB2723ABC7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 961DE7189B68AFE7A59D4ADA2A709444;
-			remoteInfo = "Flurry-iOS-SDK";
+			remoteGlobalIDString = 1BC96BED8E82CC4984352C8705A764D8;
+			remoteInfo = FirebaseCore;
 		};
 		E0A8C0E2319D0F2B446C4845C22B4BBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,138 +168,179 @@
 			remoteGlobalIDString = 8BA09793296C66FCE318826E8C2E9FA2;
 			remoteInfo = "BarcodeScanner-Localization";
 		};
-		F9848A777174390C79E42A51FF9BE5AF /* PBXContainerItemProxy */ = {
+		FFC1318C94FD52FD812E4CF680BF66F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCFF857B29A61E3BCDA7C64D9C616D21;
-			remoteInfo = BarcodeScanner;
+			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
+			remoteInfo = nanopb;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00515E7A50F2F6E3163AB3BD709B02BB /* cameraRotate@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cameraRotate@3x.png"; path = "Images/cameraRotate@3x.png"; sourceTree = "<group>"; };
-		03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		07DD673CB3CC7841833AD30E8D8B7D60 /* flashOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOn@3x.png"; path = "Images/flashOn@3x.png"; sourceTree = "<group>"; };
-		0B19D78590D49C6439973C8B34848BB5 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
-		0E6D8D8EC98315A6F4E24FD5E74F4157 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0F87CB8B6F1269CC3697AB8EEF02273C /* FlurryEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlurryEmpty.m; path = Flurry/FlurryEmpty.m; sourceTree = "<group>"; };
-		1359955C6B4B96F4298DDB13DF7B7DE6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		063B63CD86EACA11FA763615A1DB9A6D /* BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
+		07BC2295FB62D811E6263FB0ED78CA63 /* FocusViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusViewType.swift; path = Sources/DataStructures/FocusViewType.swift; sourceTree = "<group>"; };
+		08A23B6F4E06E01ED2075C536B45DE99 /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutConstraint+Extensions.swift"; path = "Sources/Extensions/NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
+		0AAAC80AC2114F4EABD84148462BB4FF /* FIRNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkURLSession.h; path = Firebase/Core/Private/FIRNetworkURLSession.h; sourceTree = "<group>"; };
+		0C29220EA0667CE11109A9AD70A356A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		1258DA6EF5D12D24886F661AF8A203B5 /* FIRConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRConfiguration.m; path = Firebase/Core/FIRConfiguration.m; sourceTree = "<group>"; };
+		136B022BB90E7759C736EA6478396A7D /* FlurryConsent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryConsent.h; path = Flurry/FlurryConsent.h; sourceTree = "<group>"; };
+		137584E3E0EB514BC007420F9BA9CE29 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		14EC7F803DFD2CEA554BEC7497981D03 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		152AEACB76D55B9468E77580D85DADDC /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BarcodeScanner.framework; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A953DFD9137396EE52DD0A67F74C5 /* Pods-PaperWorksheet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-frameworks.sh"; sourceTree = "<group>"; };
+		15CC738A81BB2EB84223A76B31F52483 /* FIRVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVersion.m; path = Firebase/Core/FIRVersion.m; sourceTree = "<group>"; };
+		198B01D5C8D467A3CFBEE7E34C9C66B5 /* FIRNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNetworkURLSession.m; path = Firebase/Core/FIRNetworkURLSession.m; sourceTree = "<group>"; };
+		1A0E82BDAA7EC77AF868FA7EE8464541 /* ResourceBundle-BarcodeScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BarcodeScanner-Info.plist"; sourceTree = "<group>"; };
 		1ACC0A9A4481D18C09AD27E5F31DCB20 /* Pods-PaperWorksheet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaperWorksheet-acknowledgements.plist"; sourceTree = "<group>"; };
-		1AD70506DCA6BE6ABB0A591B7F326BE6 /* BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
-		22C101B602C60AAEC2087A1AF1D46EAE /* Functions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = Sources/Helpers/Functions.swift; sourceTree = "<group>"; };
-		240E8558BABD2692481D57224AEEBDAF /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarcodeScannerViewController.swift; path = Sources/Controllers/BarcodeScannerViewController.swift; sourceTree = "<group>"; };
-		246633AD98A988696489435C884A114C /* HeaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderViewController.swift; path = Sources/Controllers/HeaderViewController.swift; sourceTree = "<group>"; };
-		2A2D3A78A1F69D3E12D2B22E9EADAF22 /* VideoPermissionService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPermissionService.swift; path = Sources/Helpers/VideoPermissionService.swift; sourceTree = "<group>"; };
-		2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		2E4C42AFA8E5A6CDF41A447347FEA747 /* Flurry-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Flurry-iOS-SDK.modulemap"; sourceTree = "<group>"; };
-		2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BarcodeScanner.framework; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		339146374DB94E0461285CBD168763AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34EB779F7350CFD4FC80B6584B997B00 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimplePDF.modulemap; sourceTree = "<group>"; };
-		350209493D31446D218F1531CC957341 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		1C297ADBAC970061518C955C84E2B843 /* cameraRotate@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cameraRotate@3x.png"; path = "Images/cameraRotate@3x.png"; sourceTree = "<group>"; };
+		1C669C7CE088005ECD3A5F6C7C3FEAE4 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
+		1C800C31F39CC280023E3F32FC920002 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CCBBD66676DA9B4F89BC57F90EF7D47 /* flashOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOff@3x.png"; path = "Images/flashOff@3x.png"; sourceTree = "<group>"; };
+		1DB4ADF7662DA095C51B463F43B2A4E9 /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = Firebase/Core/Private/FIRAppInternal.h; sourceTree = "<group>"; };
+		20F46F9D3AB9F8DBFB85A17579D9864E /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		214B8DDC233625EB2375421E3F563C0A /* FIRMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMutableDictionary.h; path = Firebase/Core/Private/FIRMutableDictionary.h; sourceTree = "<group>"; };
+		2887EF787EFC2AA4C3414E873B078768 /* FIRNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNetworkConstants.m; path = Firebase/Core/FIRNetworkConstants.m; sourceTree = "<group>"; };
+		29AA13E49447D4FFBC892241AE8BC5CB /* BarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BarcodeScanner.bundle; path = "BarcodeScanner-BarcodeScanner.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F18C6C0F355CF22BF1BB1BF39C3757A /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/Public/FIRApp.h; sourceTree = "<group>"; };
+		2FB1106254C2A24213364971E220789B /* FIRBundleUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRBundleUtil.m; path = Firebase/Core/FIRBundleUtil.m; sourceTree = "<group>"; };
+		328B02AF2AEAD2F8D61B3699A7681D92 /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
+		36A034A5592B68469C83C32E3F676454 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = Firebase/Core/Public/FIRLoggerLevel.h; sourceTree = "<group>"; };
 		37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.debug.xcconfig"; sourceTree = "<group>"; };
-		3889C8E82EA82FE0C31ABEF2827C58E4 /* Flurry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Flurry/Flurry.h; sourceTree = "<group>"; };
-		39E35AF98E76F2E9756606AE9B6E4F7F /* ResourceBundle-Localization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Localization-Info.plist"; sourceTree = "<group>"; };
-		3B9D8891B8603ACAB05B57BB05823962 /* info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "info@3x.png"; path = "Images/info@3x.png"; sourceTree = "<group>"; };
-		3E602DD0C4BAF507C7EBEFCAC99109EC /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
-		43443AFFF03DF85FC4F628E3DA6F319E /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		43E471AF243A0FF84BC4B5CCDED6E9A5 /* ResourceBundle-BarcodeScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BarcodeScanner-Info.plist"; sourceTree = "<group>"; };
-		4507EE1C7498E0125C4D6DA7FC3C0D32 /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Sources/Controllers/CameraViewController.swift; sourceTree = "<group>"; };
-		55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
-		578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
-		59F75C1120491141DC9B553A3CCB364B /* TorchMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TorchMode.swift; path = Sources/DataStructures/TorchMode.swift; sourceTree = "<group>"; };
+		37CE33E28F6EC0CE5D81A5793C307051 /* Flurry-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Flurry-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		37D879F8B07533625CFFCB124337AF01 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		393213A0013F01F91386182B9CC94C99 /* FIRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfiguration.h; path = Firebase/Core/Public/FIRConfiguration.h; sourceTree = "<group>"; };
+		39BA35AA8743C15478FAFDFF35DEB8EF /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D405EABC375E6A148CB7015A018FC15 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		42D259A4AE1C3E2B0310D345CC85DFBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A3CA3CA98C3543E89EAEF876834342 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		463BD54441AAEC2735F6E6A6C6D51DC8 /* VideoPermissionService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPermissionService.swift; path = Sources/Helpers/VideoPermissionService.swift; sourceTree = "<group>"; };
+		4A3FAB2E6470A4E9EF1B36B9B6F2EAFC /* FIRErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrorCode.h; path = Firebase/Core/Private/FIRErrorCode.h; sourceTree = "<group>"; };
+		4A4E20BCF923CF392CBD499B6A15B9DA /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Sources/Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		4B4332B447291ECD1FB9453DD8D16060 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BBD037F7D64772927BF738AF075553A /* MessageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Sources/Controllers/MessageViewController.swift; sourceTree = "<group>"; };
+		4C80920DD1B46615ECD96CC3C701A0A1 /* FIRAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppEnvironmentUtil.m; path = Firebase/Core/third_party/FIRAppEnvironmentUtil.m; sourceTree = "<group>"; };
+		4DDA5E70B992749AF33223F8F164479F /* FirebaseCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCore.h; path = Firebase/Core/Public/FirebaseCore.h; sourceTree = "<group>"; };
+		4E0FC22A5DDDFAC6E829732808909E47 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		53F9ACF58EFE4A2BFBE5EE91344385CE /* FIRAppAssociationRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppAssociationRegistration.m; path = Firebase/Core/FIRAppAssociationRegistration.m; sourceTree = "<group>"; };
+		54C5AD1A24E1AF5AB94113E1C19C076A /* Flurry-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		55D14DF136931AA5EBBFCF6D48FEAB2A /* FIROptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptions.h; path = Firebase/Core/Public/FIROptions.h; sourceTree = "<group>"; };
+		56F9B88657C41373D4FDECE187D8A83E /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
+		57CD3289FBB476A36234D470858C0943 /* Flurry-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Flurry-iOS-SDK.modulemap"; sourceTree = "<group>"; };
+		581DF4555486FB000E2F0D2C5DBF5506 /* FIRReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRReachabilityChecker+Internal.h"; path = "Firebase/Core/Private/FIRReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
-		5C1DC4D27B7FB204F2B913AD299C3080 /* MessageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Sources/Controllers/MessageViewController.swift; sourceTree = "<group>"; };
-		5FD39447A5738980D4D5373EAA5F54C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Flurry_iOS_SDK.framework; path = "Flurry-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BarcodeScanner.bundle; path = "BarcodeScanner-BarcodeScanner.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		631D83FBF8BAAC652668E80979620D1C /* FlurryAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdDelegate.h; path = FlurryAds/StaticAPI/FlurryAdDelegate.h; sourceTree = "<group>"; };
+		5B814A7ED7F1CDB00441DE0CA5DE3D86 /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		5D2ACD345D43D3A4C05ADDE9B3DE6BA3 /* FIRAnalyticsConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAnalyticsConfiguration.m; path = Firebase/Core/FIRAnalyticsConfiguration.m; sourceTree = "<group>"; };
+		5D89B560230D91E9AF5FF609E0651FDB /* BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BarcodeScanner.modulemap; sourceTree = "<group>"; };
+		5F56EFB8C7F25AF7CD44165882AB994C /* FIRNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetwork.h; path = Firebase/Core/Private/FIRNetwork.h; sourceTree = "<group>"; };
+		5F5A1C7D109DED928014C345B9975070 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5F5DB053E526E008804EF22C0798737E /* FIRNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkMessageCode.h; path = Firebase/Core/Private/FIRNetworkMessageCode.h; sourceTree = "<group>"; };
 		634D41DA1B7BBD51D0213A17F7BDC63A /* Pods-PaperWorksheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaperWorksheet-dummy.m"; sourceTree = "<group>"; };
-		640207E814AA4892F5B8A9A0ED3115AC /* FlurryAdNative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNative.h; path = FlurryAds/FlurryAdNative/FlurryAdNative.h; sourceTree = "<group>"; };
-		65FD596FAD01317ECAE560C1DDA8997B /* FlurryAdBanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdBanner.h; path = FlurryAds/FlurryAdBanner/FlurryAdBanner.h; sourceTree = "<group>"; };
-		69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		6A2D53BDC66764B1212832B9F718DD8E /* FlurryAdNativeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeDelegate.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeDelegate.h; sourceTree = "<group>"; };
-		6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaperWorksheet.framework; path = "Pods-PaperWorksheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D8DF9C433F5F2CA74C660CF54FB4E6E /* BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BarcodeScanner.modulemap; sourceTree = "<group>"; };
-		6FFE754B734C02D5542CCC0A031FF8AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72939334B131A9228B9E8DBA80A828D8 /* libFlurryAds_8.5.0.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurryAds_8.5.0.a; path = FlurryAds/libFlurryAds_8.5.0.a; sourceTree = "<group>"; };
-		756C954615866E691E67450C309B716B /* Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Localization.bundle; path = "BarcodeScanner-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79C981449FA5B920EBD22DB663451986 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		7A5DAAC05062060B54545BA21191F0FE /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutConstraint+Extensions.swift"; path = "Sources/Extensions/NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
-		7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		7EB6D83FF7264A4BAF2DE3ADE08B764E /* FlurryAdsEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlurryAdsEmpty.m; path = FlurryAds/FlurryAdsEmpty.m; sourceTree = "<group>"; };
-		7EDB14B593EFC5298D1E3A1611E5679F /* FlurryAdBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdBannerDelegate.h; path = FlurryAds/FlurryAdBanner/FlurryAdBannerDelegate.h; sourceTree = "<group>"; };
-		7FA92C69C03FDE0F3E00C885FE68F907 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		659579FDA07D2E7850977A92D6AF5D7D /* Flurry_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Flurry_iOS_SDK.framework; path = "Flurry-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68747BD95B87AD3C899E83F4B17E9255 /* FIRReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRReachabilityChecker.m; path = Firebase/Core/FIRReachabilityChecker.m; sourceTree = "<group>"; };
+		6D9981363E3AEFD0E84D6F6D4A9B5395 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarcodeScanner.xcconfig; sourceTree = "<group>"; };
+		6EE7FB4E50C970A1E3B8454A33B9F9AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6F05DAAC5A7A93511F08659F9B6075DC /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/DataStructures/State.swift; sourceTree = "<group>"; };
+		73C374176CDB778B04310BF860CD6F4F /* flashOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOn@3x.png"; path = "Images/flashOn@3x.png"; sourceTree = "<group>"; };
+		74E37EF40F06B2D00C7E6ECB206AF71E /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
+		75E54019A099041EC1B9EA6028DEF4F6 /* libFlurry_8.6.0.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurry_8.6.0.a; path = Flurry/libFlurry_8.6.0.a; sourceTree = "<group>"; };
+		77AC5DA302D2E7FADCCB8282C2DE345C /* BarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
+		7A8E86F7B02ABE6561EBAEC9DDBFF680 /* SimplePDF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimplePDF.modulemap; sourceTree = "<group>"; };
+		7F4AA65D92E3D0816B06B40CD2E025D4 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
+		7FE9505039247E05ACCC9D0E5B6B4F31 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
+		803BA873D044636CDE4520CE243C899C /* FIRReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRReachabilityChecker.h; path = Firebase/Core/Private/FIRReachabilityChecker.h; sourceTree = "<group>"; };
+		8091793194F8911E9B30D5E05F0D0B18 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
 		80DB4DD57938EE75AE3C0B9087FEB85D /* Pods-PaperWorksheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaperWorksheet-umbrella.h"; sourceTree = "<group>"; };
-		847B509D9F48513131839DABDDE031B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		84D73C03D5CD97313C99F1FDB9869048 /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
-		875CA153137FA714270D015903881898 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		8EFE55046E4C377E68202499CBD53C71 /* FocusViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusViewType.swift; path = Sources/DataStructures/FocusViewType.swift; sourceTree = "<group>"; };
+		8249A07B08ADB5334BE02BC120DC3816 /* FirebaseCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseCore-dummy.m"; sourceTree = "<group>"; };
+		8939B3E03C0D31A03FCDD27060E8FD73 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		8B4B16C4B0A02629BE13F9910D5C111A /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Sources/Controllers/CameraViewController.swift; sourceTree = "<group>"; };
+		8E1BDC3128CA080CE2FA3CADA88352B4 /* Functions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = Sources/Helpers/Functions.swift; sourceTree = "<group>"; };
+		8F792E1B258093A306A70E00613B57D2 /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
+		911CF492A44B1D4F3BD4440E43497BC9 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		91B2DD5D83CADBB1B67D499D066A0B1B /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
+		91F4A7DF6FD9A142FF528BE543D456F0 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
+		931EF9CB9B0D5F20EE5AD9E348E088C8 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		947667CD1B06E94555AD4591EF84B81A /* FlurryAdTargeting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdTargeting.h; path = FlurryAds/Shared/FlurryAdTargeting.h; sourceTree = "<group>"; };
-		9DA17B1166D18052CC620FE23D1C557B /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurrySessionBuilder.h; path = Flurry/FlurrySessionBuilder.h; sourceTree = "<group>"; };
-		A2E6F602FF5DAD8C64BCDACF909A2E37 /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
-		A4DA37093051C4D78437C644EA6E89CB /* FlurryAdNativeAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeAsset.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeAsset.h; sourceTree = "<group>"; };
-		AD94962E079883F10E94802B05CE8A4B /* SimplePDF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-prefix.pch"; sourceTree = "<group>"; };
-		B05639C8853794D76890BEB01A55BB0B /* FlurryConsent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryConsent.h; path = Flurry/FlurryConsent.h; sourceTree = "<group>"; };
-		B1178EDCF3FFF1D64C9A1B0D63448305 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Sources/Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		B317523FC926F6613039B7E1176A113A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B96EFDB853CEF71F6FFCDE9A13561C61 /* Flurry-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
-		B99E072EB0F1ADB4F0E9AE0F33899B98 /* libFlurry_8.5.0.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurry_8.5.0.a; path = Flurry/libFlurry_8.5.0.a; sourceTree = "<group>"; };
-		BC2A59E7456B87EB1A1B1A67A00F933A /* FlurryAdNativeStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdNativeStyle.h; path = FlurryAds/FlurryAdNative/FlurryAdNativeStyle.h; sourceTree = "<group>"; };
-		BF544DE38E9B75A0FB7E50EFEA8B6287 /* Flurry-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flurry-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		99FF6BDED94A32C9F639601262AF3417 /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = Firebase/Core/FIRApp.m; sourceTree = "<group>"; };
+		9D1683D55DE11828FE5984010EABE7B6 /* info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "info@3x.png"; path = "Images/info@3x.png"; sourceTree = "<group>"; };
+		9E1FFA0ACDF53AFE4EDE48DDB2F161C7 /* FirebaseCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.xcconfig; sourceTree = "<group>"; };
+		9E2812E20486E2091CA00EE7D4977D30 /* FIRLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRLogger.m; path = Firebase/Core/FIRLogger.m; sourceTree = "<group>"; };
+		9EAC4993F75CE84A24F2D802F435B605 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		9F49178C110A03022291B82AFA330EBB /* Flurry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Flurry/Flurry.h; sourceTree = "<group>"; };
+		A3133A0D991526937DE21F134E3BABBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A38D331AF29E9154DDBBCE2D7A4FCF9C /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		A39B43367E50B524D0D17B534B66C541 /* SimplePDF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimplePDF-dummy.m"; sourceTree = "<group>"; };
+		AAF3DD43DC7DD1F05018AF4034051C83 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09DD87B813599CD0DA62E72C39434ED /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = Firebase/Core/Private/FIRErrors.h; sourceTree = "<group>"; };
+		B4210C4A9956CE7A630DD5C396994CF8 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		B63E553BB4FC79EA9F16139C6DDAE6AC /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = Firebase/Core/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
+		B9DFEEA3D88C8ED35275A70C14B8E0BA /* ResourceBundle-Localization-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Localization-Info.plist"; sourceTree = "<group>"; };
+		BAEB24C8DD0C1D9EFDBFB80D0586F456 /* FIROptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIROptions.m; path = Firebase/Core/FIROptions.m; sourceTree = "<group>"; };
+		BD6A40F574BDBB96789C2710E207C17D /* FirebaseCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCore.modulemap; sourceTree = "<group>"; };
+		BFD4DB2694BA0B346897D6C39CCD8828 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFEA6BD6F95553251407832058DFA934 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		C1A9F35CD01200C741532B90433C9DD9 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarcodeScannerViewController.swift; path = Sources/Controllers/BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		C2A5D0788AEF3C435FF0634A796B894F /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurrySessionBuilder.h; path = Flurry/FlurrySessionBuilder.h; sourceTree = "<group>"; };
+		C2F7B8CFA208B3B03D286745902A0B48 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C434D53019D824DD188D4D86193189AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C57F9D17D6929F7FBC9AB894A1E4FBC4 /* FlurryAdInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdInterstitialDelegate.h; path = FlurryAds/FlurryAdInterstitial/FlurryAdInterstitialDelegate.h; sourceTree = "<group>"; };
-		CB50B978D81E44CB059CAFD1A33083F6 /* BarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
-		D084D0C767D9BF9221CCF143DB95279B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAA3D146A3581FF2DCA49A51E9297FEB /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		CBDE67AB04698DAF61D90E6D06938196 /* Flurry-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flurry-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		CBE3AD2BF8C3DF1410918D820349E080 /* FIRAnalyticsConfiguration+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRAnalyticsConfiguration+Internal.h"; path = "Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"; sourceTree = "<group>"; };
+		CE26CAB3CB8AA528E7AA9B0998604FB9 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = Firebase/Core/Private/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
 		D19D662ACBBF5306D464D9274F3E624D /* Pods-PaperWorksheet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PaperWorksheet-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarcodeScanner.xcconfig; sourceTree = "<group>"; };
-		DCDC0DE9261B88C95ABA564C44495D5C /* AVMetadataObject+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVMetadataObject+Extensions.swift"; path = "Sources/Extensions/AVMetadataObject+Extensions.swift"; sourceTree = "<group>"; };
-		DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF.framework; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE41BFAB8A08E020397DEC589231E105 /* FlurryAdInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdInterstitial.h; path = FlurryAds/FlurryAdInterstitial/FlurryAdInterstitial.h; sourceTree = "<group>"; };
+		DB5AD5BFCC510CA11220CC58002BA835 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DBC48F1EF40E6A5101225678ABE9A30D /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		DCC13CAE91C9BC7A150B9B2D7EFF790A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEAD9DE97987045F46B100DAE9B3A929 /* Pods-PaperWorksheet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaperWorksheet-resources.sh"; sourceTree = "<group>"; };
-		DF06BC4446C1B625A31CE76AB9E820F3 /* Flurry-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		DFF2C399720BB4F176BFCD1C4316A303 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
+		E0489653E8CC5153387A6EA8C644731E /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04B47E4625CD6DBB22AEBAC35C253A8 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		E05B841485B3F109DFB0AD1425517938 /* SimplePDF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.xcconfig; sourceTree = "<group>"; };
+		E09B472C58406243485A8F5A163C8FA4 /* FIRErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRErrors.m; path = Firebase/Core/FIRErrors.m; sourceTree = "<group>"; };
+		E4F1817DC2B79A839E08E155D483E9D0 /* Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Localization.bundle; path = "BarcodeScanner-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62719E5E36E112CCE9C75B1AAF7B0E2 /* HeaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderViewController.swift; path = Sources/Controllers/HeaderViewController.swift; sourceTree = "<group>"; };
+		E7430738C2CA457DCBDFE7571277104C /* FirebaseCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCore-umbrella.h"; sourceTree = "<group>"; };
+		E9FF56BFC92B6CD3EDA8F859EFE4DDD1 /* Flurry-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		EB85AD50D84715EEC79899F1BA0030CE /* FIRMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMutableDictionary.m; path = Firebase/Core/FIRMutableDictionary.m; sourceTree = "<group>"; };
+		EC2FEA3785D8C9BA34B83235F6753AAF /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = Firebase/Core/Private/FIRLogger.h; sourceTree = "<group>"; };
 		ECBA8187D0FA4C0AF2280EEE5D3324FB /* Pods-PaperWorksheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaperWorksheet.modulemap"; sourceTree = "<group>"; };
-		F0B748C8ABBAD7F10A724CBD682D2DBE /* FlurryAdError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlurryAdError.h; path = FlurryAds/Shared/FlurryAdError.h; sourceTree = "<group>"; };
-		F4DD395A8F428370CE9FD6BD8D78855F /* Flurry-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Flurry-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
-		F4EA39786D6227552F072947B4118DBF /* flashOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashOff@3x.png"; path = "Images/flashOff@3x.png"; sourceTree = "<group>"; };
-		F5E10A32C3C0685FD8BA200726CC33BF /* BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
-		F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		FF0474B5E73583C6E35DDD5FBBBC8AE2 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/DataStructures/State.swift; sourceTree = "<group>"; };
+		ECDFB1F3F2F4612578ADE1470D9BED3B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EE03AA5F390BC23E2BDB21C424112DEC /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		EE2360B9CDEF0A4E552FE5A076D36AE8 /* FIRNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkLoggerProtocol.h; path = Firebase/Core/Private/FIRNetworkLoggerProtocol.h; sourceTree = "<group>"; };
+		EE5EA68942F7E16FB4843F6F6B3AA8FE /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
+		F03312EF9B91E4A5A1E48F6F61E25AE9 /* AVMetadataObject+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVMetadataObject+Extensions.swift"; path = "Sources/Extensions/AVMetadataObject+Extensions.swift"; sourceTree = "<group>"; };
+		F31F5F397E1EFEBCE33B0E995FA84E96 /* FIRNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNetwork.m; path = Firebase/Core/FIRNetwork.m; sourceTree = "<group>"; };
+		F3F2230F54DA95DFF73A95516A81B6AE /* BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
+		F629CDEA06428CE3D64022A2EEA2C01A /* SimplePDF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimplePDF-umbrella.h"; sourceTree = "<group>"; };
+		F66CDA0D51127DCB2ADA03B0C6A42EFB /* FIRVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVersion.h; path = Firebase/Core/Private/FIRVersion.h; sourceTree = "<group>"; };
+		FB01C41DAE448DC797B138D0DBD9D469 /* TorchMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TorchMode.swift; path = Sources/DataStructures/TorchMode.swift; sourceTree = "<group>"; };
+		FB4D0DD93056C896B615732F30FDA095 /* FIRNetworkConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkConstants.h; path = Firebase/Core/Private/FIRNetworkConstants.h; sourceTree = "<group>"; };
+		FD401BEFDB6436B1544AF6157F26D8A3 /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaperWorksheet.framework; path = "Pods-PaperWorksheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB2AC70C822087DBE52C4360B89A645 /* FIRAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppEnvironmentUtil.h; path = Firebase/Core/third_party/FIRAppEnvironmentUtil.h; sourceTree = "<group>"; };
+		FE58B4F163D46BF3DC4D116B732797BD /* FlurryEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlurryEmpty.m; path = Flurry/FlurryEmpty.m; sourceTree = "<group>"; };
+		FEE19E323D6C081445B24802566CBD4C /* FIRBundleUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRBundleUtil.h; path = Firebase/Core/Private/FIRBundleUtil.h; sourceTree = "<group>"; };
+		FFA4AA2A9C07B017D35EC1947CCF8E3F /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAnalyticsConfiguration.h; path = Firebase/Core/Public/FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D362E702565FC989EFAE770D0A3AEFD /* Frameworks */ = {
+		36B0F041F6C060427761D35C8EBD66E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE711E74EC663D92DB69FC3B820AB00 /* Foundation.framework in Frameworks */,
+				070AB4EEDA92B4A7489D4C0898B8086B /* Foundation.framework in Frameworks */,
+				BBA1FDE1E431403AF7AB2306084135AB /* Security.framework in Frameworks */,
+				7C60F3F2D3C370D53E2AE3F87052DB4F /* SystemConfiguration.framework in Frameworks */,
+				107E4C1F8DDA3E9E99848C4137CA3CED /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A51499BDA0A5508797F53799758B8FF /* Frameworks */ = {
+		49B8D303F49F6EF5DBD91E2AA3342C72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35032786AD6B62409E297E9336780546 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E1E9F94760257B148FA15A9593231A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA30EF8DD4AE435AE3E91A010F114260 /* AVFoundation.framework in Frameworks */,
-				56C0DBCBACBCAD62EE61DBEB660F5C8E /* CoreGraphics.framework in Frameworks */,
-				4F92654762486979AF8C523CFA256AF2 /* CoreMedia.framework in Frameworks */,
-				7983A2D7A3B8ADA223BF5989AEFEC698 /* CoreTelephony.framework in Frameworks */,
-				F4AA3B67422CD7AAD355701312F33D8F /* Foundation.framework in Frameworks */,
-				F00F01C9CBFDC86D2D62F83B33077E59 /* MediaPlayer.framework in Frameworks */,
-				03269A4F93E12F84E9604BCBF841134B /* Security.framework in Frameworks */,
-				61A9A8C41D5EB1D947CE4A1D482A01B7 /* SystemConfiguration.framework in Frameworks */,
-				FE04A514E05559DCACC8D87BC69BAD06 /* UIKit.framework in Frameworks */,
-				1B627CF608DFE0152F7D1EFA63C9E949 /* WebKit.framework in Frameworks */,
+				B84F2CAC383B421F70BF52E83ECBA4EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +361,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94A4C9099E418E828F86C588AA95CE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EE159FBED69B43B9C83CD37195753F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		971041836592E28ADEEDA495A96A62A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE41125430BCF410B9E4B1B44E90786F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F909CC11B88E87A6596EA0C29ECB1E /* Foundation.framework in Frameworks */,
+				C90C7F0C221C834D74182CBE60BACDC1 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3436447769C5EA8632DC9FA1CEC106A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,55 +393,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBEBCBC3737C331AD5517D87E4336D70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D47BB0CC6827B1CECC05EF7500A67E1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BBD34BD7E96768148546CCA728B0BBE /* BarcodeScanner */ = {
+		1DE31EA2B8238969F583A442D99C4A2B /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				DCDC0DE9261B88C95ABA564C44495D5C /* AVMetadataObject+Extensions.swift */,
-				240E8558BABD2692481D57224AEEBDAF /* BarcodeScannerViewController.swift */,
-				4507EE1C7498E0125C4D6DA7FC3C0D32 /* CameraViewController.swift */,
-				8EFE55046E4C377E68202499CBD53C71 /* FocusViewType.swift */,
-				22C101B602C60AAEC2087A1AF1D46EAE /* Functions.swift */,
-				246633AD98A988696489435C884A114C /* HeaderViewController.swift */,
-				5C1DC4D27B7FB204F2B913AD299C3080 /* MessageViewController.swift */,
-				7A5DAAC05062060B54545BA21191F0FE /* NSLayoutConstraint+Extensions.swift */,
-				FF0474B5E73583C6E35DDD5FBBBC8AE2 /* State.swift */,
-				59F75C1120491141DC9B553A3CCB364B /* TorchMode.swift */,
-				1359955C6B4B96F4298DDB13DF7B7DE6 /* UIView+Extensions.swift */,
-				B1178EDCF3FFF1D64C9A1B0D63448305 /* UIViewController+Extensions.swift */,
-				2A2D3A78A1F69D3E12D2B22E9EADAF22 /* VideoPermissionService.swift */,
-				A77E849A44ADF752375D79E02C08F10C /* Resources */,
-				B59311C3F22B1E50169CFFA4F5E02D65 /* Support Files */,
+				F03312EF9B91E4A5A1E48F6F61E25AE9 /* AVMetadataObject+Extensions.swift */,
+				C1A9F35CD01200C741532B90433C9DD9 /* BarcodeScannerViewController.swift */,
+				8B4B16C4B0A02629BE13F9910D5C111A /* CameraViewController.swift */,
+				07BC2295FB62D811E6263FB0ED78CA63 /* FocusViewType.swift */,
+				8E1BDC3128CA080CE2FA3CADA88352B4 /* Functions.swift */,
+				E62719E5E36E112CCE9C75B1AAF7B0E2 /* HeaderViewController.swift */,
+				4BBD037F7D64772927BF738AF075553A /* MessageViewController.swift */,
+				08A23B6F4E06E01ED2075C536B45DE99 /* NSLayoutConstraint+Extensions.swift */,
+				6F05DAAC5A7A93511F08659F9B6075DC /* State.swift */,
+				FB01C41DAE448DC797B138D0DBD9D469 /* TorchMode.swift */,
+				5B814A7ED7F1CDB00441DE0CA5DE3D86 /* UIView+Extensions.swift */,
+				4A4E20BCF923CF392CBD499B6A15B9DA /* UIViewController+Extensions.swift */,
+				463BD54441AAEC2735F6E6A6C6D51DC8 /* VideoPermissionService.swift */,
+				6FCA048457E1E1D03A63A1DA01838523 /* Resources */,
+				93CF0C26D573E872D7EBBDF22D74E5CF /* Support Files */,
 			);
 			name = BarcodeScanner;
 			path = BarcodeScanner;
 			sourceTree = "<group>";
 		};
-		352CC4A169E223B57F9386C5DB174DFF /* Support Files */ = {
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E4C42AFA8E5A6CDF41A447347FEA747 /* Flurry-iOS-SDK.modulemap */,
-				F4DD395A8F428370CE9FD6BD8D78855F /* Flurry-iOS-SDK.xcconfig */,
-				BF544DE38E9B75A0FB7E50EFEA8B6287 /* Flurry-iOS-SDK-dummy.m */,
-				B96EFDB853CEF71F6FFCDE9A13561C61 /* Flurry-iOS-SDK-prefix.pch */,
-				DF06BC4446C1B625A31CE76AB9E820F3 /* Flurry-iOS-SDK-umbrella.h */,
-				339146374DB94E0461285CBD168763AB /* Info.plist */,
+				C550301DDD253B6073EDFDBBA791DA8C /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Flurry-iOS-SDK";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4035DA6E6528942EA6D13B0DA98E983B /* Support Files */ = {
+		342047471671F16C5C4238CB3C838C4F /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				5FD39447A5738980D4D5373EAA5F54C5 /* Info.plist */,
-				34EB779F7350CFD4FC80B6584B997B00 /* SimplePDF.modulemap */,
-				A2E6F602FF5DAD8C64BCDACF909A2E37 /* SimplePDF.xcconfig */,
-				0B19D78590D49C6439973C8B34848BB5 /* SimplePDF-dummy.m */,
-				AD94962E079883F10E94802B05CE8A4B /* SimplePDF-prefix.pch */,
-				84D73C03D5CD97313C99F1FDB9869048 /* SimplePDF-umbrella.h */,
+				9A2731397AABFE0F66B7ACE256A2B3DF /* CoreOnly */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		3B71B1A3FAB2735CA5A7025808652634 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC13CAE91C9BC7A150B9B2D7EFF790A /* Info.plist */,
+				56F9B88657C41373D4FDECE187D8A83E /* nanopb.modulemap */,
+				91B2DD5D83CADBB1B67D499D066A0B1B /* nanopb.xcconfig */,
+				1C669C7CE088005ECD3A5F6C7C3FEAE4 /* nanopb-dummy.m */,
+				91F4A7DF6FD9A142FF528BE543D456F0 /* nanopb-prefix.pch */,
+				74E37EF40F06B2D00C7E6ECB206AF71E /* nanopb-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/nanopb";
+			sourceTree = "<group>";
+		};
+		3E28AA45CFECE1F091E8C9FC1947F47A /* Flurry-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				680CC0130C8AB0E132C163D034F6BA4E /* FlurrySDK */,
+				BF04BC08B25F4AAB20C50EC0CB301D7B /* Support Files */,
+			);
+			name = "Flurry-iOS-SDK";
+			path = "Flurry-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		41896D7E41AF9DD1AC565847784513D1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3133A0D991526937DE21F134E3BABBC /* Info.plist */,
+				7A8E86F7B02ABE6561EBAEC9DDBFF680 /* SimplePDF.modulemap */,
+				E05B841485B3F109DFB0AD1425517938 /* SimplePDF.xcconfig */,
+				A39B43367E50B524D0D17B534B66C541 /* SimplePDF-dummy.m */,
+				328B02AF2AEAD2F8D61B3699A7681D92 /* SimplePDF-prefix.pch */,
+				F629CDEA06428CE3D64022A2EEA2C01A /* SimplePDF-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SimplePDF";
@@ -320,26 +490,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		61FDE97263E498C9080F1199C1751151 /* Flurry-iOS-SDK */ = {
+		6599F536A06E9D8F786A57504C977A91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9B46922EB2FBA92A40E018ECB5D4030 /* FlurryAds */,
-				C7B9F8057C3F14F26FC92929E4FB32E7 /* FlurrySDK */,
-				352CC4A169E223B57F9386C5DB174DFF /* Support Files */,
+				75E54019A099041EC1B9EA6028DEF4F6 /* libFlurry_8.6.0.a */,
 			);
-			name = "Flurry-iOS-SDK";
-			path = "Flurry-iOS-SDK";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6443DDF22220BA88A83A9C41FFB2FEDC /* SimplePDF */ = {
+		680CC0130C8AB0E132C163D034F6BA4E /* FlurrySDK */ = {
 			isa = PBXGroup;
 			children = (
-				350209493D31446D218F1531CC957341 /* SimplePDF.h */,
-				3E602DD0C4BAF507C7EBEFCAC99109EC /* SimplePDF.swift */,
-				4035DA6E6528942EA6D13B0DA98E983B /* Support Files */,
+				9F49178C110A03022291B82AFA330EBB /* Flurry.h */,
+				136B022BB90E7759C736EA6478396A7D /* FlurryConsent.h */,
+				FE58B4F163D46BF3DC4D116B732797BD /* FlurryEmpty.m */,
+				C2A5D0788AEF3C435FF0634A796B894F /* FlurrySessionBuilder.h */,
+				6599F536A06E9D8F786A57504C977A91 /* Frameworks */,
 			);
-			name = SimplePDF;
-			path = SimplePDF;
+			name = FlurrySDK;
+			sourceTree = "<group>";
+		};
+		6FCA048457E1E1D03A63A1DA01838523 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C297ADBAC970061518C955C84E2B843 /* cameraRotate@3x.png */,
+				1CCBBD66676DA9B4F89BC57F90EF7D47 /* flashOff@3x.png */,
+				73C374176CDB778B04310BF860CD6F4F /* flashOn@3x.png */,
+				9D1683D55DE11828FE5984010EABE7B6 /* info@3x.png */,
+				F28AF1FB7DDC229D36AB9262E98AC597 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7715CE0A645DAC864E2D0B93D584FF29 /* encode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = encode;
 			sourceTree = "<group>";
 		};
 		78B9DB2E7CC0A7AD2E0EF259AFC394AE /* Pods-PaperWorksheet */ = {
@@ -364,146 +551,310 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */,
-				E51676BBD989014A23EA330DAAFFFB8D /* Pods */,
-				A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				E9962FFA42C330380D22716CFC97B72B /* Pods */,
+				8F263CC2FD975C70AF91DD5C7D6396CD /* Products */,
 				5E3D2068812DA3663589624B28448E0C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
+		7F3326778F95D112A8D10B6B63FD630E /* NSData+zlib */ = {
 			isa = PBXGroup;
 			children = (
-				89DAFB3154DBA2CFA28E11B305E021EF /* iOS */,
+				A38D331AF29E9154DDBBCE2D7A4FCF9C /* GTMNSData+zlib.h */,
+				20F46F9D3AB9F8DBFB85A17579D9864E /* GTMNSData+zlib.m */,
 			);
-			name = Frameworks;
+			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		89DAFB3154DBA2CFA28E11B305E021EF /* iOS */ = {
+		8CD1F9565E8A87F803F3C13AF1A9EB03 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				7DB7CE4F8614894537484C4676F14345 /* AVFoundation.framework */,
-				F9FF4652A85574747031C3879446F6BF /* CoreGraphics.framework */,
-				578D2FAC4DA94CCD83E0B9879EC4C1CF /* CoreMedia.framework */,
-				03DB274AE9DED56458CA6F2F33BFF30B /* CoreTelephony.framework */,
-				847B509D9F48513131839DABDDE031B4 /* Foundation.framework */,
-				55F6956BDC2F2326351C29444AF238D6 /* MediaPlayer.framework */,
-				69B5D8E89EFCEE2223991A7A947F0B9E /* Security.framework */,
-				875CA153137FA714270D015903881898 /* SystemConfiguration.framework */,
-				79C981449FA5B920EBD22DB663451986 /* UIKit.framework */,
-				2CCBDD7C95C8FC3A7F54C5101B2DC308 /* WebKit.framework */,
+				A2E18B93CBCB1A157A8B838E473BC8AB /* Frameworks */,
 			);
-			name = iOS;
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */ = {
+		8F263CC2FD975C70AF91DD5C7D6396CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */,
-				2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */,
-				6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */,
-				756C954615866E691E67450C309B716B /* Localization.bundle */,
-				6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */,
-				DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */,
+				29AA13E49447D4FFBC892241AE8BC5CB /* BarcodeScanner.bundle */,
+				152AEACB76D55B9468E77580D85DADDC /* BarcodeScanner.framework */,
+				C2F7B8CFA208B3B03D286745902A0B48 /* FirebaseCore.framework */,
+				659579FDA07D2E7850977A92D6AF5D7D /* Flurry_iOS_SDK.framework */,
+				E0489653E8CC5153387A6EA8C644731E /* GoogleToolboxForMac.framework */,
+				E4F1817DC2B79A839E08E155D483E9D0 /* Localization.bundle */,
+				BFD4DB2694BA0B346897D6C39CCD8828 /* nanopb.framework */,
+				FD401BEFDB6436B1544AF6157F26D8A3 /* Pods_PaperWorksheet.framework */,
+				AAF3DD43DC7DD1F05018AF4034051C83 /* SimplePDF.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A77E849A44ADF752375D79E02C08F10C /* Resources */ = {
+		8F3A3095BF4A33FE4BC50718C6BDAE85 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				00515E7A50F2F6E3163AB3BD709B02BB /* cameraRotate@3x.png */,
-				F4EA39786D6227552F072947B4118DBF /* flashOff@3x.png */,
-				07DD673CB3CC7841833AD30E8D8B7D60 /* flashOn@3x.png */,
-				3B9D8891B8603ACAB05B57BB05823962 /* info@3x.png */,
-				B9B52DA87F53CB52B71CEB4DB9935CE7 /* Localizable.strings */,
+				4E0FC22A5DDDFAC6E829732808909E47 /* GoogleToolboxForMac.modulemap */,
+				14EC7F803DFD2CEA554BEC7497981D03 /* GoogleToolboxForMac.xcconfig */,
+				CAA3D146A3581FF2DCA49A51E9297FEB /* GoogleToolboxForMac-dummy.m */,
+				37D879F8B07533625CFFCB124337AF01 /* GoogleToolboxForMac-prefix.pch */,
+				8939B3E03C0D31A03FCDD27060E8FD73 /* GoogleToolboxForMac-umbrella.h */,
+				42D259A4AE1C3E2B0310D345CC85DFBA /* Info.plist */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
 			sourceTree = "<group>";
 		};
-		B59311C3F22B1E50169CFFA4F5E02D65 /* Support Files */ = {
+		93CF0C26D573E872D7EBBDF22D74E5CF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D8DF9C433F5F2CA74C660CF54FB4E6E /* BarcodeScanner.modulemap */,
-				D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */,
-				F5E10A32C3C0685FD8BA200726CC33BF /* BarcodeScanner-dummy.m */,
-				CB50B978D81E44CB059CAFD1A33083F6 /* BarcodeScanner-prefix.pch */,
-				1AD70506DCA6BE6ABB0A591B7F326BE6 /* BarcodeScanner-umbrella.h */,
-				6FFE754B734C02D5542CCC0A031FF8AF /* Info.plist */,
-				43E471AF243A0FF84BC4B5CCDED6E9A5 /* ResourceBundle-BarcodeScanner-Info.plist */,
-				39E35AF98E76F2E9756606AE9B6E4F7F /* ResourceBundle-Localization-Info.plist */,
+				5D89B560230D91E9AF5FF609E0651FDB /* BarcodeScanner.modulemap */,
+				6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */,
+				F3F2230F54DA95DFF73A95516A81B6AE /* BarcodeScanner-dummy.m */,
+				77AC5DA302D2E7FADCCB8282C2DE345C /* BarcodeScanner-prefix.pch */,
+				063B63CD86EACA11FA763615A1DB9A6D /* BarcodeScanner-umbrella.h */,
+				45A3CA3CA98C3543E89EAEF876834342 /* Info.plist */,
+				1A0E82BDAA7EC77AF868FA7EE8464541 /* ResourceBundle-BarcodeScanner-Info.plist */,
+				B9DFEEA3D88C8ED35275A70C14B8E0BA /* ResourceBundle-Localization-Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BarcodeScanner";
 			sourceTree = "<group>";
 		};
-		C7B9F8057C3F14F26FC92929E4FB32E7 /* FlurrySDK */ = {
+		9A2731397AABFE0F66B7ACE256A2B3DF /* CoreOnly */ = {
 			isa = PBXGroup;
 			children = (
-				3889C8E82EA82FE0C31ABEF2827C58E4 /* Flurry.h */,
-				B05639C8853794D76890BEB01A55BB0B /* FlurryConsent.h */,
-				0F87CB8B6F1269CC3697AB8EEF02273C /* FlurryEmpty.m */,
-				9DA17B1166D18052CC620FE23D1C557B /* FlurrySessionBuilder.h */,
-				D045D41A27250FF8F125DE906B1995DD /* Frameworks */,
+				EE5EA68942F7E16FB4843F6F6B3AA8FE /* Firebase.h */,
 			);
-			name = FlurrySDK;
+			name = CoreOnly;
 			sourceTree = "<group>";
 		};
-		C9B46922EB2FBA92A40E018ECB5D4030 /* FlurryAds */ = {
+		9D4DD3D130FFC98BA6BE5EABA35F2E0D /* decode */ = {
 			isa = PBXGroup;
 			children = (
-				65FD596FAD01317ECAE560C1DDA8997B /* FlurryAdBanner.h */,
-				7EDB14B593EFC5298D1E3A1611E5679F /* FlurryAdBannerDelegate.h */,
-				631D83FBF8BAAC652668E80979620D1C /* FlurryAdDelegate.h */,
-				F0B748C8ABBAD7F10A724CBD682D2DBE /* FlurryAdError.h */,
-				DE41BFAB8A08E020397DEC589231E105 /* FlurryAdInterstitial.h */,
-				C57F9D17D6929F7FBC9AB894A1E4FBC4 /* FlurryAdInterstitialDelegate.h */,
-				640207E814AA4892F5B8A9A0ED3115AC /* FlurryAdNative.h */,
-				A4DA37093051C4D78437C644EA6E89CB /* FlurryAdNativeAsset.h */,
-				6A2D53BDC66764B1212832B9F718DD8E /* FlurryAdNativeDelegate.h */,
-				BC2A59E7456B87EB1A1B1A67A00F933A /* FlurryAdNativeStyle.h */,
-				7EB6D83FF7264A4BAF2DE3ADE08B764E /* FlurryAdsEmpty.m */,
-				947667CD1B06E94555AD4591EF84B81A /* FlurryAdTargeting.h */,
-				E92ADC60769E003F2BFDAFB6DBFE8E27 /* Frameworks */,
 			);
-			name = FlurryAds;
+			name = decode;
 			sourceTree = "<group>";
 		};
-		D045D41A27250FF8F125DE906B1995DD /* Frameworks */ = {
+		A2E18B93CBCB1A157A8B838E473BC8AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B99E072EB0F1ADB4F0E9AE0F33899B98 /* libFlurry_8.5.0.a */,
+				B4210C4A9956CE7A630DD5C396994CF8 /* FirebaseInstanceID.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E51676BBD989014A23EA330DAAFFFB8D /* Pods */ = {
+		AA6571817FAE8E079E7D7C9A10058DC3 /* GoogleToolboxForMac */ = {
 			isa = PBXGroup;
 			children = (
-				1BBD34BD7E96768148546CCA728B0BBE /* BarcodeScanner */,
-				61FDE97263E498C9080F1199C1751151 /* Flurry-iOS-SDK */,
-				6443DDF22220BA88A83A9C41FFB2FEDC /* SimplePDF */,
+				E80D1ACB478D8BC648CA764D708EBBEB /* Defines */,
+				7F3326778F95D112A8D10B6B63FD630E /* NSData+zlib */,
+				8F3A3095BF4A33FE4BC50718C6BDAE85 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		AD3EB4E3C928D5ECBF47484836BA8F97 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				D57D8435D60DBAC2F1FE63FC848D17F0 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		BF04BC08B25F4AAB20C50EC0CB301D7B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57CD3289FBB476A36234D470858C0943 /* Flurry-iOS-SDK.modulemap */,
+				37CE33E28F6EC0CE5D81A5793C307051 /* Flurry-iOS-SDK.xcconfig */,
+				CBDE67AB04698DAF61D90E6D06938196 /* Flurry-iOS-SDK-dummy.m */,
+				54C5AD1A24E1AF5AB94113E1C19C076A /* Flurry-iOS-SDK-prefix.pch */,
+				E9FF56BFC92B6CD3EDA8F859EFE4DDD1 /* Flurry-iOS-SDK-umbrella.h */,
+				4B4332B447291ECD1FB9453DD8D16060 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Flurry-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		C550301DDD253B6073EDFDBBA791DA8C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0C29220EA0667CE11109A9AD70A356A5 /* AVFoundation.framework */,
+				671CFE093C43F06FEEF17A312A304B24 /* Foundation.framework */,
+				6D9981363E3AEFD0E84D6F6D4A9B5395 /* Security.framework */,
+				6EE7FB4E50C970A1E3B8454A33B9F9AE /* SystemConfiguration.framework */,
+				DB5AD5BFCC510CA11220CC58002BA835 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D0E16A70605A506E1CEF88E00E941206 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				137584E3E0EB514BC007420F9BA9CE29 /* pb.h */,
+				BFEA6BD6F95553251407832058DFA934 /* pb_common.c */,
+				7F4AA65D92E3D0816B06B40CD2E025D4 /* pb_common.h */,
+				8091793194F8911E9B30D5E05F0D0B18 /* pb_decode.c */,
+				DFF2C399720BB4F176BFCD1C4316A303 /* pb_decode.h */,
+				3D405EABC375E6A148CB7015A018FC15 /* pb_encode.c */,
+				DBC48F1EF40E6A5101225678ABE9A30D /* pb_encode.h */,
+				9D4DD3D130FFC98BA6BE5EABA35F2E0D /* decode */,
+				7715CE0A645DAC864E2D0B93D584FF29 /* encode */,
+				3B71B1A3FAB2735CA5A7025808652634 /* Support Files */,
+			);
+			name = nanopb;
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		D57D8435D60DBAC2F1FE63FC848D17F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				931EF9CB9B0D5F20EE5AD9E348E088C8 /* FirebaseAnalytics.framework */,
+				E04B47E4625CD6DBB22AEBAC35C253A8 /* FirebaseCoreDiagnostics.framework */,
+				9EAC4993F75CE84A24F2D802F435B605 /* FirebaseNanoPB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC16238C41E0443C48C33CD777BEC3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD6A40F574BDBB96789C2710E207C17D /* FirebaseCore.modulemap */,
+				9E1FFA0ACDF53AFE4EDE48DDB2F161C7 /* FirebaseCore.xcconfig */,
+				8249A07B08ADB5334BE02BC120DC3816 /* FirebaseCore-dummy.m */,
+				E7430738C2CA457DCBDFE7571277104C /* FirebaseCore-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FirebaseCore";
+			sourceTree = "<group>";
+		};
+		E80D1ACB478D8BC648CA764D708EBBEB /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				EE03AA5F390BC23E2BDB21C424112DEC /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		E9962FFA42C330380D22716CFC97B72B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DE31EA2B8238969F583A442D99C4A2B /* BarcodeScanner */,
+				342047471671F16C5C4238CB3C838C4F /* Firebase */,
+				AD3EB4E3C928D5ECBF47484836BA8F97 /* FirebaseAnalytics */,
+				F5FD718EF653A11FA364B94000D8E1F3 /* FirebaseCore */,
+				8CD1F9565E8A87F803F3C13AF1A9EB03 /* FirebaseInstanceID */,
+				3E28AA45CFECE1F091E8C9FC1947F47A /* Flurry-iOS-SDK */,
+				AA6571817FAE8E079E7D7C9A10058DC3 /* GoogleToolboxForMac */,
+				D0E16A70605A506E1CEF88E00E941206 /* nanopb */,
+				ECE44A2BE8B37E89F8D589580585299E /* SimplePDF */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E92ADC60769E003F2BFDAFB6DBFE8E27 /* Frameworks */ = {
+		ECE44A2BE8B37E89F8D589580585299E /* SimplePDF */ = {
 			isa = PBXGroup;
 			children = (
-				72939334B131A9228B9E8DBA80A828D8 /* libFlurryAds_8.5.0.a */,
+				7FE9505039247E05ACCC9D0E5B6B4F31 /* SimplePDF.h */,
+				8F792E1B258093A306A70E00613B57D2 /* SimplePDF.swift */,
+				41896D7E41AF9DD1AC565847784513D1 /* Support Files */,
 			);
-			name = Frameworks;
+			name = SimplePDF;
+			path = SimplePDF;
+			sourceTree = "<group>";
+		};
+		F5FD718EF653A11FA364B94000D8E1F3 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				FFA4AA2A9C07B017D35EC1947CCF8E3F /* FIRAnalyticsConfiguration.h */,
+				5D2ACD345D43D3A4C05ADDE9B3DE6BA3 /* FIRAnalyticsConfiguration.m */,
+				CBE3AD2BF8C3DF1410918D820349E080 /* FIRAnalyticsConfiguration+Internal.h */,
+				2F18C6C0F355CF22BF1BB1BF39C3757A /* FIRApp.h */,
+				99FF6BDED94A32C9F639601262AF3417 /* FIRApp.m */,
+				CE26CAB3CB8AA528E7AA9B0998604FB9 /* FIRAppAssociationRegistration.h */,
+				53F9ACF58EFE4A2BFBE5EE91344385CE /* FIRAppAssociationRegistration.m */,
+				FDB2AC70C822087DBE52C4360B89A645 /* FIRAppEnvironmentUtil.h */,
+				4C80920DD1B46615ECD96CC3C701A0A1 /* FIRAppEnvironmentUtil.m */,
+				1DB4ADF7662DA095C51B463F43B2A4E9 /* FIRAppInternal.h */,
+				FEE19E323D6C081445B24802566CBD4C /* FIRBundleUtil.h */,
+				2FB1106254C2A24213364971E220789B /* FIRBundleUtil.m */,
+				393213A0013F01F91386182B9CC94C99 /* FIRConfiguration.h */,
+				1258DA6EF5D12D24886F661AF8A203B5 /* FIRConfiguration.m */,
+				4DDA5E70B992749AF33223F8F164479F /* FirebaseCore.h */,
+				4A3FAB2E6470A4E9EF1B36B9B6F2EAFC /* FIRErrorCode.h */,
+				B09DD87B813599CD0DA62E72C39434ED /* FIRErrors.h */,
+				E09B472C58406243485A8F5A163C8FA4 /* FIRErrors.m */,
+				EC2FEA3785D8C9BA34B83235F6753AAF /* FIRLogger.h */,
+				9E2812E20486E2091CA00EE7D4977D30 /* FIRLogger.m */,
+				36A034A5592B68469C83C32E3F676454 /* FIRLoggerLevel.h */,
+				214B8DDC233625EB2375421E3F563C0A /* FIRMutableDictionary.h */,
+				EB85AD50D84715EEC79899F1BA0030CE /* FIRMutableDictionary.m */,
+				5F56EFB8C7F25AF7CD44165882AB994C /* FIRNetwork.h */,
+				F31F5F397E1EFEBCE33B0E995FA84E96 /* FIRNetwork.m */,
+				FB4D0DD93056C896B615732F30FDA095 /* FIRNetworkConstants.h */,
+				2887EF787EFC2AA4C3414E873B078768 /* FIRNetworkConstants.m */,
+				EE2360B9CDEF0A4E552FE5A076D36AE8 /* FIRNetworkLoggerProtocol.h */,
+				5F5DB053E526E008804EF22C0798737E /* FIRNetworkMessageCode.h */,
+				0AAAC80AC2114F4EABD84148462BB4FF /* FIRNetworkURLSession.h */,
+				198B01D5C8D467A3CFBEE7E34C9C66B5 /* FIRNetworkURLSession.m */,
+				55D14DF136931AA5EBBFCF6D48FEAB2A /* FIROptions.h */,
+				BAEB24C8DD0C1D9EFDBFB80D0586F456 /* FIROptions.m */,
+				B63E553BB4FC79EA9F16139C6DDAE6AC /* FIROptionsInternal.h */,
+				803BA873D044636CDE4520CE243C899C /* FIRReachabilityChecker.h */,
+				68747BD95B87AD3C899E83F4B17E9255 /* FIRReachabilityChecker.m */,
+				581DF4555486FB000E2F0D2C5DBF5506 /* FIRReachabilityChecker+Internal.h */,
+				F66CDA0D51127DCB2ADA03B0C6A42EFB /* FIRVersion.h */,
+				15CC738A81BB2EB84223A76B31F52483 /* FIRVersion.m */,
+				DAC16238C41E0443C48C33CD777BEC3A /* Support Files */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		20904F0C638FEA5DE14ABBFE7C460D61 /* Headers */ = {
+		4547B9AF8085A499AA35614798F8F9E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDC302F17892A69F9A576BAD3CA6981B /* SimplePDF-umbrella.h in Headers */,
-				2035133A228C38795DA85D99E8D96372 /* SimplePDF.h in Headers */,
+				F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */,
+				392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */,
+				806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */,
+				29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */,
+				E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347593E648CE31CB6A1830E3EE06308 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA24CA38124523697E11F3907295DC09 /* Pods-PaperWorksheet-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80245068C1854E6BFEECA827011F1D2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A62647679E0E0A21720EEB3159C2CC /* Flurry-iOS-SDK-umbrella.h in Headers */,
+				D29CE79FEAC31AF8DCD45E23844312FF /* Flurry.h in Headers */,
+				BCFCC26DCC06D3ACB27C6FFD19BCF57A /* FlurryConsent.h in Headers */,
+				E5A9D2CE28C86B77DD53C0C78B75C917 /* FlurrySessionBuilder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F466EF33CB8D3214A6AEA89E2BF70A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7762CCB1BF67C5F8451AF095A678D42 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				3883B72198499726B04F847CA9D1F627 /* GTMDefines.h in Headers */,
+				4FB56F6CF1214292B65508F5374418AE /* GTMNSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,74 +866,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A377651121847B431E716AFF60C972EA /* Headers */ = {
+		B42A987B1A6E8C4A251BBB534200167F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06AA66B17C12209F2DD3B74166B594E6 /* Pods-PaperWorksheet-umbrella.h in Headers */,
+				5695878E65D6718D3B41618940C35B80 /* SimplePDF-umbrella.h in Headers */,
+				5D9AA53D7EE9557AF76D6A42A67CEA68 /* SimplePDF.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30CE3B3ADE3942FEB292C2385E89A5E /* Headers */ = {
+		CB8DD0EC96D179C9F98FBF280A5BD30F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB13EC389DD7417BD448AADFA7848F0 /* Flurry-iOS-SDK-umbrella.h in Headers */,
-				C2B08074D8E0811E0960A007786DEE22 /* Flurry.h in Headers */,
-				FA7BAC580CE148F6D7F961224FC02BB9 /* FlurryAdBanner.h in Headers */,
-				22D01E0457C5B6558BBD6FD168FABCFD /* FlurryAdBannerDelegate.h in Headers */,
-				A986CEBCDBF7D28E1AE00083F7FFB0E0 /* FlurryAdDelegate.h in Headers */,
-				AA70887AC6C132843C543EFEF041413F /* FlurryAdError.h in Headers */,
-				23F7F998F52FE0FBB4E1281E02AF225B /* FlurryAdInterstitial.h in Headers */,
-				D18110C37F6C4B2D444B5B46D38D2F55 /* FlurryAdInterstitialDelegate.h in Headers */,
-				90E99127ABD1CF9584B62212550AD73A /* FlurryAdNative.h in Headers */,
-				5227649CA26AC8122F5C03831578F95A /* FlurryAdNativeAsset.h in Headers */,
-				3DB2E0CE20A8F7116C0483381568923F /* FlurryAdNativeDelegate.h in Headers */,
-				A16EC3A50C8C7551D4097CF07D804E36 /* FlurryAdNativeStyle.h in Headers */,
-				17EB24EE12E8323ED6F75AEBFDF2B019 /* FlurryAdTargeting.h in Headers */,
-				A03D704119995F040F237425A9740C5B /* FlurryConsent.h in Headers */,
-				FD8FD27560A6F2DFD848E138FD186E29 /* FlurrySessionBuilder.h in Headers */,
+				7525390045039F998FF0DADC322488CB /* FIRAnalyticsConfiguration+Internal.h in Headers */,
+				8F0FFA270E768BC335C0AB4DDC229B9A /* FIRAnalyticsConfiguration.h in Headers */,
+				ECDED525D94D5EB2C6E2A2430C263091 /* FIRApp.h in Headers */,
+				65736E1FDF516AE1EF4927AA623D5486 /* FIRAppAssociationRegistration.h in Headers */,
+				4E9E3F4C76FDD56538C1D94D6E004488 /* FIRAppEnvironmentUtil.h in Headers */,
+				FB11BD2C3420AB15D25927163B7B5883 /* FIRAppInternal.h in Headers */,
+				05F97FB862DED24F1B1905C862373C6F /* FIRBundleUtil.h in Headers */,
+				A1910C42D44099DC241B389D9BCC26C1 /* FIRConfiguration.h in Headers */,
+				CDB2195B09973FF1A90E093B2DA73FEE /* FirebaseCore-umbrella.h in Headers */,
+				FE57FA66A59CFE7BF9DEE193BA04EA63 /* FirebaseCore.h in Headers */,
+				E5A5D0A0FE946574D88719130B234B84 /* FIRErrorCode.h in Headers */,
+				EBDEB68E8A470B9A82FA5AF8315E1CC4 /* FIRErrors.h in Headers */,
+				381AED7B43FE7EAD4E6C7A48FE4CB740 /* FIRLogger.h in Headers */,
+				7EF7379A0CC562D025B9F38F0B087CFF /* FIRLoggerLevel.h in Headers */,
+				D4D85DCC77C00686249407005DBAA53E /* FIRMutableDictionary.h in Headers */,
+				9B3BB0BB63055112AE0B41146D80AA04 /* FIRNetwork.h in Headers */,
+				E1959EA54A2CBA1858855C530C844337 /* FIRNetworkConstants.h in Headers */,
+				5B46B9D656F626D2AB2033FE60A5FDF3 /* FIRNetworkLoggerProtocol.h in Headers */,
+				F14DE07709E12D0D1913F2590548B202 /* FIRNetworkMessageCode.h in Headers */,
+				DA625BE200A2E8AD3A51CB233D33B598 /* FIRNetworkURLSession.h in Headers */,
+				FA5FD415B2981BB2D8F0DBEAC41F705B /* FIROptions.h in Headers */,
+				F6E4719DEDBA73D6404445A113521CA2 /* FIROptionsInternal.h in Headers */,
+				3D87E3A862C9B32F401A6F6F561B5046 /* FIRReachabilityChecker+Internal.h in Headers */,
+				5176D8C2F911883FC75A97525B5567CB /* FIRReachabilityChecker.h in Headers */,
+				F4D8DA24C4BF579C3BC481E2C376A988 /* FIRVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */ = {
+		1BC96BED8E82CC4984352C8705A764D8 /* FirebaseCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 288DCF12FF434F9B009BE86AFAB28EB3 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
+			buildConfigurationList = 7E2CFBFB1D71ECBB0CAC96391D572369 /* Build configuration list for PBXNativeTarget "FirebaseCore" */;
 			buildPhases = (
-				D7E0273F188C40C99D716173698996A0 /* Sources */,
-				2D362E702565FC989EFAE770D0A3AEFD /* Frameworks */,
-				20904F0C638FEA5DE14ABBFE7C460D61 /* Headers */,
+				CC9B2033D75E04E0EE35C1988055D3AC /* Sources */,
+				CE41125430BCF410B9E4B1B44E90786F /* Frameworks */,
+				CB8DD0EC96D179C9F98FBF280A5BD30F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				95655A12517E11DD065F678183D2E5BE /* PBXTargetDependency */,
 			);
-			name = SimplePDF;
-			productName = SimplePDF;
-			productReference = DDF5C3CE32B22C94570E366CFA6A6114 /* SimplePDF.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		34656C2120EDF5FB436ECA9D3E8432A7 /* Pods-PaperWorksheet */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1AD6494B0F237B4297C3D9B263E85EE /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */;
-			buildPhases = (
-				16746E3564942CF6BF37B751A55A7D93 /* Sources */,
-				3A51499BDA0A5508797F53799758B8FF /* Frameworks */,
-				A377651121847B431E716AFF60C972EA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B0804CF98026F942A20876669A087E34 /* PBXTargetDependency */,
-				17AC8D39BAD6637ACDA3A4FCB40A9ECE /* PBXTargetDependency */,
-				756D53011EDA4E1732351BDF16242799 /* PBXTargetDependency */,
-			);
-			name = "Pods-PaperWorksheet";
-			productName = "Pods-PaperWorksheet";
-			productReference = 6AA8D2498815A4E5840ADF32DA3DD40E /* Pods_PaperWorksheet.framework */;
+			name = FirebaseCore;
+			productName = FirebaseCore;
+			productReference = C2F7B8CFA208B3B03D286745902A0B48 /* FirebaseCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8BA09793296C66FCE318826E8C2E9FA2 /* BarcodeScanner-Localization */ = {
@@ -599,7 +942,7 @@
 			);
 			name = "BarcodeScanner-Localization";
 			productName = "BarcodeScanner-Localization";
-			productReference = 756C954615866E691E67450C309B716B /* Localization.bundle */;
+			productReference = E4F1817DC2B79A839E08E155D483E9D0 /* Localization.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8C194D5E546C32BB634B5BBEF26DEFC3 /* BarcodeScanner-BarcodeScanner */ = {
@@ -616,16 +959,56 @@
 			);
 			name = "BarcodeScanner-BarcodeScanner";
 			productName = "BarcodeScanner-BarcodeScanner";
-			productReference = 61E292F122F3F0AA378E101DECD57D68 /* BarcodeScanner.bundle */;
+			productReference = 29AA13E49447D4FFBC892241AE8BC5CB /* BarcodeScanner.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		961DE7189B68AFE7A59D4ADA2A709444 /* Flurry-iOS-SDK */ = {
+		AA347384995648D74B3511AFF8348EFC /* SimplePDF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9D4522F17F80B3681B0A59CE22B2DD2 /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */;
+			buildConfigurationList = 7B8AE68DDA24FAF3CA40240EA9D1DDA9 /* Build configuration list for PBXNativeTarget "SimplePDF" */;
 			buildPhases = (
-				876ACD8FB7D51F8C4B368A445C4FAE3A /* Sources */,
-				3E1E9F94760257B148FA15A9593231A0 /* Frameworks */,
-				D30CE3B3ADE3942FEB292C2385E89A5E /* Headers */,
+				B2F56F75EF33474A38427A4105D4562B /* Sources */,
+				FBEBCBC3737C331AD5517D87E4336D70 /* Frameworks */,
+				B42A987B1A6E8C4A251BBB534200167F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplePDF;
+			productName = SimplePDF;
+			productReference = AAF3DD43DC7DD1F05018AF4034051C83 /* SimplePDF.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA2A12A98E33D6B1EE71468EB68AC672 /* Pods-PaperWorksheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4144E297585D97A2EAA4BD2E32B31B7B /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */;
+			buildPhases = (
+				F3C78B876B4CDEFA9E738ADBC8930969 /* Sources */,
+				49B8D303F49F6EF5DBD91E2AA3342C72 /* Frameworks */,
+				7347593E648CE31CB6A1830E3EE06308 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8757E482FA6F5268A9F0CF253A04D116 /* PBXTargetDependency */,
+				93522FDB89C1F2C7FAB8B90480BE8443 /* PBXTargetDependency */,
+				BE0612D325798E071DFCF6FC2A2CED19 /* PBXTargetDependency */,
+				40E0F552D1CF5C4BC10E28186A9948AC /* PBXTargetDependency */,
+				68B78946661099E6650030EB5D7D6CB8 /* PBXTargetDependency */,
+				5EC189734DF78AB51A9C1F435ECA6424 /* PBXTargetDependency */,
+			);
+			name = "Pods-PaperWorksheet";
+			productName = "Pods-PaperWorksheet";
+			productReference = FD401BEFDB6436B1544AF6157F26D8A3 /* Pods_PaperWorksheet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAE12E9C1D04A409B9BD189020043E4D /* Flurry-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FDAF6545282962F59B8B487F798FB0E /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */;
+			buildPhases = (
+				038269876960E14CEECA3EB1DEB3AEA4 /* Sources */,
+				36B0F041F6C060427761D35C8EBD66E0 /* Frameworks */,
+				80245068C1854E6BFEECA827011F1D2C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -633,7 +1016,41 @@
 			);
 			name = "Flurry-iOS-SDK";
 			productName = "Flurry-iOS-SDK";
-			productReference = 6077664E7695ECF30AD25D2E320A6829 /* Flurry_iOS_SDK.framework */;
+			productReference = 659579FDA07D2E7850977A92D6AF5D7D /* Flurry_iOS_SDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */;
+			buildPhases = (
+				238527BE8D494586023F2A2B8A60D242 /* Sources */,
+				971041836592E28ADEEDA495A96A62A2 /* Frameworks */,
+				4547B9AF8085A499AA35614798F8F9E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nanopb;
+			productName = nanopb;
+			productReference = BFD4DB2694BA0B346897D6C39CCD8828 /* nanopb.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3535EDFA606E7F458C510BC81D8F03A /* GoogleToolboxForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6463CEDD5A9E7834B0A6169FCB3B178 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
+			buildPhases = (
+				352540812ADED7BA9290BA358FB48D66 /* Sources */,
+				94A4C9099E418E828F86C588AA95CE89 /* Frameworks */,
+				84F466EF33CB8D3214A6AEA89E2BF70A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = E0489653E8CC5153387A6EA8C644731E /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FCFF857B29A61E3BCDA7C64D9C616D21 /* BarcodeScanner */ = {
@@ -653,7 +1070,7 @@
 			);
 			name = BarcodeScanner;
 			productName = BarcodeScanner;
-			productReference = 2F87DAE4AA8C7A9CC540931520914BF4 /* BarcodeScanner.framework */;
+			productReference = 152AEACB76D55B9468E77580D85DADDC /* BarcodeScanner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -673,16 +1090,19 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A28CDA594D55DF1D554FBF4C4B50BBCD /* Products */;
+			productRefGroup = 8F263CC2FD975C70AF91DD5C7D6396CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FCFF857B29A61E3BCDA7C64D9C616D21 /* BarcodeScanner */,
 				8C194D5E546C32BB634B5BBEF26DEFC3 /* BarcodeScanner-BarcodeScanner */,
 				8BA09793296C66FCE318826E8C2E9FA2 /* BarcodeScanner-Localization */,
-				961DE7189B68AFE7A59D4ADA2A709444 /* Flurry-iOS-SDK */,
-				34656C2120EDF5FB436ECA9D3E8432A7 /* Pods-PaperWorksheet */,
-				1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */,
+				1BC96BED8E82CC4984352C8705A764D8 /* FirebaseCore */,
+				CAE12E9C1D04A409B9BD189020043E4D /* Flurry-iOS-SDK */,
+				F3535EDFA606E7F458C510BC81D8F03A /* GoogleToolboxForMac */,
+				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
+				BA2A12A98E33D6B1EE71468EB68AC672 /* Pods-PaperWorksheet */,
+				AA347384995648D74B3511AFF8348EFC /* SimplePDF */,
 			);
 		};
 /* End PBXProject section */
@@ -719,21 +1139,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16746E3564942CF6BF37B751A55A7D93 /* Sources */ = {
+		038269876960E14CEECA3EB1DEB3AEA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C80B1457C60C0C342779F3BAC799B5B /* Pods-PaperWorksheet-dummy.m in Sources */,
+				AEF047E0FD3DF3C4BD5FAB3C48F2E6A7 /* Flurry-iOS-SDK-dummy.m in Sources */,
+				60B7BA865F238DCB79D436D764A37AB2 /* FlurryEmpty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		876ACD8FB7D51F8C4B368A445C4FAE3A /* Sources */ = {
+		238527BE8D494586023F2A2B8A60D242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2626E62836B28935D95C2DE01D09B35 /* Flurry-iOS-SDK-dummy.m in Sources */,
-				EBA0C3D3A8E2FC89D4A0CD46E28FB20A /* FlurryAdsEmpty.m in Sources */,
-				24BE27D1D247713E9BCD4709E650D7A4 /* FlurryEmpty.m in Sources */,
+				468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */,
+				3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */,
+				54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */,
+				55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		352540812ADED7BA9290BA358FB48D66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D10CE405433B469CBE8C40B42865E1 /* GoogleToolboxForMac-dummy.m in Sources */,
+				CEE0F11B7D13AF6CDA079F544A127554 /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F56F75EF33474A38427A4105D4562B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59867D44168D25421EA214436E77E019 /* SimplePDF-dummy.m in Sources */,
+				F8DBD58316DBB71F05CD1CD597ACDAFE /* SimplePDF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,19 +1198,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC9B2033D75E04E0EE35C1988055D3AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48F32411C56B14902BD1CD937E74716 /* FIRAnalyticsConfiguration.m in Sources */,
+				FDF3FB90B18F1F4C211F38110EE750A3 /* FIRApp.m in Sources */,
+				1F19C59101F5F9B66F8730F9EF625A1F /* FIRAppAssociationRegistration.m in Sources */,
+				8B595D1E703A57549BB98A1AF0F257DA /* FIRAppEnvironmentUtil.m in Sources */,
+				1FD11A578D78250D186EADB1DE6732F7 /* FIRBundleUtil.m in Sources */,
+				3BD66D6656842D316A18D8F595045BF0 /* FIRConfiguration.m in Sources */,
+				58A4DA15799705E46B6A18BA48838897 /* FirebaseCore-dummy.m in Sources */,
+				0ABF3961C14F4E2D012936D83C5C724A /* FIRErrors.m in Sources */,
+				CAAD8C8007C5868AEC3DEB72D6D1D74A /* FIRLogger.m in Sources */,
+				E5D01D1436ED6AED3103E3ECA01F6C4E /* FIRMutableDictionary.m in Sources */,
+				F82C7DF4CBBE4EFF86EEB12C209720EB /* FIRNetwork.m in Sources */,
+				DFB4D54E24E9B7EBD4A66946569162E6 /* FIRNetworkConstants.m in Sources */,
+				2FAFE7A2E5F7C163B3F9A55000557F72 /* FIRNetworkURLSession.m in Sources */,
+				C04AADE8E4A470C4074FCA8EE90CF4C2 /* FIROptions.m in Sources */,
+				B65CB6EF3292BEB782D1C68597EB362F /* FIRReachabilityChecker.m in Sources */,
+				C14BCC00F75331E60F28F82F7D3F9EA9 /* FIRVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0ED6202F73A89A6C43D478F9A96DEE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7E0273F188C40C99D716173698996A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D285057643B14E34F95C093C71AF0880 /* SimplePDF-dummy.m in Sources */,
-				79BCE5755199943145DD0491E1CBDA1E /* SimplePDF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,15 +1235,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C78B876B4CDEFA9E738ADBC8930969 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143100A79BA6D038E3EB1CE9C304F195 /* Pods-PaperWorksheet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17AC8D39BAD6637ACDA3A4FCB40A9ECE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Flurry-iOS-SDK";
-			target = 961DE7189B68AFE7A59D4ADA2A709444 /* Flurry-iOS-SDK */;
-			targetProxy = 715AB66DF3E2D4764D3B403B0DBC65AC /* PBXContainerItemProxy */;
-		};
 		2160DF83069FE7302183E2EA38BCDA32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BarcodeScanner-Localization";
@@ -802,29 +1258,59 @@
 			target = 8C194D5E546C32BB634B5BBEF26DEFC3 /* BarcodeScanner-BarcodeScanner */;
 			targetProxy = E0A8C0E2319D0F2B446C4845C22B4BBA /* PBXContainerItemProxy */;
 		};
-		756D53011EDA4E1732351BDF16242799 /* PBXTargetDependency */ = {
+		40E0F552D1CF5C4BC10E28186A9948AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = F3535EDFA606E7F458C510BC81D8F03A /* GoogleToolboxForMac */;
+			targetProxy = 9377B2F1F56304D0C30928EA85E97C75 /* PBXContainerItemProxy */;
+		};
+		5EC189734DF78AB51A9C1F435ECA6424 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
+			targetProxy = FFC1318C94FD52FD812E4CF680BF66F2 /* PBXContainerItemProxy */;
+		};
+		68B78946661099E6650030EB5D7D6CB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SimplePDF;
-			target = 1FF416944BFAE7682C1FD6B9C7363B5F /* SimplePDF */;
-			targetProxy = 226D47906E26ED1C4A22BB03FA2F5D29 /* PBXContainerItemProxy */;
+			target = AA347384995648D74B3511AFF8348EFC /* SimplePDF */;
+			targetProxy = C580DBEADC728FD9F9D43255BC0EE790 /* PBXContainerItemProxy */;
 		};
-		B0804CF98026F942A20876669A087E34 /* PBXTargetDependency */ = {
+		8757E482FA6F5268A9F0CF253A04D116 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BarcodeScanner;
 			target = FCFF857B29A61E3BCDA7C64D9C616D21 /* BarcodeScanner */;
-			targetProxy = F9848A777174390C79E42A51FF9BE5AF /* PBXContainerItemProxy */;
+			targetProxy = 2374DCBB6AC1AF3EA5E2D6E5452CBEEB /* PBXContainerItemProxy */;
+		};
+		93522FDB89C1F2C7FAB8B90480BE8443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FirebaseCore;
+			target = 1BC96BED8E82CC4984352C8705A764D8 /* FirebaseCore */;
+			targetProxy = C9A88C1791A18CC31254D0DB2723ABC7 /* PBXContainerItemProxy */;
+		};
+		95655A12517E11DD065F678183D2E5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = F3535EDFA606E7F458C510BC81D8F03A /* GoogleToolboxForMac */;
+			targetProxy = 54D5E18D452A5EDA7693AB371ADF56BD /* PBXContainerItemProxy */;
+		};
+		BE0612D325798E071DFCF6FC2A2CED19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Flurry-iOS-SDK";
+			target = CAE12E9C1D04A409B9BD189020043E4D /* Flurry-iOS-SDK */;
+			targetProxy = 1F9B6A6D848037836C443D2B5E8E1923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B9B52DA87F53CB52B71CEB4DB9935CE7 /* Localizable.strings */ = {
+		F28AF1FB7DDC229D36AB9262E98AC597 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D084D0C767D9BF9221CCF143DB95279B /* Localizable.strings */,
-				0E6D8D8EC98315A6F4E24FD5E74F4157 /* Localizable.strings */,
-				B317523FC926F6613039B7E1176A113A /* Localizable.strings */,
-				7FA92C69C03FDE0F3E00C885FE68F907 /* Localizable.strings */,
-				43443AFFF03DF85FC4F628E3DA6F319E /* Localizable.strings */,
+				39BA35AA8743C15478FAFDFF35DEB8EF /* Localizable.strings */,
+				911CF492A44B1D4F3BD4440E43497BC9 /* Localizable.strings */,
+				ECDFB1F3F2F4612578ADE1470D9BED3B /* Localizable.strings */,
+				5F5A1C7D109DED928014C345B9975070 /* Localizable.strings */,
+				1C800C31F39CC280023E3F32FC920002 /* Localizable.strings */,
 			);
 			name = Localizable.strings;
 			path = Localization;
@@ -835,7 +1321,7 @@
 /* Begin XCBuildConfiguration section */
 		07C11BFA814239BFAE0245D8181C1440 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -849,9 +1335,40 @@
 			};
 			name = Debug;
 		};
+		08DCEECB267ABEEE7E382A779F100D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B2DD5D83CADBB1B67D499D066A0B1B /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				PRODUCT_MODULE_NAME = nanopb;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		26EADC180B4958837FEA68324AA4A8A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -865,9 +1382,166 @@
 			};
 			name = Debug;
 		};
+		2ACEA15768FCB0F330AA0DCBEFFACBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E1FFA0ACDF53AFE4EDE48DDB2F161C7 /* FirebaseCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/FirebaseCore/FirebaseCore.modulemap";
+				PRODUCT_MODULE_NAME = FirebaseCore;
+				PRODUCT_NAME = FirebaseCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BA963D9C3A99AACF877282E78659224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EC7F803DFD2CEA554BEC7497981D03 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		450F86CC2D755FAFCFAD24D9C7B2DDA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B2DD5D83CADBB1B67D499D066A0B1B /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				PRODUCT_MODULE_NAME = nanopb;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4559CC932BBD8CD15FA9F01FBBF74A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37CE33E28F6EC0CE5D81A5793C307051 /* Flurry-iOS-SDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Flurry-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK.modulemap";
+				PRODUCT_MODULE_NAME = Flurry_iOS_SDK;
+				PRODUCT_NAME = Flurry_iOS_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		501616EF3C278436C361C89E8A536669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EC7F803DFD2CEA554BEC7497981D03 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				PRODUCT_MODULE_NAME = GoogleToolboxForMac;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5C436328A3335845654887AE919F0A6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -898,9 +1572,71 @@
 			};
 			name = Release;
 		};
+		6A7374FCE2744A4D704E2B7CECD16448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05B841485B3F109DFB0AD1425517938 /* SimplePDF.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				PRODUCT_MODULE_NAME = SimplePDF;
+				PRODUCT_NAME = SimplePDF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A9BAB0942F532431B9BAF6161E5EC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E1FFA0ACDF53AFE4EDE48DDB2F161C7 /* FirebaseCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/FirebaseCore/FirebaseCore.modulemap";
+				PRODUCT_MODULE_NAME = FirebaseCore;
+				PRODUCT_NAME = FirebaseCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		6C02D1725139F2B621729D009F611D6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
@@ -914,7 +1650,7 @@
 			};
 			name = Release;
 		};
-		768BF50EC497D63FBD69EC1EE90BC47F /* Debug */ = {
+		75ACA363E9B34E171C4FAC1254FFFD91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37621687561B30E154F61D9EF7C48C78 /* Pods-PaperWorksheet.debug.xcconfig */;
 			buildSettings = {
@@ -950,41 +1686,9 @@
 			};
 			name = Debug;
 		};
-		97EE148668996AF5EDC4C7880270DB18 /* Debug */ = {
+		81F0B4A22A16042B8D87BD5FD7A07FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BarcodeScanner/BarcodeScanner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BarcodeScanner/BarcodeScanner.modulemap";
-				PRODUCT_MODULE_NAME = BarcodeScanner;
-				PRODUCT_NAME = BarcodeScanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C5981555A67ED031498EF411DFBFBAAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4DD395A8F428370CE9FD6BD8D78855F /* Flurry-iOS-SDK.xcconfig */;
+			baseConfigurationReference = 37CE33E28F6EC0CE5D81A5793C307051 /* Flurry-iOS-SDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1014,9 +1718,9 @@
 			};
 			name = Release;
 		};
-		CB753E5D0655D8ED02892F941FF21E8F /* Debug */ = {
+		97EE148668996AF5EDC4C7880270DB18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2E6F602FF5DAD8C64BCDACF909A2E37 /* SimplePDF.xcconfig */;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1027,14 +1731,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/BarcodeScanner/BarcodeScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				PRODUCT_MODULE_NAME = SimplePDF;
-				PRODUCT_NAME = SimplePDF;
+				MODULEMAP_FILE = "Target Support Files/BarcodeScanner/BarcodeScanner.modulemap";
+				PRODUCT_MODULE_NAME = BarcodeScanner;
+				PRODUCT_NAME = BarcodeScanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1167,9 +1871,9 @@
 			};
 			name = Release;
 		};
-		D20CE8B2DC306D14707EF08AE917409A /* Debug */ = {
+		EBACD5ACA37E9658564BCEAEBDF3A8DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4DD395A8F428370CE9FD6BD8D78855F /* Flurry-iOS-SDK.xcconfig */;
+			baseConfigurationReference = E05B841485B3F109DFB0AD1425517938 /* SimplePDF.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1180,25 +1884,43 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Flurry-iOS-SDK/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK.modulemap";
-				PRODUCT_MODULE_NAME = Flurry_iOS_SDK;
-				PRODUCT_NAME = Flurry_iOS_SDK;
+				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
+				PRODUCT_MODULE_NAME = SimplePDF;
+				PRODUCT_NAME = SimplePDF;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		D51CD36C42CBC2E7C04B73507DC3F315 /* Release */ = {
+		F7891FAB3DCCC7720C8B004853422D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3729344AF44D2221C396C5B3D1498B /* BarcodeScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
+				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Localization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F83A7135622937A9AE9AE188502EA07E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B0E1A79B7FD3F48C93552DFB8495DE7 /* Pods-PaperWorksheet.release.xcconfig */;
 			buildSettings = {
@@ -1234,72 +1956,23 @@
 			};
 			name = Release;
 		};
-		DA8200786B9F87FDA2D6949ABBFF9D8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2E6F602FF5DAD8C64BCDACF909A2E37 /* SimplePDF.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimplePDF/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimplePDF/SimplePDF.modulemap";
-				PRODUCT_MODULE_NAME = SimplePDF;
-				PRODUCT_NAME = SimplePDF;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F7891FAB3DCCC7720C8B004853422D14 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B033B2B07D21083BA4DA4423455075 /* BarcodeScanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BarcodeScanner";
-				INFOPLIST_FILE = "Target Support Files/BarcodeScanner/ResourceBundle-Localization-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = Localization;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0FDAF6545282962F59B8B487F798FB0E /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4559CC932BBD8CD15FA9F01FBBF74A7D /* Debug */,
+				81F0B4A22A16042B8D87BD5FD7A07FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		17AB7C6D01B5210295A85B975C43139C /* Build configuration list for PBXNativeTarget "BarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97EE148668996AF5EDC4C7880270DB18 /* Debug */,
 				5C436328A3335845654887AE919F0A6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		288DCF12FF434F9B009BE86AFAB28EB3 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB753E5D0655D8ED02892F941FF21E8F /* Debug */,
-				DA8200786B9F87FDA2D6949ABBFF9D8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1313,11 +1986,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4144E297585D97A2EAA4BD2E32B31B7B /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75ACA363E9B34E171C4FAC1254FFFD91 /* Debug */,
+				F83A7135622937A9AE9AE188502EA07E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		43523ADF3C49D8804435876EBE4921C1 /* Build configuration list for PBXNativeTarget "BarcodeScanner-BarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26EADC180B4958837FEA68324AA4A8A4 /* Debug */,
 				6C02D1725139F2B621729D009F611D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B8AE68DDA24FAF3CA40240EA9D1DDA9 /* Build configuration list for PBXNativeTarget "SimplePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7374FCE2744A4D704E2B7CECD16448 /* Debug */,
+				EBACD5ACA37E9658564BCEAEBDF3A8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E2CFBFB1D71ECBB0CAC96391D572369 /* Build configuration list for PBXNativeTarget "FirebaseCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A9BAB0942F532431B9BAF6161E5EC8D /* Debug */,
+				2ACEA15768FCB0F330AA0DCBEFFACBA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1331,20 +2031,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1AD6494B0F237B4297C3D9B263E85EE /* Build configuration list for PBXNativeTarget "Pods-PaperWorksheet" */ = {
+		A6463CEDD5A9E7834B0A6169FCB3B178 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				768BF50EC497D63FBD69EC1EE90BC47F /* Debug */,
-				D51CD36C42CBC2E7C04B73507DC3F315 /* Release */,
+				2BA963D9C3A99AACF877282E78659224 /* Debug */,
+				501616EF3C278436C361C89E8A536669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9D4522F17F80B3681B0A59CE22B2DD2 /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */ = {
+		F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D20CE8B2DC306D14707EF08AE917409A /* Debug */,
-				C5981555A67ED031498EF411DFBFBAAE /* Release */,
+				08DCEECB267ABEEE7E382A779F100D91 /* Debug */,
+				450F86CC2D755FAFCFAD24D9C7B2DDA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
