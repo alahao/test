@@ -61,6 +61,11 @@ class Operation {
     var decNumberOpertaionSignL = ""
     var decNumberOpertaionSignR = ""
     var operationArray = [0]
+    
+//    func duplicatedQuestion() -> [String]{
+//        questionNumber = questionNumber - 2
+//        return runOperation()
+//    }
    
     
     func runOperation() -> [String] {
@@ -291,19 +296,25 @@ class Operation {
             if randomOperationSign == 0 || randomOperationSign == 1 {
                 numberOpertaionSign = "+"
                 decNumberAnswer = decNumberOne + decNumberTwo
+                print("decNumberOne:\(decNumberOne) + decNumberTwo:\(decNumberTwo) = decNumberAnswer:\(decNumberAnswer)")
             } else if randomOperationSign == 2 || randomOperationSign == 3 {
                 numberOpertaionSign = "-"
                 decNumberAnswer = decNumberOne
                 decNumberOne = decNumberAnswer + decNumberTwo
+                print("decNumberOne:\(decNumberOne) - decNumberTwo:\(decNumberTwo) = decNumberAnswer:\(decNumberAnswer)")
                 
             } else if randomOperationSign == 4 {
                 numberOpertaionSign = "×"
                 decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
                 decNumberAnswer = decNumberOne * decNumberTwo
-            } else if randomOperationSign == 4 {
+                print("decNumberOne:\(decNumberOne) x decNumberTwo:\(decNumberTwo) = decNumberAnswer:\(decNumberAnswer)")
+            } else if randomOperationSign == 5 {
                 numberOpertaionSign = "÷"
                 decNumberTwo = decNumberTwo.rounded(toPlaces: GKRandomDistribution(randomSource: answerSeed!, lowestValue: dPMulMin, highestValue: dPMulMax).nextInt())
                 decNumberAnswer = decNumberOne * decNumberTwo
+                swap(&decNumberAnswer, &decNumberOne)
+                //one answer two, one two has value
+                print("decNumberOne:\(decNumberOne) / decNumberTwo:\(decNumberTwo) = decNumberAnswer:\(decNumberAnswer)")
             }
             
             if decNumberOne.truncatingRemainder(dividingBy: 1) == 0 && decNumberTwo.truncatingRemainder(dividingBy: 1) == 0 {
@@ -314,13 +325,13 @@ class Operation {
         questionNumber = questionNumber + 1
         let questionNumberL = questionNumber
         randomDecimalOperation()
-        questionSetOne = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " ="
+        questionSetOne = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " = "
         decNumberAnswerOne = decNumberAnswer
         
         questionNumber = questionNumber + 1
         let questionNumberR = questionNumber
         randomDecimalOperation()
-        questionSetTwo = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " ="
+        questionSetTwo = decNumberOne.cleanValue + " \(numberOpertaionSign) " + decNumberTwo.cleanValue + " = "
         decNumberAnswerTwo = decNumberAnswer
         
         let array = [String(questionNumberL), questionSetOne, String(questionNumberR), questionSetTwo, String(decNumberAnswerOne.cleanValue), String(decNumberAnswerTwo.cleanValue)]

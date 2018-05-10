@@ -53,7 +53,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var finalNumerator = 0
     var finalDenominator = 0
     var wholeNumberCount = 0
-  
+    
     // Decimal
     var decNumberOne = 0.00
     var decNumberTwo = 0.00
@@ -90,15 +90,22 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         cellNumber = 10 * pageNumber
         answerSeedNumber = UInt64(Int.random(min: 10000, max: 99999))
         answerSeed?.seed = answerSeedNumber
-        print("removed Array, new Array is \(question.questionArray)")
+        print("removed Array, new Array is \(question.questionArray), cellNumber:\(cellNumber), page\(pageNumber)")
         for _ in 1...cellNumber {
-            var resultArray = operation.runOperation()
-            if question.questionArray.contains(resultArray) {
-                print("$caught duplicated questions")
-                resultArray = operation.runOperation()
-            } else {
-            question.questionArray.append(resultArray)
+            
+            func checkDuplicate() {
+                var resultArray = operation.runOperation()
+                print("$$$resultArray: \(resultArray)")
+                print("$$$questionArray: \(question.questionArray)")
+                if question.questionArray.suffix(5).contains(where: { $0.contains(resultArray[1]) }) || question.questionArray.contains(where: { $0.contains(resultArray[3]) }) {
+                    print("$$$caught duplicated questions")
+                    questionNumber = questionNumber - 2
+                    checkDuplicate()
+                } else {
+                    question.questionArray.append(resultArray)
+                }
             }
+            checkDuplicate()
         }
         let stringSeedOperation = seedOperation.map{String($0)}.joined()
         let stringWorksheetAnswerCode = stringSeedOperation + String(difficulty!) + String(format: "%02d", pageNumber) + "\(Int(answerSeedNumber))"
@@ -111,12 +118,12 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Generated"])
         Flurry.logEvent("Worksheet Generated", withParameters: getLogOperations())
         print(getLogOperations())
-
+        
     }
     
     // Prepare Event for Flurry
     func getLogOperations() -> [String : String] {
-    
+        
         //Pl,Mi,Mu,Di,Fr,De
         var logOperation = [String]()
         if selectedOpertaions["plus"] == true {
@@ -146,17 +153,17 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // GENERATE BAR CODE
     func generateBarCode() {
-    let imageView = UIImageView()
-    let codeGenerator = FCBBarCodeGenerator()
-    let size = CGSize(width: 100, height: 100)
-    let code = worksheetAnswerCode.map{String($0)}.joined()
-    let type = FCBBarcodeType.qrcode
-    
-    if let image = codeGenerator.barcode(code: code, type: type, size: size) {
-        imageView.image = image
-    } else {
-        imageView.image = nil
-    }
+        let imageView = UIImageView()
+        let codeGenerator = FCBBarCodeGenerator()
+        let size = CGSize(width: 100, height: 100)
+        let code = worksheetAnswerCode.map{String($0)}.joined()
+        let type = FCBBarcodeType.qrcode
+        
+        if let image = codeGenerator.barcode(code: code, type: type, size: size) {
+            imageView.image = image
+        } else {
+            imageView.image = nil
+        }
     }
     
     // 4. CREATE TABLEVIEW
@@ -193,18 +200,18 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     UIFont.systemFont(ofSize: 8),
                     UIFont.systemFont(ofSize: 12),],
             textColors: [UIColor.gray, UIColor.black, UIColor.gray, UIColor.black])
-
+        
         
         
         // Create PDF Table
         while currentPageArrayStart + 9 < cellNumber {
-
+            
             pdf.setContentAlignment(.center)
             pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
-
+            
             
             pdf.setContentAlignment(.left)
-
+            
             let columnCount = 4
             let currentPageArray = question.questionArray[currentPageArrayStart...currentPageArrayStart + 9]
             pdf.addTable(currentPageArray.count, columnCount: columnCount, rowHeight: 70.0, tableLineWidth: 0, tableDefinition: tableDef, dataArray: Array(currentPageArray))
@@ -214,15 +221,15 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             pdf.addLineSpace(40)
             pdf.addLineSeparator(height: 0.1)
             pdf.addLineSpace(4)
-
-          pdf.beginHorizontalArrangement()
+            
+            pdf.beginHorizontalArrangement()
             pdf.setContentAlignment(.left)
             // page number
             pdf.addText("Page \(currentPageNumber)/\(pageNumber)", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
             
             pdf.setContentAlignment(.center)
             pdf.addText("For answer keys, scan barcode using the PaperMath app.", font: UIFont.systemFont(ofSize: 8), textColor: UIColor.black)
-
+            
             pdf.endHorizontalArrangement()
             pdf.addLineSpace(4)
             
@@ -250,7 +257,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 
                 return newImage!
             }
-
+            
             let codeGenerator = FCBBarCodeGenerator()
             let size = CGSize(width: 180, height: 20)
             let code = worksheetAnswerCode.map{String($0)}.joined()
@@ -258,14 +265,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             pdf.beginHorizontalArrangement()
             
-  
+            
             
             pdf.setContentAlignment(.center)
             // bar code
             if let image = codeGenerator.barcode(code: code, type: type, size: size) {
                 pdf.addImage(image)
             }
-           
+            
             
             pdf.setContentAlignment(.right)
             // app store icon
@@ -315,7 +322,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Printed"])
         Flurry.logEvent("Worksheet Printed", withParameters: getLogOperations())
         print(getLogOperations())
-
+        
         
         let printController = UIPrintInteractionController.shared
         let printInfo = UIPrintInfo(dictionary : nil)
@@ -339,7 +346,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Exported"])
         Flurry.logEvent("Worksheet Exported", withParameters: getLogOperations())
         print(getLogOperations())
-
+        
         
         loadSimplePDF()
         loadPDFAndShare()

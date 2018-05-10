@@ -49,7 +49,7 @@ class Difficulty {
             bMax = 10
         } else if difficulty == 1 {
             aMin = 10
-            aMax = 1000
+            aMax = 100
             bMin = 10
             bMax = 100
         } else if difficulty == 2 {
@@ -121,29 +121,29 @@ class Difficulty {
     
     func OperationDifficultyFraction() {
         if difficulty == 0 {
-            nLMin = 2
+            nLMin = 1
             nLMax = 10
             dLMin = 2
             dLMax = 10
-            nRMin = 2
+            nRMin = 1
             nRMax = 10
             dRMin = 2
             dRMax = 10
         } else if difficulty == 1 {
-            nLMin = 2
+            nLMin = 1
             nLMax = 10
             dLMin = 2
             dLMax = 10
-            nRMin = 2
+            nRMin = 1
             nRMax = 10
             dRMin = 2
             dRMax = 10
         } else if difficulty == 2 {
-            nLMin = 2
+            nLMin = 1
             nLMax = 10
             dLMin = 2
             dLMax = 20
-            nRMin = 2
+            nRMin = 1
             nRMax = 10
             dRMin = 2
             dRMax = 20
@@ -156,27 +156,27 @@ class Difficulty {
             dPMax = 1
             dPMulMin = 0
             dPMulMax = 1
-            numberAMin = 2
+            numberAMin = 1
             numberAMax = 10
-            numberBMin = 2
+            numberBMin = 1
             numberBMax = 10
         } else if difficulty == 1 {
             dPMin = 1
             dPMax = 2
             dPMulMin = 0
             dPMulMax = 1
-            numberAMin = 2
+            numberAMin = 10
             numberAMax = 20
-            numberBMin = 2
+            numberBMin = 10
             numberBMax = 20
         } else if difficulty == 2 {
             dPMin = 1
             dPMax = 3
             dPMulMin = 0
             dPMulMax = 2
-            numberAMin = 2
+            numberAMin = 10
             numberAMax = 100
-            numberBMin = 2
+            numberBMin = 10
             numberBMax = 100
         }
     }

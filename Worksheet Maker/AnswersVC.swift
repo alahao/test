@@ -18,7 +18,7 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let operation = Operation()
     var cellNumber = 2
     var pageNumber : Int? = 1
-    var cellHeight = 40
+    var cellHeight = 50
     
     @IBOutlet weak var scanCode: UIButton!
     @IBOutlet weak var answerTableView: UITableView!
@@ -54,14 +54,14 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("generate page")
         
         
-            question.questionArray.removeAll()
-            questionNumber = 0
-            print("$ new cell number is \(cellNumber)")
-            cellNumber = 10 * pageNumber!
+        question.questionArray.removeAll()
+        questionNumber = 0
+        print("$ new cell number is \(cellNumber)")
+        cellNumber = 10 * pageNumber!
         if cellNumber > 0 {
             for _ in 1...cellNumber {
-            question.questionArray.append(operation.runOperation())
-            
+                question.questionArray.append(operation.runOperation())
+                
             }
             self.answerTableView.reloadData()
         }}
@@ -77,10 +77,24 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerSheetCell", for: indexPath) as! TableViewAnswerCell
         //Display Anwsers
+        
+        // Display attributed Answer in bold
+        func setAttributedString(questionArrayRow : Int, answerArrayRow : Int) -> NSAttributedString {
+            let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 11)]
+            let yourOtherAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)]
+            let attributedString = NSMutableAttributedString(string: String(question.questionArray[indexPath.row][questionArrayRow]), attributes: yourAttributes)
+            let partTwo = NSMutableAttributedString(string: String(question.questionArray[indexPath.row][answerArrayRow]), attributes: yourOtherAttributes)
+            attributedString.append(partTwo)
+            
+            return attributedString
+        }
+        
         cell.setLQN.text = String(describing: question.questionArray[indexPath.row][0])
-        cell.setLQ.text = "\(question.questionArray[indexPath.row][1] + question.questionArray[indexPath.row][4])"
+        cell.setLQ.attributedText = setAttributedString(questionArrayRow: 1, answerArrayRow: 4)
+        
+        
         cell.setRQN.text = String(describing: question.questionArray[indexPath.row][2])
-        cell.setRQ.text = "\(question.questionArray[indexPath.row][3] + question.questionArray[indexPath.row][5])"
+        cell.setRQ.attributedText = setAttributedString(questionArrayRow: 3, answerArrayRow: 5)
         return cell
     }
     
@@ -166,7 +180,7 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         worksheetAnswerCode = code.compactMap{Int(String($0))}
         print("$$worksheetAnswerCode: \(worksheetAnswerCode), code is: \(code)")
-
+        
         
         enum codeError : Error {
             case invalidA
@@ -224,13 +238,13 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             
             Flurry.logEvent("Scanned Answer Code", withParameters: printParams)
             Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Scanned"])
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 controller.dismiss(animated: true, completion: nil)
             }
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-//                controller.resetWithError(message: "Invalid Barcode")
-//            }
+            //            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            //                controller.resetWithError(message: "Invalid Barcode")
+            //            }
         }
         
         
