@@ -66,7 +66,8 @@ class Operation {
     func runOperation() -> [String] {
         assignOperation()
         var result = [""]
-        let shuffledOperation = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: operationArray)
+        let lcg = GKLinearCongruentialRandomSource(seed: answerSeedNumber)
+        let shuffledOperation = lcg.arrayByShufflingObjects(in: operationArray)
         operation = shuffledOperation[0] as! Int
         
         if operation <= 3 {

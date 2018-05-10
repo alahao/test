@@ -15,6 +15,7 @@ var numberOperation = ""
 var questionNumber = 0
 var seedOperation = [0,0,0,0,0,0]
 let answerSeed : GKMersenneTwisterRandomSource? = GKMersenneTwisterRandomSource()
+var answerSeedNumber : UInt64 = 0
 var worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -25,7 +26,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var worksheetTableView: UITableView!
     
     // VARIBLES
-    var answerSeedNumber : UInt64 = 0
     var numberOne = 0
     var numberTwo = 0
     var numberAnswer = 0
