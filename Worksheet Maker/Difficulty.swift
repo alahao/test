@@ -56,7 +56,7 @@ class Difficulty {
             aMin = 10
             aMax = 10000
             bMin = 10
-            bMax = 10000
+            bMax = 1000
         }
     }
     
@@ -70,30 +70,30 @@ class Difficulty {
             aMin = 10
             aMax = 100
             bMin = 10
-            bMax = 1000
+            bMax = 100
         } else if difficulty == 2 {
             aMin = 10
             aMax = 10000
             bMin = 10
-            bMax = 10000
+            bMax = 1000
         }
     }
     
     
     func OperationDifficultyTimes() {
         if difficulty == 0 {
-            aMin = 1
+            aMin = 2
             aMax = 10
-            bMin = 1
+            bMin = 2
             bMax = 10
         } else if difficulty == 1 {
             aMin = 10
             aMax = 100
-            bMin = 10
-            bMax = 50
+            bMin = 2
+            bMax = 10
         } else if difficulty == 2 {
             aMin = 10
-            aMax = 10000
+            aMax = 1000
             bMin = 10
             bMax = 100
         }

@@ -97,7 +97,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 var resultArray = operation.runOperation()
                 print("$$$resultArray: \(resultArray)")
                 print("$$$questionArray: \(question.questionArray.suffix(2))")
-                if question.questionArray.suffix(20).contains(where: { $0.contains(resultArray[1]) }) || question.questionArray.suffix(20).contains(where: { $0.contains(resultArray[3]) }) {
+                if question.questionArray.suffix(20).contains(where: { $0.contains(resultArray[1]) }) || question.questionArray.suffix(20).contains(where: { $0.contains(resultArray[3]) }) || resultArray[1] == resultArray [3] {
                     print("$$$caught duplicated questions")
                     questionNumber = questionNumber - 2
                     checkDuplicate()

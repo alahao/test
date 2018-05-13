@@ -62,18 +62,15 @@ class Operation {
     var decNumberOpertaionSignR = ""
     var operationArray = [0]
     
-//    func duplicatedQuestion() -> [String]{
-//        questionNumber = questionNumber - 2
-//        return runOperation()
-//    }
    
     
     func runOperation() -> [String] {
         assignOperation()
         var result = [""]
-        let lcg = GKLinearCongruentialRandomSource(seed: answerSeedNumber)
-        let shuffledOperation = lcg.arrayByShufflingObjects(in: operationArray)
-        operation = shuffledOperation[0] as! Int
+
+        let randomArrayIndex = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: operationArray.count - 1).nextInt()
+        operation = operationArray[randomArrayIndex]
+//        print("shuffledOperation: \(operation), operationArray: \(operationArray), randomArrayIndex: \(randomArrayIndex), count: \(operationArray.count)")
         
         if operation <= 3 {
             result = CalculatePMTD()
