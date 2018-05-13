@@ -11,6 +11,7 @@ import Flurry_iOS_SDK
 
 var currentSwitch = 0
 var selectedOpertaions = ["plus": true, "minus": false, "multiplication": false, "division": false, "fraction": false, "decimal": false]
+var selectedButtons = ["plus": true, "minus": false, "multiplication": false, "division": false, "fraction": false, "decimal": false]
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -98,13 +99,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buttonPlus(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "plus")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "plus")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
@@ -112,13 +109,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buttonMinus(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "minus")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "minus")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
@@ -126,26 +119,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buttonMul(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "multiplication")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "multiplication")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
     @IBAction func buttonDiv(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "division")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "division")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
@@ -153,13 +138,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buttonFraction(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "fraction")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "fraction")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
@@ -167,13 +148,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buttonDec(_ sender: UIButton) {
         if sender.isSelected == true {
             sender.isSelected = false
-            selectedOpertaions.updateValue(false, forKey: "decimal")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            selectedOpertaions.updateValue(true, forKey: "decimal")
-            print("$selectedOperations is \(selectedOpertaions)")
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         }
     }
@@ -181,6 +158,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     // GENERATE BUTTON
     @IBAction func generatePressed(_ sender: Any) {
+        checkSelectedButtons()
         checkEmptySelection()
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Generate Button Pressed"])
@@ -199,12 +177,47 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+// ****  CHECK BUTTONS
+    func checkSelectedButtons() {
+        
+        selectedOpertaions = ["plus": false, "minus": false, "multiplication": false, "division": false, "fraction": false, "decimal": false]
+        selectedButtons = ["plus": false, "minus": false, "multiplication": false, "division": false, "fraction": false, "decimal": false]
+        
+        if buttonPlusColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "plus")
+            selectedButtons.updateValue(true, forKey: "plus")
+        }
+        if buttonMinusColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "minus")
+            selectedButtons.updateValue(true, forKey: "minus")
+        }
+        if buttonMultiplicationColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "multiplication")
+            selectedButtons.updateValue(true, forKey: "multiplication")
+        }
+        if buttonDivisionColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "division")
+            selectedButtons.updateValue(true, forKey: "division")
+        }
+        if buttonFractionColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "fraction")
+            selectedButtons.updateValue(true, forKey: "fraction")
+        }
+        if buttonDecimalColor.isSelected {
+            selectedOpertaions.updateValue(true, forKey: "decimal")
+            selectedButtons.updateValue(true, forKey: "decimal")
+        }
+        print("$*Check Buttons Result, Button: \(selectedOpertaions)")
+        print("$*Operation: \(selectedOpertaions)")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Main Menu"])
+        
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
-        selectedOpertaions["plus"] = true
+//        selectedOpertaions["plus"] = true
         print("$selectedOperation:\(selectedOpertaions), $worksheetAnswerCode: \(worksheetAnswerCode)")
         
         
