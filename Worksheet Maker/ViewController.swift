@@ -217,7 +217,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
         buttonPlusColor.isSelected = true
-//        selectedOpertaions["plus"] = true
         print("$selectedOperation:\(selectedOpertaions), $worksheetAnswerCode: \(worksheetAnswerCode)")
         
         
