@@ -124,6 +124,18 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     // Prepare Event for Flurry
     func getLogOperations() -> [String : String] {
         
+        var difficultyString = ""
+        switch difficulty {
+        case 0:
+            difficultyString = "Beginner"
+        case 1:
+            difficultyString = "Intermediate"
+        case 2:
+            difficultyString = "Advanced"
+        default:
+            difficultyString = "Invalid"
+        }
+        
         //Pl,Mi,Mu,Di,Fr,De
         var logOperation = [String]()
         if selectedOpertaions["plus"] == true {
@@ -145,7 +157,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             logOperation.append("De")
         }
         
-        let params = ["Difficulty": String(difficulty!), "Page Number": String(pageNumber), "Seed": String(answerSeedNumber), "Operation": logOperation.map{String($0)}.joined(separator: " ")]
+        logOperation.append(difficultyString)
+        
+        
+        let params = ["Difficulty": difficultyString, "Page Number": String(pageNumber), "Seed": String(answerSeedNumber), "Operation": logOperation.map{String($0)}.joined(separator: " ")]
         
         return params
     }
@@ -207,7 +222,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         while currentPageArrayStart + 9 < cellNumber {
             
             pdf.setContentAlignment(.center)
-            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Baskerville", size: 20)!, textColor: UIColor.black)
+            pdf.addText("PaperMath Worksheet", font: UIFont(name: "TrebuchetMS-Bold", size: 20)!, textColor: UIColor.black)
             
             
             pdf.setContentAlignment(.left)

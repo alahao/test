@@ -80,11 +80,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-//        pickerLabel.textColor = UIColor(red: 76.0/255.0, green: 153.0/255.0, blue: 207.0/255.0, alpha: 1.0)
-        pickerLabel.textColor = UIColor(named: "ColorPrimary")
 
+        pickerLabel.textColor = UIColor(named: "ColorPrimary")
         pickerLabel.text = pagePickersPage[row] + pagePickrsQuestion[row]
-        pickerLabel.font = UIFont.boldSystemFont(ofSize: 16)
+//        pickerLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        pickerLabel.font = UIFont(name: "TrebuchetMS", size: 16)
+        pickerLabel.textColor = UIColor(named: "ColorPrimary")
         pickerLabel.textAlignment = .center
         return pickerLabel
     }
@@ -95,9 +96,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        let pickerLabel = UILabel()
-//        pickerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-//        selectedPageNumber = row + 1
+
     }
     
     
@@ -217,15 +216,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print("$*Check Buttons Result, Button: \(selectedOpertaions)")
         print("$*Operation: \(selectedOpertaions)")
     }
+  
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let font: [AnyHashable : Any] = [NSAttributedStringKey.font : UIFont(name: "TrebuchetMS-Bold", size: 16)]
+        segmentControl.setTitleTextAttributes(font, for: .normal)
         
-//        buttonPlusColor.layer.shadowOpacity = 0.2
-//        buttonPlusColor.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
-//        buttonPlusColor.layer.shadowRadius = 5.0
-//        buttonPlusColor.layer.shadowColor = UIColor.black.cgColor
+    
+        
         buttonPlusColor.backgroundColor = UIColor(named: "ColorPrimary")
         buttonPlusColor.isSelected = true
         print("$selectedOperation:\(selectedOpertaions), $worksheetAnswerCode: \(worksheetAnswerCode)")

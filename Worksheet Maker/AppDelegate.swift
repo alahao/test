@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
             
         //FLURRY BY YAHOO
-        Flurry.startSession("3BP6JVF4Q62S6H5Y4VMY", with: FlurrySessionBuilder
+        Flurry.startSession("46X4MVHRF549PP9984M3", with: FlurrySessionBuilder
             .init()
             .withCrashReporting(true)
             .withLogLevel(FlurryLogLevelAll))

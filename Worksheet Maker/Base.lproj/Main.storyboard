@@ -205,7 +205,7 @@
                                     <constraint firstAttribute="width" constant="200" id="7QE-O9-Fvh"/>
                                     <constraint firstAttribute="height" constant="40" id="fy7-Pn-yIy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                 <color key="tintColor" red="0.9624421742" green="0.97891123859999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Generate"/>
                                 <userDefinedRuntimeAttributes>
@@ -298,7 +298,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dub-EO-8I3">
                                                 <rect key="frame" x="60" y="0.0" width="215" height="40"/>
                                                 <color key="backgroundColor" name="ColorAccent"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                                 <color key="tintColor" red="0.96244217421391676" green="0.97891123855229789" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Print"/>
                                                 <userDefinedRuntimeAttributes>
@@ -358,8 +358,8 @@
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="15" id="fso-k1-20H"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                            <color key="textColor" name="ColorDefaultGray"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                                                            <color key="textColor" name="ColorPrimary"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-at-pjg">
@@ -378,8 +378,8 @@
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="15" id="kdM-yZ-4aV"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                            <color key="textColor" name="ColorDefaultGray"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                                                            <color key="textColor" name="ColorPrimary"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-fF-LsA" userLabel="Number Three Label">
@@ -478,7 +478,7 @@ feedback@prettymotion.com
 Thank you!</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.17839146976629053" green="0.28882634512719274" blue="0.41839244378306883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <font key="NSFont" size="15" name="TrebuchetMS"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -488,7 +488,10 @@ Thank you!</string>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-Zc-4GI">
                                         <rect key="frame" x="0.0" y="562" width="295" height="48"/>
-                                        <state key="normal" title="Difficulty Level Reference Chart"/>
+                                        <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="17"/>
+                                        <state key="normal" title="Difficulty Level Reference Chart">
+                                            <color key="titleColor" name="ColorPrimary"/>
+                                        </state>
                                         <connections>
                                             <segue destination="S6c-8H-BFN" kind="show" id="ofw-zj-HDx"/>
                                         </connections>
@@ -532,7 +535,7 @@ Thank you!</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rog-Q4-iKf">
                                         <rect key="frame" x="290" y="4" width="25" height="25"/>
-                                        <color key="tintColor" name="Blue"/>
+                                        <color key="tintColor" name="ColorDefaultGray"/>
                                         <state key="normal" image="icons8-info-50.png">
                                             <color key="titleColor" red="0.29920160769999998" green="0.60023695229999996" blue="0.81237965820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -658,10 +661,15 @@ Thank you!</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qSs-0E-bNq" secondAttribute="height" multiplier="55:100" id="lbW-tc-zmU"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find barcode at the bottom of your worksheet printout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiC-5e-ERg">
-                                <rect key="frame" x="50" y="138" width="275" height="39.666666666666657"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode can be located at the bottom of your worksheet printout." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiC-5e-ERg">
+                                <rect key="frame" x="50" y="138" width="275" height="37.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="16"/>
                                 <color key="textColor" name="ColorDefaultGray"/>
                                 <nil key="highlightedColor"/>
                             </label>

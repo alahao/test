@@ -11,5 +11,6 @@ pod 'SimplePDF'
 pod 'BarcodeScanner'
 pod 'Firebase/Core'
 pod 'Flurry-iOS-SDK/FlurrySDK'
+pod 'NVActivityIndicatorView'
 
 end
