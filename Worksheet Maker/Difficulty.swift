@@ -73,7 +73,7 @@ class Difficulty {
             bMax = 100
         } else if difficulty == 2 {
             aMin = 10
-            aMax = 10000
+            aMax = 1000
             bMin = 10
             bMax = 1000
         }
@@ -167,8 +167,8 @@ class Difficulty {
             dPMulMax = 1
             numberAMin = 10
             numberAMax = 20
-            numberBMin = 10
-            numberBMax = 20
+            numberBMin = 1
+            numberBMax = 9
         } else if difficulty == 2 {
             dPMin = 1
             dPMax = 3
@@ -176,8 +176,8 @@ class Difficulty {
             dPMulMax = 2
             numberAMin = 10
             numberAMax = 100
-            numberBMin = 10
-            numberBMax = 100
+            numberBMin = 1
+            numberBMax = 9
         }
     }
     

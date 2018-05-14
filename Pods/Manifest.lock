@@ -23,16 +23,20 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
   - SimplePDF (3.0.0)
 
 DEPENDENCIES:
   - BarcodeScanner
   - Firebase/Core
   - Flurry-iOS-SDK/FlurrySDK
+  - NVActivityIndicatorView
   - SimplePDF
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - BarcodeScanner
     - Firebase
     - FirebaseAnalytics
@@ -41,6 +45,7 @@ SPEC REPOS:
     - Flurry-iOS-SDK
     - GoogleToolboxForMac
     - nanopb
+    - NVActivityIndicatorView
     - SimplePDF
 
 SPEC CHECKSUMS:
@@ -52,8 +57,9 @@ SPEC CHECKSUMS:
   Flurry-iOS-SDK: 7ffff02e583c73f7cad41cffb4ffe8b8d9f0421f
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   SimplePDF: 903143ede36965886997a5c1bc6b8940b082ba20
 
-PODFILE CHECKSUM: 2c77279c9994a8546f2edc53e1f984848384a2a9
+PODFILE CHECKSUM: 566fbea7acbd417f5e370a0a501239f9b214d70a
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2
