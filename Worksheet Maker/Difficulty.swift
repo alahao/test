@@ -106,12 +106,12 @@ class Difficulty {
             bMin = 1
             bMax = 10
         } else if difficulty == 1 {
-            aMin = 2
+            aMin = 8
             aMax = 20
             bMin = 2
             bMax = 20
         } else if difficulty == 2 {
-            aMin = 10
+            aMin = 8
             aMax = 50
             bMin = 10
             bMax = 50
@@ -139,13 +139,13 @@ class Difficulty {
             dRMin = 2
             dRMax = 10
         } else if difficulty == 2 {
-            nLMin = 1
-            nLMax = 10
-            dLMin = 2
+            nLMin = 10
+            nLMax = 20
+            dLMin = 10
             dLMax = 20
-            nRMin = 1
-            nRMax = 10
-            dRMin = 2
+            nRMin = 10
+            nRMax = 20
+            dRMin = 10
             dRMax = 20
         }
     }

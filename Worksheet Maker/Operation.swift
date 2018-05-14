@@ -193,11 +193,6 @@ class Operation {
             difficultySetting.OperationDifficultyFraction()
             randomOperationSign = GKRandomDistribution(randomSource: answerSeed!, lowestValue: 0, highestValue: 5).nextInt()
             if difficulty == 0 {
-                numberOpertaionSign = "+"
-                fOneAnswerN = fLN * fRD + fRN * fLD
-                fOneAnswerD = fLD * fRD
-            }
-            else if difficulty == 1 {
                 if randomOperationSign < 4 {
                     numberOpertaionSign = "+"
                     fOneAnswerN = fLN * fRD + fRN * fLD
@@ -208,6 +203,27 @@ class Operation {
                     fOneAnswerD = fLD
                     fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
                     fLD = fOneAnswerD * fRD
+                }
+            }
+            else if difficulty == 1 {
+                if randomOperationSign < 2 { //make + and - more likely to happen
+                    numberOpertaionSign = "+"
+                    fOneAnswerN = fLN * fRD + fRN * fLD
+                    fOneAnswerD = fLD * fRD
+                } else if randomOperationSign == 2 || randomOperationSign == 3 {
+                    numberOpertaionSign = "-"
+                    fOneAnswerN = fLN
+                    fOneAnswerD = fLD
+                    fLN = fOneAnswerN * fRD + fRN * fOneAnswerD
+                    fLD = fOneAnswerD * fRD
+                } else if randomOperationSign == 4 {
+                    numberOpertaionSign = "×"
+                    fOneAnswerN = fLN * fRN
+                    fOneAnswerD = fLD * fRD
+                } else if randomOperationSign == 5 {
+                    numberOpertaionSign = "÷"
+                    fOneAnswerN = fLN * fRD
+                    fOneAnswerD = fLD * fRN
                 }
             }
             else if difficulty == 2 {

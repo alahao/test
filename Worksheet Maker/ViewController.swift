@@ -72,6 +72,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var buttonDivisionColor: UIButton!
     @IBOutlet weak var buttonFractionColor: UIButton!
     @IBOutlet weak var buttonDecimalColor: UIButton!
+    @IBOutlet weak var selectedPickView: UIPickerView!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -79,9 +80,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor(red: 76.0/255.0, green: 153.0/255.0, blue: 207.0/255.0, alpha: 1.0)
+//        pickerLabel.textColor = UIColor(red: 76.0/255.0, green: 153.0/255.0, blue: 207.0/255.0, alpha: 1.0)
+        pickerLabel.textColor = UIColor(named: "ColorPrimary")
+
         pickerLabel.text = pagePickersPage[row] + pagePickrsQuestion[row]
-        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 18)
+        pickerLabel.font = UIFont.boldSystemFont(ofSize: 16)
         pickerLabel.textAlignment = .center
         return pickerLabel
     }
@@ -92,7 +95,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPageNumber = row + 1
+//        let pickerLabel = UILabel()
+//        pickerLabel.font = UIFont.boldSystemFont(ofSize: 20)
+//        selectedPageNumber = row + 1
     }
     
     
@@ -102,7 +107,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     
@@ -112,7 +117,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     
@@ -122,7 +127,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     @IBAction func buttonDiv(_ sender: UIButton) {
@@ -131,7 +136,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     
@@ -141,7 +146,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     
@@ -151,7 +156,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             sender.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         } else {
             sender.isSelected = true
-            sender.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+            sender.backgroundColor = UIColor(named: "ColorPrimary")
         }
     }
     
@@ -160,6 +165,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func generatePressed(_ sender: Any) {
         checkSelectedButtons()
         checkEmptySelection()
+        selectedPageNumber = selectedPickView.selectedRow(inComponent: 0) + 1
+        print("$*selectedPage:\(selectedPageNumber)")
         performSegue(withIdentifier: "segueCreateWorkSheet", sender: self)
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Generate Button Pressed"])
     }
@@ -215,7 +222,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonPlusColor.backgroundColor = UIColor(red: 255.0/255.0, green: 169.0/255.0, blue: 12.0/255.0, alpha: 1.0)
+//        buttonPlusColor.layer.shadowOpacity = 0.2
+//        buttonPlusColor.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+//        buttonPlusColor.layer.shadowRadius = 5.0
+//        buttonPlusColor.layer.shadowColor = UIColor.black.cgColor
+        buttonPlusColor.backgroundColor = UIColor(named: "ColorPrimary")
         buttonPlusColor.isSelected = true
         print("$selectedOperation:\(selectedOpertaions), $worksheetAnswerCode: \(worksheetAnswerCode)")
         

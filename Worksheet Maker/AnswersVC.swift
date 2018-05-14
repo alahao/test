@@ -132,21 +132,6 @@ class AnswersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension UIViewController {
-    func hideKeyboard()
-    {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(UIViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard()
-    {
-        view.endEditing(true)
-    }
-}
 
 
 // MARK: - BarcodeScannerCodeDelegate
@@ -253,12 +238,10 @@ extension AnswersVC: BarcodeScannerCodeDelegate {
             Flurry.logEvent("Scanned Answer Code", withParameters: printParams)
             Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Scanned"])
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                 controller.dismiss(animated: true, completion: nil)
             }
-            //            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            //                controller.resetWithError(message: "Invalid Barcode")
-            //            }
+
         }
         
         
