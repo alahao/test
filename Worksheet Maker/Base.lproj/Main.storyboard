@@ -159,7 +159,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q84-yC-PB7">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="94.333333333333329"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="17"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Fraction">
                                                             <color key="titleColor" name="ColorDefaultGray"/>
@@ -177,7 +177,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhy-sW-XDT">
                                                         <rect key="frame" x="170" y="0.0" width="150" height="94.333333333333329"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="17"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Decimal">
                                                             <color key="titleColor" name="ColorDefaultGray"/>
@@ -467,7 +467,7 @@
                                 <rect key="frame" x="40" y="128" width="295" height="610"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRn-75-54I">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="528"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="562"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">PaperMath makes it super easy to print math worksheet for your young math learners with a few taps.   We believe by printing math worksheet, parents can help kids to spend less time on screens, and increase the efficiency of basic math practicing.
@@ -487,7 +487,7 @@ Thank you!</string>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" lookupSuggestion="YES"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-Zc-4GI">
-                                        <rect key="frame" x="0.0" y="528" width="295" height="82"/>
+                                        <rect key="frame" x="0.0" y="562" width="295" height="48"/>
                                         <state key="normal" title="Difficulty Level Reference Chart"/>
                                         <connections>
                                             <segue destination="S6c-8H-BFN" kind="show" id="ofw-zj-HDx"/>
@@ -1175,10 +1175,6 @@ Thank you!</string>
                         <color key="barTintColor" name="ColorBackground"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="20"/>
-                            <color key="textColor" name="ColorDefaultGray"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="30"/>
                             <color key="textColor" name="ColorDefaultGray"/>
                         </textAttributes>
                     </navigationBar>
