@@ -10,6 +10,8 @@ import UIKit
 import SimplePDF
 import GameKit
 import Flurry_iOS_SDK
+import Firebase
+
 
 var numberOperation = ""
 var questionNumber = 0
@@ -19,6 +21,9 @@ var answerSeedNumber : UInt64 = 0
 var worksheetAnswerCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var activityInd: UIActivityIndicatorView!
+    
     @IBOutlet weak var answerButton: UIBarButtonItem!
     let question = questionArray()
     let operation = Operation()
@@ -78,6 +83,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     // 1. VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityInd.isHidden = true
         generatingPage()
         worksheetTableView.delegate = self
         worksheetTableView.dataSource = self
@@ -112,13 +118,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         worksheetAnswerCode = stringWorksheetAnswerCode.compactMap{Int(String($0))}
         print("$worksheetAnswerCode is \(worksheetAnswerCode.map{String($0)}.joined())")
         
-        
-        
         // FLURRY
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Generated"])
         Flurry.logEvent("Worksheet Generated", withParameters: getLogOperations())
-        print(getLogOperations())
-        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(title!)",
+            AnalyticsParameterItemName: title!,
+            AnalyticsParameterContentType: "cont"
+            ])
     }
     
     // Prepare Event for Flurry
@@ -209,7 +216,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         let tableDef = TableDefinition (
             alignments: [.center],
-            columnWidths: [20, 220, 20, 220],
+            columnWidths: [20, 280, 20, 280],
             fonts: [UIFont.systemFont(ofSize: 8),
                     UIFont.systemFont(ofSize: 12),
                     UIFont.systemFont(ofSize: 8),
@@ -222,7 +229,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         while currentPageArrayStart + 9 < cellNumber {
             
             pdf.setContentAlignment(.center)
-            pdf.addText("PaperMath Worksheet", font: UIFont(name: "TrebuchetMS-Bold", size: 20)!, textColor: UIColor.black)
+            pdf.addText("PaperMath Worksheet", font: UIFont(name: "Trebuchet-BoldItalic", size: 20)!, textColor: UIColor.black)
             
             
             pdf.setContentAlignment(.left)
@@ -240,10 +247,10 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             pdf.beginHorizontalArrangement()
             pdf.setContentAlignment(.left)
             // page number
-            pdf.addText("Page \(currentPageNumber)/\(pageNumber)", font: UIFont.systemFont(ofSize: 10), textColor: UIColor.black)
+            pdf.addText("Page \(currentPageNumber)/\(pageNumber)", font: UIFont(name: "TrebuchetMS-Bold", size: 10)!, textColor: UIColor.black)
             
             pdf.setContentAlignment(.center)
-            pdf.addText("For answer keys, scan barcode using the PaperMath app.", font: UIFont.systemFont(ofSize: 8), textColor: UIColor.black)
+            pdf.addText("For answer keys, scan barcode using the PaperMath app.", font: UIFont(name: "Trebuchet-BoldItalic", size: 8)!, textColor: UIColor.black)
             
             pdf.endHorizontalArrangement()
             pdf.addLineSpace(4)
@@ -313,13 +320,14 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // Load PDF
     func loadPDFAndShare() {
+        startActivityInd()
         let fileManager = FileManager.default
         
         if fileManager.fileExists(atPath: docURL.path){
             
             let activityViewController = UIActivityViewController (activityItems: [docURL], applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
-            present(activityViewController, animated: true, completion: nil)
+            present(activityViewController, animated: true, completion: endActivityInd)
         }
         else {
             print("# Document was not found")
@@ -333,11 +341,11 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     //Share Button Pressed
     @IBAction func sendToPrint(_ sender: UIButton) {
+
         loadSimplePDF()
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Printed"])
         Flurry.logEvent("Worksheet Printed", withParameters: getLogOperations())
         print(getLogOperations())
-        
         
         let printController = UIPrintInteractionController.shared
         let printInfo = UIPrintInfo(dictionary : nil)
@@ -347,6 +355,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         printController.printInfo = printInfo
         printController.printingItem = docURL
         printController.present(animated : true, completionHandler : nil)
+
     }
     
     @IBAction func PDFRefresh(_ sender: Any) {
@@ -355,16 +364,27 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         question.questionArray.removeAll()
         generatingPage()
         self.worksheetTableView.reloadData()
+
     }
     
     @IBAction func PDFExport(_ sender: Any) {
+
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Exported"])
         Flurry.logEvent("Worksheet Exported", withParameters: getLogOperations())
         print(getLogOperations())
-        
-        
+
         loadSimplePDF()
         loadPDFAndShare()
+    }
+    
+    func startActivityInd() {
+        activityInd.isHidden = false
+        activityInd.startAnimating()
+    }
+    
+    func endActivityInd() {
+        activityInd.isHidden = true
+        activityInd.stopAnimating()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

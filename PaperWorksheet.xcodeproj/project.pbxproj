@@ -34,6 +34,7 @@
 		3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */; };
 		3D9D932020A2B1EA00965C21 /* IMG_0280.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D931F20A2B1EA00965C21 /* IMG_0280.PNG */; };
 		3D9D932220A2B32000965C21 /* icons8-screenshot-filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D932120A2B32000965C21 /* icons8-screenshot-filled-100@3x.png */; };
+		3DAAD18420AB6AE000B241FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */; };
 		3DF9EE8A209AB49C00FD00CE /* FCBBarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */; };
 		3DF9EE8C209AC7D300FD00CE /* icons8-barcode-scanner-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */; };
 		3DF9EE8E209D047800FD00CE /* icons8-screenshot-filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE8D209D047700FD00CE /* icons8-screenshot-filled-30.png */; };
@@ -77,6 +78,7 @@
 		3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksheetVC.swift; sourceTree = "<group>"; };
 		3D9D931F20A2B1EA00965C21 /* IMG_0280.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0280.PNG; path = ../../../../PaperMath/ASSETS/IMG_0280.PNG; sourceTree = "<group>"; };
 		3D9D932120A2B32000965C21 /* icons8-screenshot-filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-screenshot-filled-100@3x.png"; path = "../../../../../Downloads/icons8-screenshot-filled-100@3x.png"; sourceTree = "<group>"; };
+		3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBBarCodeGenerator.swift; sourceTree = "<group>"; };
 		3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-barcode-scanner-25.png"; sourceTree = "<group>"; };
 		3DF9EE8D209D047700FD00CE /* icons8-screenshot-filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-screenshot-filled-30.png"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */,
 				3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */,
 				3D8496F21FAF994500CCCE55 /* AppDelegate.swift */,
+				3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */,
 				3D0968E51FB5E2B700570933 /* Assets */,
 			);
 			path = "Worksheet Maker";
@@ -271,6 +274,7 @@
 				3DF9EE98209D4BA400FD00CE /* App_Store_Badge_US_300@3x.png in Resources */,
 				3D53F2D02054A0EB00679CD9 /* icons8-print-filled-100.png in Resources */,
 				3D53F2D22054A0EB00679CD9 /* icons8-export-pdf-filled-100.png in Resources */,
+				3DAAD18420AB6AE000B241FD /* GoogleService-Info.plist in Resources */,
 				3D2270A120886A9A00ACF235 /* icons8-test-passed-25.png in Resources */,
 				3DF9EE8E209D047800FD00CE /* icons8-screenshot-filled-30.png in Resources */,
 				3D53F2D12054A0EB00679CD9 /* icons8-add-list-filled-100.png in Resources */,
@@ -308,7 +312,6 @@
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SimplePDF/SimplePDF.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -317,7 +320,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimplePDF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

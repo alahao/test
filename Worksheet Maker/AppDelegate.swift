@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Flurry_iOS_SDK
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .withCrashReporting(true)
             .withLogLevel(FlurryLogLevelAll))
         
-//        Flurry.setDebugLogEnabled:YES
+        //Flurry.setDebugLogEnabled:YES
+        
+        //FireBase
+        FirebaseApp.configure()
+        
         return true
     }
 
