@@ -4,35 +4,115 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Worksheet Maker.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>SimplePDF.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>SwiftyStoreKit.xcscheme</key>
+		<key>BarcodeScanner-BarcodeScanner.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BarcodeScanner-Localization.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>BarcodeScanner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>FirebaseCore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>FirebaseDatabase.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Flurry-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Pods-PaperWorksheet.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>SimplePDF.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08C74C6635FB23D0068DED6C6570F107</key>
+		<key>1BC96BED8E82CC4984352C8705A764D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDF3CA571BB2F1B8B3FC48F7D058776A</key>
+		<key>49E78D73ADA9A4586E44317A96CCD0E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBCC628130BC94D1F8069EFE1CC64DE0</key>
+		<key>62FABD757FE4DF7B87CB5ACCAE424F36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8BA09793296C66FCE318826E8C2E9FA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C194D5E546C32BB634B5BBEF26DEFC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>947EADB4BCCA5FD2D9EA1A3B18A59979</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9938F3058E6013FAB6444C41E86DC9E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAE12E9C1D04A409B9BD189020043E4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3535EDFA606E7F458C510BC81D8F03A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCFF857B29A61E3BCDA7C64D9C616D21</key>
 		<dict>
 			<key>primary</key>
 			<true/>

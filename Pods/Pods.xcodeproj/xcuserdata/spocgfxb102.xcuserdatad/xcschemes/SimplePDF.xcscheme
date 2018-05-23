@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBCC628130BC94D1F8069EFE1CC64DE0"
+               BlueprintIdentifier = "947EADB4BCCA5FD2D9EA1A3B18A59979"
                BuildableName = "SimplePDF.framework"
                BlueprintName = "SimplePDF"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FBCC628130BC94D1F8069EFE1CC64DE0"
+            BlueprintIdentifier = "947EADB4BCCA5FD2D9EA1A3B18A59979"
             BuildableName = "SimplePDF.framework"
             BlueprintName = "SimplePDF"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FBCC628130BC94D1F8069EFE1CC64DE0"
+            BlueprintIdentifier = "947EADB4BCCA5FD2D9EA1A3B18A59979"
             BuildableName = "SimplePDF.framework"
             BlueprintName = "SimplePDF"
             ReferencedContainer = "container:Pods.xcodeproj">

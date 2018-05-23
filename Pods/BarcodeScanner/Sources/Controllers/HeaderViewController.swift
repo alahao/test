@@ -76,7 +76,7 @@ private extension HeaderViewController {
   func makeTitleLabel() -> UILabel {
     let label = UILabel()
     label.text = localizedString("SCAN_BARCODE_TITLE")
-    label.font = UIFont(name: "Trebuchet-BoldItalic", size: 20)
+    label.font = UIFont.boldSystemFont(ofSize: 17)
     label.textColor = .black
     label.numberOfLines = 1
     label.textAlignment = .center
@@ -86,7 +86,7 @@ private extension HeaderViewController {
   func makeCloseButton() -> UIButton {
     let button = UIButton(type: .system)
     button.setTitle(localizedString("BUTTON_CLOSE"), for: UIControlState())
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     button.tintColor = .black
     return button
   }

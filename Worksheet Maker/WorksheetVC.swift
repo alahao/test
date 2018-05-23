@@ -121,11 +121,6 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // FLURRY
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Generated"])
         Flurry.logEvent("Worksheet Generated", withParameters: getLogOperations())
-        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemID: "id-\(title!)",
-            AnalyticsParameterItemName: title!,
-            AnalyticsParameterContentType: "cont"
-            ])
     }
     
     // Prepare Event for Flurry
@@ -355,6 +350,8 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         printController.printInfo = printInfo
         printController.printingItem = docURL
         printController.present(animated : true, completionHandler : nil)
+        
+        Database.database().reference().childByAutoId().setValue(getLogOperations)
 
     }
     
@@ -371,7 +368,7 @@ class WorksheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
         Flurry.logEvent("Event", withParameters: ["Button Pressed" : "Worksheet Exported"])
         Flurry.logEvent("Worksheet Exported", withParameters: getLogOperations())
-        print(getLogOperations())
+        Analytics.logEvent("Worksheet Exported", parameters: getLogOperations())
 
         loadSimplePDF()
         loadPDFAndShare()

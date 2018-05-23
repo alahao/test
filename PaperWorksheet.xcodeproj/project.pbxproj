@@ -34,7 +34,8 @@
 		3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */; };
 		3D9D932020A2B1EA00965C21 /* IMG_0280.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D931F20A2B1EA00965C21 /* IMG_0280.PNG */; };
 		3D9D932220A2B32000965C21 /* icons8-screenshot-filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D932120A2B32000965C21 /* icons8-screenshot-filled-100@3x.png */; };
-		3DAAD18420AB6AE000B241FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */; };
+		3DAAD18620AB76CD00B241FD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAD18520AB76CD00B241FD /* InfoViewController.swift */; };
+		3DAAD18820AB7B9F00B241FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAAD18720AB7B9F00B241FD /* GoogleService-Info.plist */; };
 		3DF9EE8A209AB49C00FD00CE /* FCBBarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */; };
 		3DF9EE8C209AC7D300FD00CE /* icons8-barcode-scanner-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */; };
 		3DF9EE8E209D047800FD00CE /* icons8-screenshot-filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE8D209D047700FD00CE /* icons8-screenshot-filled-30.png */; };
@@ -42,8 +43,7 @@
 		3DF9EE96209D484B00FD00CE /* App_Store_Badge_US_300C.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE95209D484A00FD00CE /* App_Store_Badge_US_300C.png */; };
 		3DF9EE98209D4BA400FD00CE /* App_Store_Badge_US_300@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE97209D4BA400FD00CE /* App_Store_Badge_US_300@3x.png */; };
 		3DF9EE9C209D51F400FD00CE /* App_Store_PaperMath.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9EE9B209D51F400FD00CE /* App_Store_PaperMath.pdf */; };
-		631ED7ED1D09FBB6D0EB66AB /* Pods_PaperWorksheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */; };
-		9061A669D7C013735689AC0B /* Pods_Worksheet_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */; };
+		C54DEE68033582A7EB3F7F7F /* Pods_PaperWorksheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553457D927581A4AC3140DE /* Pods_PaperWorksheet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +66,7 @@
 		3D68BD63205CE62100C9F428 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		3D68BD65205D9CB000C9F428 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionArray.swift; sourceTree = "<group>"; };
+		3D7B9534F9C790B34A3188C6 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperWorksheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
 		3D8496EF1FAF994500CCCE55 /* PaperWorksheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperWorksheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8496F21FAF994500CCCE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8496F41FAF994500CCCE55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +79,8 @@
 		3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksheetVC.swift; sourceTree = "<group>"; };
 		3D9D931F20A2B1EA00965C21 /* IMG_0280.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0280.PNG; path = ../../../../PaperMath/ASSETS/IMG_0280.PNG; sourceTree = "<group>"; };
 		3D9D932120A2B32000965C21 /* icons8-screenshot-filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-screenshot-filled-100@3x.png"; path = "../../../../../Downloads/icons8-screenshot-filled-100@3x.png"; sourceTree = "<group>"; };
-		3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DAAD18520AB76CD00B241FD /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		3DAAD18720AB7B9F00B241FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCBBarCodeGenerator.swift; sourceTree = "<group>"; };
 		3DF9EE8B209AC7D200FD00CE /* icons8-barcode-scanner-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-barcode-scanner-25.png"; sourceTree = "<group>"; };
 		3DF9EE8D209D047700FD00CE /* icons8-screenshot-filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-screenshot-filled-30.png"; sourceTree = "<group>"; };
@@ -86,10 +88,8 @@
 		3DF9EE95209D484A00FD00CE /* App_Store_Badge_US_300C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store_Badge_US_300C.png; sourceTree = SOURCE_ROOT; };
 		3DF9EE97209D4BA400FD00CE /* App_Store_Badge_US_300@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App_Store_Badge_US_300@3x.png"; sourceTree = SOURCE_ROOT; };
 		3DF9EE9B209D51F400FD00CE /* App_Store_PaperMath.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = App_Store_PaperMath.pdf; path = Download_on_App_Store/App_Store_PaperMath.pdf; sourceTree = SOURCE_ROOT; };
-		4EBCC59431F46514498689F4 /* Pods-PaperWorksheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperWorksheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.release.xcconfig"; sourceTree = "<group>"; };
-		6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Worksheet_Maker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperWorksheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41151C11C8FCF839A21D15A /* Pods-PaperWorksheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperWorksheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.debug.xcconfig"; sourceTree = "<group>"; };
+		578DB089219C8C02E05F9730 /* Pods-PaperWorksheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperWorksheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperWorksheet/Pods-PaperWorksheet.debug.xcconfig"; sourceTree = "<group>"; };
+		A553457D927581A4AC3140DE /* Pods_PaperWorksheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperWorksheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,19 +97,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9061A669D7C013735689AC0B /* Pods_Worksheet_Maker.framework in Frameworks */,
-				631ED7ED1D09FBB6D0EB66AB /* Pods_PaperWorksheet.framework in Frameworks */,
+				C54DEE68033582A7EB3F7F7F /* Pods_PaperWorksheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		315E702D15A53C03CBBE6984 /* Pods */ = {
+		0F95046A46354C51FF041757 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E41151C11C8FCF839A21D15A /* Pods-PaperWorksheet.debug.xcconfig */,
-				4EBCC59431F46514498689F4 /* Pods-PaperWorksheet.release.xcconfig */,
+				578DB089219C8C02E05F9730 /* Pods-PaperWorksheet.debug.xcconfig */,
+				3D7B9534F9C790B34A3188C6 /* Pods-PaperWorksheet.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -148,8 +147,8 @@
 			children = (
 				3D8496F11FAF994500CCCE55 /* Worksheet Maker */,
 				3D8496F01FAF994500CCCE55 /* Products */,
-				315E702D15A53C03CBBE6984 /* Pods */,
 				761A36C30CBFD33048A49A1E /* Frameworks */,
+				0F95046A46354C51FF041757 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +168,7 @@
 				3D8496F41FAF994500CCCE55 /* ViewController.swift */,
 				3D84970D1FAFBDB000CCCE55 /* WorksheetVC.swift */,
 				3D34943D205B900700A6571B /* AnswersVC.swift */,
+				3DAAD18520AB76CD00B241FD /* InfoViewController.swift */,
 				3D84970B1FAFA22A00CCCE55 /* TableViewCell.swift */,
 				3D34F64A208528A30086879B /* TableViewAnswerCell.swift */,
 				3D68BD63205CE62100C9F428 /* Operation.swift */,
@@ -177,7 +177,7 @@
 				3D68BD67205D9FEC00C9F428 /* QuestionArray.swift */,
 				3DF9EE89209AB49B00FD00CE /* FCBBarCodeGenerator.swift */,
 				3D8496F21FAF994500CCCE55 /* AppDelegate.swift */,
-				3DAAD18320AB6ADF00B241FD /* GoogleService-Info.plist */,
+				3DAAD18720AB7B9F00B241FD /* GoogleService-Info.plist */,
 				3D0968E51FB5E2B700570933 /* Assets */,
 			);
 			path = "Worksheet Maker";
@@ -188,8 +188,7 @@
 			children = (
 				3D49E9EF209F394B00F4DAB6 /* SystemConfiguration.framework */,
 				3D49E9ED209F392B00F4DAB6 /* Security.framework */,
-				6C0D1DB6FD47D88F22F38099 /* Pods_Worksheet_Maker.framework */,
-				73B177ACE56BE07E198F71BC /* Pods_PaperWorksheet.framework */,
+				A553457D927581A4AC3140DE /* Pods_PaperWorksheet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,11 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D8497041FAF994500CCCE55 /* Build configuration list for PBXNativeTarget "PaperWorksheet" */;
 			buildPhases = (
-				51509870A8029A877DEFA73F /* [CP] Check Pods Manifest.lock */,
+				6ABF6124E5164BD9AE9590AB /* [CP] Check Pods Manifest.lock */,
 				3D8496EB1FAF994500CCCE55 /* Sources */,
 				3D8496EC1FAF994500CCCE55 /* Frameworks */,
 				3D8496ED1FAF994500CCCE55 /* Resources */,
-				77775605DF8178B820D367D7 /* [CP] Embed Pods Frameworks */,
+				C724C37ABDF612CE5BC3FDA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = PrettyMotion;
 				TargetAttributes = {
 					3D8496EE1FAF994500CCCE55 = {
@@ -274,7 +273,7 @@
 				3DF9EE98209D4BA400FD00CE /* App_Store_Badge_US_300@3x.png in Resources */,
 				3D53F2D02054A0EB00679CD9 /* icons8-print-filled-100.png in Resources */,
 				3D53F2D22054A0EB00679CD9 /* icons8-export-pdf-filled-100.png in Resources */,
-				3DAAD18420AB6AE000B241FD /* GoogleService-Info.plist in Resources */,
+				3DAAD18820AB7B9F00B241FD /* GoogleService-Info.plist in Resources */,
 				3D2270A120886A9A00ACF235 /* icons8-test-passed-25.png in Resources */,
 				3DF9EE8E209D047800FD00CE /* icons8-screenshot-filled-30.png in Resources */,
 				3D53F2D12054A0EB00679CD9 /* icons8-add-list-filled-100.png in Resources */,
@@ -284,7 +283,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51509870A8029A877DEFA73F /* [CP] Check Pods Manifest.lock */ = {
+		6ABF6124E5164BD9AE9590AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +301,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77775605DF8178B820D367D7 /* [CP] Embed Pods Frameworks */ = {
+		C724C37ABDF612CE5BC3FDA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,6 +312,7 @@
 				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SimplePDF/SimplePDF.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -321,6 +321,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimplePDF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +345,7 @@
 				3DF9EE8A209AB49C00FD00CE /* FCBBarCodeGenerator.swift in Sources */,
 				3D68BD66205D9CB000C9F428 /* Difficulty.swift in Sources */,
 				3D84970E1FAFBDB000CCCE55 /* WorksheetVC.swift in Sources */,
+				3DAAD18620AB76CD00B241FD /* InfoViewController.swift in Sources */,
 				3D34F64B208528A30086879B /* TableViewAnswerCell.swift in Sources */,
 				3D8496F31FAF994500CCCE55 /* AppDelegate.swift in Sources */,
 				3D349440205B942A00A6571B /* TextFieldMaxLengths.swift in Sources */,
@@ -386,6 +388,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -393,6 +396,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -443,6 +447,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -450,6 +455,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -481,7 +487,7 @@
 		};
 		3D8497051FAF994500CCCE55 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E41151C11C8FCF839A21D15A /* Pods-PaperWorksheet.debug.xcconfig */;
+			baseConfigurationReference = 578DB089219C8C02E05F9730 /* Pods-PaperWorksheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,7 +503,7 @@
 		};
 		3D8497061FAF994500CCCE55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EBCC59431F46514498689F4 /* Pods-PaperWorksheet.release.xcconfig */;
+			baseConfigurationReference = 3D7B9534F9C790B34A3188C6 /* Pods-PaperWorksheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

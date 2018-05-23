@@ -6,10 +6,11 @@ target 'PaperWorksheet' do
   use_frameworks!
 
   # Pods for PaperWorksheet
-	
+
 pod 'SimplePDF'
 pod 'BarcodeScanner'
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 pod 'Flurry-iOS-SDK/FlurrySDK'
 
 end
